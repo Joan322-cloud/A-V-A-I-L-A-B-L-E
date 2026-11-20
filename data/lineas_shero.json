@@ -1,0 +1,1340 @@
+{
+	"_comentario": "Líneas de Shero por trigger (GDD 5.3, fuente docs/dialogos_shero_vitzo.md). 'literal': true = fragmento de las capturas con alias; false = añadida en la misma voz. 'canal': canal | dm | voz | correo. 'voz' = archivo en assets/audio/voces/<idioma>/shero/ sin extensión.",
+	"inicio_turno": {
+		"canal": "canal",
+		"voz": "shero_buenas_team",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Buenas, team. Un reminder para todos.",
+				"en": "Evening, team. A reminder for everyone."
+			},
+			{
+				"literal": true,
+				"es": "Team, les hago recordar, OTRA VEZ, que deben respetar el layout.",
+				"en": "Team, I'm reminding you, AGAIN, that you must respect the layout."
+			},
+			{
+				"literal": false,
+				"es": "Buenas, team. ¿Ya estamos todos logueados? Veo tres pendientes.",
+				"en": "Evening, team. Is everyone logged in yet? I see three pending."
+			},
+			{
+				"literal": false,
+				"es": "Reminder: la isla es la isla. No es sugerencia.",
+				"en": "Reminder: the island is the island. It's not a suggestion."
+			}
+		]
+	},
+	"isla_10_min": {
+		"canal": "canal",
+		"voz": "shero_isla_10min",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Team, ya ha pasado 10 minutos. Las únicas personas en la isla son @Jiroshi @Marko @Llauri. Todas las demás tienen 5 minutos para cambiarse o escribirme por interno el motivo por el cual no se han cambiado aún.",
+				"en": "Team, 10 minutes have passed. The only people on the island are @Jiroshi @Marko @Llauri. Everyone else has 5 minutes to move or DM me the reason why you haven't moved yet."
+			},
+			{
+				"literal": false,
+				"es": "Te veo en la isla de atrás. Te lo digo una sola vez.",
+				"en": "I see you at the back island. I'll say it once."
+			}
+		]
+	},
+	"isla_gracia_vencida": {
+		"canal": "canal",
+		"voz": "shero_dale_ack",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Written warnings enviados a sus correos KipuPay, por favor responder con el ack y cambiarse a nuestra isla.",
+				"en": "Written warnings sent to your KipuPay emails, please reply with the ack and move to our island."
+			}
+		]
+	},
+	"de_pie_en_live": {
+		"canal": "dm",
+		"voz": "shero_por_que_aux",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "¿Por qué corres? Aquí nadie corre. Salvo yo.",
+				"en": "Why are you running? Nobody runs here. Except me."
+			},
+			{
+				"literal": false,
+				"es": "Te escucho correr por el pasillo. Camina.",
+				"en": "I can hear you running down the hall. Walk."
+			}
+		],
+		"_comentario": "v0.3 P3: la regla v0.2 'de pie en Live' ya no existe (pararte en la sala es libre). Este DM solo sale si el jugador se queda sin aire corriendo (player.gd); no castiga."
+	},
+	"correo_10_min": {
+		"canal": "dm",
+		"voz": "shero_correo_once_min",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Hola. Nuevamente tenemos un caso de más de 10 min.",
+				"en": "Hi. Once again we have a case over 10 min."
+			},
+			{
+				"literal": true,
+				"es": "Al revisar las notas veo que no se necesitaba hacer nada.",
+				"en": "Looking at the notes I see nothing needed to be done."
+			},
+			{
+				"literal": true,
+				"es": "Me comentas que fue lo que tomó tanto tiempo, please.",
+				"en": "Tell me what took so long, please."
+			}
+		]
+	},
+	"correo_10_min_segundo": {
+		"canal": "dm",
+		"voz": "shero_que_tomo_tanto",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Tenemos este nuevo caso de AHT BO. Solo se revisó el correo y no se necesitó mayor gestión. Un caso así no debería pasar los 10 min. Te he enviado el segundo WW a tu correo.",
+				"en": "We have this new BO AHT case. Only the email was reviewed and no further handling was needed. A case like this shouldn't go over 10 min. I've sent the second WW to your email."
+			}
+		]
+	},
+	"break_excedido": {
+		"canal": "canal",
+		"voz": "shero_no_hay_breaks",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "En un solo turno he encontrado tasks de casi 30 min, llamadas perdidas de casi 40 min, lunchs de 1 hora con 20, etc.",
+				"en": "In a single shift I've found tasks of almost 30 min, missed calls of almost 40 min, 1 hour 20 lunches, etc."
+			},
+			{
+				"literal": false,
+				"es": "Llevas 11 minutos en AUX. Te estoy viendo.",
+				"en": "You've been in AUX for 11 minutes. I'm watching you."
+			},
+			{
+				"literal": false,
+				"es": "Lunch es 1 hora. No 1 hora con 20.",
+				"en": "Lunch is 1 hour. Not 1 hour 20."
+			}
+		]
+	},
+	"tres_molestos": {
+		"canal": "voz",
+		"voz": "shero_tres_molestos",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Tres clientes molestos seguidos. ¿Qué está pasando contigo?",
+				"en": "Three angry customers in a row. What's going on with you?"
+			},
+			{
+				"literal": false,
+				"es": "Sé más empático.",
+				"en": "Be more empathetic."
+			}
+		]
+	},
+	"ww_emitido": {
+		"canal": "correo",
+		"voz": "shero_dale_ack",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Se le enviará el warning por su correo de KipuPay con copia a los 3 OM de la campaña.",
+				"en": "The warning will be sent to your KipuPay email with copy to the campaign's 3 OMs."
+			},
+			{
+				"literal": false,
+				"es": "Dale Ack.",
+				"en": "Ack it."
+			},
+			{
+				"literal": false,
+				"es": "Tienes un correo sin ack. Lo necesito antes de que termine el turno.",
+				"en": "You have an email without ack. I need it before the shift ends."
+			}
+		]
+	},
+	"procedimiento_misses": {
+		"canal": "canal",
+		"voz": "",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Al aparecer por primera vez con un caso reportado se manejará solo como una alerta. En caso vuelvan a aparecer, ya tocará el primer written warning. De ser reincidentes, se aplica el segundo written warning con copia a los tres OM y se evalúa la continuidad en la campaña.",
+				"en": "The first time you show up with a reported case it will be handled only as an alert. If you show up again, the first written warning is due. For repeat offenders, the second written warning is applied with the three OMs in copy and your continuity in the campaign is reviewed."
+			},
+			{
+				"literal": false,
+				"es": "Esto no es personal. Es el procedimiento.",
+				"en": "This isn't personal. It's the procedure."
+			}
+		]
+	},
+	"alerta": {
+		"canal": "dm",
+		"voz": "",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Te dejo esto como alerta. La próxima ya es written warning.",
+				"en": "Leaving this as an alert. Next time it's a written warning."
+			}
+		]
+	},
+	"convocar_coaching": {
+		"canal": "dm",
+		"voz": "shero_unete_sala",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Únete a la sala.",
+				"en": "Join the room."
+			}
+		]
+	},
+	"ack_a_tiempo": {
+		"canal": "voz",
+		"voz": "shero_bien",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Bien.",
+				"en": "Good."
+			}
+		]
+	},
+	"avatar_alterado": {
+		"canal": "canal",
+		"voz": "",
+		"version_minima": "0.3",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "Ezlaki es una herramienta profesional, no su red social personal.",
+				"en": "Ezlaki is a professional tool, not your personal social network."
+			},
+			{
+				"literal": true,
+				"es": "Todos aquí somos adultos, pórtense como tal.",
+				"en": "We're all adults here, act like it."
+			},
+			{
+				"literal": false,
+				"es": "Esa foto no eres tú. Cámbiala.",
+				"en": "That photo isn't you. Change it."
+			}
+		]
+	},
+	"screamer": {
+		"canal": "voz",
+		"voz": "shero_screamer",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "¡TE DIJE QUE NO HAY BREAKS!",
+				"en": "I TOLD YOU THERE ARE NO BREAKS!"
+			},
+			{
+				"literal": false,
+				"es": "¡ONCE MINUTOS!",
+				"en": "ELEVEN MINUTES!"
+			},
+			{
+				"literal": false,
+				"es": "¡DALE ACK!",
+				"en": "ACK IT!"
+			}
+		]
+	},
+	"topico_anotado": {
+		"canal": "dm",
+		"voz": "",
+		"nota": "[PROPUESTA] v0.2: la enfermera del tópico (piso 1) avisa a Shero cuando te manda de vuelta con Fatiga alta.",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Me avisan del tópico. Anotado. Si estás tan cansado, el problema no es el tópico.",
+				"en": "The infirmary let me know. Noted. If you're that tired, the infirmary isn't the problem."
+			},
+			{
+				"literal": false,
+				"es": "¿Tópico en horario de cola? Lo anoto en tu seguimiento.",
+				"en": "Infirmary during queue hours? Going in your follow-up file."
+			}
+		]
+	},
+	"ascensor_pisos": {
+		"canal": "dm",
+		"voz": "",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Me llegó el reporte de accesos del ascensor. Esos pisos no son de la campaña. Baja a tu sitio.",
+				"en": "I got the elevator access report. Those floors aren't ours. Get back to your seat."
+			},
+			{
+				"literal": false,
+				"es": "¿Qué buscas en el 5? Tu fotocheck no abre nada ahí. Vuelve a la isla.",
+				"en": "What are you looking for on 5? Your badge opens nothing there. Back to the island."
+			}
+		]
+	},
+	"escalera": {
+		"comodin_break": {
+			"_nota": "v0.3.2-core4: tercer break marcado con el comodín. Shero amaga la persecución, se detiene y lo deja pasar durante el cupo del break; después corre la escalera del break excedido.",
+			"perdon": [
+				{
+					"canal": "voz",
+					"es": "Ok. Que no se repita. Lo dejo como alerta.",
+					"en": "Okay. Don't let it happen again. I'll leave it as an alert.",
+					"voz": "excusa_ok"
+				},
+				{
+					"canal": "dm",
+					"es": "Tu PC se marcó sola en Break, @{agente}. Qué casualidad. Es tu tercer break: lo dejo pasar {cupo} minutos y te los estoy contando. Pasados los {cupo} no hay comodín que valga. No hay breaks.",
+					"en": "Your PC set itself to Break, @{agente}. What a coincidence. It's your third break: I'll let it slide for {cupo} minutes and I'm counting them. Past {cupo}, no lifeline will save you. There are no breaks.",
+					"typing_s": 3.0,
+					"retraso": 2.5,
+					"mention": true
+				}
+			]
+		},
+		"marca": {
+			"_nota": "v0.3.2-core4: cada exceso deja una marca para el resto del turno (balance.json/escalera/marcas). El DM lo manda quien ejecuta la pista (Shero o Rasec) unos segundos después del aviso del escalón. {tipo} sale de 'tipos' según el grupo de la pista.",
+			"tipos": {
+				"descanso": {"es": "pasarte del break o del lunch", "en": "going over on break or lunch"},
+				"sitio": {"es": "no estar en tu sitio", "en": "being away from your seat"},
+				"coaching": {"es": "el AUX Coaching", "en": "the Coaching AUX"},
+				"inasistencia": {"es": "no presentarte", "en": "not showing up"},
+				"correo": {"es": "el tiempo de un caso", "en": "case handling time"}
+			},
+			"primera": [
+				{
+					"canal": "dm",
+					"es": "Anotado, @{agente}: primera marca por {tipo}. La próxima vez empiezo un paso más arriba.",
+					"en": "Noted, @{agente}: first mark for {tipo}. Next time I start one step higher.",
+					"typing_s": 2.0,
+					"retraso": 3.0,
+					"mention": true
+				}
+			],
+			"mas": [
+				{
+					"canal": "dm",
+					"es": "Van {n} marcas por {tipo}, @{agente}. Ya no hay avisos suaves.",
+					"en": "That's {n} marks for {tipo}, @{agente}. No more gentle warnings.",
+					"typing_s": 2.0,
+					"retraso": 3.0,
+					"mention": true
+				}
+			]
+		},
+		"_comentario": "v0.3 P3 (Discipline): mensajes de cada escalón por pista (SHERO_ESCALADA §2.2, DIALOGOS §1). Cada escalón es una LISTA de mensajes que salen todos (en orden). canal: dm (DM del autor: dm:shero / dm:rasec) · #allocations · #team-familia · voz (en persona si el ejecutor está en tu piso, si no por los parlantes de tu piso) · pa (siempre parlantes). autor: shero (por defecto) | rasec. voz = voces/<autor>/<archivo> (P6 los sintetiza; si falta suena el pitido con subtítulo). typing_s: s reales de 'escribiendo…' antes; edita + edita_s: el mensaje se edita después (terror de oficina). {agente} {pct} {min} {n} {hora} {lista} los rellena Discipline.",
+		"break_1": {
+			"molestia": [
+				{
+					"canal": "dm",
+					"es": "Break. Ok.",
+					"en": "Break. Okay.",
+					"voz": "break_1",
+					"typing_s": 2.5,
+					"edita": {
+						"es": "Break. Ok. Anotado. No hay breaks, pero ok.",
+						"en": "Break. Okay. Noted. There are no breaks, but okay."
+					},
+					"edita_s": 4.0
+				},
+				{
+					"canal": "#allocations",
+					"es": "No hay breaks.",
+					"en": "There are no breaks.",
+					"voz": "shero_no_hay_breaks",
+					"typing_s": 1.5
+				}
+			]
+		},
+		"break_2": {
+			"llamado": [
+				{
+					"canal": "#team-familia",
+					"es": "@{agente} segundo break. Team, les recuerdo: el break es cuando baja la cola. La cola no ha bajado.",
+					"en": "@{agente} second break. Team, reminder: break is when the queue goes down. The queue hasn't gone down.",
+					"voz": "break_2",
+					"typing_s": 3.0,
+					"mention": true
+				},
+				{
+					"canal": "#allocations",
+					"es": "No hay breaks.",
+					"en": "There are no breaks.",
+					"voz": "shero_no_hay_breaks",
+					"typing_s": 1.0
+				}
+			]
+		},
+		"tercer_break": {
+			"persecucion": [
+				{
+					"canal": "voz",
+					"es": "¿Tercer break? ¡¿TERCER BREAK?!",
+					"en": "Third break? THIRD BREAK?!",
+					"voz": "esc_tercer_break"
+				}
+			]
+		},
+		"break": {
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "Llevas 10 minutos en break. El break dura 10 minutos. Haz la cuenta.",
+					"en": "You've been on break for 10 minutes. Break lasts 10 minutes. Do the math.",
+					"voz": "esc_break_llamado",
+					"typing_s": 4.0
+				},
+				{
+					"canal": "voz",
+					"es": "Llevas 10 minutos en break. El break dura 10 minutos. Haz la cuenta.",
+					"en": "You've been on break for 10 minutes. Break lasts 10 minutes. Do the math.",
+					"voz": "esc_break_llamado",
+					"_nota": "v0.3.2-core4: el primer aviso del break se oye donde estés (antes solo era un DM)."
+				},
+				{
+					"canal": "#allocations",
+					"es": "@{agente} break excedido. No hay breaks.",
+					"en": "@{agente} break exceeded. There are no breaks.",
+					"typing_s": 1.5,
+					"mention": true
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "{agente}. A tu sitio. Ahora. No lo voy a repetir.",
+					"en": "{agente}. To your seat. Now. I won't repeat it.",
+					"voz": "esc_break_verbal"
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Written warning: break excedido. Copia a los 3 OM. Dale ack.",
+					"en": "Written warning: break exceeded. The 3 OMs in copy. Ack it.",
+					"voz": "shero_dale_ack"
+				},
+				{
+					"canal": "#team-familia",
+					"es": "Hoy tenemos {n} written warnings en el team. Felicito al resto.",
+					"en": "Today we have {n} written warnings on the team. I congratulate the rest.",
+					"voz": "team_ww",
+					"typing_s": 2.0
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Te imprimí algo. Quédate donde estás.",
+					"en": "I printed something for you. Stay where you are.",
+					"voz": "esc_break_persecucion"
+				}
+			]
+		},
+		"lunch": {
+			"hora": [
+				{
+					"canal": "dm",
+					"es": "Tu lunch es a las {hora}. No a las {hora} y cinco.",
+					"en": "Your lunch is at {hora}. Not {hora} and five.",
+					"voz": "lunch_hora",
+					"typing_s": 3.0
+				}
+			],
+			"inicio": [
+				{
+					"canal": "dm",
+					"es": "Cuarenta y cinco minutos. Te los estoy contando.",
+					"en": "Forty-five minutes. I'm counting them.",
+					"voz": "lunch_inicio",
+					"typing_s": 2.0
+				}
+			],
+			"fuera_hora": [
+				{
+					"canal": "dm",
+					"es": "Tu lunch no es ahora. Ahora es Available.",
+					"en": "Your lunch isn't now. Now is Available.",
+					"voz": "lunch_fuera_hora",
+					"typing_s": 2.0
+				}
+			],
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "Tu lunch terminó. Tienes cuarenta y cinco minutos, no cuarenta y seis.",
+					"en": "Your lunch is over. You get forty-five minutes, not forty-six.",
+					"voz": "esc_lunch_llamado",
+					"typing_s": 4.0
+				},
+				{
+					"canal": "#team-familia",
+					"es": "Team: lunch es 45 minutos. No 1 hora con 20. @{agente}.",
+					"en": "Team: lunch is 45 minutes. Not 1 hour and 20. @{agente}.",
+					"typing_s": 2.0,
+					"mention": true
+				},
+				{
+					"canal": "pa",
+					"es": "¡Se pasaron del lunch! ¡Written warning para todos!",
+					"en": "You all went over lunch! Written warning for everyone!",
+					"voz": "shero_lunch_ww_todos_02",
+					"cosechado": true
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "{agente}. Sube. El microondas no es tu sitio.",
+					"en": "{agente}. Come up. The microwave is not your seat.",
+					"voz": "esc_lunch_verbal"
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Written warning: lunch excedido. Dale ack.",
+					"en": "Written warning: lunch exceeded. Ack it.",
+					"voz": "esc_lunch_ww"
+				},
+				{
+					"canal": "pa",
+					"es": "Veo lunchs de una hora con veinte. El lunch es de 45, team. Written warning en camino.",
+					"en": "I see lunches of an hour and twenty. Lunch is 45, team. Written warning on its way.",
+					"voz": "shero_lunch_excedido",
+					"retraso": 4.0,
+					"cosechado": true
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Voy a bajar. No te muevas.",
+					"en": "I'm coming down. Don't move.",
+					"voz": "esc_lunch_persecucion"
+				}
+			],
+			"perdon": [
+				{
+					"canal": "voz",
+					"es": "¿Dormido? …Te salvó que estás dormido. O que lo parezcas. Written warning. Sube.",
+					"en": "Asleep? …You're saved because you're asleep. Or because you look it. Written warning. Get up there.",
+					"voz": "lunch_perdon"
+				}
+			],
+			"perdon_2": [
+				{
+					"canal": "voz",
+					"es": "¿Otra vez dormido? Ya no te creo.",
+					"en": "Asleep again? I don't believe you anymore.",
+					"voz": "lunch_perdon_2"
+				}
+			]
+		},
+		"correo": {
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "Hola. Nuevamente tenemos un caso de más de 10 min. Me comentas qué fue lo que tomó tanto tiempo, please.",
+					"en": "Hi. Once again we have a case over 10 min. Tell me what took so long, please.",
+					"voz": "shero_correo_once_min",
+					"typing_s": 3.0,
+					"quick_replies": [
+						"excusa_1",
+						"excusa_2",
+						"excusa_3"
+					]
+				},
+				{
+					"canal": "voz",
+					"es": "¡Te pasaste 10 minutos de correo!",
+					"en": "You went 10 minutes over on that email!",
+					"voz": "shero_correo_diez_min",
+					"cosechado": true
+				}
+			],
+			"excusa_ok": [
+				{
+					"canal": "dm",
+					"es": "Ok. Que no se repita. Lo dejo como alerta.",
+					"en": "Okay. Don't let it happen again. I'll leave it as an alert.",
+					"voz": "excusa_ok",
+					"typing_s": 1.5
+				}
+			],
+			"excusa_mal": [
+				{
+					"canal": "dm",
+					"es": "Al revisar las notas veo que no se necesitaba hacer nada.",
+					"en": "Looking at the notes I see nothing needed to be done.",
+					"voz": "excusa_mal",
+					"typing_s": 1.0
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "Sigo esperando el cierre. Estoy aquí. Detrás.",
+					"en": "I'm still waiting for the close. I'm here. Behind you.",
+					"voz": "esc_correo_verbal"
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Tenemos este nuevo caso de AHT BO. Te envié el WW a tu correo, con copia a los tres OM.",
+					"en": "We have this new BO AHT case. I sent the WW to your email, with the three OMs in copy.",
+					"voz": "shero_ww_segundo"
+				},
+				{
+					"canal": "#allocations",
+					"es": "Team, tenemos casos de más de 10 min. @{agente}.",
+					"en": "Team, we have cases over 10 min. @{agente}.",
+					"typing_s": 1.5,
+					"mention": true
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "voz",
+					"es": "Ya voy.",
+					"en": "I'm coming.",
+					"voz": "esc_sala_persecucion",
+					"_nota": "v0.3.2-core4: antes «Diecinueve minutos. Mírame.» (esc_correo_persecucion); los minutos de la escalera ahora salen de balance.json/escalera."
+				}
+			]
+		},
+		"sala": {
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "¿A dónde vas? No tienes AUX.",
+					"en": "Where are you going? You have no AUX.",
+					"voz": "esc_sala_llamado",
+					"typing_s": 2.5
+				},
+				{
+					"canal": "voz",
+					"es": "¡¿A dónde vas?! ¡No hay breaks!",
+					"en": "Where are you going?! There are no breaks!",
+					"voz": "shero_lunch_ww_todos_01",
+					"cosechado": true
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "¡Regresa a tu sitio ahora mismo!",
+					"en": "Get back to your seat right now!",
+					"voz": "shero_regresa_sitio"
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Written warning: abandono de posición. Dale ack. Y regresa.",
+					"en": "Written warning: abandonment of position. Ack it. And come back.",
+					"voz": "esc_sala_ww"
+				},
+				{
+					"canal": "#team-familia",
+					"es": "@{agente} fuera de la sala sin AUX. Written warning. La sala es la sala.",
+					"en": "@{agente} out of the room with no AUX. Written warning. The room is the room.",
+					"typing_s": 2.0,
+					"mention": true
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Ya voy.",
+					"en": "I'm coming.",
+					"voz": "esc_sala_persecucion"
+				}
+			]
+		},
+		"otra_isla": {
+			"llamado": [
+				{
+					"canal": "#team-familia",
+					"es": "Team, las únicas personas en la isla son {lista}. Las demás tienen {quedan} minutos.",
+					"en": "Team, the only people at the island are {lista}. Everyone else has {quedan} minutes.",
+					"typing_s": 4.0,
+					"mention": true
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "Te veo en la isla de atrás. Te lo digo una sola vez. Tu isla es la C.",
+					"en": "I see you at the back island. I'll say it once. Your island is C.",
+					"voz": "esc_isla_verbal"
+				}
+			],
+			"ww": [
+				{
+					"canal": "#team-familia",
+					"es": "Written warnings enviados a sus correos KipuPay, por favor responder con el ack y cambiarse a nuestra isla.",
+					"en": "Written warnings sent to your KipuPay emails, please reply with the ack and move to our island.",
+					"voz": "shero_dale_ack",
+					"typing_s": 2.0
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "voz",
+					"es": "Tu isla es la mía. Voy.",
+					"en": "Your island is mine. I'm coming.",
+					"voz": "esc_isla_persecucion"
+				}
+			]
+		},
+		"coaching": {
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "¿Coaching? ¿Con quién? Nadie te convocó, campeón.",
+					"en": "Coaching? With whom? Nobody called you, champ.",
+					"voz": "esc_coaching_llamado",
+					"autor": "rasec",
+					"typing_s": 2.0
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "Nadie se pone en coaching solo. Nadie se coachea a sí mismo. Sal de Coaching.",
+					"en": "Nobody goes into coaching alone. Nobody coaches themselves. Get out of Coaching.",
+					"voz": "esc_coaching_verbal",
+					"autor": "rasec"
+				}
+			],
+			"ww": [
+				{
+					"canal": "dm",
+					"es": "Written warning de mi parte: uso indebido del AUX Coaching. Sí, yo también puedo.",
+					"en": "Written warning from me: misuse of the Coaching AUX. Yes, I can do that too.",
+					"voz": "esc_coaching_ww",
+					"autor": "rasec",
+					"typing_s": 2.0
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "¿Querías coaching? Ya voy.",
+					"en": "You wanted coaching? I'm coming.",
+					"voz": "esc_coaching_persecucion",
+					"autor": "rasec"
+				}
+			]
+		},
+		"coaching_exceso": {
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "La reunión terminó hace rato. ¿Sigues en Coaching?",
+					"en": "The meeting ended a while ago. Are you still in Coaching?",
+					"voz": "esc_exceso_llamado",
+					"autor": "rasec",
+					"typing_s": 2.0,
+					"edita": {
+						"es": "La reunión terminó hace rato. ¿Sigues en Coaching? 🙂",
+						"en": "The meeting ended a while ago. Are you still in Coaching? 🙂"
+					},
+					"edita_s": 5.0
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "Coaching no es un sitio para vivir. Available. Ya.",
+					"en": "Coaching isn't a place to live. Available. Now.",
+					"voz": "esc_exceso_verbal",
+					"autor": "rasec"
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "¿Once horas de coaching? Aquí no.",
+					"en": "Eleven hours of coaching? Not here.",
+					"voz": "esc_exceso_persecucion",
+					"autor": "rasec"
+				}
+			]
+		},
+		"coaching_noshow": {
+			"verbal": [
+				{
+					"canal": "dm",
+					"es": "Te estoy esperando en la sala. La sala también te espera.",
+					"en": "I'm waiting for you in the room. The room is waiting too.",
+					"voz": "coach_noshow",
+					"typing_s": 2.0,
+					"quick_replies": [
+						"join_rooms"
+					]
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Written warning: inasistencia a coaching. El link sigue abierto.",
+					"en": "Written warning: coaching no-show. The link is still open.",
+					"voz": "esc_noshow_ww"
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Si no vienes a la sala, la sala va a ti.",
+					"en": "If you won't come to the room, the room comes to you.",
+					"voz": "coach_noshow_persecucion"
+				}
+			]
+		},
+		"coaching_noshow_rasec": {
+			"verbal": [
+				{
+					"canal": "dm",
+					"es": "Te estoy esperando en Rooms. Hasta la música te espera.",
+					"en": "I'm waiting for you in Rooms. Even the music is waiting.",
+					"voz": "coach_noshow",
+					"autor": "rasec",
+					"typing_s": 2.0,
+					"quick_replies": [
+						"join_rooms"
+					]
+				}
+			],
+			"ww": [
+				{
+					"canal": "dm",
+					"es": "Written warning: no viniste a mi coaching.",
+					"en": "Written warning: you didn't come to my coaching.",
+					"voz": "esc_coaching_ww",
+					"autor": "rasec"
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Bueno. Voy yo.",
+					"en": "Fine. I'll come to you.",
+					"voz": "esc_noshow_rasec_persecucion",
+					"autor": "rasec"
+				}
+			]
+		},
+		"available": {
+			"verbal": [
+				{
+					"canal": "dm",
+					"es": "@{agente} tu Available está en {pct} %. La meta es 80. No 70. Ochenta.",
+					"en": "@{agente} your Available is at {pct} %. The target is 80. Not 70. Eighty.",
+					"voz": "esc_avl_llamado",
+					"typing_s": 3.0
+				},
+				{
+					"canal": "voz",
+					"es": "{pct} por ciento. Lo estoy viendo en la lista del Mentor. Todos lo están viendo.",
+					"en": "{pct} percent. I'm looking at it on the Mentor's list. Everyone is looking at it.",
+					"voz": "esc_avl_verbal"
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Written warning: Available {pct} %. Segunda lista.",
+					"en": "Written warning: Available {pct} %. Second list.",
+					"voz": "esc_avl_ww"
+				},
+				{
+					"canal": "#team-familia",
+					"es": "@{agente} {pct} % en la lista. Segunda vez. Written warning.",
+					"en": "@{agente} {pct} % on the list. Second time. Written warning.",
+					"typing_s": 2.0,
+					"mention": true
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Ven a mi sitio. Trae tu Available.",
+					"en": "Come to my desk. Bring your Available.",
+					"voz": "esc_avl_persecucion"
+				}
+			]
+		},
+		"topico": {
+			"permiso": [
+				{
+					"canal": "dm",
+					"es": "Ok. Tópico, piso 1. Quince minutos. Te los estoy contando.",
+					"en": "Okay. Medical room, 1st floor. Fifteen minutes. I'm counting them.",
+					"voz": "topico_permiso",
+					"typing_s": 2.5
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "dm",
+					"es": "¿Otra vez? Work avoiding. Ya bajo.",
+					"en": "Again? Work avoiding. I'm coming down.",
+					"voz": "topico_work_avoiding",
+					"typing_s": 1.5
+				}
+			]
+		},
+		"topico_excedido": {
+			"verbal": [
+				{
+					"canal": "pa",
+					"es": "Quince minutos eran quince.",
+					"en": "Fifteen minutes meant fifteen.",
+					"voz": "topico_exceso"
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Ya voy por ti.",
+					"en": "I'm coming for you.",
+					"voz": "esc_training_persecucion"
+				}
+			]
+		},
+		"training_regreso": {
+			"llamado": [
+				{
+					"canal": "dm",
+					"es": "El training terminó hace {min} minutos. El Trainer dice que saliste. Yo no te veo.",
+					"en": "Training ended {min} minutes ago. The Trainer says you left. I don't see you.",
+					"voz": "esc_training_llamado",
+					"typing_s": 3.0
+				}
+			],
+			"verbal": [
+				{
+					"canal": "voz",
+					"es": "¿Sigues en el piso 1? ¿Tanto te gustó?",
+					"en": "Still on the 1st floor? Did you like it that much?",
+					"voz": "esc_training_verbal"
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Voy por ti.",
+					"en": "I'm coming for you.",
+					"voz": "esc_training_persecucion"
+				}
+			]
+		},
+		"ww_ack": {
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "No me diste ack.",
+					"en": "You didn't give me ack.",
+					"voz": "ww_sin_ack"
+				}
+			]
+		},
+		"llamadas_perdidas": {
+			"llamado": [
+				{
+					"canal": "#allocations",
+					"es": "¡Contesten esas llamadas!",
+					"en": "Answer those calls!",
+					"voz": "shero_contesten",
+					"typing_s": 1.0
+				}
+			],
+			"verbal": [
+				{
+					"canal": "dm",
+					"es": "Dos llamadas sonando y tú de pie. Siéntate. El cliente no se va a atender solo.",
+					"en": "Two calls ringing and you standing. Sit down. The customer won't serve himself.",
+					"voz": "llamada_perdida_2",
+					"typing_s": 2.0
+				},
+				{
+					"canal": "voz",
+					"es": "¡Contesten esas llamadas!",
+					"en": "Answer those calls!",
+					"voz": "shero_contesten"
+				}
+			],
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Tres llamadas perdidas. Written warning. Dale ack.",
+					"en": "Three missed calls. Written warning. Ack it.",
+					"voz": "esc_perdidas_ww"
+				}
+			],
+			"persecucion": [
+				{
+					"canal": "pa",
+					"es": "Cuatro. Voy a contestar yo. Contigo.",
+					"en": "Four. I'll answer it myself. With you.",
+					"voz": "llamada_perdida_4"
+				}
+			]
+		},
+		"tres_molestos": {
+			"ww": [
+				{
+					"canal": "voz",
+					"es": "Tres clientes molestos seguidos. ¿Qué está pasando contigo? Sé más empático.",
+					"en": "Three angry customers in a row. What's going on with you? Be more empathetic.",
+					"voz": "shero_tres_molestos"
+				}
+			]
+		},
+		"dos_verbales": {
+			"ww": [
+				{
+					"canal": "dm",
+					"es": "Dos verbales hacen un escrito. Written warning.",
+					"en": "Two verbals make a written one. Written warning.",
+					"voz": "dos_verbales",
+					"typing_s": 2.0
+				},
+				{
+					"canal": "voz",
+					"es": "Primero la alerta. Después el written warning. Los reincidentes ya saben lo que sigue.",
+					"en": "First the alert. Then the written warning. Repeat offenders know what comes next.",
+					"voz": "shero_alerta_primero",
+					"retraso": 4.5,
+					"cosechado": true
+				}
+			]
+		},
+		"ack_ok": {
+			"voz": [
+				{
+					"canal": "voz",
+					"es": "Bien.",
+					"en": "Good.",
+					"voz": "shero_bien"
+				}
+			]
+		},
+		"reflejo": {
+			"voz": [
+				{
+					"canal": "voz",
+					"es": "Sigo mirando. Tú sigue.",
+					"en": "I'm still watching. You keep going.",
+					"voz": "reflejo_mirando"
+				}
+			]
+		},
+		"persecucion": {
+			"al_verte": [
+				{
+					"canal": "voz",
+					"es": "¡Te voy a traer de las orejas!",
+					"en": "I'm going to drag you back by the ears!",
+					"voz": "shero_persecucion"
+				},
+				{
+					"canal": "voz",
+					"es": "No corras. Es peor si corres.",
+					"en": "Don't run. It's worse if you run.",
+					"voz": "persecucion_2"
+				},
+				{
+					"canal": "voz",
+					"es": "Firma aquí. Solo es una firma.",
+					"en": "Sign here. It's just a signature.",
+					"voz": "persecucion_3"
+				}
+			],
+			"bano": [
+				{
+					"canal": "voz",
+					"es": "Yo no entro. Yo espero. Tengo todo el turno.",
+					"en": "I don't go in. I wait. I have the whole shift.",
+					"voz": "persecucion_bano"
+				}
+			],
+			"llega": [
+				{
+					"canal": "pa",
+					"es": "Ya llegué a tu piso.",
+					"en": "I'm on your floor.",
+					"voz": "persecucion_llega"
+				}
+			]
+		},
+		"coaching_sesion": {
+			"espera_llamada": [
+				{
+					"canal": "dm",
+					"es": "Termina tu llamada. Te espero en Rooms.",
+					"en": "Finish your call. I'll wait for you in Rooms.",
+					"voz": "coach_espera",
+					"typing_s": 1.5
+				}
+			],
+			"lineas": [
+				{
+					"canal": "voz",
+					"es": "Esto no es un castigo. Es una conversación.",
+					"en": "This isn't a punishment. It's a conversation.",
+					"voz": "coach_1"
+				},
+				{
+					"canal": "voz",
+					"es": "¿Cómo te sientes? No respondas. Era retórica.",
+					"en": "How do you feel? Don't answer. It was rhetorical.",
+					"voz": "coach_2"
+				},
+				{
+					"canal": "voz",
+					"es": "Te escuché en la llamada de las {hora}. Sonreías con la voz. Eso me preocupa.",
+					"en": "I heard you on the {hora} call. You were smiling with your voice. That worries me.",
+					"voz": "coach_3"
+				},
+				{
+					"canal": "voz",
+					"es": "Vamos a trabajar tu empatía. Repite conmigo: \"entiendo su molestia\".",
+					"en": "Let's work on your empathy. Repeat after me: \"I understand your frustration\".",
+					"voz": "coach_4"
+				},
+				{
+					"canal": "voz",
+					"es": "Bien. Ahora dilo sin que se te note el sueño.",
+					"en": "Good. Now say it without the sleep showing.",
+					"voz": "coach_5"
+				},
+				{
+					"canal": "voz",
+					"es": "Esta conversación queda registrada. Para tu crecimiento.",
+					"en": "This conversation is on record. For your growth.",
+					"voz": "coach_6"
+				}
+			],
+			"fin": [
+				{
+					"canal": "voz",
+					"es": "Bien. Vuelve a Available. No hay breaks.",
+					"en": "Good. Back to Available. There are no breaks.",
+					"voz": "coach_fin"
+				}
+			]
+		},
+		"coaching_sesion_rasec": {
+			"espera_llamada": [
+				{
+					"canal": "dm",
+					"autor": "rasec",
+					"es": "Termina tu llamada. La música y yo te esperamos en Rooms.",
+					"en": "Finish your call. The music and I are waiting in Rooms.",
+					"voz": "coach_rasec_espera",
+					"typing_s": 1.5
+				}
+			],
+			"lineas": [
+				{
+					"canal": "rooms",
+					"autor": "rasec",
+					"es": "Bienvenido. Esto es un espacio seguro. Está grabado, pero es seguro.",
+					"en": "Welcome. This is a safe space. It's recorded, but it's safe.",
+					"voz": "coach_rasec_1"
+				},
+				{
+					"canal": "rooms",
+					"autor": "rasec",
+					"es": "Shero me cuenta que tienes potencial. Lo dijo con esa cara.",
+					"en": "Shero tells me you have potential. He said it with that face.",
+					"voz": "coach_rasec_2"
+				},
+				{
+					"canal": "rooms",
+					"autor": "rasec",
+					"es": "Aquí somos familia. Y en la familia nadie se va temprano.",
+					"en": "We're family here. And in a family nobody leaves early.",
+					"voz": "coach_rasec_3"
+				},
+				{
+					"canal": "rooms",
+					"autor": "rasec",
+					"es": "Tu Available es tu nombre. Cuídalo.",
+					"en": "Your Available is your name. Take care of it.",
+					"voz": "coach_rasec_4"
+				},
+				{
+					"canal": "rooms",
+					"autor": "rasec",
+					"es": "Esto queda en tu legajo. Para tu crecimiento.",
+					"en": "This goes in your file. For your growth.",
+					"voz": "coach_rasec_5"
+				}
+			],
+			"fin": [
+				{
+					"canal": "rooms",
+					"autor": "rasec",
+					"es": "Listo. Vuelve a Available. Ya.",
+					"en": "Done. Back to Available. Now.",
+					"voz": "coach_rasec_fin"
+				}
+			]
+		},
+		"lema": {
+			"allocations": [
+				{
+					"canal": "#allocations",
+					"es": "No hay breaks.",
+					"en": "There are no breaks.",
+					"voz": "shero_no_hay_breaks",
+					"typing_s": 1.2
+				}
+			]
+		},
+		"amonestacion": {
+			"canal": [
+				{
+					"canal": "#team-familia",
+					"es": "Se emitió una amonestación en el team. No es personal. Es para todos. Pero tiene un nombre: @{agente}.",
+					"en": "A reprimand was issued in the team. It's not personal. It's for everyone. But it has a name: @{agente}.",
+					"typing_s": 3.5,
+					"mention": true
+				}
+			]
+		},
+		"ww_conteo": {
+			"_comentario": "P7: el 2.º WW del turno (de cualquier pista o de Metrics) lo anuncia Shero por los parlantes con su clip cosechado; 'retraso' = segundos reales después del escalón (para no cortar la voz del WW).",
+			"segundo": [
+				{
+					"canal": "pa",
+					"es": "Segundo WW enviado, con copia a los tres OM. El siguiente pasa a la siguiente etapa.",
+					"en": "Second WW sent, with the three OMs in copy. The next one moves to the next stage.",
+					"voz": "shero_procedimiento",
+					"retraso": 5.0,
+					"cosechado": true
+				}
+			]
+		}
+	},
+	"ambiente": {
+		"_comentario": "P7: clips cosechados de Shero (DIALOGOS §13) que dice en su sitio del piso 2 a una hora del turno (shero.gd). Solo suenan si estás en el piso 2 a menos de 'radio' m y Shero está tranquilo en su sitio; si llevan 'canal' también los publica en Ezlaki (aunque no estés). 'turnos' = turnos en que pasa.",
+		"radio": 34.0,
+		"lineas": [
+			{
+				"hora": "00:40",
+				"turnos": [
+					1,
+					2,
+					3
+				],
+				"es": "A partir de medianoche no hay breaks, no hay lunch y no hay excusas.",
+				"en": "After midnight there are no breaks, no lunch and no excuses.",
+				"voz": "shero_madrugada_01",
+				"cosechado": true
+			},
+			{
+				"hora": "02:00",
+				"turnos": [
+					1,
+					2,
+					3
+				],
+				"es": "Son las dos de la mañana y yo sigo aquí. Ustedes también. Nadie se va.",
+				"en": "It's two in the morning and I'm still here. So are you. Nobody leaves.",
+				"voz": "shero_madrugada_02",
+				"cosechado": true
+			},
+			{
+				"hora": "05:10",
+				"turnos": [
+					1,
+					2,
+					3
+				],
+				"es": "¿Cansado? Yo llevo 10 años cansado. Live channel. Ahora.",
+				"en": "Tired? I've been tired for 10 years. Live channel. Now.",
+				"voz": "shero_madrugada_03",
+				"cosechado": true
+			},
+			{
+				"hora": "01:10",
+				"turnos": [
+					2,
+					3
+				],
+				"post": "#team-familia",
+				"es": "Ezlaki es una herramienta profesional, no su red social. Pongan su foto en el perfil.",
+				"en": "Ezlaki is a professional tool, not your social network. Put your own photo on your profile.",
+				"voz": "shero_ezlak_profesional",
+				"cosechado": true
+			},
+			{
+				"hora": "05:40",
+				"turnos": [
+					3
+				],
+				"post": "#team-familia",
+				"es": "¡Todos aquí somos adultos! ¡Pórtense como tal!",
+				"en": "We're all adults here! Act like it!",
+				"voz": "shero_somos_adultos",
+				"cosechado": true
+			},
+			{
+				"hora": "03:25",
+				"turnos": [
+					2,
+					3
+				],
+				"post": "#allocations",
+				"es": "Veo tasks de casi 30 minutos y llamadas perdidas de casi 40. Todos a Live channel, please.",
+				"en": "I see tasks of almost 30 minutes and missed calls of almost 40. Everyone to Live channel, please.",
+				"voz": "shero_cola_alta_01",
+				"cosechado": true
+			},
+			{
+				"hora": "06:35",
+				"turnos": [
+					1,
+					2,
+					3
+				],
+				"post": "#allocations",
+				"es": "Un caso así no debería pasar los 10 minutos. ¡Contesten!",
+				"en": "A case like that shouldn't go over 10 minutes. Answer!",
+				"voz": "shero_cola_alta_02",
+				"cosechado": true
+			},
+			{
+				"hora": "02:45",
+				"turnos": [
+					2,
+					3
+				],
+				"post": "#allocations",
+				"es": "¿Una PC en break hace 10 minutos? ¡¿QUIÉN FUE?!",
+				"en": "A PC on break for 10 minutes? WHO WAS IT?!",
+				"voz": "shero_quien_fue",
+				"cosechado": true
+			}
+		]
+	}
+}

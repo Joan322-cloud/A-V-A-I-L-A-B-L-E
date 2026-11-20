@@ -1,0 +1,117 @@
+{
+	"_comentario": "PLAN_v0.3 §3.6. Una columna por nivel en el orden de 'niveles'. Turno real = dificil + sin checkpoints + reinicio del turno completo al morir. Difficulty.scale(clave) devuelve el multiplicador del nivel efectivo; Difficulty.flag(clave) un booleano; Difficulty.value(clave) cualquier otro valor. [PROPUESTA] hasta que Joan lo pruebe.",
+	"niveles": [
+		"facil",
+		"normal",
+		"dificil"
+	],
+	"por_defecto": "normal",
+	"escalas": {
+		"plazos": [
+			1.2,
+			0.85,
+			0.65
+		],
+		"ack": [
+			1.2,
+			0.85,
+			0.65
+		],
+		"calma": [
+			1.2,
+			0.75,
+			0.4
+		],
+		"fatiga_hora": [
+			0.75,
+			1.0,
+			1.25
+		],
+		"_fatiga_hora_nota": "v0.3.2: ya no se usa (lo reemplaza fatiga/ganancia, que también cubre el Turno real); queda por compatibilidad.",
+		"tolerancia_rta": [
+			1.2,
+			0.85,
+			0.65
+		],
+		"vitzo_reaccion": [
+			1.2,
+			0.85,
+			0.65
+		],
+		"mentor_cumplir": [
+			1.2,
+			0.85,
+			0.65
+		]
+	},
+	"banderas": {
+		"salvarse_sentado": [
+			true,
+			false,
+			false
+		],
+		"confirmar_tercer_break": [
+			true,
+			false,
+			false
+		],
+		"pistas_trampas": [
+			true,
+			false,
+			false
+		],
+		"tooltips": [
+			true,
+			true,
+			false
+		],
+		"pistas_extra": [
+			true,
+			false,
+			false
+		],
+		"respuestas_predefinidas": [
+			true,
+			true,
+			false
+		]
+	},
+	"valores": {
+		"quiz_aprobar": [
+			2,
+			3,
+			4
+		],
+		"quiz_pista": [
+			true,
+			false,
+			false
+		],
+		"checkpoints": [
+			"contacto",
+			"turno",
+			"login_break_lunch"
+		]
+	},
+	"fatiga": {
+		"_comentario": "v0.3.2 (Joan: «la fatiga se reducía muy rápido… debería bajar más rápido o lento según la dificultad»). Una columna por nivel en el orden de 'niveles' (aquí SÍ hay columna propia para el Turno real). Fatigue.add multiplica lo que SUBE por 'ganancia' (cada hora, cliente molesto, feedback, gritos del Trainer…) y lo que BAJA por 'recuperacion' (café, energética, taper, Marleny, agua, baño, dormir en el lunch, tópico). Normal: la ganancia pasiva no cambia y se recupera más lento que en la v0.3.1 (taper −20 → −15, café −15 → −11). Retocar solo estos números.",
+		"niveles": [
+			"facil",
+			"normal",
+			"dificil",
+			"real"
+		],
+		"ganancia": [
+			0.9,
+			1.2,
+			1.5,
+			1.7
+		],
+		"recuperacion": [
+			1.0,
+			0.65,
+			0.5,
+			0.4
+		]
+	}
+}

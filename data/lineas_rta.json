@@ -1,0 +1,28 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P5 · Perrito RTA (DIALOGOS §2) [PROPUESTA]. Voz robótica + ladrido (sfx/rta_ladrido). #allocations: órdenes de AUX y tags. Strikes por turno: 1.ª y 2.ª orden ignorada = tag; 3.ª, o 'caza_tras_tag2_s' de juego tras el 2.º tag sin corregir = caza en todo el edificio → 'aux_incorrecto'. Corregir el AUX en cualquier Fonex (PC o terminal) cancela la caza. El cupo de Break ya no es suyo (es de Shero); el de Baño sí (10 min acumulados). 'npc' = tags a compañeros (que escalan y desaparecen).",
+	"caza_tras_tag2_s": 60.0,
+	"velocidad_caza_ms": 7.0,
+	"llegada_s": 12.0,
+	"llegada_por_piso_s": 4.0,
+	"orden_bo": {"es": "@{agente} pasa a BO. Allocation {desde}-{hasta}.", "en": "@{agente} switch to BO. Allocation {desde}-{hasta}."},
+	"orden_bo_caso": {"es": "@{agente} pasa a BO. Hay un caso esperándote. Te está esperando.", "en": "@{agente} switch to BO. There's a case waiting for you. It is waiting."},
+	"orden_available": {"es": "@{agente} pasa a Available. Cola alta.", "en": "@{agente} switch to Available. High queue."},
+	"orden_lunch": {"es": "@{agente} pasa a Lunch. Horario {hora}. Cuarenta y cinco minutos. Guau.", "en": "@{agente} switch to Lunch. Schedule {hora}. Forty-five minutes. Woof."},
+	"orden_training": {"es": "@{agente} pasa a Training. Te esperan en el piso 1. Sala 2.", "en": "@{agente} switch to Training. They're waiting for you on the 1st floor. Room 2."},
+	"tag_1": {"es": "@{agente} AUX incorrecto: {aux} {t}. Corrige.", "en": "@{agente} wrong AUX: {aux} {t}. Fix it."},
+	"tag_2": {"es": "@{agente} segundo aviso. AUX incorrecto: {aux} {t}. Al tercero no aviso.", "en": "@{agente} second notice. Wrong AUX: {aux} {t}. On the third I don't warn."},
+	"tag_cupo": {"es": "@{agente} {aux} {t}. Cupo excedido. Corrige.", "en": "@{agente} {aux} {t}. Quota exceeded. Fix it."},
+	"caza": {"es": "@{agente} adherencia cero. Voy.", "en": "@{agente} adherence zero. Coming."},
+	"caza_pa": {"es": "[parlantes] Se están perdiendo estados. Se están perdiendo estados.", "en": "[speakers] States are being lost. States are being lost."},
+	"caza_cerca": {"es": "[jadeo] [tintineo del lanyard] Estado. Estado. Estado.", "en": "[panting] [lanyard jingle] Status. Status. Status."},
+	"perdida_caza": {"es": "@{agente} AUX correcto. Reporte cerrado. Por ahora.", "en": "@{agente} AUX correct. Report closed. For now."},
+	"reporte": {"es": "Reporte de adherencia · ID {id}. Archivado.", "en": "Adherence report · ID {id}. Filed."},
+	"npc": [
+		{"hora": "02:15", "agente": "ttoom", "es": "@Ttoom segundo aviso. AUX incorrecto: Break 47:12. Al tercero no aviso.", "en": "@Ttoom second notice. Wrong AUX: Break 47:12. On the third I don't warn."},
+		{"hora": "02:44", "agente": "ttoom", "es": "@Ttoom adherencia cero. Voy.", "en": "@Ttoom adherence zero. Coming."},
+		{"hora": "03:02", "agente": "ttoom", "es": "Reporte de adherencia · ID 0441 · Ttoom. Archivado.", "en": "Adherence report · ID 0441 · Ttoom. Filed."},
+		{"hora": "05:12", "agente": "marko", "es": "@Marko segundo aviso. Baño 23:40. Al tercero no aviso.", "en": "@Marko second notice. Bathroom 23:40. On the third I don't warn."},
+		{"hora": "06:30", "agente": "llauri", "es": "@Llauri AUX incorrecto: Available 00:00. Corrige. (Llauri, ¿sigues ahí?)", "en": "@Llauri wrong AUX: Available 00:00. Fix it. (Llauri, are you still there?)"},
+		{"hora": "07:40", "agente": "juan", "es": "@Juan AUX incorrecto: Coaching 6:12:09. Corrige. Corrige. Corrige.", "en": "@Juan wrong AUX: Coaching 6:12:09. Fix it. Fix it. Fix it."}
+	]
+}

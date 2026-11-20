@@ -1,0 +1,32 @@
+keys,es,en
+PKG_V031_Q5_READY,"Cadenas del paquete Q5 (v0.3.1): mundo del site y Modo liviano","Package Q5 strings (v0.3.1): site world and Lite mode"
+Q5_POSTER_1,Siempre disponible.,Always available.
+Q5_POSTER_2,Tu sonrisa se escucha.,Your smile can be heard.
+Q5_POSTER_3,Un equipo. Un turno. Una meta.,One team. One shift. One goal.
+Q5_POSTER_4,El cliente primero. Tú después.,The customer first. You after.
+Q5_POSTER_5,Aquí nadie se desconecta.,Nobody logs off here.
+Q5_POSTER_6,Gracias por quedarte.,Thank you for staying.
+Q5_PISO_MOJADO,¡CUIDADO! PISO MOJADO,CAUTION! WET FLOOR
+Q5_TOPICO_VINILO,Respira. Ya vas a estar bien.,Breathe. You'll be fine soon.
+Q5_SIN_CELULAR,PROHIBIDO CELULARES DESDE AQUÍ,NO PHONES PAST THIS POINT
+Q5_ROOFTOP_SIGN,AZOTEA · ABIERTA 24 H · SIN BREAK NI LUNCH ESTÁS FUERA DE LA SALA,ROOFTOP · OPEN 24 H · WITHOUT BREAK OR LUNCH YOU ARE OFF THE FLOOR
+OPT_QUALITY_LIGHT,Modo liviano (PC sin GPU),Lite mode (PC without GPU)
+OPT_QUALITY_AUTO,Modo liviano automático si los fps son bajos (web),Automatic Lite mode when fps are low (web)
+OPT_QUALITY_HINT_Q5,"Liviano: 3D al 50 %, 8 luces, materiales planos, 30 fps máx. Baja: 3D al 75 %, sin sombras ni MSAA. Media: 100 %, MSAA 2×. Alta: MSAA 4×.","Lite: 3D at 50%, 8 lights, flat materials, 30 fps cap. Low: 3D at 75%, no shadows or MSAA. Medium: 100%, MSAA 2x. High: MSAA 4x."
+MSG_QUALITY_AUTO_LIGHT,"Los fps estaban bajos: se activó el Modo liviano (Opciones → Calidad gráfica).","Frame rate was low: Lite mode is on (Options → Graphics quality)."
+Q5_H_NOTA_1,NO HAY BREAKS,THERE ARE NO BREAKS
+Q5_H_NOTA_2,available… available… available…,available… available… available…
+Q5_H_NOTA_3,tu AHT te está mirando,your AHT is watching you
+Q5_H_NOTA_4,¿por qué sigues aquí?,why are you still here?
+Q5_H_NOTA_5,no contestes la de las 3:47,don't pick up the 3:47 call
+Q5_H_NOTA_6,ya no siento las manos,I can't feel my hands anymore
+Q5_H_NOTA_7,el baño de abajo sí tiene pestillo,the bathroom downstairs does lock
+Q5_H_NOTA_8,NO MIRES EL VIDRIO,DON'T LOOK AT THE GLASS
+Q5_H_KPI,EMPLEADO DEL MES,EMPLOYEE OF THE MONTH
+Q5_H_ATASCO,ATASCO,PAPER JAM
+Q5_H_FUERA_SERVICIO,FUERA DE SERVICIO,OUT OF ORDER
+Q5_H_DESCONECTADO,Usuario desconectado,User disconnected
+Q5_PUERTA_PUSH,EMPUJE,PUSH
+Q5_SIN_ACCESO,SOLO PERSONAL,STAFF ONLY
+Q5_SALA_FEEDBACK,SALA DE FEEDBACK · QA,FEEDBACK ROOM · QA
+Q5_SALA_AUX,SALA AUXILIAR,OVERFLOW ROOM

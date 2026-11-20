@@ -1,0 +1,67 @@
+keys,es,en
+PKG_V032_IA_READY,"Cadenas del paquete IA (v0.3.2): conversación, chat con clientes y micrófono","IA package strings (v0.3.2): conversation, customer chat and microphone"
+IA_SEEN,Visto · {hora},Seen · {hora}
+IA_CHAT_TITLE,Chat con el cliente,Customer chat
+IA_CHAT_TYPING,{nombre} está escribiendo…,{nombre} is typing…
+IA_CHAT_PLACEHOLDER,Escribe al cliente… (Enter envía),Write to the customer… (Enter sends)
+IA_CHAT_SEND,Enviar,Send
+IA_CHAT_QUICK,Respuestas rápidas,Quick replies
+IA_CHAT_CASE,Datos del caso,Case data
+IA_CHAT_NO_PRESETS,Difícil: sin respuestas predefinidas. Escribe o habla.,Hard: no preset replies. Type or speak.
+IA_CHAT_CUSTOMER,Cliente,Customer
+IA_CHAT_YOU,Tú,You
+IA_CHAT_READ,Leído,Read
+IA_CHAT_SENT,Enviado,Sent
+IA_CALL_SAY,Dile al cliente… (Enter),Say to the customer… (Enter)
+IA_MIC_HOLD,Mantén [{tecla}] para hablar,Hold [{tecla}] to talk
+IA_MIC_LISTENING,Escuchando…,Listening…
+IA_MIC_THINKING,Reconociendo…,Recognising…
+IA_MIC_YOU_SAID,Dijiste: «{texto}»,You said: «{texto}»
+IA_MIC_FAIL,No te entendí. Usa una respuesta rápida o repítelo.,I didn't catch that. Use a quick reply or say it again.
+IA_MIC_UNAVAILABLE,Micrófono no disponible ({motivo}). Usa las respuestas rápidas.,Microphone unavailable ({motivo}). Use the quick replies.
+IA_MIC_NO_MATCH,El cliente no entendió lo que dijiste.,The customer didn't follow what you said.
+IA_MIC_LEVEL,Nivel,Level
+IA_OPT_GROUP,Conversación y micrófono,Conversation and microphone
+IA_OPT_CALLS,Responder llamadas,Answer calls
+IA_OPT_CALLS_PRESETS,Respuestas predefinidas,Preset replies
+IA_OPT_CALLS_MIC,Micrófono,Microphone
+IA_OPT_CALLS_HINT,"Micrófono: mantén pulsada la tecla de hablar, di tu respuesta y el cliente te contesta según lo que dijiste. Reconocimiento de voz sin conexión (Vosk, en tu PC). Si falla, salen las respuestas rápidas.","Microphone: hold the talk key, say your reply and the customer answers according to what you said. Offline speech recognition (Vosk, on your PC). If it fails, quick replies show up."
+IA_OPT_WEB_NOTICE,"En el navegador el reconocimiento de voz lo hace el propio navegador: Chrome envía el audio a los servidores de Google. Solo se activa si lo aceptas aquí.","In the browser, speech recognition is done by the browser itself: Chrome sends the audio to Google's servers. It's only enabled if you accept it here."
+IA_OPT_WEB_ACCEPT,"Acepto usar el reconocimiento de voz del navegador (envía audio a Google)","I accept using the browser's speech recognition (sends audio to Google)"
+IA_OPT_MIC_STATUS,Estado del micrófono: {estado},Microphone status: {estado}
+IA_MIC_STATE_OK,listo,ready
+IA_MIC_STATE_LOADING,cargando el modelo de voz…,loading the voice model…
+IA_MIC_STATE_NOENGINE,no hay motor de voz en esta versión,no speech engine in this build
+IA_MIC_STATE_NOCONSENT,falta tu permiso para la voz del navegador,needs your consent for browser speech
+IA_MIC_STATE_ERROR,error del motor de voz,speech engine error
+IA_MIC_TEST,Probar micrófono,Test microphone
+IA_MIC_ES_ONLY,"El reconocimiento de voz de esta versión entiende solo español.","Speech recognition in this build understands SPANISH ONLY. In English, type your reply or pick a quick reply: both work fully in English."
+IA_MIC_ES_ONLY_SHORT,"Voz: solo español","Voice: Spanish only · type or pick a reply (English works)"
+IA_DIFF_NO_PRESETS,"En Difícil y Turno real no hay respuestas predefinidas: escribe o habla.","On Hard and Real shift there are no preset replies: type or speak."
+IA_REACT_ASK,Espero su reacción para saber que están al tanto,I expect your reaction so I know you're aware
+IA_REACT_ADD,+ reaccionar,+ react
+IA_REACT_HINT,"Clic en un emoji · o flechas izquierda/derecha y [Enter] ([Retroceso] cierra)","Click an emoji · or left/right arrows and [Enter] ([Backspace] closes)"
+CAUSE_SIN_REACCION,No reaccionó al aviso del supervisor,Didn't react to the supervisor's notice
+IA_REACT_BANNER,"Shero espera tu reacción en {canal} · {t} · clic aquí o [Enter]","Shero is waiting for your reaction in {canal} · {t} · click here or [Enter]"
+IA_REACT_BANNER_ALONE,"SOLO FALTAS TÚ por reaccionar en {canal} · {t} · clic aquí o [Enter]","YOU ARE THE ONLY ONE who hasn't reacted in {canal} · {t} · click here or [Enter]"
+IA_REACT_ALONE_SUB,"Ezlaki · {canal}: todos reaccionaron al aviso de Shero. Solo faltas tú.","Ezlaki · {canal}: everyone reacted to Shero's notice. Only you are missing."
+IA_REACT_ALONE_TOAST,"{canal}: solo faltas tú por reaccionar","{canal}: only your reaction is missing"
+IA_WALL_COUNT,Reaccionaron {n} de {total},{n} of {total} reacted
+IA_WALL_ONLY_YOU,SOLO FALTAS TÚ,ONLY YOU ARE MISSING
+IA_WALL_MISSING,faltan {n} y tú,{n} and you still missing
+IA_WALL_YOU_DONE,tú ya reaccionaste,you already reacted
+IA_WALL_YOU_MISSED,no reaccionaste,you didn't react
+IA_WALL_SHOW,ver quién reaccionó,see who reacted
+IA_WALL_HIDE,ocultar lista,hide list
+IA_WALL_YOU,Tú,You
+IA_WALL_MISSING_LIST,Faltan: {quienes},Missing: {quienes}
+IA_WALL_OFF_LIST,No están en línea: {quienes},Not online: {quienes}
+IA_PRES_ACTIVO,activo,active
+IA_PRES_LLAMADA,en llamada,on a call
+IA_PRES_LUNCH,en lunch,at lunch
+IA_PRES_PAUSA,pausó sus notificaciones,paused notifications
+IA_PRES_PAUSA_CORTO,notif. en pausa,notifs paused
+IA_PRES_AUSENTE,ausente,away
+IA_CHAT_COMPOSING,escribiendo… el cliente espera,typing… the customer waits
+IA_PIN_TITLE,Fijado · espera tu reacción,Pinned · waiting for your reaction
+IA_PIN_ABOVE,(fijado arriba),(pinned above)

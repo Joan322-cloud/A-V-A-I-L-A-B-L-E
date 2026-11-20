@@ -1,0 +1,349 @@
+{
+	"_comentario": "v0.3.2-core · Conjunto ciego en INGLÉS para IANlu: escrito después de cerrar nlu_en.json, con otras palabras que test_intents_en.json. No se ajusta el léxico mirándolo línea a línea.",
+	"lineas": [
+		[
+			"KipuPay, good evening, you're speaking with Llauri.",
+			"cs_saludo"
+		],
+		[
+			"Hi, thanks for reaching out to KipuPay. What can I do for you?",
+			"cs_saludo"
+		],
+		[
+			"I get it, that is really frustrating and I want to help.",
+			"cs_empatia"
+		],
+		[
+			"I apologize, sir, you have every right to be upset.",
+			"cs_empatia",
+			"disculpa"
+		],
+		[
+			"No worries ma'am, we will sort this out together.",
+			"cs_empatia"
+		],
+		[
+			"I'm really sorry about all this trouble.",
+			"cs_empatia",
+			"disculpa"
+		],
+		[
+			"I know it's hard when the money doesn't arrive.",
+			"cs_empatia"
+		],
+		[
+			"May I have the order number and your full name?",
+			"cs_proceso"
+		],
+		[
+			"I need to verify your identity first, what is your ID?",
+			"cs_proceso"
+		],
+		[
+			"Let me take a look at your case in Kardex.",
+			"cs_proceso"
+		],
+		[
+			"I'll look into it right away, could you confirm the amount?",
+			"cs_proceso"
+		],
+		[
+			"Please confirm the beneficiary's name so I can validate the transfer.",
+			"cs_proceso"
+		],
+		[
+			"Your remittance has been paid out already.",
+			"cs_info"
+		],
+		[
+			"It was rejected by the partner, so the money is being returned.",
+			"cs_info"
+		],
+		[
+			"The status says in progress; it usually takes two working days.",
+			"cs_info"
+		],
+		[
+			"Stay on the line please, I'll be right back.",
+			"cs_hold"
+		],
+		[
+			"Hold on a sec, let me place you on hold.",
+			"cs_hold"
+		],
+		[
+			"Could you wait a few seconds?",
+			"cs_hold"
+		],
+		[
+			"Can I help you with anything else tonight?",
+			"cs_cierre"
+		],
+		[
+			"All set, you'll receive a confirmation by email. Take care.",
+			"cs_cierre"
+		],
+		[
+			"Thank you for holding, it's fixed now. Goodbye.",
+			"cs_cierre"
+		],
+		[
+			"Please relax, there's no need to shout.",
+			"cs_calmese"
+		],
+		[
+			"If you don't calm down I'll have to hang up.",
+			"cs_calmese"
+		],
+		[
+			"For sure it will be there tomorrow, I promise.",
+			"cs_promesa"
+		],
+		[
+			"Sorry, that's the policy and it can't be done.",
+			"cs_procedimiento"
+		],
+		[
+			"It's not up to me, you made a mistake when sending.",
+			"cs_procedimiento"
+		],
+		[
+			"I'm escalating your case to second level.",
+			"cs_escalar"
+		],
+		[
+			"Let me open a case with the fraud team.",
+			"cs_escalar"
+		],
+		[
+			"I'll refund your money today.",
+			"cs_reembolso"
+		],
+		[
+			"We are going to void the transaction and process the refund.",
+			"cs_reembolso"
+		],
+		[
+			"hey there",
+			"saludo"
+		],
+		[
+			"good morning boss",
+			"saludo"
+		],
+		[
+			"heading over now",
+			"voy"
+		],
+		[
+			"I'll join in a minute",
+			"voy"
+		],
+		[
+			"count me in",
+			"voy"
+		],
+		[
+			"roger that",
+			"ack"
+		],
+		[
+			"noted, thanks",
+			"ack",
+			"gracias"
+		],
+		[
+			"confirmed",
+			"ack"
+		],
+		[
+			"alright",
+			"ok"
+		],
+		[
+			"yep, will do",
+			"ok"
+		],
+		[
+			"okay boss",
+			"ok"
+		],
+		[
+			"I don't want to",
+			"negar"
+		],
+		[
+			"forget it",
+			"negar"
+		],
+		[
+			"I'm not interested",
+			"negar"
+		],
+		[
+			"I'm not sure",
+			"no_se"
+		],
+		[
+			"I don't remember",
+			"no_se"
+		],
+		[
+			"many thanks",
+			"gracias"
+		],
+		[
+			"thx, how kind",
+			"gracias"
+		],
+		[
+			"sorry, it was an accident",
+			"disculpa"
+		],
+		[
+			"excuse me, I was wrong",
+			"disculpa"
+		],
+		[
+			"the system froze and I didn't see the message",
+			"excusa"
+		],
+		[
+			"I got delayed, I was helping a customer",
+			"excusa"
+		],
+		[
+			"may I take a break now?",
+			"pedir_break"
+		],
+		[
+			"five minutes for a coffee?",
+			"pedir_break"
+		],
+		[
+			"is it lunch time yet?",
+			"pedir_lunch"
+		],
+		[
+			"I need the restroom",
+			"pedir_bano"
+		],
+		[
+			"could you help me with this?",
+			"pedir_ayuda"
+		],
+		[
+			"I'm lost, any advice?",
+			"pedir_ayuda"
+		],
+		[
+			"I don't feel well, I have a fever",
+			"ayuda_salud"
+		],
+		[
+			"I can't breathe",
+			"ayuda_salud"
+		],
+		[
+			"I'm exhausted and sleepy",
+			"queja"
+		],
+		[
+			"this job is unfair",
+			"queja"
+		],
+		[
+			"I resign",
+			"renuncia"
+		],
+		[
+			"great job, you are the best",
+			"halago"
+		],
+		[
+			"nice work",
+			"halago"
+		],
+		[
+			"everything will be fine, you're not alone",
+			"apoyo"
+		],
+		[
+			"do me a favor and cover for me",
+			"favor"
+		],
+		[
+			"I checked it, I did everything right",
+			"defensa"
+		],
+		[
+			"that's a lie, I never did that",
+			"defensa"
+		],
+		[
+			"Juan is asleep at his desk",
+			"delatar"
+		],
+		[
+			"she is recording everything",
+			"delatar"
+		],
+		[
+			"how do I close the case?",
+			"pregunta_caso"
+		],
+		[
+			"what do I say to the client about the refund?",
+			"pregunta_caso"
+		],
+		[
+			"how do you feel? are you happy here?",
+			"pregunta_personal"
+		],
+		[
+			"are you a bot?",
+			"pregunta_personal"
+		],
+		[
+			"does anyone know what time it ends?",
+			"pregunta"
+		],
+		[
+			"lol I'm kidding",
+			"broma"
+		],
+		[
+			"you stupid clown",
+			"insulto"
+		],
+		[
+			"screw you",
+			"insulto"
+		],
+		[
+			"I'll kill you",
+			"amenaza"
+		],
+		[
+			"you'll pay for this, I will report you",
+			"amenaza"
+		],
+		[
+			"I like you, a hug",
+			"carino"
+		],
+		[
+			"my dad has an exam tomorrow",
+			"contar"
+		],
+		[
+			"did you watch the movie? it's cold tonight",
+			"charla"
+		],
+		[
+			"I'm going home, good night everyone",
+			"despedida",
+			"saludo"
+		]
+	]
+}

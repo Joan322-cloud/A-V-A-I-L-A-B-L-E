@@ -1,0 +1,271 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P4 · Líneas de los canales de Ezlaki (DIALOGOS §1, §2, §8, §9 + nuevas de P4 para el ambiente opresivo). Quién y cuándo: ezlak_canales.json/programados. Todo [PROPUESTA] hasta que Joan lo revise. {agente} = jugador. v0.3.1 Q3: 23 líneas nuevas para las publicaciones nuevas; las variantes de cada línea están en ezlaki_q3.json/variantes (no se repiten en el turno).",
+	"om_correo": {
+		"es": "Comunicado de Operaciones: el AUX Correo deja de existir. Los correos caen en Available. Gracias por su adaptación.",
+		"en": "Operations notice: the Email AUX no longer exists. Emails land in Available. Thank you for adapting."
+	},
+	"om_bo": {
+		"es": "Comunicado: el AUX KYC ahora se llama BO. Nada más cambia. Todo lo demás también cambia.",
+		"en": "Notice: the KYC AUX is now called BO. Nothing else changes. Everything else changes too."
+	},
+	"om_breaks": {
+		"es": "Recordatorio: máximo 2 breaks por turno. El tercero no existe. Quien lo encuentre, no vuelve a buscarlo.",
+		"en": "Reminder: maximum 2 breaks per shift. The third doesn't exist. Whoever finds it doesn't look for it again."
+	},
+	"om_azotea": {
+		"es": "Comunicado: la cafetería de la azotea abre en Break y Lunch. Al aire libre. Con lluvia también es al aire libre.",
+		"en": "Notice: the rooftop cafeteria opens during Break and Lunch. Outdoors. With rain it's also outdoors."
+	},
+	"om_bono": {
+		"es": "¡Buenas noticias! Se aprobó el bono de puntualidad para todo el site 🎉",
+		"en": "Good news! The punctuality bonus was approved for the whole site 🎉"
+	},
+	"om_bono_borrado": {
+		"es": "Este mensaje fue eliminado.",
+		"en": "This message was deleted."
+	},
+	"om_metricas": {
+		"es": "Operaciones: el ranking de Available del site se publica al cierre. Los últimos 3 serán contactados. Por cariño.",
+		"en": "Operations: the site Available ranking is published at closing. The bottom 3 will be contacted. Out of care."
+	},
+	"tm_ascensor": {
+		"es": "Buenas noches, site. El ascensor 2 sigue en mantenimiento. Usen la escalera. La escalera es segura.",
+		"en": "Good evening, site. Elevator 2 is still under maintenance. Use the stairs. The stairs are safe."
+	},
+	"tm_fotocheck": {
+		"es": "Site: se encontró un fotocheck en el piso 5. El piso 5 no existe. Pasen a recogerlo.",
+		"en": "Site: a badge was found on the 5th floor. The 5th floor doesn't exist. Come pick it up."
+	},
+	"tm_musica": {
+		"es": "Les pongo algo de música para la madrugada, team. Bajito. No lo apaguen.",
+		"en": "I'll put on some music for the early hours, team. Low. Don't turn it off."
+	},
+	"qa_calibracion": {
+		"es": "Calibración semanal: el 30 % de los contactos de madrugada serán monitoreados. El 70 % restante también.",
+		"en": "Weekly calibration: 30 % of night contacts will be monitored. The remaining 70 % too."
+	},
+	"qa_rec": {
+		"es": "Recuerden: el punto rojo no es un error. Es atención.",
+		"en": "Remember: the red dot isn't a glitch. It's attention."
+	},
+	"qa_suspiro": {
+		"es": "Tip de calidad: un suspiro en una llamada se escucha como «no me importa». Se escucha.",
+		"en": "Quality tip: a sigh on a call sounds like «I don't care». It is heard."
+	},
+	"shero_saludo": {
+		"es": "Buenas noches, team. No hay breaks.",
+		"en": "Good evening, team. There are no breaks."
+	},
+	"shero_isla": {
+		"es": "Team, siéntense en su isla. MI isla. La fila C. Las otras islas no son de ustedes.",
+		"en": "Team, sit at your island. MY island. Row C. The other islands are not yours."
+	},
+	"shero_layout": {
+		"es": "El layout es el layout. Quien no está en su sitio, no está.",
+		"en": "The layout is the layout. Whoever isn't at their seat, isn't."
+	},
+	"shero_buen_trabajo": {
+		"es": "Buen trabajo anoche, team.",
+		"en": "Good job last night, team."
+	},
+	"shero_buen_trabajo_editado": {
+		"es": "Buen trabajo anoche, team. Casi todos.",
+		"en": "Good job last night, team. Almost everyone."
+	},
+	"shero_no_hay_breaks": {
+		"es": "No hay breaks.",
+		"en": "There are no breaks."
+	},
+	"shero_correos_excedidos": {
+		"es": "Correos de más de 10 min hoy: @Llauri (12:40), @Juan (11:05). Nuevamente tenemos casos de más de 10 min. No hay breaks.",
+		"en": "Emails over 10 min today: @Llauri (12:40), @Juan (11:05). Once again we have cases over 10 min. There are no breaks."
+	},
+	"shero_breaks_excedidos": {
+		"es": "Breaks excedidos hoy: 2. Ya saben quiénes son. Yo también sé.",
+		"en": "Breaks exceeded today: 2. You know who you are. I know too."
+	},
+	"shero_amonestacion": {
+		"es": "Se emitió una amonestación en el team. No es personal. Es para todos. Pero tiene un nombre.",
+		"en": "A reprimand was issued in the team. It's not personal. It's for everyone. But it has a name."
+	},
+	"shero_cafe": {
+		"es": "Veo tazas en el escritorio. Las tazas no atienden llamadas.",
+		"en": "I see mugs on the desk. Mugs don't answer calls."
+	},
+	"shero_lista": {
+		"es": "Vi la lista. Los que están bajo 70 ya saben. Los que están en 71 también deberían saber.",
+		"en": "I saw the list. Those under 70 already know. Those at 71 should know too."
+	},
+	"rta_npc_ttoom": {
+		"es": "@Ttoom AUX incorrecto: Break hace 12:10. Corrige. Guau.",
+		"en": "@Ttoom wrong AUX: Break for 12:10. Correct it. Woof."
+	},
+	"rta_npc_marko": {
+		"es": "@Marko lleva 11 min en Baño. Tolerancia excedida. Primer tag.",
+		"en": "@Marko has been in Bathroom 11 min. Tolerance exceeded. First tag."
+	},
+	"rta_npc_llauri": {
+		"es": "@Llauri segundo tag. Al tercero no aviso.",
+		"en": "@Llauri second tag. On the third I don't warn."
+	},
+	"rta_npc_juan": {
+		"es": "@Juan Available sin actividad 14 min. ¿Respira? Confirmar.",
+		"en": "@Juan Available with no activity 14 min. Breathing? Confirm."
+	},
+	"rta_todos_available": {
+		"es": "Team: todos en Available. La cola sube. Nadie en BO sin allocation.",
+		"en": "Team: everyone in Available. The queue is rising. Nobody in BO without allocation."
+	},
+	"companero_ayuda": {
+		"es": "ayuda no puedo levantarme de la silla",
+		"en": "help i can't get up from the chair"
+	},
+	"companero_ayuda_borrado": {
+		"es": "Este mensaje fue eliminado.",
+		"en": "This message was deleted."
+	},
+	"llamadas_perdidas": {
+		"llamado": {
+			"es": "¡Contesten esas llamadas! Tu teléfono suena y tú no estás. ¿Dónde estás?",
+			"en": "Answer those calls! Your phone rings and you're not there. Where are you?"
+		},
+		"verbal": {
+			"es": "@{agente} segunda llamada perdida. Te estoy mirando desde mi sitio. Siéntate.",
+			"en": "@{agente} second missed call. I'm watching you from my desk. Sit down."
+		}
+	},
+	"excusa": {
+		"pregunta": {
+			"es": "¿Por qué ese correo lleva más de 10 minutos? Explícame.",
+			"en": "Why has that email been open for more than 10 minutes? Explain."
+		},
+		"respuesta_ok": {
+			"es": "Ok. Que no se repita. Lo anoto.",
+			"en": "Ok. Don't let it happen again. I'm writing it down."
+		},
+		"respuesta_mal": {
+			"es": "No vi el reloj, dice. El reloj sí te vio a ti.",
+			"en": "Didn't see the clock, you say. The clock saw you."
+		}
+	},
+	"en_un_caso": {
+		"es": "Todos estamos en un caso.",
+		"en": "We're all in a case."
+	},
+	"shero_ack_ok": {
+		"es": "Recibido. Queda en tu file.",
+		"en": "Received. It stays in your file."
+	},
+	"shero_ok": {
+		"es": "Ok no es una respuesta. Pero lo acepto. Por ahora.",
+		"en": "Ok isn't an answer. But I'll accept it. For now."
+	},
+	"shero_me_siento_mal": {
+		"es": "Te sientes mal. Anotado. Baja al tópico. Quince minutos. Ni uno más.",
+		"en": "You feel sick. Noted. Go down to the infirmary. Fifteen minutes. Not one more."
+	},
+	"rooms_invitacion": {
+		"es": "Te espero en Ezlaki Rooms. Ahora.",
+		"en": "I'm waiting for you in Ezlaki Rooms. Now."
+	},
+	"ww_dm": {
+		"es": "Written warning #{n}: {motivo}. Copia a los 3 OM. Da Ack.",
+		"en": "Written warning #{n}: {motivo}. Copy to the 3 OMs. Give Ack."
+	},
+	"shero_typing_fantasma": {
+		"es": "Shero está escribiendo…",
+		"en": "Shero is typing…"
+	},
+	"rta_acw_recordatorio": {
+		"es": "Team, recuerden que el ACW es de máx 2 min, ojo con sus tiempos. Guau.",
+		"en": "Team, remember ACW is max 2 min, watch your times. Woof."
+	},
+	"mentor_tip_1": {
+		"es": "Tip del Mentor: el saludo de la campaña tiene 14 palabras. Ni 13 ni 15.",
+		"en": "Mentor tip: the campaign greeting has 14 words. Not 13, not 15."
+	},
+	"om_cafe": {
+		"es": "Comunicado: la máquina de café del piso 2 queda fuera de servicio por el bienestar de todos.",
+		"en": "Notice: the floor 2 coffee machine is out of service for everyone's wellbeing."
+	},
+	"shero_bo_sin_cola": {
+		"es": "@here de momento no hay cola, pasamos a BO.",
+		"en": "@here no queue for now, switch to BO."
+	},
+	"companero_madrugada": {
+		"es": "alguien tiene cargador tipo c? el mío desapareció de la mesa",
+		"en": "anyone have a usb-c charger? mine vanished from the desk"
+	},
+	"qa_muestreo": {
+		"es": "Calidad: esta noche el muestreo es al azar. El azar soy yo.",
+		"en": "Quality: tonight's sampling is random. I am the random."
+	},
+	"rta_npc_keyla": {
+		"es": "@Keyla Break excedido. Captura adjunta. Guau.",
+		"en": "@Keyla Break exceeded. Screenshot attached. Woof."
+	},
+	"shero_foto_perfil": {
+		"es": "Ezlaki es una herramienta profesional, no su red social. Pongan su foto en el perfil.",
+		"en": "Ezlaki is a professional tool, not your social network. Put your own photo on your profile."
+	},
+	"shero_cerramos_casos": {
+		"es": "@{agente} cerramos los casos.",
+		"en": "@{agente} close the cases."
+	},
+	"tm_integracion": {
+		"es": "¡Team! Hoy hay integración. Asistencia voluntaria. Se toma lista 🎉",
+		"en": "Team! Team building today. Voluntary attendance. We take roll call 🎉"
+	},
+	"rta_npc_brando": {
+		"es": "@Brando contacto perdido. Missed. Guau.",
+		"en": "@Brando missed contact. Missed. Woof."
+	},
+	"om_simulacro": {
+		"es": "Operaciones: a las 04:30 hay simulacro de evacuación. No evacuen. Es un simulacro.",
+		"en": "Operations: evacuation drill at 04:30. Don't evacuate. It's a drill."
+	},
+	"companero_sueno": {
+		"es": "si me ven con los ojos cerrados es que estoy escuchando al cliente. con mucha atención",
+		"en": "if you see me with my eyes closed I'm listening to the customer. very carefully"
+	},
+	"shero_sin_breaks": {
+		"es": "@here Nos quedamos sin breaks.",
+		"en": "@here We're out of breaks."
+	},
+	"mentor_tip_2": {
+		"es": "Recuerden: el cliente no está molesto con ustedes. Está molesto. Con ustedes.",
+		"en": "Remember: the customer isn't mad at you. They're mad. At you."
+	},
+	"rta_npc_yesenia": {
+		"es": "@Yesenia ACW 00:07:20. Máximo 2 min. Guau.",
+		"en": "@Yesenia ACW 00:07:20. Max 2 min. Woof."
+	},
+	"qa_empatia": {
+		"es": "Calidad: la empatía se mide en segundos. Pocos segundos, poca empatía.",
+		"en": "Quality: empathy is measured in seconds. Few seconds, little empathy."
+	},
+	"shero_madrugada": {
+		"es": "Son las 6. Las 6 no existen para el cliente. Para ustedes tampoco.",
+		"en": "It's 6. 6 o'clock doesn't exist for the customer. Not for you either."
+	},
+	"rta_lista_available": {
+		"es": "@here estado del team. Los que no están en Available ya saben. Guau.",
+		"en": "@here team status. Those not in Available know. Woof."
+	},
+	"om_encuesta": {
+		"es": "Encuesta de clima laboral: responda con sinceridad. Las respuestas son anónimas y llevan su nombre.",
+		"en": "Work climate survey: answer honestly. Answers are anonymous and carry your name."
+	},
+	"companero_bus": {
+		"es": "ya casi. el bus de las 8:45. el bus de las 8:45. el bus de las 8:45",
+		"en": "almost there. the 8:45 bus. the 8:45 bus. the 8:45 bus"
+	},
+	"shero_cierre": {
+		"es": "Cierre del turno. Adjunto adherencia. Mañana conversamos los que salen en la captura.",
+		"en": "End of shift. Adherence attached. Tomorrow I talk to whoever is in the screenshot."
+	},
+	"shero_despedida": {
+		"es": "Buen turno, team. Casi todos. Descansen. Poco.",
+		"en": "Good shift, team. Almost everyone. Rest. A little."
+	}
+}

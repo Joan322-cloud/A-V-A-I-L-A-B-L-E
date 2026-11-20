@@ -1,0 +1,182 @@
+{
+	"_comentario": "[PROPUESTA] Líneas del Trainer (v0.2, piso 1, T2+). TODAS son placeholders escritas por Claude en el tono del GDD (voz baja de aula, nunca grita salvo 'GAAAA', que es exclusivo suyo). Joan debe reemplazar el guion (PENDIENTE_JOAN b, turno 2: tono y frases). 'dictar' se oye a través del vidrio con subtítulo si estás a < 9 m; 'asomarse' al salir de la sala; 'charla' son las frases de la charla de inducción (9 s reales, el reloj avanza 10 min); 'grito' solo desde T3. Voz: assets/audio/voces/trainer/ (solo existen trainer_gaaaa_01..04, clips del grito; el resto suena con el pitido/susurro sintético hasta que se graben).",
+	"dictar": {
+		"canal": "voz",
+		"voz": "",
+		"lineas": [
+			{
+				"es": "…y por eso el Available no se negocia. Repitan conmigo.",
+				"en": "…and that's why Available is non-negotiable. Repeat after me."
+			},
+			{
+				"es": "La empatía va primero. Siempre primero. Luego el proceso.",
+				"en": "Empathy comes first. Always first. Then the process."
+			},
+			{
+				"es": "Nunca cuelguen primero. Nunca. ¿Quién cuelga primero?",
+				"en": "Never hang up first. Never. Who hangs up first?"
+			},
+			{
+				"es": "Break es un privilegio. Anoten eso.",
+				"en": "Break is a privilege. Write that down."
+			},
+			{
+				"es": "Si Shero les escribe, responden. No piensan: responden.",
+				"en": "If Shero writes to you, you answer. You don't think: you answer."
+			}
+		]
+	},
+	"asomarse": {
+		"canal": "voz",
+		"voz": "",
+		"lineas": [
+			{
+				"es": "Un momento, promoción. Ya vuelvo.",
+				"en": "One moment, class. Be right back."
+			},
+			{
+				"es": "¿Tú eres del turno de madrugada? Ven. Ven un segundo.",
+				"en": "You're from the graveyard shift? Come here. Just a second."
+			}
+		]
+	},
+	"charla": {
+		"canal": "voz",
+		"voz": "",
+		"lineas": [
+			{
+				"es": "Te vi mirando. Eso está bien. La curiosidad es actitud.",
+				"en": "I saw you watching. That's good. Curiosity is attitude."
+			},
+			{
+				"es": "Te voy a hacer un repaso rápido de inducción. Rapidito. Tú no te muevas.",
+				"en": "I'll give you a quick induction refresher. Real quick. Don't move."
+			},
+			{
+				"es": "Available es actitud. Tu break es un privilegio. ¿Está claro?",
+				"en": "Available is attitude. Your break is a privilege. Clear?"
+			},
+			{
+				"es": "Listo. Ya puedes volver. Shero sabe que estuviste conmigo.",
+				"en": "Done. You can go back now. Shero knows you were with me."
+			}
+		]
+	},
+	"grito": {
+		"canal": "voz",
+		"voz": "trainer_gaaaa",
+		"nota": "Exclusivo del Trainer (decisión de Joan 2026-11-07). Clips RENOMBRAR-safe: trainer_gaaaa_01..04 (solo el grito, sin guion viejo).",
+		"lineas": [
+			{
+				"es": "¡GAAAA!",
+				"en": "GAAAA!"
+			}
+		]
+	},
+	"_comentario_v03": "v0.3 · P5 (DIALOGOS §5): training con AUX Training (T2 02:20, T3 01:40), sesión en la sala 2, quiz con el reloj pausado. Claves planas {es,en}; audio voces/trainer/<id>.ogg (P6). {agente}, {hora}, {min}, {n} los rellena el juego.",
+	"anuncio": {
+		"es": "Actualización de campaña hoy a las {hora}: «{tema}». Piso 1, sala de training. Asistencia obligatoria: cláusula siete. Quiz de 5 preguntas, mínimo {min}. Traigan actitud.",
+		"en": "Campaign update today at {hora}: \"{tema}\". 1st floor, training room. Mandatory attendance: clause seven. 5-question quiz, minimum {min}. Bring attitude."
+	},
+	"llamado": {
+		"es": "{agente}, te toca la actualización de campaña. Pasa a Training y baja al piso 1. Te guardé la silla del extremo. Las demás ya están ocupadas. Quiz al final: mínimo {min} de 5.",
+		"en": "{agente}, your turn for the campaign update. Switch to Training and come down to the 1st floor. I saved you the end chair. The others are taken. Quiz at the end: minimum {min} out of 5."
+	},
+	"espera": {
+		"es": "Te estoy esperando. La sala está fría. Las siluetas también te esperan.",
+		"en": "I'm waiting for you. The room is cold. The silhouettes are waiting too."
+	},
+	"escapa": {
+		"es": "¿A dónde vas? El training no termina hasta que yo diga GAAA… hasta que yo diga.",
+		"en": "Where are you going? Training doesn't end until I say GAAA… until I say so."
+	},
+	"persecucion": {
+		"es": "¡TE ESTOY BUSCANDO, PROMOCIÓN!",
+		"en": "I'M LOOKING FOR YOU, TRAINEE!"
+	},
+	"sin_training": {
+		"es": "Siéntate. Pero primero pon Training. Si el sistema no sabe que estás aprendiendo, no estás aprendiendo.",
+		"en": "Sit down. But switch to Training first. If the system doesn't know you're learning, you're not learning."
+	},
+	"bienvenida": {
+		"es": "Bienvenido a la actualización 3.2 de KipuPay. Esto no es un castigo. Es crecimiento.",
+		"en": "Welcome to the KipuPay 3.2 update. This isn't punishment. It's growth."
+	},
+	"clase_1": {
+		"es": "Regla nueva: los casos KYC solo caen en BO. BO baja tu Available. Available no se negocia. Anoten la contradicción: viene en el examen.",
+		"en": "New rule: KYC cases only land in BO. BO lowers your Available. Available isn't negotiable. Write down the contradiction: it's on the exam."
+	},
+	"clase_2": {
+		"es": "Vitzo no recibe correos. Vitzo recibe solicitudes en su portal. Si alguien le escribe un correo a Vitzo, no vuelve al training. No vuelve.",
+		"en": "Vitzo doesn't receive emails. Vitzo receives requests in its portal. If someone emails Vitzo, they don't come back to training. They don't come back."
+	},
+	"clase_3": {
+		"es": "El lunch dura cuarenta y cinco minutos. El minuto cuarenta y seis no existe. Lo eliminamos.",
+		"en": "Lunch lasts forty-five minutes. Minute forty-six doesn't exist. We removed it."
+	},
+	"clase_4": {
+		"es": "Si un cliente cambia su nombre, su fecha de nacimiento o su dirección después de un KYC aprobado, aparece «KYC Recheck». El recheck va primero. Siempre primero.",
+		"en": "If a customer changes their name, date of birth or address after a passed KYC, \"KYC Recheck\" appears. The recheck goes first. Always first."
+	},
+	"clase_5": {
+		"es": "¡Tengo siete departamentos en Nueva York! Solo vengo aquí por hobby.",
+		"en": "I have seven apartments in New York! I only come here as a hobby."
+	},
+	"siluetas": {
+		"es": "[las siluetas giran la cabeza hacia ti, todas a la vez, y vuelven a mirar la pizarra]",
+		"en": "[the silhouettes turn their heads toward you, all at once, and look back at the board]"
+	},
+	"quiz_intro": {
+		"es": "Ahora un quiz rápido. Cinco preguntas. Si fallan… GAAAA. Es broma. No es broma.",
+		"en": "Now a quick quiz. Five questions. If you fail… GAAAA. Just kidding. Not kidding."
+	},
+	"quiz_bien": {
+		"es": "Bien.",
+		"en": "Good."
+	},
+	"quiz_mal": {
+		"es": "Mmm.",
+		"en": "Hmm."
+	},
+	"aprobado": {
+		"es": "Aprobado. Puedes volver a tu sitio. Shero sabe a qué hora saliste.",
+		"en": "Passed. You can go back to your seat. Shero knows what time you left."
+	},
+	"reprobado": {
+		"es": "No llegaste al mínimo. Mira la pizarra.",
+		"en": "You didn't reach the minimum. Look at the board."
+	},
+	"repaso": {
+		"es": "Mientras tanto, repasemos. Available es actitud. Actitud es Available. Repitan.",
+		"en": "Meanwhile, let's review. Available is attitude. Attitude is Available. Repeat."
+	},
+	"alta": {
+		"es": "Listo. Vuelve a tu sitio. Corre. No, no corras. Camina rápido, que corran los demás.",
+		"en": "Done. Back to your seat. Run. No, don't run. Walk fast, let the others run."
+	},
+	"_comentario_v032": "v0.3.2 fb-ui (Joan: la voz dice lo mismo que el subtítulo, siempre): `aprobado` y `reprobado` ya no llevan números (la nota y el mínimo se ven en la pizarra del quiz); `reprobado` se volvió a sintetizar. b3_* = la clase del MIÉRCOLES (training.json/dias/3): más corta y más rara, el Trainer repite palabra por palabra las bromas del Training (lineas_trainer_amable: t_bo_kyc, t_rta, t_aux_pct), sin reírse; las reglas de KYC por región las dicta y quedan en la pizarra. anuncio y llamado son texto de Ezlaki (no se oyen): llevan el tema del día y la nota mínima ({tema}, {min}).",
+	"b3_bienvenida": {
+		"es": "Hola, familia. Actualización tres punto tres. Hoy es cortito. Los chistes ya se los saben.",
+		"en": "Hello, family. Update three point three. Today is a short one. You already know the jokes."
+	},
+	"b3_clase_1": {
+		"es": "KYC por región. Norvalia: completo antes de mil quinientos KP. Islas Taren: antes del primer envío, letra por letra.",
+		"en": "KYC by region. Norvalia: complete before fifteen hundred KP. Taren Islands: before the first transfer, letter by letter."
+	},
+	"b3_clase_2": {
+		"es": "Valdesia: ocho dígitos. Si falla la verificación, revisión desde seiscientos KP o el cuarto envío. Está en la pizarra.",
+		"en": "Valdesia: eight digits. If verification fails, review from six hundred KP or the fourth transfer. It's on the board."
+	},
+	"b3_clase_3": {
+		"es": "Lo que no está en Kardex, no pasó. Y si ustedes no están en Kardex… bueno, ustedes tampoco pasaron. Es broma, familia.",
+		"en": "If it's not in Kardex, it didn't happen. And if you're not in Kardex… well, you didn't happen either. Just kidding, family."
+	},
+	"b3_clase_4": {
+		"es": "Allocations. Perrito RTA cuida los AUX. Si te dice BO, BO. Es buenito. Muerde poquito.",
+		"en": "Allocations. Perrito RTA looks after the AUX. If he says BO, BO. He's sweet. He barely bites."
+	},
+	"b3_clase_5": {
+		"es": "Mira tu Available: en BO baja. Arriba de setenta, eres familia. Abajo de setenta… también, pero te llaman.",
+		"en": "Look at your Available: in BO it drops. Above seventy, you're family. Below seventy… you're family too, but they call you in."
+	}
+}

@@ -1,0 +1,2650 @@
+{
+	"_comentario": "AVAILABLE v0.3 P6b · Training (antes Inducción; Turno 0, PLAN §2 #84). La genera tools/... (scratchpad gen_tutorial.py). Cada módulo: id, n, min (minutos reales aprox.), preparar (entrada_sala | sentado | ninguno), reloj (normal = sin reloj de tutorial: el caso BO corre a 10x), pasos. Paso: tipo leer (espera [T]/Continuar) | esperar (cond) | accion (accion + args) | elegir ([T] sí / [N] no); quien (sistema | companero | mentor); texto/pista {es,en}; objetivo (seat:<id> | marker:<nombre> | sleep: luz guía); voz (voces/<slug>/<id>, la sintetiza P6a); ezlak (también se publica en Ezlaki). Condiciones: las implementa scripts/core/tutorial.gd (_cond). {resultado} {csat} {tiempo} {kyc} {agente} se rellenan en vivo. v0.3.1 (integración, auditoría #69): módulo 3 con la barra de pasos y «Busca la operación en Kardex», 6 con la respuesta escrita en Ezlaki, 7 con el taper y los microondas del -1, 9 con la «Duración del turno». v0.3.2: es el TRAINING (el recuerdo del día en que el agente entró): pasa en la sala de training principal del piso 1, la sesión vive en la PC de training T-01, cada módulo lo presenta el Trainer amable (lineas_trainer_amable.json, voces/trainer_amable/t_<id>) y el último módulo es la firma del contrato (contrato.json). v0.3.2 rehecho (Joan 2026-11-11): 14 módulos con la voz del Trainer UNA línea a la vez (TrainingVoice) y el aula viva (TrainingStage). Todo lo genera tools/v032_training_guion.py (ahí están las claves de módulo y de paso y las reglas del guion): NO editar a mano.",
+	"version": 1,
+	"modulos": [
+		{
+			"id": "llegada",
+			"n": 1,
+			"min": 1.7,
+			"preparar": "entrada_sala",
+			"titulo": {
+				"es": "Bienvenida a la familia",
+				"en": "Welcome to the family"
+			},
+			"resumen": {
+				"es": "Tu primer día: el café con tu promoción, tu sitio, el Trainer aprende tu nombre y qué es KipuPay.",
+				"en": "Your first day: coffee with your class, your seat, the Trainer learns your name and what KipuPay is."
+			},
+			"escena": "cafe",
+			"trainer": "puerta",
+			"hora": "08:48",
+			"pasos": [
+				{
+					"id": "tarjeta",
+					"tipo": "accion",
+					"accion": "tarjeta",
+					"luego": [
+						"piensa:0"
+					]
+				},
+				{
+					"id": "cafe",
+					"tipo": "esperar",
+					"cond": "cafe",
+					"quien": "trainer",
+					"objetivo": "marker:training_cafe",
+					"texto": {
+						"es": "Tu primer día en Konzentramance. Hay café de bienvenida: acércate a la mesa (sigue la luz) y sírvete con [E].",
+						"en": "Your first day at Konzentramance. There's welcome coffee: walk to the table (follow the light) and help yourself with [E]."
+					},
+					"pista": {
+						"es": "La mesa del café está del lado de las ventanas, con tu promoción alrededor. Mírala y pulsa [E].",
+						"en": "The coffee table is on the window side, with your class around it. Look at it and press [E]."
+					},
+					"dice": [
+						"t_hola",
+						"t_cafe_1"
+					],
+					"luego": [
+						"promo:hola_nayra",
+						"promo:hola_yimi",
+						"t_cafe_2"
+					]
+				},
+				{
+					"id": "sentarse",
+					"tipo": "esperar",
+					"cond": "sentado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Tu sitio es la T-01, al centro de la herradura. Sigue la luz y siéntate con [E].",
+						"en": "Your seat is T-01, in the middle of the horseshoe. Follow the light and sit down with [E]."
+					},
+					"pista": {
+						"es": "La T-01 es la mesa del centro, la que mira a la pizarra. La luz cian marca tu silla: mírala y pulsa [E].",
+						"en": "T-01 is the desk in the middle, the one facing the whiteboard. The cyan light marks your chair: look at it and press [E]."
+					},
+					"objetivo": "seat:T-01",
+					"dice": [
+						"t_sitio"
+					],
+					"escena": "clase"
+				},
+				{
+					"id": "nombre",
+					"tipo": "elegir",
+					"quien": "trainer",
+					"trainer": "cerca",
+					"cue_si": "nombre",
+					"cue_no": "nombre",
+					"texto": {
+						"es": "El Trainer te pregunta tu nombre. [T] «Me llamo {agente}» · [N] Le muestras el fotocheck sin hablar.",
+						"en": "The Trainer asks your name. [T] \"I'm {agente}\" · [N] Show him your badge without a word."
+					},
+					"dice": [
+						"t_nombre_pregunta"
+					],
+					"luego_si": [
+						"t_nombre"
+					],
+					"luego_no": [
+						"t_nombre_timido"
+					],
+					"luego": [
+						"t_nombres"
+					]
+				},
+				{
+					"id": "que_es",
+					"tipo": "leer",
+					"quien": "trainer",
+					"texto": {
+						"es": "KipuPay es una app para enviar dinero a otro país. Tú eres agente de atención: contestas llamadas, chats y correos y resuelves sus casos.",
+						"en": "KipuPay is an app for sending money to another country. You are a customer service agent: you answer calls, chats and emails and solve their cases."
+					},
+					"dice": [
+						"t_que_es",
+						"piensa:1"
+					],
+					"auto": true,
+					"trainer": "centro"
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Llama una señora: su envío no llegó. ¿Cuál es tu trabajo?",
+						"en": "Mini-check · A lady calls: her transfer didn't arrive. What is your job?"
+					},
+					"opciones": [
+						{
+							"es": "Venderle otro envío",
+							"en": "Sell her another transfer"
+						},
+						{
+							"es": "Escucharla, revisar su caso y resolverlo",
+							"en": "Listen to her, check her case and solve it"
+						},
+						{
+							"es": "Arreglar la app",
+							"en": "Fix the app"
+						}
+					],
+					"correcta": 1,
+					"explica": {
+						"es": "Atiendes contactos (llamadas, chats, correos) y resuelves casos. Y todo queda medido.",
+						"en": "You handle contacts (calls, chats, emails) and solve cases. And everything is measured."
+					}
+				}
+			]
+		},
+		{
+			"id": "aux",
+			"n": 2,
+			"min": 1.4,
+			"preparar": "silla",
+			"titulo": {
+				"es": "AUX y Available %",
+				"en": "AUX and Available %"
+			},
+			"resumen": {
+				"es": "Tu PC, Fonex, los estados AUX y cómo se mueve tu Available %.",
+				"en": "Your PC, Fonex, the AUX states and how your Available % moves."
+			},
+			"hora": "09:15",
+			"pasos": [
+				{
+					"id": "login",
+					"tipo": "esperar",
+					"cond": "logueado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Delante tienes tu PC de training. Inicia sesión en Fonex con [Espacio].",
+						"en": "In front of you is your training PC. Log in to Fonex with [Space]."
+					},
+					"dice": [
+						"t_aux"
+					],
+					"luego": [
+						"t_login_ok"
+					],
+					"ui": [
+						"fonex:aceptar"
+					]
+				},
+				{
+					"id": "menu_aux",
+					"tipo": "esperar",
+					"cond": "aux_menu",
+					"quien": "sistema",
+					"texto": {
+						"es": "Tu AUX es tu estado: ahora estás en «Available». Abre el menú de AUX con [Q].",
+						"en": "Your AUX is your status: right now you're \"Available\". Open the AUX menu with [Q]."
+					},
+					"dice": [
+						"t_aux_2"
+					],
+					"ui": [
+						"fonex:aux"
+					]
+				},
+				{
+					"id": "poner_bo",
+					"tipo": "esperar",
+					"cond": "aux:BO",
+					"quien": "sistema",
+					"texto": {
+						"es": "Elige BO (back office) con la tecla [2] o con un clic.",
+						"en": "Choose BO (back office) with key [2] or a click."
+					},
+					"dice": [
+						"t_aux_bo"
+					],
+					"luego": [
+						"bien"
+					],
+					"ui": [
+						"aux:BO"
+					]
+				},
+				{
+					"id": "available_pct",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Mira «AVL» arriba a la derecha: es tu Available %. Sube en Available y baja en BO. La meta: sobre 70 %.",
+						"en": "Look at \"AVL\" at the top right: it's your Available %. It rises in Available and drops in BO. The goal: above 70 %."
+					},
+					"dice": [
+						"t_aux_pct"
+					],
+					"auto": true,
+					"ui": [
+						"hud:avl"
+					]
+				},
+				{
+					"id": "volver_available",
+					"tipo": "esperar",
+					"cond": "aux:AVAILABLE",
+					"quien": "sistema",
+					"texto": {
+						"es": "Vuelve a Available: [Q] y luego [1].",
+						"en": "Go back to Available: [Q] and then [1]."
+					},
+					"dice": [
+						"t_aux_volver"
+					],
+					"ui": [
+						"aux:AVAILABLE"
+					]
+				},
+				{
+					"id": "aux_solo_pc",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "El AUX solo se cambia en tu PC (aquí la T-01; en los turnos, la C-14). Lejos de tu PC tienes un comodín por turno: lo practicas en el break.",
+						"en": "You can only change your AUX at your PC (here T-01; on your shifts, C-14). Away from your PC you get one lifeline per shift: you'll practice it on the break."
+					},
+					"dice": [
+						"t_aux_pc"
+					],
+					"auto": true
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · El RTA te escribe: «pasa a BO». ¿Qué haces?",
+						"en": "Mini-check · The RTA writes: \"switch to BO\". What do you do?"
+					},
+					"opciones": [
+						{
+							"es": "Abro el menú con [Q] y pongo BO",
+							"en": "Open the menu with [Q] and set BO"
+						},
+						{
+							"es": "Le pregunto por qué",
+							"en": "Ask him why"
+						},
+						{
+							"es": "Termino mi café y después veo",
+							"en": "Finish my coffee and see later"
+						}
+					],
+					"correcta": 0,
+					"explica": {
+						"es": "Se obedece al toque: [Q] y [2]. El BO baja tu Available %, así que solo cuando te lo piden.",
+						"en": "You obey right away: [Q] and [2]. BO lowers your Available %, so only when you're asked."
+					}
+				}
+			]
+		},
+		{
+			"id": "metricas",
+			"n": 3,
+			"min": 1.3,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Tus números: la cola, los KPI y la QA",
+				"en": "Your numbers: the queue, KPIs and QA"
+			},
+			"resumen": {
+				"es": "Qué son los KPI, la cola y el contacto perdido, la QA y las calibraciones.",
+				"en": "What KPIs are, the queue and the missed contact, QA and calibrations."
+			},
+			"hora": "09:50",
+			"pasos": [
+				{
+					"id": "kpi",
+					"tipo": "leer",
+					"quien": "trainer",
+					"texto": {
+						"es": "Tus KPI son tus notas de cada día: Available %, adherencia (cumplir tu horario), AHT (cuánto tardas por cliente), CSAT (satisfacción, de 1 a 5) y la nota de QA.",
+						"en": "Your KPIs are your daily grades: Available %, adherence (keeping your schedule), AHT (how long you take per customer), CSAT (satisfaction, 1 to 5) and the QA score."
+					},
+					"dice": [
+						"t_kpi_1"
+					],
+					"auto": true,
+					"ui": [
+						"fonex:kpi"
+					]
+				},
+				{
+					"id": "ofrecer_perdida",
+					"tipo": "accion",
+					"accion": "ofrecer",
+					"dice": [
+						"t_cola"
+					],
+					"args": {
+						"contacto": "tut_llamada",
+						"timbre_s": 7
+					}
+				},
+				{
+					"id": "perder",
+					"tipo": "esperar",
+					"cond": "perdido_o_atendido",
+					"quien": "trainer",
+					"trainer": "centro",
+					"texto": {
+						"es": "Te está sonando una llamada. Esta vez NO la aceptes: déjala sonar y mira qué pasa.",
+						"en": "A call is ringing. This time DON'T accept it: let it ring and watch what happens."
+					},
+					"pista": {
+						"es": "Espera unos segundos sin pulsar [Espacio].",
+						"en": "Wait a few seconds without pressing [Space]."
+					},
+					"luego_por": {
+						"perdido": [
+							"t_perdido_ok"
+						],
+						"_": [
+							"t_perdido_contestaste"
+						]
+					},
+					"ui": [
+						"fonex:estado"
+					]
+				},
+				{
+					"id": "qa",
+					"tipo": "elegir",
+					"quien": "trainer",
+					"cue_si": "miran",
+					"cue_no": "mano:Llauri",
+					"texto": {
+						"es": "Calibración: todos califican la misma llamada. El Trainer pregunta quién presta la suya. [T] Levantas la mano · [N] Miras tu teclado.",
+						"en": "Calibration: everyone grades the same call. The Trainer asks who volunteers theirs. [T] Raise your hand · [N] Stare at your keyboard."
+					},
+					"dice": [
+						"t_qa_1"
+					],
+					"luego_si": [
+						"t_calib_si"
+					],
+					"luego_no": [
+						"promo:mano_nayra",
+						"t_calib_no"
+					]
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Estás en Available, te suena un chat y no lo tomas. ¿Qué pasa?",
+						"en": "Mini-check · You're Available, a chat rings and you don't take it. What happens?"
+					},
+					"opciones": [
+						{
+							"es": "Se lo pasan a otro y no cuenta",
+							"en": "It goes to someone else and doesn't count"
+						},
+						{
+							"es": "Te espera hasta que vuelvas",
+							"en": "It waits until you're back"
+						},
+						{
+							"es": "Se pierde: vuelve a la cola y queda en tu registro",
+							"en": "It's missed: it goes back to the queue and stays on your record"
+						}
+					],
+					"correcta": 2,
+					"explica": {
+						"es": "Contacto perdido: el cliente vuelve a la cola, espera más, y queda con tu nombre.",
+						"en": "Missed contact: the customer goes back to the queue, waits longer, and it stays under your name."
+					}
+				}
+			]
+		},
+		{
+			"id": "contactos",
+			"n": 4,
+			"min": 2.2,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Llamadas y chats",
+				"en": "Calls and chats"
+			},
+			"resumen": {
+				"es": "Aceptar, elegir qué decir, el ánimo del cliente, el CSAT y el hold.",
+				"en": "Accepting, choosing what to say, customer mood, CSAT and hold."
+			},
+			"hora": "10:20",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Role play: el Trainer hace de cliente. En Available te entran llamadas, chats y correos.",
+						"en": "Role play: the Trainer plays the customer. In Available you get calls, chats and emails."
+					},
+					"dice": [
+						"t_contactos"
+					],
+					"auto": true
+				},
+				{
+					"id": "ofrecer_llamada",
+					"tipo": "accion",
+					"accion": "ofrecer",
+					"args": {
+						"contacto": "tut_llamada"
+					}
+				},
+				{
+					"id": "aceptar",
+					"tipo": "esperar",
+					"cond": "contacto_activo",
+					"quien": "sistema",
+					"texto": {
+						"es": "Te entra una llamada. Acéptala con [Espacio].",
+						"en": "A call is coming in. Accept it with [Space]."
+					},
+					"dice": [
+						"t_contactos_2"
+					],
+					"ui": [
+						"fonex:aceptar"
+					]
+				},
+				{
+					"id": "conversar",
+					"tipo": "esperar",
+					"cond": "contacto_fin",
+					"quien": "sistema",
+					"texto": {
+						"es": "Escucha a la clienta (subtítulo y Kardex) y elige qué responder con [1]-[4] o con un clic. Ojo: las respuestas cómodas a veces son trampas.",
+						"en": "Listen to the customer (subtitle and Kardex) and choose your answer with [1]-[4] or a click. Careful: comfortable answers are sometimes traps."
+					},
+					"pista": {
+						"es": "Primero muestra interés y revisa; al final dale el estado exacto que ves en Kardex.",
+						"en": "First show interest and check; at the end give her the exact status you see in Kardex."
+					},
+					"ui": [
+						"kardex:opciones",
+						"app:kardex"
+					]
+				},
+				{
+					"id": "resultado",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "La llamada terminó: clienta {resultado}, CSAT {csat} de 5.",
+						"en": "The call ended: customer {resultado}, CSAT {csat} out of 5."
+					},
+					"dice_por": {
+						"satisfecho": [
+							"t_llamada_bien"
+						],
+						"_": [
+							"t_llamada_regular"
+						]
+					},
+					"luego": [
+						"promo:llamada_yimi",
+						"t_hold"
+					],
+					"auto": true,
+					"trainer": "centro"
+				},
+				{
+					"id": "ofrecer_chat",
+					"tipo": "accion",
+					"accion": "ofrecer",
+					"args": {
+						"contacto": "tut_chat"
+					},
+					"dice": [
+						"t_chat"
+					]
+				},
+				{
+					"id": "chat",
+					"tipo": "esperar",
+					"cond": "contacto_fin",
+					"quien": "sistema",
+					"texto": {
+						"es": "Ahora un chat. Acéptalo con [Espacio] y respóndele sin demorarte.",
+						"en": "Now a chat. Accept it with [Space] and answer without delay."
+					},
+					"pista": {
+						"es": "Elige la respuesta que pide el número de operación y luego la que da el estado.",
+						"en": "Pick the answer that asks for the transaction number and then the one that gives the status."
+					},
+					"ui": [
+						"fonex:aceptar",
+						"kardex:opciones",
+						"app:kardex"
+					]
+				},
+				{
+					"id": "arboles",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Según lo que respondas, el cliente termina satisfecho, neutral o molesto. Y lo que tardas es tu AHT.",
+						"en": "Depending on your answers, the customer ends up satisfied, neutral or upset. And how long you take is your AHT."
+					},
+					"dice": [
+						"t_aht"
+					],
+					"auto": true,
+					"trainer": "centro"
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · En plena llamada tienes que pararte. ¿Qué haces primero?",
+						"en": "Mini-check · Mid-call you have to get up. What do you do first?"
+					},
+					"opciones": [
+						{
+							"es": "Me levanto rápido y vuelvo",
+							"en": "Get up quickly and come back"
+						},
+						{
+							"es": "Pongo al cliente en hold con [H]",
+							"en": "Put the customer on hold with [H]"
+						},
+						{
+							"es": "Cuelgo y lo llamo después",
+							"en": "Hang up and call back later"
+						}
+					],
+					"correcta": 1,
+					"explica": {
+						"es": "Hold primero: si te levantas sin hold, el cliente cuelga molesto.",
+						"en": "Hold first: if you get up without hold, the customer hangs up upset."
+					}
+				}
+			]
+		},
+		{
+			"id": "correo",
+			"n": 5,
+			"min": 2.4,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "El correo como caso",
+				"en": "The email as a case"
+			},
+			"resumen": {
+				"es": "Kardex → destinatario → campos → enviar → tipificar → cerrar, con el reloj de 10 minutos.",
+				"en": "Kardex → recipient → fields → send → categorize → close, with the 10-minute clock."
+			},
+			"reloj": "normal",
+			"hora": "11:00",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "El correo es un caso: no se pierde, pero tienes 10 minutos de juego (unos 60 s reales) para cerrarlo.",
+						"en": "An email is a case: it can't be missed, but you have 10 game minutes (about 60 real seconds) to close it."
+					},
+					"dice": [
+						"t_correo"
+					],
+					"auto": true
+				},
+				{
+					"id": "ofrecer_correo",
+					"tipo": "accion",
+					"accion": "ofrecer",
+					"args": {
+						"contacto": "tut_correo"
+					}
+				},
+				{
+					"id": "aceptar",
+					"tipo": "esperar",
+					"cond": "contacto_activo",
+					"quien": "sistema",
+					"texto": {
+						"es": "Te llegó un correo. Acéptalo con [Espacio]. Para usar el ratón, acerca la vista: mira un monitor y pulsa [E].",
+						"en": "You got an email. Accept it with [Space]. To use the mouse, zoom in: look at a monitor and press [E]."
+					},
+					"ui": [
+						"fonex:aceptar"
+					]
+				},
+				{
+					"id": "kardex",
+					"tipo": "esperar",
+					"cond": "kardex",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 1 · Busca la operación en Kardex: haz clic en el número KP del correo (o [F1]).",
+						"en": "Step 1 · Find the transaction in Kardex: click the KP number in the email (or [F1])."
+					},
+					"dice": [
+						"t_paso_kardex"
+					],
+					"ui": [
+						"correo:kardex",
+						"kardex:buscar",
+						"app:kardex"
+					]
+				},
+				{
+					"id": "destinatario",
+					"tipo": "esperar",
+					"cond": "destinatario_ok",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 2 · Vuelve a Correo ([F2]) y elige el destinatario: el partner pagador que viste en Kardex.",
+						"en": "Step 2 · Back to Mail ([F2]) and choose the recipient: the paying partner you saw in Kardex."
+					},
+					"pista": {
+						"es": "Kardex dice: partner Banco Andino.",
+						"en": "Kardex says: partner Banco Andino."
+					},
+					"ui": [
+						"correo:destinatario",
+						"app:correo"
+					]
+				},
+				{
+					"id": "plantilla",
+					"tipo": "esperar",
+					"cond": "plantilla_ok",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 3 · Elige la plantilla. El cliente pide el comprobante de entrega: eso es un POD.",
+						"en": "Step 3 · Choose the template. The customer wants proof of delivery: that's a POD."
+					},
+					"ui": [
+						"correo:plantilla",
+						"app:correo"
+					]
+				},
+				{
+					"id": "campos",
+					"tipo": "esperar",
+					"cond": "campos_ok",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 4 · Completa ID, monto y fecha con los datos de KARDEX: haz clic en el n.º, el monto y la fecha de la operación en Kardex; cada dato va a su campo.",
+						"en": "Step 4 · Fill in ID, amount and date with the KARDEX data: click the transaction's number, amount and date in Kardex; each one goes to its own field."
+					},
+					"pista": {
+						"es": "Kardex: 2.480,00 KP · 08/11.",
+						"en": "Kardex: 2,480.00 KP · 08/11."
+					},
+					"dice": [
+						"t_paso_campos"
+					],
+					"ui": [
+						"correo:campos",
+						"kardex:resultado",
+						"app:correo"
+					]
+				},
+				{
+					"id": "enviar",
+					"tipo": "esperar",
+					"cond": "enviado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 5 · Revisa y pulsa «Enviar».",
+						"en": "Step 5 · Check it and press \"Send\"."
+					},
+					"ui": [
+						"correo:enviar",
+						"app:correo"
+					]
+				},
+				{
+					"id": "tipificar",
+					"tipo": "esperar",
+					"cond": "tipificado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 6 · Tipifica: «POD solicitado al partner».",
+						"en": "Step 6 · Categorize: \"POD requested from partner\"."
+					},
+					"dice": [
+						"t_paso_tipificar"
+					],
+					"ui": [
+						"correo:tipificar",
+						"app:correo"
+					]
+				},
+				{
+					"id": "cerrar",
+					"tipo": "esperar",
+					"cond": "caso_cerrado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Paso 7 · Cierra el caso.",
+						"en": "Step 7 · Close the case."
+					},
+					"ui": [
+						"correo:cerrar",
+						"app:correo"
+					]
+				},
+				{
+					"id": "ayudar",
+					"tipo": "elegir",
+					"quien": "promocion",
+					"guarda": "ayudo",
+					"trainer": "centro",
+					"texto": {
+						"es": "Caso cerrado en {tiempo} de juego. Llauri, a tu izquierda, se perdió. [T] Le soplas: «F1, y clic en el número KP» · [N] Sigues con lo tuyo.",
+						"en": "Case closed in {tiempo} game time. Llauri, on your left, is lost. [T] Whisper: \"F1, then click the KP number\" · [N] Mind your own case."
+					},
+					"dice": [
+						"bien",
+						"promo:ayuda_nayra"
+					],
+					"luego_si": [
+						"promo:gracias_nayra",
+						"t_ayuda_si"
+					],
+					"luego_no": [
+						"t_ayuda_no"
+					]
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · El cliente escribe un monto y Kardex dice otro. ¿Cuál pones en el correo?",
+						"en": "Mini-check · The customer writes one amount and Kardex says another. Which one goes in the email?"
+					},
+					"opciones": [
+						{
+							"es": "El del cliente: él sabe cuánto mandó",
+							"en": "The customer's: he knows what he sent"
+						},
+						{
+							"es": "El promedio de los dos",
+							"en": "The average of the two"
+						},
+						{
+							"es": "El de Kardex",
+							"en": "The one in Kardex"
+						}
+					],
+					"correcta": 2,
+					"explica": {
+						"es": "Kardex es la operación de verdad; el cliente a veces se equivoca.",
+						"en": "Kardex is the real transaction; customers sometimes get it wrong."
+					}
+				}
+			]
+		},
+		{
+			"id": "cafe",
+			"n": 6,
+			"min": 1.7,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Coffee break",
+				"en": "Coffee break"
+			},
+			"resumen": {
+				"es": "Diez minutos de café con tu promoción y la historia del Trainer.",
+				"en": "Ten minutes of coffee with your class and the Trainer's story."
+			},
+			"hora": "11:40",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "trainer",
+					"texto": {
+						"es": "¡Coffee break! Diez minutos.",
+						"en": "Coffee break! Ten minutes."
+					},
+					"dice": [
+						"t_break_cafe"
+					],
+					"auto": true,
+					"escena": "cafe"
+				},
+				{
+					"id": "cafe",
+					"tipo": "esperar",
+					"cond": "cafe",
+					"quien": "trainer",
+					"objetivo": "marker:training_cafe",
+					"texto": {
+						"es": "Levántate ([E] o muévete), ve a la mesa del café (sigue la luz) y sírvete con [E].",
+						"en": "Stand up ([E] or move), go to the coffee table (follow the light) and help yourself with [E]."
+					},
+					"pista": {
+						"es": "La mesa del café está del lado de las ventanas.",
+						"en": "The coffee table is on the window side."
+					}
+				},
+				{
+					"id": "porque",
+					"tipo": "elegir",
+					"quien": "promocion",
+					"guarda": "conto",
+					"texto": {
+						"es": "Llauri te pregunta por qué entraste. [T] Le cuentas · [N] Sonríes y te encoges de hombros.",
+						"en": "Llauri asks why you joined. [T] Tell her · [N] Smile and shrug."
+					},
+					"dice": [
+						"promo:planilla_yimi",
+						"promo:ahorro_zuly",
+						"promo:porque_nayra"
+					],
+					"luego_si": [
+						"piensa:3",
+						"promo:lindo_nayra"
+					],
+					"luego_no": [
+						"promo:contaras_nayra"
+					]
+				},
+				{
+					"id": "historia",
+					"tipo": "elegir",
+					"quien": "trainer",
+					"guarda": "pregunto",
+					"texto": {
+						"es": "El Trainer cuenta cómo empezó. (TL = team leader, el jefe de un equipo.) [T] «¿Y valió la pena?» · [N] Escuchas en silencio.",
+						"en": "The Trainer tells how he started. (TL = team leader, the head of a team.) [T] \"Was it worth it?\" · [N] Listen in silence."
+					},
+					"dice": [
+						"t_historia_1",
+						"t_historia_2"
+					],
+					"luego_si": [
+						"t_historia_vale"
+					],
+					"luego_no": [
+						"t_historia_calla"
+					],
+					"luego": [
+						"t_historia_3"
+					]
+				},
+				{
+					"id": "brindis",
+					"tipo": "esperar",
+					"cond": "cafe",
+					"quien": "promocion",
+					"objetivo": "marker:training_cafe",
+					"al_cumplir": "festejo",
+					"texto": {
+						"es": "Brinda con tu promoción: mira la mesa del café y pulsa [E].",
+						"en": "Toast with your class: look at the coffee table and press [E]."
+					},
+					"pista": {
+						"es": "Mira la mesa del café y pulsa [E].",
+						"en": "Look at the coffee table and press [E]."
+					},
+					"dice": [
+						"promo:tl_kenyi",
+						"t_tl_gana"
+					],
+					"luego": [
+						"t_brindis",
+						"promo:moto_yimi",
+						"piensa:2"
+					]
+				},
+				{
+					"id": "volver",
+					"tipo": "esperar",
+					"cond": "sentado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Se acabó el break. Vuelve a tu sitio, la T-01, y siéntate con [E].",
+						"en": "The break is over. Go back to your seat, T-01, and sit down with [E]."
+					},
+					"pista": {
+						"es": "La T-01 es la mesa del centro, la que mira a la pizarra. La luz cian marca tu silla: mírala y pulsa [E].",
+						"en": "T-01 is the desk in the middle, the one facing the whiteboard. The cyan light marks your chair: look at it and press [E]."
+					},
+					"objetivo": "seat:T-01",
+					"dice": [
+						"t_break_fin"
+					],
+					"escena": "clase"
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Tu break dura 10 minutos. Vas en el minuto 9 y la cola del café es larga. ¿Qué haces?",
+						"en": "Mini-check · Your break is 10 minutes. You're at minute 9 and the coffee line is long. What do you do?"
+					},
+					"opciones": [
+						{
+							"es": "Vuelvo a mi sitio sin café",
+							"en": "Go back to my seat without coffee"
+						},
+						{
+							"es": "Espero: es un minuto más",
+							"en": "Wait: it's one more minute"
+						},
+						{
+							"es": "Le pido a alguien que me cubra",
+							"en": "Ask someone to cover for me"
+						}
+					],
+					"correcta": 0,
+					"explica": {
+						"es": "Vuelves. El break dura diez y ni un segundo más: eso sí lo mide el sistema.",
+						"en": "You go back. A break is ten minutes and not one second more: the system does measure that."
+					}
+				}
+			]
+		},
+		{
+			"id": "bo_kyc",
+			"n": 7,
+			"min": 1.3,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "BO y KYC",
+				"en": "BO and KYC"
+			},
+			"resumen": {
+				"es": "Cuándo poner BO, qué es un KYC, regiones, Recheck y Revisión reforzada.",
+				"en": "When to use BO, what a KYC is, regions, Recheck and Enhanced review."
+			},
+			"hora": "12:00",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "KYC = «conoce a tu cliente»: comprobar que alguien es quien dice ser. Los KYC solo llegan en BO.",
+						"en": "KYC = \"know your customer\": checking that someone is who they say they are. KYC cases only arrive in BO."
+					},
+					"dice": [
+						"t_bo_kyc"
+					],
+					"auto": true
+				},
+				{
+					"id": "poner_bo",
+					"tipo": "esperar",
+					"cond": "aux:BO",
+					"quien": "sistema",
+					"texto": {
+						"es": "El RTA te manda a BO. Ponlo tú: [Q] y [2].",
+						"en": "The RTA sends you to BO. Set it yourself: [Q] and [2]."
+					},
+					"ui": [
+						"aux:BO"
+					]
+				},
+				{
+					"id": "ofrecer_kyc",
+					"tipo": "accion",
+					"accion": "ofrecer",
+					"args": {
+						"contacto": "tut_kyc"
+					}
+				},
+				{
+					"id": "aceptar",
+					"tipo": "esperar",
+					"cond": "contacto_activo",
+					"quien": "sistema",
+					"texto": {
+						"es": "Te llegó un KYC. Acéptalo con [Espacio]: se abre Identa.",
+						"en": "You got a KYC. Accept it with [Space]: Identa opens."
+					},
+					"ui": [
+						"fonex:aceptar"
+					]
+				},
+				{
+					"id": "decidir",
+					"tipo": "esperar",
+					"cond": "kyc_decidido",
+					"quien": "sistema",
+					"texto": {
+						"es": "Cliente de Norvalia: pasó los 1.500 KP y la e-verificación no confirmó nada. En Norvalia el KYC debe estar completo antes de 1.500 KP. Mira qué documentos subió y elige la acción en Identa.",
+						"en": "Norvalia customer: over 1,500 KP and the e-verification confirmed nothing. In Norvalia the KYC must be complete before 1,500 KP. Check which documents were uploaded and choose the action in Identa."
+					},
+					"pista": {
+						"es": "No subió su documento de identidad: pídelo («Solicitar documento de identidad»).",
+						"en": "No ID document was uploaded: request it (\"Request ID document\")."
+					},
+					"dice": [
+						"t_identa"
+					],
+					"ui": [
+						"identa:decidir",
+						"app:identa"
+					]
+				},
+				{
+					"id": "resultado",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "{kyc}.",
+						"en": "{kyc}."
+					},
+					"dice_por": {
+						"bo_ok": [
+							"bien"
+						],
+						"_": [
+							"casi"
+						]
+					},
+					"auto": true
+				},
+				{
+					"id": "volver",
+					"tipo": "esperar",
+					"cond": "aux:AVAILABLE",
+					"quien": "sistema",
+					"texto": {
+						"es": "Vuelve a Available: [Q] y [1].",
+						"en": "Go back to Available: [Q] and [1]."
+					},
+					"dice": [
+						"t_bo_volver"
+					],
+					"ui": [
+						"aux:AVAILABLE"
+					]
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Un cliente de Norvalia pasó los 1.500 KP y le falta un documento. ¿Qué haces?",
+						"en": "Mini-check · A Norvalia customer went over 1,500 KP and a document is missing. What do you do?"
+					},
+					"opciones": [
+						{
+							"es": "Lo apruebo: ya envió antes",
+							"en": "Approve it: they've sent before"
+						},
+						{
+							"es": "Pido el documento que falta",
+							"en": "Request the missing document"
+						},
+						{
+							"es": "Nada: no es mi problema",
+							"en": "Nothing: not my problem"
+						}
+					],
+					"correcta": 1,
+					"explica": {
+						"es": "Se pide lo que falta. Las reglas de cada país están en el Manual.",
+						"en": "You request what's missing. Each country's rules are in the Manual."
+					}
+				}
+			]
+		},
+		{
+			"id": "vitzo",
+			"n": 8,
+			"min": 1.4,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Partners y Portal Vitzo",
+				"en": "Partners and the Vitzo Portal"
+			},
+			"resumen": {
+				"es": "Quién paga cada envío y por qué con Vitzo es «solo portal».",
+				"en": "Who pays each transfer and why Vitzo is \"portal only\"."
+			},
+			"reloj": "normal",
+			"hora": "12:30",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Los partners pagan los envíos del otro lado. A los normales se les escribe un correo. A Vitzo, no: Vitzo solo por su portal.",
+						"en": "Partners pay out the transfers on the other side. You email the normal ones. Not Vitzo: Vitzo only through its portal."
+					},
+					"dice": [
+						"t_vitzo"
+					],
+					"auto": true
+				},
+				{
+					"id": "ofrecer_vitzo",
+					"tipo": "accion",
+					"accion": "ofrecer",
+					"args": {
+						"contacto": "tut_vitzo"
+					}
+				},
+				{
+					"id": "aceptar",
+					"tipo": "esperar",
+					"cond": "contacto_activo",
+					"quien": "sistema",
+					"texto": {
+						"es": "Una clienta pregunta por su envío. Acepta el correo con [Espacio].",
+						"en": "A customer asks about her transfer. Accept the email with [Space]."
+					},
+					"ui": [
+						"fonex:aceptar"
+					]
+				},
+				{
+					"id": "kardex",
+					"tipo": "esperar",
+					"cond": "kardex",
+					"quien": "sistema",
+					"texto": {
+						"es": "Búscalo en Kardex: mira quién es el partner pagador.",
+						"en": "Find it in Kardex: see who the paying partner is."
+					},
+					"ui": [
+						"correo:kardex",
+						"kardex:buscar",
+						"app:kardex"
+					]
+				},
+				{
+					"id": "portal",
+					"tipo": "esperar",
+					"cond": "portal_buscar",
+					"quien": "sistema",
+					"texto": {
+						"es": "El partner es Vitzo. Abre el Portal Vitzo ([F4]) y busca ahí la operación.",
+						"en": "The partner is Vitzo. Open the Vitzo Portal ([F4]) and look up the transaction there."
+					},
+					"dice": [
+						"t_portal"
+					],
+					"ui": [
+						"portal:buscar",
+						"app:portal"
+					]
+				},
+				{
+					"id": "responder",
+					"tipo": "esperar",
+					"cond": "enviado_ok",
+					"quien": "sistema",
+					"texto": {
+						"es": "El portal dice «depositado». A la CLIENTA sí se le responde por correo: elige «Cliente», la plantilla «Status» y los datos de Kardex. Envíalo.",
+						"en": "The portal says \"deposited\". You do answer the CUSTOMER by email: choose \"Customer\", the \"Status\" template and the Kardex data. Send it."
+					},
+					"pista": {
+						"es": "Destinatario: Cliente · Plantilla: Status · 1.135,00 KP · 09/11.",
+						"en": "Recipient: Cliente · Template: Status · 1,135.00 KP · 09/11."
+					},
+					"ui": [
+						"correo:paso",
+						"app:correo"
+					]
+				},
+				{
+					"id": "tipificar",
+					"tipo": "esperar",
+					"cond": "tipificado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Tipifica «Status informado al cliente».",
+						"en": "Categorize \"Status reported to customer\"."
+					},
+					"ui": [
+						"correo:tipificar",
+						"app:correo"
+					]
+				},
+				{
+					"id": "cerrar",
+					"tipo": "esperar",
+					"cond": "caso_cerrado",
+					"quien": "sistema",
+					"texto": {
+						"es": "Y cierra el caso.",
+						"en": "And close the case."
+					},
+					"luego": [
+						"bien"
+					],
+					"ui": [
+						"correo:cerrar",
+						"app:correo"
+					]
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Necesitas un comprobante de Vitzo. ¿Cómo se lo pides?",
+						"en": "Mini-check · You need a receipt from Vitzo. How do you ask for it?"
+					},
+					"opciones": [
+						{
+							"es": "Con un correo a Vitzo",
+							"en": "With an email to Vitzo"
+						},
+						{
+							"es": "Por Ezlaki",
+							"en": "On Ezlaki"
+						},
+						{
+							"es": "Por el Portal Vitzo",
+							"en": "Through the Vitzo Portal"
+						}
+					],
+					"correcta": 2,
+					"explica": {
+						"es": "Portal para todo. A Vitzo nunca un correo, aunque alguien te diga lo contrario.",
+						"en": "Portal for everything. Never an email to Vitzo, even if someone tells you otherwise."
+					}
+				}
+			]
+		},
+		{
+			"id": "ezlak",
+			"n": 9,
+			"min": 1.8,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Ezlaki",
+				"en": "Ezlaki"
+			},
+			"resumen": {
+				"es": "Canales, DMs, respuestas rápidas, el recordatorio de Vitzo, Rooms y el coaching.",
+				"en": "Channels, DMs, quick replies, Vitzo's reminder, Rooms and coaching."
+			},
+			"hora": "14:00",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Ezlaki es el chat de la empresa (pantalla derecha, arriba): canales y DMs.",
+						"en": "Ezlaki is the company chat (right screen, top): channels and DMs."
+					},
+					"dice": [
+						"t_ezlak"
+					],
+					"auto": true,
+					"ui": [
+						"ezlak:lista"
+					]
+				},
+				{
+					"id": "canal",
+					"tipo": "esperar",
+					"cond": "ezlak_canal:#site-updates",
+					"quien": "sistema",
+					"texto": {
+						"es": "Acerca la vista ([E] sobre el monitor derecho) y abre #site-updates con un clic.",
+						"en": "Zoom in ([E] on the right monitor) and open #site-updates with a click."
+					},
+					"ui": [
+						"ezlak:canal:#site-updates"
+					]
+				},
+				{
+					"id": "dm_shero",
+					"tipo": "accion",
+					"accion": "post",
+					"args": {
+						"canal": "dm:shero",
+						"autor": "shero",
+						"texto": {
+							"es": "Buenas, team. Training. ¿Me confirmas que estás en tu sitio?",
+							"en": "Hi, team. Training. Can you confirm you're at your seat?"
+						},
+						"meta": {
+							"quick_replies": [
+								"ok",
+								"en_un_caso"
+							],
+							"mention": true,
+							"typing_s": 1.0
+						}
+					}
+				},
+				{
+					"id": "responder",
+					"tipo": "esperar",
+					"cond": "quick_reply:ok",
+					"quien": "sistema",
+					"texto": {
+						"es": "Shero te escribió por DM. Responde con la respuesta rápida «Ok».",
+						"en": "Shero wrote to you by DM. Answer with the quick reply \"Ok\"."
+					},
+					"dice": [
+						"t_ezlak_2"
+					],
+					"ui": [
+						"ezlak:respuesta:ok",
+						"ezlak:canal:dm:shero"
+					]
+				},
+				{
+					"id": "escribir",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "También puedes escribir tu propia respuesta: Ezlaki entiende lo que quieres decir y queda en el canal.",
+						"en": "You can also type your own answer: Ezlaki understands what you mean and it stays in the channel."
+					},
+					"dice": [
+						"t_escribir"
+					],
+					"auto": true,
+					"ui": [
+						"ezlak:escribir"
+					]
+				},
+				{
+					"id": "vitzo",
+					"tipo": "accion",
+					"accion": "vitzo_reminder",
+					"args": {}
+				},
+				{
+					"id": "reaccionar",
+					"tipo": "esperar",
+					"cond": "reaccion",
+					"quien": "sistema",
+					"texto": {
+						"es": "Vitzo publicó su recordatorio en #site-updates. Reacciona con el emoji que pide: clic en el botón o [Enter].",
+						"en": "Vitzo posted its reminder in #site-updates. React with the emoji it asks for: click the button or [Enter]."
+					},
+					"dice": [
+						"t_reaccion"
+					],
+					"ui": [
+						"ezlak:fijado",
+						"ezlak:reaccion",
+						"ezlak:canal:#site-updates"
+					]
+				},
+				{
+					"id": "rooms",
+					"tipo": "accion",
+					"accion": "rooms",
+					"args": {}
+				},
+				{
+					"id": "unirse",
+					"tipo": "esperar",
+					"cond": "rooms",
+					"quien": "sistema",
+					"texto": {
+						"es": "Shero te convoca a un coaching por Ezlaki Rooms. Únete con «Unirse» en su DM (o [Enter]).",
+						"en": "Shero calls you to a coaching on Ezlaki Rooms. Join with \"Join\" in his DM (or [Enter])."
+					},
+					"ui": [
+						"ezlak:respuesta:join_rooms",
+						"ezlak:canal:dm:shero"
+					]
+				},
+				{
+					"id": "sesion",
+					"tipo": "esperar",
+					"cond": "coaching_fin",
+					"quien": "sistema",
+					"texto": {
+						"es": "Estás en un coaching autorizado: tu AUX pasó a Coaching. Escucha.",
+						"en": "You're in an authorized coaching: your AUX switched to Coaching. Listen."
+					}
+				},
+				{
+					"id": "volver",
+					"tipo": "esperar",
+					"cond": "aux:AVAILABLE",
+					"quien": "sistema",
+					"texto": {
+						"es": "La sesión terminó. Vuelve a Available ya: [Q] y [1].",
+						"en": "The session is over. Back to Available now: [Q] and [1]."
+					},
+					"dice": [
+						"t_coaching_volver"
+					],
+					"ui": [
+						"aux:AVAILABLE"
+					]
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Shero te escribe «¿Estás en tu sitio?» y tú estás ocupado. ¿Qué haces?",
+						"en": "Mini-check · Shero writes \"Are you at your seat?\" and you're busy. What do you do?"
+					},
+					"opciones": [
+						{
+							"es": "Le contesto al toque",
+							"en": "Answer right away"
+						},
+						{
+							"es": "Termino lo mío y después le contesto",
+							"en": "Finish my thing and answer later"
+						},
+						{
+							"es": "Le pregunto por qué quiere saber",
+							"en": "Ask him why he wants to know"
+						}
+					],
+					"correcta": 0,
+					"explica": {
+						"es": "A un jefe se le contesta al toque. Y «¿por qué?» queda anotado.",
+						"en": "You answer a boss right away. And \"why?\" goes on your record."
+					}
+				}
+			]
+		},
+		{
+			"id": "salir",
+			"n": 10,
+			"min": 1.9,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Breaks, lunch y salir del aula",
+				"en": "Breaks, lunch and leaving the classroom"
+			},
+			"resumen": {
+				"es": "Break, lunch, salir del aula y el comodín.",
+				"en": "Break, lunch, leaving the room and the lifeline."
+			},
+			"hora": "14:40",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Por turno: 2 breaks de 10 minutos y 1 lunch de 45. Baño, cuando lo necesites. Sin uno de esos AUX no se sale de la sala.",
+						"en": "Per shift: 2 ten-minute breaks and 1 forty-five-minute lunch. Bathroom when you need it. Without one of those AUX you don't leave the room."
+					},
+					"dice": [
+						"t_salir"
+					],
+					"auto": true
+				},
+				{
+					"id": "break",
+					"tipo": "esperar",
+					"cond": "aux:BREAK",
+					"quien": "sistema",
+					"texto": {
+						"es": "Pon AUX Break: [Q] y [3].",
+						"en": "Set AUX Break: [Q] and [3]."
+					},
+					"dice": [
+						"t_break"
+					],
+					"ui": [
+						"aux:BREAK"
+					]
+				},
+				{
+					"id": "salir",
+					"tipo": "esperar",
+					"cond": "fuera_sala",
+					"quien": "sistema",
+					"texto": {
+						"es": "Con Break puedes salir. Levántate ([E]) y sal por la puerta del aula (sigue la luz).",
+						"en": "With Break you can leave. Stand up ([E]) and go out the classroom door (follow the light)."
+					},
+					"objetivo": "marker:training_fuera",
+					"dice": [
+						"t_salir_puerta"
+					],
+					"trainer": "salida"
+				},
+				{
+					"id": "comodin",
+					"tipo": "esperar",
+					"cond": "comodin_abierto",
+					"quien": "trainer",
+					"trainer": "salida",
+					"texto": {
+						"es": "El AUX solo se cambia en una PC, y la tuya quedó lejos. Tienes un COMODÍN por turno: mantén [C] (un segundo).",
+						"en": "You can only change your AUX at a PC, and yours is far away. You have one LIFELINE per shift: hold [C] (one second)."
+					},
+					"pista": {
+						"es": "Tienes que estar de pie, lejos de la PC. Mantén pulsada la tecla [C].",
+						"en": "You have to be standing, away from the PC. Hold down the [C] key."
+					},
+					"dice": [
+						"t_comodin_1"
+					],
+					"ui": [
+						"comodin"
+					]
+				},
+				{
+					"id": "comodin_llamar",
+					"tipo": "esperar",
+					"cond": "comodin_hecho",
+					"quien": "trainer",
+					"trainer": "salida",
+					"texto": {
+						"es": "Elige qué AUX te marcan: Available [1]. Después, a quién llamas de tu promoción: [1]-[4].",
+						"en": "Choose which AUX they set: Available [1]. Then who you call from your class: [1]-[4]."
+					},
+					"pista": {
+						"es": "Si cerraste el comodín con [Esc], mantén [C] otra vez.",
+						"en": "If you closed the lifeline with [Esc], hold [C] again."
+					},
+					"luego": [
+						"comodin",
+						"t_comodin_2"
+					],
+					"ui": [
+						"comodin"
+					]
+				},
+				{
+					"id": "volver",
+					"tipo": "esperar",
+					"cond": "sentado_available",
+					"quien": "sistema",
+					"texto": {
+						"es": "Vuelve a tu sitio, siéntate ([E]) y confirma Available: [Q] y [1].",
+						"en": "Back to your seat, sit down ([E]) and confirm Available: [Q] and [1]."
+					},
+					"objetivo": "seat:T-01",
+					"dice": [
+						"t_volver_sitio"
+					],
+					"luego": [
+						"t_taper"
+					],
+					"ui": [
+						"aux:AVAILABLE"
+					]
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Se acabó tu break y estás en la cafetería, lejos de tu PC. ¿Qué te salva?",
+						"en": "Mini-check · Your break is over and you're in the cafeteria, far from your PC. What saves you?"
+					},
+					"opciones": [
+						{
+							"es": "Cambio el AUX en la PC de otro",
+							"en": "Change the AUX at someone else's PC"
+						},
+						{
+							"es": "El comodín: mantengo [C] y llamo a un compañero",
+							"en": "The lifeline: hold [C] and call a coworker"
+						},
+						{
+							"es": "Nada: el sistema espera",
+							"en": "Nothing: the system waits"
+						}
+					],
+					"correcta": 1,
+					"explica": {
+						"es": "El comodín, una vez por turno. Si nadie contesta, se pierde: cuida a tus amigos.",
+						"en": "The lifeline, once per shift. If nobody answers, it's gone: take care of your friends."
+					}
+				}
+			]
+		},
+		{
+			"id": "jefes",
+			"n": 11,
+			"min": 1.8,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Shero y los demás jefes",
+				"en": "Shero and the other bosses"
+			},
+			"resumen": {
+				"es": "La escalera de Shero y el Ack, Perrito RTA, Haime, el Trainer, Rasec y sus eventos.",
+				"en": "Shero's ladder and Ack, Perrito RTA, Haime, the Trainer, Rasec and his events."
+			},
+			"hora": "15:20",
+			"pasos": [
+				{
+					"id": "escalera",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Shero es tu supervisor. No grita: escala. Llamado → verbal → written warning (WW, con Ack) → y si te alcanza, se acabó. Tres WW: despido.",
+						"en": "Shero is your supervisor. He doesn't yell: he escalates. Call-out → verbal → written warning (WW, with Ack) → and if he catches you, it's over. Three WWs: fired."
+					},
+					"dice": [
+						"t_jefes"
+					],
+					"auto": true
+				},
+				{
+					"id": "llamado",
+					"tipo": "accion",
+					"accion": "post",
+					"args": {
+						"canal": "dm:shero",
+						"autor": "shero",
+						"texto": {
+							"es": "{agente}, veo tu AUX. Ojo. (Esto es un llamado de práctica.)",
+							"en": "{agente}, I see your AUX. Careful. (This is a practice call-out.)"
+						},
+						"meta": {
+							"tipo": "llamado",
+							"mention": true,
+							"typing_s": 1.0
+						}
+					}
+				},
+				{
+					"id": "ww",
+					"tipo": "accion",
+					"accion": "ww_practica",
+					"args": {}
+				},
+				{
+					"id": "ack",
+					"tipo": "esperar",
+					"cond": "ack",
+					"quien": "sistema",
+					"texto": {
+						"es": "Te llegó un written warning de práctica. Da «Ack» (el botón o [Espacio]).",
+						"en": "You got a practice written warning. Give \"Ack\" (the button or [Space])."
+					},
+					"dice": [
+						"t_ack"
+					],
+					"luego": [
+						"bien",
+						"t_escalera"
+					],
+					"ui": [
+						"ww:ack"
+					]
+				},
+				{
+					"id": "rta_orden",
+					"tipo": "accion",
+					"accion": "post",
+					"args": {
+						"canal": "#allocations",
+						"autor": "rta",
+						"meta": {
+							"tipo": "tag",
+							"mention": true
+						},
+						"texto": {
+							"es": "@{agente} pasa a BO. Ahora. (Práctica.)",
+							"en": "@{agente} switch to BO. Now. (Practice.)"
+						}
+					}
+				},
+				{
+					"id": "rta",
+					"tipo": "esperar",
+					"cond": "aux:BO",
+					"quien": "trainer",
+					"texto": {
+						"es": "Perrito RTA te acaba de ordenar BO en #allocations. Hazle caso: [Q] y [2]. Al tercer tag sin obedecer, te caza por todo el edificio.",
+						"en": "Perrito RTA just ordered BO in #allocations. Obey: [Q] and [2]. At the third tag without obeying, he hunts you across the building."
+					},
+					"dice": [
+						"t_rta"
+					],
+					"ui": [
+						"aux:BO"
+					]
+				},
+				{
+					"id": "rta_fin",
+					"tipo": "accion",
+					"accion": "post",
+					"args": {
+						"canal": "#allocations",
+						"autor": "rta",
+						"meta": {
+							"tipo": "tag",
+							"mention": true
+						},
+						"texto": {
+							"es": "@{agente} listo. Vuelve a Available.",
+							"en": "@{agente} done. Back to Available."
+						}
+					}
+				},
+				{
+					"id": "rta_volver",
+					"tipo": "esperar",
+					"cond": "aux:AVAILABLE",
+					"quien": "sistema",
+					"texto": {
+						"es": "El RTA ya te soltó: vuelve a Available con [Q] y [1].",
+						"en": "The RTA let you go: back to Available with [Q] and [1]."
+					},
+					"ui": [
+						"aux:AVAILABLE"
+					]
+				},
+				{
+					"id": "screamer",
+					"tipo": "elegir",
+					"quien": "sistema",
+					"accion": "screamer_practica",
+					"texto": {
+						"es": "Cuando alguien te alcanza, hay un screamer. ¿Quieres ver uno de práctica? [T] Sí · [N] No, gracias.",
+						"en": "When someone catches you, there's a screamer. Want to see a practice one? [T] Yes · [N] No, thanks."
+					},
+					"dice": [
+						"t_simulacro"
+					],
+					"luego_si": [
+						"t_screamer_fin"
+					],
+					"luego_no": [
+						"t_simulacro_no"
+					],
+					"trainer": "centro"
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Shero te manda un written warning con Ack. ¿Qué haces?",
+						"en": "Mini-check · Shero sends you a written warning with Ack. What do you do?"
+					},
+					"opciones": [
+						{
+							"es": "Lo leo con calma mañana",
+							"en": "Read it calmly tomorrow"
+						},
+						{
+							"es": "Le escribo que no estoy de acuerdo",
+							"en": "Write that I disagree"
+						},
+						{
+							"es": "Doy Ack al toque",
+							"en": "Ack right away"
+						}
+					],
+					"correcta": 2,
+					"explica": {
+						"es": "Ack al toque: si no lo das a tiempo, Shero viene por ti. Y tres WW son despido.",
+						"en": "Ack right away: if you don't give it in time, Shero comes for you. And three WWs get you fired."
+					}
+				}
+			]
+		},
+		{
+			"id": "fatiga",
+			"n": 12,
+			"min": 1.9,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Fatiga, sillones del -1 y colapso",
+				"en": "Fatigue, the -1 sofas and collapse"
+			},
+			"resumen": {
+				"es": "Cómo se nota la Fatiga, cómo bajarla durmiendo en el -1 y qué es un colapso.",
+				"en": "How Fatigue shows, how to lower it by sleeping on -1 and what a collapse is."
+			},
+			"hora": "16:00",
+			"pasos": [
+				{
+					"id": "intro",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "La Fatiga sube con las horas y con los sustos. No hay barra: la notas. Te la subimos un momento.",
+						"en": "Fatigue rises with the hours and the scares. There's no bar: you feel it. We'll raise it for a moment."
+					},
+					"dice": [
+						"t_fatiga"
+					],
+					"auto": true
+				},
+				{
+					"id": "subir",
+					"tipo": "accion",
+					"accion": "fatiga",
+					"args": {
+						"valor": 72
+					}
+				},
+				{
+					"id": "frotar",
+					"tipo": "esperar",
+					"cond": "rub_eyes",
+					"quien": "sistema",
+					"texto": {
+						"es": "Tienes sueño: la vista se nubla. Frótate los ojos con [R].",
+						"en": "You're sleepy: your vision blurs. Rub your eyes with [R]."
+					},
+					"cue": "bosteza:Marko"
+				},
+				{
+					"id": "ascensor",
+					"tipo": "esperar",
+					"cond": "piso:-1",
+					"quien": "sistema",
+					"texto": {
+						"es": "Lo que más baja la Fatiga es dormir. Levántate, ve al ascensor (sigue la luz), pulsa [E] en el panel y elige el piso -1.",
+						"en": "What lowers Fatigue most is sleep. Stand up, go to the elevator (follow the light), press [E] on the panel and choose floor -1."
+					},
+					"objetivo": "marker:ascensor",
+					"dice": [
+						"t_agua"
+					],
+					"ui": [
+						"ascensor:piso:-1"
+					]
+				},
+				{
+					"id": "dormir",
+					"tipo": "esperar",
+					"cond": "dormido",
+					"quien": "sistema",
+					"texto": {
+						"es": "Ve a la zona de descanso (sigue la luz) y acuéstate en un puff o sillón con [E].",
+						"en": "Go to the rest area (follow the light) and lie down on a bean bag or sofa with [E]."
+					},
+					"objetivo": "sleep"
+				},
+				{
+					"id": "despertar",
+					"tipo": "esperar",
+					"cond": "despierto",
+					"quien": "sistema",
+					"texto": {
+						"es": "Dormido, el reloj corre rápido y la Fatiga baja. Levántate con [E] o moviéndote.",
+						"en": "Asleep, the clock runs fast and Fatigue drops. Get up with [E] or by moving."
+					}
+				},
+				{
+					"id": "colapso",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Si la Fatiga llega a 100, colapsas: una muerte sin culpable. Te la mostramos ahora, de práctica.",
+						"en": "If Fatigue reaches 100, you collapse: a death with no one to blame. We'll show you now, as practice."
+					},
+					"auto": true
+				},
+				{
+					"id": "colapsar",
+					"tipo": "accion",
+					"accion": "colapso_practica",
+					"args": {}
+				},
+				{
+					"id": "pantalla",
+					"tipo": "esperar",
+					"cond": "muerte_vista",
+					"quien": "sistema",
+					"texto": {
+						"es": "…",
+						"en": "…"
+					},
+					"panel": false
+				},
+				{
+					"id": "reconectar",
+					"tipo": "esperar",
+					"cond": "reconectado",
+					"quien": "sistema",
+					"texto": {
+						"es": "«Usuario desconectado. Motivo: Colapso». Pulsa [Espacio] para reconectar.",
+						"en": "\"User disconnected. Reason: Collapse\". Press [Space] to reconnect."
+					},
+					"ui": [
+						"muerte:reconectar"
+					]
+				},
+				{
+					"id": "fin",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Reconectaste en el último checkpoint, con Fatiga 60. Cuídala: duerme cuando puedas, toma agua y no corras sin motivo.",
+						"en": "You reconnected at the last checkpoint, with Fatigue 60. Look after it: sleep when you can, drink water and don't run for no reason."
+					},
+					"dice": [
+						"t_colapso_fin"
+					],
+					"auto": true
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · Te caes de sueño en pleno turno. ¿Qué te conviene?",
+						"en": "Mini-check · You're falling asleep mid-shift. What's best?"
+					},
+					"opciones": [
+						{
+							"es": "Ir al tópico y decir que me siento mal",
+							"en": "Go to the infirmary and say I feel sick"
+						},
+						{
+							"es": "Cerrar los ojos un ratito en Available",
+							"en": "Close my eyes for a bit while Available"
+						},
+						{
+							"es": "Frotarme los ojos y dormir en mi break, en el -1",
+							"en": "Rub my eyes and sleep on my break, on -1"
+						}
+					],
+					"correcta": 2,
+					"explica": {
+						"es": "[R] aclara la vista un rato; dormir en el -1 (con Break o Lunch) es lo que de verdad baja la Fatiga. Nunca en Available.",
+						"en": "[R] clears your vision for a while; sleeping on -1 (on Break or Lunch) is what really lowers Fatigue. Never while Available."
+					}
+				}
+			]
+		},
+		{
+			"id": "partidas",
+			"n": 13,
+			"min": 1.0,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "Checkpoints, dificultad y elegir día",
+				"en": "Checkpoints, difficulty and choosing a day"
+			},
+			"resumen": {
+				"es": "Cómo se guarda, qué cambia con la dificultad, el Turno real, las partidas y el Manual del agente.",
+				"en": "How saving works, what difficulty changes, Real shift, saves and the Agent manual."
+			},
+			"hora": "16:40",
+			"pasos": [
+				{
+					"id": "manual",
+					"tipo": "esperar",
+					"cond": "manual_abierto",
+					"quien": "sistema",
+					"texto": {
+						"es": "Abre la pausa con [Esc] y entra en «Manual del agente»: ahí está cada término (AUX, AHT, KYC, POD…) y el resumen de las reglas.",
+						"en": "Open the pause menu with [Esc] and go to \"Agent manual\": every term is there (AUX, AHT, KYC, POD…) plus the rules summary."
+					},
+					"dice": [
+						"t_partidas"
+					]
+				},
+				{
+					"id": "checkpoints",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "El juego guarda solo, en checkpoints. Al morir vuelves al último. Dificultad: Fácil (más tiempo y pistas), Normal o Difícil; «Semana real» es Difícil sin checkpoints.",
+						"en": "The game saves by itself, at checkpoints. When you die you go back to the last one. Difficulty: Easy (more time and hints), Normal or Hard; \"Real week\" is Hard without checkpoints."
+					}
+				},
+				{
+					"id": "partidas",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Cada agente es una partida propia, con su historia y sus finales. «Elegir día» te deja rejugar un día ya alcanzado, como rama aparte. En Opciones eliges la duración del turno.",
+						"en": "Each agent is a separate save, with their own story and endings. \"Choose day\" lets you replay a day you've reached, as a separate branch. In Options you choose the shift length."
+					}
+				},
+				{
+					"id": "check",
+					"tipo": "pregunta",
+					"quien": "trainer",
+					"texto": {
+						"es": "Mini-check · No recuerdas qué era un POD. ¿Dónde lo miras?",
+						"en": "Mini-check · You can't remember what a POD was. Where do you look?"
+					},
+					"opciones": [
+						{
+							"es": "Le pregunto al cliente",
+							"en": "Ask the customer"
+						},
+						{
+							"es": "En el Manual del agente ([Esc] o Campus → Manual)",
+							"en": "In the Agent manual ([Esc] or Campus → Manual)"
+						},
+						{
+							"es": "No hay dónde",
+							"en": "There's nowhere"
+						}
+					],
+					"correcta": 1,
+					"explica": {
+						"es": "El Manual del agente tiene cada término y el resumen de las reglas.",
+						"en": "The Agent manual has every term and the rules summary."
+					}
+				},
+				{
+					"id": "fin",
+					"tipo": "leer",
+					"quien": "sistema",
+					"texto": {
+						"es": "Training completo. Ya conoce las reglas. Ellos también saben que usted las conoce. Falta lo más bonito: la firma.",
+						"en": "Training complete. You know the rules now. They also know that you know them. The nicest part is left: the signing."
+					}
+				}
+			]
+		},
+		{
+			"id": "contrato",
+			"n": 14,
+			"min": 1.9,
+			"preparar": "sentado",
+			"titulo": {
+				"es": "La firma del contrato",
+				"en": "Signing the contract"
+			},
+			"resumen": {
+				"es": "El final del Training: el Trainer reparte el contrato en papel, a plazo indefinido, y lo firmas con su lapicero.",
+				"en": "The end of the Training: the Trainer hands out the paper contract, for an indefinite term, and you sign it with his pen."
+			},
+			"hora": "17:00",
+			"pasos": [
+				{
+					"id": "ceremonia",
+					"tipo": "leer",
+					"quien": "trainer",
+					"texto": {
+						"es": "El Trainer apaga el proyector y pone en cada mesa un contrato en papel y un lapicero de KipuPay.",
+						"en": "The Trainer turns off the projector and puts a paper contract and a KipuPay pen on every desk."
+					},
+					"dice": [
+						"t_contrato"
+					],
+					"auto": true,
+					"cue": "contratos",
+					"trainer": "centro"
+				},
+				{
+					"id": "firmar",
+					"tipo": "accion",
+					"accion": "contrato",
+					"mientras": [
+						"t_ceremonia"
+					],
+					"trainer": "mesa"
+				},
+				{
+					"id": "foto",
+					"tipo": "elegir",
+					"quien": "trainer",
+					"guarda": "foto",
+					"trainer": "centro",
+					"texto": {
+						"es": "¡Foto de promoción! [T] Sales sonriendo · [N] Sales serio.",
+						"en": "Class photo! [T] Smile · [N] Keep a straight face."
+					},
+					"dice": [
+						"t_foto_1"
+					],
+					"luego_si": [
+						"t_foto_si"
+					],
+					"luego_no": [
+						"t_foto_no"
+					]
+				},
+				{
+					"id": "flash",
+					"tipo": "accion",
+					"accion": "foto",
+					"luego": [
+						"promo:ojos_nayra",
+						"t_foto_2"
+					]
+				},
+				{
+					"id": "bienvenido",
+					"tipo": "elegir",
+					"quien": "trainer",
+					"texto": {
+						"es": "El Trainer te da la mano. [T] Se la das · [N] Asientes con la cabeza.",
+						"en": "The Trainer offers his hand. [T] Shake it · [N] Nod."
+					},
+					"trainer": "mesa",
+					"dice": [
+						"t_promesa"
+					],
+					"cue_si": "aprieta",
+					"cue_no": "suelta",
+					"luego": [
+						"t_despedida"
+					]
+				}
+			]
+		}
+	],
+	"casos": [
+		{
+			"id": "tut_llamada",
+			"ref_v02": "nuevo",
+			"hora_juego": "inducción",
+			"canal": "llamada",
+			"arquetipo": "el_amable",
+			"animo_inicial": 0,
+			"tutorial": true,
+			"caso": {
+				"es": "Estado del envío #KP-0001-2048 a la mamá de la clienta. Pagado esta mañana por Caja Mirador.",
+				"en": "Status of transfer #KP-0001-2048 to the customer's mother. Paid this morning by Caja Mirador."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Buenas noches… perdone la hora. Quiero saber si ya llegó mi envío, el KP-0001-2048. Es para mi mamá.",
+						"en": "Good evening… sorry for the hour. I want to know if my transfer arrived, KP-0001-2048. It's for my mom."
+					},
+					"audio": "voces/clientes/tut_llamada_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "nombre",
+							"es": "Buenas noches, no se preocupe. Con gusto lo reviso. ¿Me confirma su nombre?",
+							"en": "Good evening, don't worry. I'll gladly check it. Can you confirm your name?"
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "revisa",
+							"es": "Un momento, reviso el KP-0001-2048.",
+							"en": "One moment, I'll check KP-0001-2048."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "duda",
+							"es": "Seguro ya llegó, señora. Siempre llegan.",
+							"en": "It surely arrived, ma'am. They always do.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"nombre": {
+					"cliente": {
+						"es": "Rosa Quispe. Es para su medicina, por eso llamo a esta hora.",
+						"en": "Rosa Quispe. It's for her medicine, that's why I'm calling at this hour."
+					},
+					"audio": "voces/clientes/tut_llamada_nombre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Gracias, señora Rosa. Lo estoy viendo en Kardex.",
+							"en": "Thank you, Mrs. Rosa. I'm looking at it in Kardex."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "duda",
+							"es": "Ajá. ¿Algo más?",
+							"en": "Uh-huh. Anything else?"
+						}
+					]
+				},
+				"duda": {
+					"cliente": {
+						"es": "¿Seguro? ¿Lo está viendo o me está diciendo cualquier cosa?",
+						"en": "Are you sure? Are you looking at it or just saying anything?"
+					},
+					"audio": "voces/clientes/tut_llamada_duda.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 25,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Tiene razón, disculpe. Lo reviso ahora mismo.",
+							"en": "You're right, I'm sorry. I'll check it right now."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -35,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Señora, cálmese.",
+							"en": "Ma'am, calm down.",
+							"qa": "calmese"
+						}
+					]
+				},
+				"revisa": {
+					"cliente": {
+						"es": "¿Y? ¿Qué dice?",
+						"en": "And? What does it say?"
+					},
+					"audio": "voces/clientes/tut_llamada_revisa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 20,
+							"t_juego": 25,
+							"sig": "fin_satisfecho",
+							"es": "Caja Mirador lo pagó esta mañana: su mamá puede cobrarlo con su documento. ¿La ayudo en algo más?",
+							"en": "Caja Mirador paid it this morning: your mom can collect it with her ID. Can I help with anything else?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -5,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Está en proceso. Ya llegará.",
+							"en": "It's in process. It'll get there.",
+							"qa": "respuesta_sin_revisar"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "¡Ay, gracias, joven! Mañana temprano vamos. Gracias de verdad.",
+						"en": "Oh, thank you! We'll go early tomorrow. Truly, thank you."
+					},
+					"audio": "voces/clientes/tut_llamada_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Ya… bueno. Volveré a llamar.",
+						"en": "Right… okay. I'll call again."
+					},
+					"audio": "voces/clientes/tut_llamada_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "¿Que me calme? Voy a poner un reclamo.",
+						"en": "Calm down? I'm going to file a complaint."
+					},
+					"audio": "voces/clientes/tut_llamada_fin_molesto.ogg"
+				}
+			}
+		},
+		{
+			"id": "tut_chat",
+			"ref_v02": "nuevo",
+			"hora_juego": "inducción",
+			"canal": "chat",
+			"arquetipo": "el_que_repite",
+			"animo_inicial": 0,
+			"tutorial": true,
+			"caso": {
+				"es": "Chat: «¿dónde está mi plata?». Envío #KP-0001-4410, pagado por RemesaYa hace una hora.",
+				"en": "Chat: \"where is my money?\". Transfer #KP-0001-4410, paid by RemesaYa an hour ago."
+			},
+			"inicio": "inicio",
+			"timeout": {
+				"s_juego": 900,
+				"fin": "fin_timeout"
+			},
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "hola. dónde está mi plata",
+						"en": "hi. where is my money"
+					},
+					"audio": "voces/clientes/tut_chat_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 15,
+							"sig": "numero",
+							"es": "Hola, con gusto te ayudo. ¿Me pasas el número de operación (KP-…)?",
+							"en": "Hi, happy to help. Can you send me the transaction number (KP-…)?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "molesto",
+							"es": "Ya debe estar en tu cuenta.",
+							"en": "It should be in your account already.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"numero": {
+					"cliente": {
+						"es": "KP-0001-4410",
+						"en": "KP-0001-4410"
+					},
+					"audio": "voces/clientes/tut_chat_numero.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 20,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Gracias. RemesaYa lo pagó hace una hora: ya puedes retirarlo.",
+							"en": "Thanks. RemesaYa paid it an hour ago: you can withdraw it now."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Revisa tu banco mañana.",
+							"en": "Check your bank tomorrow."
+						}
+					]
+				},
+				"molesto": {
+					"cliente": {
+						"es": "no está. revisé. no está.",
+						"en": "it's not there. i checked. it's not."
+					},
+					"audio": "voces/clientes/tut_chat_molesto.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 20,
+							"t_juego": 15,
+							"sig": "numero",
+							"es": "Perdona, lo reviso bien. ¿Me pasas el número de operación?",
+							"en": "Sorry, let me check properly. Can you send me the transaction number?"
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -40,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Es lo que dice el sistema.",
+							"en": "That's what the system says."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "ok gracias!!",
+						"en": "ok thanks!!"
+					},
+					"audio": "voces/clientes/tut_chat_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "ok…",
+						"en": "ok…"
+					},
+					"audio": "voces/clientes/tut_chat_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "pésimo servicio",
+						"en": "terrible service"
+					},
+					"audio": "voces/clientes/tut_chat_fin_molesto.ogg"
+				},
+				"fin_timeout": {
+					"resultado": "neutral",
+					"csat": 2,
+					"cliente": {
+						"es": "(el cliente salió del chat)",
+						"en": "(the customer left the chat)"
+					},
+					"audio": "voces/clientes/tut_chat_fin_timeout.ogg"
+				}
+			}
+		},
+		{
+			"id": "tut_correo",
+			"canal": "correo",
+			"tutorial": true,
+			"tx": "KP-0001-3307",
+			"de": "baltazar.u@correo.kp",
+			"asunto": {
+				"es": "Necesito el comprobante de KP-0001-3307",
+				"en": "I need the receipt for KP-0001-3307"
+			},
+			"cuerpo": {
+				"es": "Buenas noches. Le envié 2.840 KP a mi hermano (KP-0001-3307). El banco dice que ya pagó pero él no ve nada. ¿Me pueden mandar el comprobante? Gracias.",
+				"en": "Good evening. I sent 2,840 KP to my brother (KP-0001-3307). The bank says it already paid but he doesn't see anything. Can you send me the receipt? Thanks."
+			},
+			"correcto": {
+				"destinatario": "Banco Andino",
+				"plantilla": "POD",
+				"campos": {
+					"id": "KP-0001-3307",
+					"monto": "2.480,00 KP",
+					"fecha": "08/11"
+				},
+				"tipificacion": "pod_solicitado"
+			},
+			"opciones_campos": {
+				"id": [
+					"KP-0001-3307",
+					"KP-0001-3370",
+					"KP-0010-3307"
+				],
+				"monto": [
+					"2.840,00 KP",
+					"2.480,00 KP",
+					"2.408,00 KP"
+				],
+				"fecha": [
+					"08/11",
+					"11/08",
+					"07/11"
+				]
+			}
+		},
+		{
+			"id": "tut_kyc",
+			"canal": "kyc",
+			"tutorial": true,
+			"perfil": {
+				"nombre": "EUSEBIA MORLÁN TISO",
+				"region": "Norvalia",
+				"total_kp": 1640,
+				"envios": 5,
+				"nacimiento": "14/06/1979",
+				"documento": "—",
+				"direccion": "Av. Las Garzas 402, Puerto Velo"
+			},
+			"everif": {
+				"estado": "fallo",
+				"confirmo": []
+			},
+			"docs": {
+				"id": {
+					"subido": false
+				},
+				"domicilio": {
+					"subido": true,
+					"direccion": "Av. Las Garzas 402, Puerto Velo"
+				}
+			},
+			"selfie": {
+				"coincide": true
+			},
+			"etiquetas": [],
+			"correcto": "solicitar_id",
+			"motivo": {
+				"es": "Norvalia sobre 1.500 KP sin KYC completo y sin documento de identidad: se solicita.",
+				"en": "Norvalia above 1,500 KP without full KYC and no ID document: request it."
+			}
+		},
+		{
+			"id": "tut_vitzo",
+			"canal": "correo",
+			"tutorial": true,
+			"tx": "KP-0001-5521",
+			"vitzo": "status",
+			"de": "candelaria.r@correo.kp",
+			"asunto": {
+				"es": "¿Llegó KP-0001-5521?",
+				"en": "Did KP-0001-5521 arrive?"
+			},
+			"cuerpo": {
+				"es": "Hola. ¿Ya llegó mi envío KP-0001-5521? En el banco me dicen que lo tiene otra empresa. No entiendo nada.",
+				"en": "Hi. Did my transfer KP-0001-5521 arrive? The bank says another company has it. I don't understand anything."
+			},
+			"correcto": {
+				"portal": [
+					"buscar"
+				],
+				"destinatario": "Cliente",
+				"plantilla": "Status",
+				"campos": {
+					"id": "KP-0001-5521",
+					"monto": "1.135,00 KP",
+					"fecha": "09/11"
+				},
+				"tipificacion": "status_informado"
+			},
+			"opciones_campos": {
+				"id": [
+					"KP-0001-5521",
+					"KP-0001-5512",
+					"KP-0011-5521"
+				],
+				"monto": [
+					"1.135,00 KP",
+					"1.153,00 KP",
+					"1.315,00 KP"
+				],
+				"fecha": [
+					"09/11",
+					"08/11",
+					"11/09"
+				]
+			}
+		}
+	],
+	"transacciones": {
+		"KP-0001-2048": {
+			"partner": "Caja Mirador",
+			"monto": "640,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Pagado por el partner esta mañana",
+				"en": "Paid by partner this morning"
+			},
+			"beneficiario": "Juana Quispe de Rosa"
+		},
+		"KP-0001-4410": {
+			"partner": "RemesaYa",
+			"monto": "300,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Pagado por el partner hace una hora",
+				"en": "Paid by partner an hour ago"
+			},
+			"beneficiario": "Néstor Ulloa"
+		},
+		"KP-0001-3307": {
+			"partner": "Banco Andino",
+			"monto": "2.480,00 KP",
+			"fecha": "08/11",
+			"estado": {
+				"es": "Pagado por el partner · sin confirmación de acreditación",
+				"en": "Paid by partner · credit not confirmed"
+			},
+			"beneficiario": "Isidro Baltazar Ugarte"
+		},
+		"KP-0001-5521": {
+			"partner": "Vitzo",
+			"monto": "1.135,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Liberado al partner pagador",
+				"en": "Released to paying partner"
+			},
+			"beneficiario": "Candelaria Ríos Paz"
+		}
+	},
+	"portal": {
+		"KP-0001-5521": {
+			"estado": "Depositado",
+			"fecha": "09/11 04:10",
+			"monto": "1.135,00 KP",
+			"pod": true,
+			"pod_texto": "Depósito 04:10 · cuenta ****5521 · ref VZ-100231"
+		}
+	},
+	"reacciones": {
+		"t_hola": "gesto:welcome",
+		"t_cafe_1": "va:cafe",
+		"t_cafe_2": "risa",
+		"promo:hola_yimi": "risa:Llauri",
+		"t_nombres": "saludan",
+		"t_aux_pct": "risa",
+		"t_perdido_ok": "risa",
+		"t_calib_si": "risa",
+		"t_llamada_bien": "aplauso",
+		"t_bien_4": "aplauso",
+		"t_correo": "risa",
+		"t_ayuda_si": "asienten",
+		"t_historia_1": "risa",
+		"t_historia_vale": "gesto:heart",
+		"promo:moto_yimi": "risa",
+		"t_tl_gana": "risa",
+		"t_bo_kyc": "risa",
+		"t_ezlak": "risa",
+		"t_escribir": "risa",
+		"t_salir": "risa",
+		"t_rta": "risa",
+		"t_fatiga": "risa",
+		"t_contrato": "aplauso",
+		"promo:ojos_nayra": "risa",
+		"t_break_fin": "risa:Marko",
+		"t_promesa": "ofrece"
+	}
+}

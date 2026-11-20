@@ -1,0 +1,18 @@
+A V A I L A B L E — v0.4 COMPLETA (18/11/2026)
+================================================
+
+NOVEDADES Y CORRECCIONES INTEGRADAS:
+1. Tiempo lineal uniforme en todo el turno (corta ~18 min, normal ~24 min, larga ~32 min);
+   solo dormir en los pufs/sofas durante el lunch acelera el reloj.
+2. Ezlaki con ritmo calmado y tenso (sin avalancha de mensajes) + IA mejorada en chat,
+   llamadas por microfono y menciones directas (@mentor, @shero, @papayala, etc.).
+3. Dificultad endurecida en Facil, Normal y Difícil + control de BO inactivo (>2 min).
+4. Don Fermin (Guardia) ahora te persigue por todo el edificio y te mata con su propio
+   screamer si intentas pasar sin completar la revision de seguridad.
+5. Molinetes con barrera fisica real (StaticBody3D): bloquean el paso hasta pulsar [E].
+6. Jiroshi como unico protagonista jugable con sus 5 finales (Renunciar, Despedido,
+   Volverse Shero, Alma en el Software y Final Secreto: El Fotocheck), con Llauri,
+   Marko, Ttoom y Juan como companeros de promocion (24/10/2025 -> 27/10/2025 -> 26/10/2026).
+7. Semana completa habilitada (Training + Lunes a Domingo): Papayala (Jueves), OM y
+   asientos vacios (Viernes), Shero Gigante, minuto 05:59 y GRASA en azotea (Sabado)
+   y epilogo/finales (Domingo).

@@ -1,0 +1,539 @@
+{
+	"_comentario": "v0.3.2-core · Conjunto de prueba en INGLÉS para IANlu (lo que el jugador escribe en inglés al cliente y en Ezlaki). Mismo formato que test_intents.json: [texto, intención aceptada, …].",
+	"lineas": [
+		[
+			"Thank you for calling KipuPay, my name is Marko.",
+			"cs_saludo"
+		],
+		[
+			"Good evening, thanks for contacting KipuPay, how can I help you?",
+			"cs_saludo"
+		],
+		[
+			"Hello, welcome to KipuPay, how may I help you tonight?",
+			"cs_saludo"
+		],
+		[
+			"I understand how you feel, I'm going to help you.",
+			"cs_empatia"
+		],
+		[
+			"I'm so sorry for the inconvenience.",
+			"cs_empatia"
+		],
+		[
+			"You're right, I apologize for the delay.",
+			"cs_empatia"
+		],
+		[
+			"Don't worry, I'm here to help.",
+			"cs_empatia"
+		],
+		[
+			"I completely understand your frustration, sir.",
+			"cs_empatia"
+		],
+		[
+			"That must be hard, I can imagine.",
+			"cs_empatia"
+		],
+		[
+			"Sorry to keep you waiting, I hear you.",
+			"cs_empatia"
+		],
+		[
+			"Can you confirm the transaction number, please?",
+			"cs_proceso"
+		],
+		[
+			"Could you give me your ID number?",
+			"cs_proceso"
+		],
+		[
+			"Let me check your transfer in the system.",
+			"cs_proceso"
+		],
+		[
+			"I will verify your details with the partner.",
+			"cs_proceso"
+		],
+		[
+			"Please provide the reference number so I can review it.",
+			"cs_proceso"
+		],
+		[
+			"I'm going to check the code in the portal.",
+			"cs_proceso"
+		],
+		[
+			"Let me look it up, can I have your document?",
+			"cs_proceso"
+		],
+		[
+			"Your transfer is being processed, it arrives in 24 hours.",
+			"cs_info"
+		],
+		[
+			"The payment was sent and the recipient can pick it up at the agency.",
+			"cs_info"
+		],
+		[
+			"It is on hold, let me explain what happens.",
+			"cs_info",
+			"cs_hold"
+		],
+		[
+			"The money was returned, it will be credited in three business days.",
+			"cs_info"
+		],
+		[
+			"One moment please, I'll put you on hold.",
+			"cs_hold"
+		],
+		[
+			"Please hold, don't hang up.",
+			"cs_hold"
+		],
+		[
+			"Give me a second, bear with me.",
+			"cs_hold"
+		],
+		[
+			"Just a moment while I check.",
+			"cs_hold",
+			"cs_proceso"
+		],
+		[
+			"Is there anything else I can help you with?",
+			"cs_cierre"
+		],
+		[
+			"It's resolved. Thank you for your patience, have a good night.",
+			"cs_cierre"
+		],
+		[
+			"It has been registered, I'll send you the tracking number by email.",
+			"cs_cierre"
+		],
+		[
+			"Anything else? Have a nice day.",
+			"cs_cierre"
+		],
+		[
+			"Thanks for waiting, it's done.",
+			"cs_cierre"
+		],
+		[
+			"Calm down, stop yelling at me.",
+			"cs_calmese"
+		],
+		[
+			"Lower your voice or I will hang up.",
+			"cs_calmese"
+		],
+		[
+			"I promise it's already in your account.",
+			"cs_promesa"
+		],
+		[
+			"I guarantee nothing will happen.",
+			"cs_promesa"
+		],
+		[
+			"It's the procedure, there is nothing I can do.",
+			"cs_procedimiento"
+		],
+		[
+			"That's not possible, the policy does not allow it.",
+			"cs_procedimiento"
+		],
+		[
+			"It's your fault, you should have read the terms.",
+			"cs_procedimiento"
+		],
+		[
+			"Call back later, it's not my department.",
+			"cs_procedimiento"
+		],
+		[
+			"I will escalate this to the fraud department.",
+			"cs_escalar"
+		],
+		[
+			"I'll transfer you to a supervisor.",
+			"cs_escalar"
+		],
+		[
+			"I'll open a ticket with the back office.",
+			"cs_escalar"
+		],
+		[
+			"I will process the refund right now.",
+			"cs_reembolso"
+		],
+		[
+			"We can cancel the transfer and return your money.",
+			"cs_reembolso"
+		],
+		[
+			"hello",
+			"saludo"
+		],
+		[
+			"hi, how are you?",
+			"saludo",
+			"pregunta_personal"
+		],
+		[
+			"good evening team",
+			"saludo"
+		],
+		[
+			"on my way",
+			"voy"
+		],
+		[
+			"I'm coming",
+			"voy"
+		],
+		[
+			"be right there",
+			"voy"
+		],
+		[
+			"joining now",
+			"voy"
+		],
+		[
+			"got it",
+			"ack"
+		],
+		[
+			"copy that",
+			"ack"
+		],
+		[
+			"understood, sir",
+			"ack"
+		],
+		[
+			"acknowledged",
+			"ack"
+		],
+		[
+			"ok",
+			"ok"
+		],
+		[
+			"sure thing",
+			"ok"
+		],
+		[
+			"sounds good",
+			"ok"
+		],
+		[
+			"yes, of course",
+			"ok"
+		],
+		[
+			"no thanks",
+			"negar"
+		],
+		[
+			"I can't, I have a queue",
+			"negar"
+		],
+		[
+			"not today",
+			"negar"
+		],
+		[
+			"no way",
+			"negar"
+		],
+		[
+			"I don't know",
+			"no_se"
+		],
+		[
+			"no idea",
+			"no_se"
+		],
+		[
+			"I don't understand",
+			"no_se"
+		],
+		[
+			"thank you so much",
+			"gracias"
+		],
+		[
+			"thanks a lot, I owe you one",
+			"gracias"
+		],
+		[
+			"I'm sorry, my mistake",
+			"disculpa"
+		],
+		[
+			"my bad, it won't happen again",
+			"disculpa"
+		],
+		[
+			"forgive me",
+			"disculpa"
+		],
+		[
+			"I couldn't, the system crashed",
+			"excusa"
+		],
+		[
+			"I was on a call",
+			"excusa"
+		],
+		[
+			"it wasn't my fault, it froze",
+			"excusa",
+			"defensa"
+		],
+		[
+			"I forgot, I was busy",
+			"excusa"
+		],
+		[
+			"can I take a break?",
+			"pedir_break"
+		],
+		[
+			"I need a break",
+			"pedir_break"
+		],
+		[
+			"can I go to lunch?",
+			"pedir_lunch"
+		],
+		[
+			"can I go to the bathroom?",
+			"pedir_bano"
+		],
+		[
+			"bathroom break please",
+			"pedir_bano"
+		],
+		[
+			"I need help",
+			"pedir_ayuda"
+		],
+		[
+			"can you help me?",
+			"pedir_ayuda"
+		],
+		[
+			"any tips?",
+			"pedir_ayuda"
+		],
+		[
+			"I feel sick",
+			"ayuda_salud"
+		],
+		[
+			"I'm dizzy, my head hurts",
+			"ayuda_salud"
+		],
+		[
+			"I'm going to faint",
+			"ayuda_salud"
+		],
+		[
+			"I'm tired",
+			"queja"
+		],
+		[
+			"I'm fed up with this job",
+			"queja"
+		],
+		[
+			"it's not fair",
+			"queja"
+		],
+		[
+			"I quit",
+			"renuncia"
+		],
+		[
+			"I want to quit",
+			"renuncia"
+		],
+		[
+			"good job",
+			"halago"
+		],
+		[
+			"you're the best",
+			"halago"
+		],
+		[
+			"well done",
+			"halago"
+		],
+		[
+			"you can do it",
+			"apoyo"
+		],
+		[
+			"hang in there, almost there",
+			"apoyo"
+		],
+		[
+			"I'll cover for you",
+			"apoyo"
+		],
+		[
+			"cover for me",
+			"favor"
+		],
+		[
+			"do me a favor, mark my aux",
+			"favor"
+		],
+		[
+			"I did verify",
+			"defensa"
+		],
+		[
+			"I followed the procedure",
+			"defensa"
+		],
+		[
+			"that's not true",
+			"defensa"
+		],
+		[
+			"it wasn't me",
+			"defensa"
+		],
+		[
+			"he is sleeping",
+			"delatar"
+		],
+		[
+			"she fell asleep",
+			"delatar"
+		],
+		[
+			"he is cheating, I saw him",
+			"delatar"
+		],
+		[
+			"what do I do with the case?",
+			"pregunta_caso"
+		],
+		[
+			"what do I tell the customer?",
+			"pregunta_caso"
+		],
+		[
+			"where is the template?",
+			"pregunta_caso"
+		],
+		[
+			"are you ok?",
+			"pregunta_personal"
+		],
+		[
+			"do you have kids?",
+			"pregunta_personal"
+		],
+		[
+			"are you real?",
+			"pregunta_personal"
+		],
+		[
+			"who are you?",
+			"pregunta_personal"
+		],
+		[
+			"what time?",
+			"pregunta"
+		],
+		[
+			"do you know?",
+			"pregunta"
+		],
+		[
+			"quick question",
+			"pregunta"
+		],
+		[
+			"just kidding",
+			"broma"
+		],
+		[
+			"haha that's funny",
+			"broma"
+		],
+		[
+			"you idiot",
+			"insulto"
+		],
+		[
+			"shut up",
+			"insulto"
+		],
+		[
+			"go to hell",
+			"insulto"
+		],
+		[
+			"you are useless",
+			"insulto"
+		],
+		[
+			"I will kill you",
+			"amenaza"
+		],
+		[
+			"I'll report you to the union",
+			"amenaza"
+		],
+		[
+			"I love you",
+			"carino"
+		],
+		[
+			"I miss you",
+			"carino"
+		],
+		[
+			"let's go to the rooftop",
+			"azotea"
+		],
+		[
+			"my mom is sick",
+			"contar",
+			"ayuda_salud"
+		],
+		[
+			"my birthday is today",
+			"contar"
+		],
+		[
+			"it's raining",
+			"charla"
+		],
+		[
+			"did you see the game?",
+			"charla"
+		],
+		[
+			"I'm leaving, see you tomorrow",
+			"despedida"
+		],
+		[
+			"bye, take care",
+			"despedida",
+			"cs_cierre"
+		]
+	]
+}

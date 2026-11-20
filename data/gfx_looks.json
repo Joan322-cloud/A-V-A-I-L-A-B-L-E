@@ -1,0 +1,158 @@
+{
+	"_doc": "v0.3.2 gfx · Aspecto por piso para las calidades Media y Alta (scripts/gfx/). Baja y Modo liviano no leen este archivo. 'base' vale para todo; 'pisos' pisa claves por piso (-1, 1, 2, 9, 'escalera'); 'zonas' pisa por zona dentro de un piso (rectángulo x0,x1,z0,z1 en coordenadas del piso); 'recuerdo' es el Training (flashback): de día, cálido y limpio, sin oscuridad; su ambiente, niebla, fondo y luces los define el Training (core/flashback.gd LOOK, core/training_room.gd LOOK) y aquí solo va lo que agregan Media/Alta (exposición, contraste, oclusión, resplandor; sin tubos apagados ni parpadeo). Los números se afinaron mirando capturas en los dos renderizadores.",
+	"base": {
+		"exposure": 1.3,
+		"tonemap": "agx",
+		"agx_white": 7.0,
+		"agx_contrast": 1.22,
+		"ambient_k": 0.4,
+		"ambient_min": 0.085,
+		"compat_ambient": 1.5,
+		"compat_fog_color": 1.8,
+		"compat_fog_density": 1.9,
+		"fog_density_k": 1.3,
+		"fog_color_k": 2.0,
+		"vol_density": 0.02,
+		"vol_albedo": [0.82, 0.88, 0.92],
+		"vol_anisotropy": 0.45,
+		"vol_length": 46.0,
+		"vol_ambient": 0.015,
+		"glow_intensity": 0.5,
+		"glow_bloom": 0.03,
+		"glow_threshold": 1.0,
+		"ssao_intensity": 2.4,
+		"ssao_radius": 1.1,
+		"ssil_intensity": 0.9,
+		"saturation": 0.92,
+		"lift": [0.985, 1.0, 1.02],
+		"gain": [1.02, 1.0, 0.97],
+		"vignette": 1.0,
+		"grain": 1.0,
+		"aberration": 1.0,
+		"lights": {
+			"enabled": true,
+			"spacing": 6.4,
+			"panel_spot": 4.0,
+			"panel_angle": 74.0,
+			"panel_soft": 1.0,
+			"panel_fill": 0.4,
+			"compat_fill": 1.8,
+			"down_spot": 1.7,
+			"down_fill": 0.3,
+			"room_k": 0.5,
+			"accent_k": 0.9,
+			"presence": 0.28,
+			"unstable": 0.12
+		}
+	},
+	"pisos": {
+		"2": {
+			"ambient_k": 0.5,
+			"vol_density": 0.018,
+			"lights": {
+				"zonas": [
+					{
+						"_doc": "Pasillo de casilleros: una poza sobre tu casillero, el tubo que parpadea junto al hall y el fondo a oscuras. Los tubos apagados conservan un brillo residual (se siguen contando: 'un panel mas').",
+						"id": "casilleros", "rect": [-0.9, 1.9, -11.0, 3.2],
+						"solo_cerca": [[0.5, -4.6]], "tenue_parpadeo": 0.35,
+						"angle": 54.0, "soft": 1.3, "spot": 1.1, "fill": 0.16, "fill_range": 3.2, "room_k": 0.2, "off_glow": 0.3,
+						"rotulos": 0.5, "tinte": {"PuertasCasilleros": 0.72}
+					},
+					{
+						"_doc": "Pantry al fondo del pasillo: a oscuras; quedan los brillos de sus aparatos.",
+						"id": "pantry", "rect": [-3.4, 5.4, -14.0, -11.0],
+						"solo": [], "room_k": 0.25, "off_glow": 0.2
+					},
+					{
+						"_doc": "Pasillo corto de banos, al fondo de todo: su downlight a un tercio (la puerta del fondo apenas se adivina).",
+						"id": "pasillo_banos", "rect": [-0.15, 1.25, -16.6, -14.0],
+						"tenue": {"DownPasilloBanos": 0.35}
+					},
+					{
+						"_doc": "Sala de feedback / calibracion: un solo panel frio sobre la mesa y las paredes cayendo a sombra. 'sigue': cuando la sesion de Haime baja o apaga las luces de la sala, las de este paquete la siguen y la exposicion NO se abre para compensar (la oscuridad la pone el guion). Extras: el derrame de la sala hacia el ala norte por el vidrio y la luz roja del REC de su monitor sobre Haime (le llega de lado: un filo rojo; 'sigue_min': con la sala a oscuras baja hasta esa fraccion, para no ser la luz principal). Para la sesion de Haime (v0.3.2-final): 'rojo_guion' = cuanto queda del rojo de su REC durante la sesion ('rojo_solo' cuando solo queda el REC); 'relleno_guion' = fraccion de la luz de relleno ORIGINAL del piso que cuenta cuando la sesion la pide en absoluto (la fatal: la luz de tu lado).",
+						"id": "calibracion", "rect": [8.6, 12.4, 1.5, 4.2], "sigue": true,
+						"angle": 44.0, "soft": 1.9, "spot": 1.0, "fill": 0.1, "fill_range": 3.0, "room_k": 0.06, "presence": 0.35,
+						"rojo_guion": 0.2, "rojo_solo": 0.7, "relleno_guion": 0.45,
+						"extras": [
+							{"de": "LuzCalibracion", "tipo": "spot", "pos": [10.4, 2.5, 3.2], "hacia": [10.7, 0.0, 6.3], "color": [0.78, 0.9, 1.0], "energy": 1.5, "range": 6.5, "angle": 34.0, "soft": 1.4},
+							{"de": "LuzRec", "tipo": "omni", "pos": [9.72, 1.08, 3.4], "color": [1.0, 0.1, 0.07], "energy": 3.2, "range": 1.1, "att": 1.0, "specular": 0.6, "sigue_min": 0.08}
+						]
+					},
+					{
+						"_doc": "Ala norte: a oscuras salvo la entrada 2, el paso a la sala de operaciones y el tubo que parpadea frente a la sala de vidrio (a media luz), para que la sala encendida se lea desde lejos.",
+						"id": "ala_norte", "rect": [-1.35, 19.5, 3.2, 7.2],
+						"solo": ["LuzAnexoN0", "LuzPasoEntrada2"], "tenue": {"LuzAnexoN2": 0.35, "LuzAnexoN0": 0.6, "LuzPasoEntrada2": 0.8},
+						"angle": 60.0, "soft": 1.3, "fill": 0.3, "fill_range": 4.0
+					}
+				]
+			}
+		},
+		"1": {
+			"ambient_k": 0.34,
+			"lights": {
+				"zonas": [
+					{
+						"_doc": "Pasillo del piso 1: una sola poza calida bajo el difusor del medio; el tramo del fondo (la puerta de la mirilla) queda a oscuras con el verde del cartel de salida.",
+						"id": "pasillo", "rect": [6.0, 8.2, -1.2, 9.6],
+						"solo": ["Difusor74"], "tenue": {"Difusor74": 0.65}, "angle": 50.0, "soft": 1.4, "fill": 0.25, "fill_range": 3.2, "room_k": 0.3, "accent_k": 0.4
+					},
+					{
+						"_doc": "Recodo al topico: su difusor a media luz.",
+						"id": "recodo", "rect": [8.2, 12.6, -1.3, 0.7],
+						"tenue": {"Difusor102": 0.6}, "fill": 0.4, "fill_range": 3.4
+					}
+				]
+			}
+		},
+		"-1": {
+			"ambient_k": 0.3,
+			"fog_density_k": 1.0,
+			"vol_density": 0.02,
+			"vol_albedo": [0.86, 0.88, 0.84],
+			"lift": [1.0, 1.01, 0.985],
+			"gain": [1.03, 1.0, 0.94],
+			"lights": {"spacing": 5.6}
+		},
+		"9": {
+			"ambient_k": 0.55,
+			"fog_density_k": 1.0,
+			"vol_density": 0.008,
+			"lights": {"spacing": 0.0}
+		},
+		"escalera": {
+			"ambient_k": 0.3,
+			"vol_density": 0.03,
+			"fog_density_k": 1.4,
+			"lights": {"spacing": 0.0, "room_k": 0.75}
+		}
+	},
+	"recuerdo": {
+		"exposure": 0.86,
+		"agx_contrast": 1.0,
+		"agx_white": 9.0,
+		"ambient_k": 0.7,
+		"ambient_min": 0.2,
+		"fog_density_k": 1.0,
+		"fog_color_k": 1.0,
+		"vol_density": 0.004,
+		"vol_albedo": [1.0, 0.95, 0.86],
+		"vol_ambient": 0.2,
+		"glow_intensity": 0.42,
+		"glow_bloom": 0.06,
+		"ssao_intensity": 1.3,
+		"saturation": 1.0,
+		"lift": [1.0, 1.0, 1.0],
+		"gain": [1.0, 1.0, 1.0],
+		"vignette": 0.35,
+		"grain": 0.35,
+		"aberration": 0.0,
+		"lights": {"enabled": false, "presence": 0.0, "unstable": 0.0}
+	},
+	"eventos": {
+		"_doc": "Qué hace el aire del piso ante cada señal del EventBus: 'emergencia' = tubos al mínimo y luminarias de emergencia; 'susto' = empuje del lente (0..1) durante 's' segundos.",
+		"pursuit_started": {"emergencia": true},
+		"pursuit_ended": {"emergencia": false},
+		"death_sequence_started": {"susto": 1.0, "s": 2.5},
+		"rta_hunt_started": {"susto": 0.35, "s": 1.2}
+	}
+}

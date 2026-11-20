@@ -1,0 +1,597 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P5 · Rasec (TM), PLAN §2 #77-78 [PROPUESTA, provisional hasta que Joan lo detalle]. Un mini evento por turno (karaoke, charadas, juego de la silla) de 4-5 min de juego; para participar hay que poner AUX BO (autorización 'tm') e ir al punto 'evento_rasec' en 'ventana_min' (× plazos). Rechazar, no poner BO o no llegar = advertencia; la 2.ª advertencia del turno = muerte 'rasec_evento'. El tema sale de la fecha real si cae en una de las 'temas' (desde/hasta MM-DD); si no, el de 'tema_por_turno'. Música de madrugada: 'musica.horas' por turno (bloque 03:00-06:00), 'duracion_min' [min, max] de juego; con música Rasec lleva el nodo Pelo visible.",
+	"turnos": {
+		"1": {
+			"hora": "05:30",
+			"tipo": "karaoke"
+		},
+		"2": {
+			"hora": "05:15",
+			"tipo": "charadas"
+		},
+		"3": {
+			"hora": "05:35",
+			"tipo": "sillas"
+		}
+	},
+	"tema_por_turno": {
+		"1": "halloween",
+		"2": "madre",
+		"3": "aniversario"
+	},
+	"temas": [
+		{
+			"id": "halloween",
+			"desde": "10-20",
+			"hasta": "11-10",
+			"nombre": {
+				"es": "Halloween",
+				"en": "Halloween"
+			}
+		},
+		{
+			"id": "navidad",
+			"desde": "12-01",
+			"hasta": "12-26",
+			"nombre": {
+				"es": "Navidad",
+				"en": "Christmas"
+			}
+		},
+		{
+			"id": "san_valentin",
+			"desde": "02-07",
+			"hasta": "02-16",
+			"nombre": {
+				"es": "San Valentín",
+				"en": "Valentine's Day"
+			}
+		},
+		{
+			"id": "madre",
+			"desde": "05-01",
+			"hasta": "05-20",
+			"nombre": {
+				"es": "el Día de la Madre",
+				"en": "Mother's Day"
+			}
+		},
+		{
+			"id": "fiestas_patrias",
+			"desde": "07-20",
+			"hasta": "07-31",
+			"nombre": {
+				"es": "Fiestas Patrias",
+				"en": "National Holidays"
+			}
+		},
+		{
+			"id": "aniversario",
+			"desde": "",
+			"hasta": "",
+			"nombre": {
+				"es": "el aniversario de la campaña KipuPay",
+				"en": "the KipuPay campaign anniversary"
+			}
+		}
+	],
+	"ventana_min": 2.0,
+	"duracion_min": 4.5,
+	"radio_m": 3.0,
+	"retraso_max_min": 30.0,
+	"musica": {
+		"horas": {
+			"1": [
+				"03:50"
+			],
+			"2": [
+				"03:25"
+			],
+			"3": [
+				"03:05",
+				"05:50"
+			]
+		},
+		"duracion_min": [
+			6.0,
+			9.0
+		],
+		"slot": "musica/rasec_madrugada",
+		"slot_respaldo": "musica/hold_kipupay_parlantes"
+	},
+	"karaoke": {
+		"slot": "musica/rasec_karaoke",
+		"versos": [
+			{
+				"es": "♪ Somos familia, de madrugada ♪",
+				"en": "♪ One big family, in the dead of night ♪"
+			},
+			{
+				"es": "♪ Nadie se cansa, nadie se va ♪",
+				"en": "♪ Nobody's tired, nobody leaves ♪"
+			},
+			{
+				"es": "♪ El Available es nuestra casa ♪",
+				"en": "♪ Available is our home ♪"
+			},
+			{
+				"es": "♪ No hay breaks, no hay breaks, no hay… ♪",
+				"en": "♪ No breaks, no breaks, no… ♪"
+			},
+			{
+				"es": "♪ nadie… se… va… ♪",
+				"en": "♪ no… body… leaves… ♪"
+			}
+		],
+		"ventana_s": 2.2
+	},
+	"charadas": {
+		"slot": "musica/rasec_charadas",
+		"rondas": [
+			{
+				"mimica": {
+					"es": "Rasec acuna algo invisible en los brazos. Lo mece. Lo mira mucho rato.",
+					"en": "Rasec cradles something invisible in his arms. Rocks it. Stares at it for a long time."
+				},
+				"opciones": [
+					{
+						"es": "Mamá",
+						"en": "Mom"
+					},
+					{
+						"es": "Cliente",
+						"en": "Customer"
+					},
+					{
+						"es": "Turno",
+						"en": "Shift"
+					}
+				],
+				"correcta": 0,
+				"si_bien": {
+					"es": "¡Mamá! Feliz día a todas las mamás que hoy no vieron a sus hijos. Aplausos.",
+					"en": "Mom! Happy day to all the moms who didn't see their kids today. Applause."
+				}
+			},
+			{
+				"mimica": {
+					"es": "Rasec cierra los ojos, apoya la cabeza en las manos… y los abre de golpe, sonriendo.",
+					"en": "Rasec closes his eyes, rests his head on his hands… and snaps them open, smiling."
+				},
+				"opciones": [
+					{
+						"es": "Dormir",
+						"en": "Sleep"
+					},
+					{
+						"es": "Descanso",
+						"en": "Rest"
+					},
+					{
+						"es": "Available",
+						"en": "Available"
+					}
+				],
+				"correcta": 2,
+				"si_bien": {
+					"es": "Available. Siempre es Available. «Dormir» no es una palabra de aquí.",
+					"en": "Available. It's always Available. \"Sleep\" isn't a word we use here."
+				}
+			},
+			{
+				"mimica": {
+					"es": "Rasec camina hacia la puerta, se detiene, vuelve a su sitio. Lo hace otra vez. Y otra.",
+					"en": "Rasec walks to the door, stops, goes back to his spot. Does it again. And again."
+				},
+				"opciones": [
+					{
+						"es": "Irse a casa",
+						"en": "Going home"
+					},
+					{
+						"es": "Break",
+						"en": "Break"
+					},
+					{
+						"es": "Nada",
+						"en": "Nothing"
+					}
+				],
+				"correcta": 2,
+				"si_bien": {
+					"es": "Nada. Nadie se va. Muy bien, {agente}.",
+					"en": "Nothing. Nobody leaves. Very good, {agente}."
+				}
+			}
+		],
+		"si_mal": {
+			"es": "Mmm. No. Pero participaste. Eso cuenta. Todo cuenta.",
+			"en": "Hmm. No. But you took part. That counts. Everything counts."
+		}
+	},
+	"sillas": {
+		"slot": "musica/rasec_sillas",
+		"rondas": 2,
+		"sillas": 5,
+		"musica_s": [
+			4.0,
+			6.5
+		],
+		"sentarse_s": 4.0
+	},
+	"decisiones": {
+		"karaoke": [
+			{
+				"en": "inicio",
+				"pregunta": "q4_karaoke_d1",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "¡Claro, Rasec! Yo empiezo.",
+							"en": "Sure, Rasec! I'll start."
+						},
+						"respuesta": "q4_karaoke_d1_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Tengo la garganta mal, mejor otro…",
+							"en": "My throat's bad, maybe someone else…"
+						},
+						"respuesta": "q4_karaoke_d1_excusa",
+						"anota": true,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "¿También hay que sonreír o eso cuesta extra?",
+							"en": "Do we have to smile too, or does that cost extra?"
+						},
+						"respuesta": "q4_karaoke_d1_burla",
+						"anota": true,
+						"grupo": 1
+					}
+				]
+			},
+			{
+				"en": "mitad",
+				"pregunta": "q4_karaoke_d2",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "[Cantar el solo con ganas]",
+							"en": "[Sing the solo with gusto]"
+						},
+						"respuesta": "q4_karaoke_d2_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Mejor cantemos todos juntos, ¿no?",
+							"en": "Better we all sing together, right?"
+						},
+						"respuesta": "q4_karaoke_d2_excusa",
+						"anota": false,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "[Cantar desafinado a propósito]",
+							"en": "[Sing off-key on purpose]"
+						},
+						"respuesta": "q4_karaoke_d2_burla",
+						"anota": true,
+						"grupo": 1
+					}
+				]
+			},
+			{
+				"en": "final",
+				"pregunta": "q4_karaoke_d3",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "Un diez, Rasec.",
+							"en": "A ten, Rasec."
+						},
+						"respuesta": "q4_karaoke_d3_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Estoy muy cansado para puntuar…",
+							"en": "I'm too tired to rate it…"
+						},
+						"respuesta": "q4_karaoke_d3_excusa",
+						"anota": true,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "Un tres. Por la música.",
+							"en": "A three. For the music."
+						},
+						"respuesta": "q4_karaoke_d3_burla",
+						"anota": true,
+						"grupo": 1
+					}
+				]
+			}
+		],
+		"charadas": [
+			{
+				"en": "inicio",
+				"pregunta": "q4_charadas_d1",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "Sí, yo actúo.",
+							"en": "Yes, I'll act."
+						},
+						"respuesta": "q4_charadas_d1_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "No levanté la mano, me estaba frotando los ojos.",
+							"en": "I didn't raise my hand, I was rubbing my eyes."
+						},
+						"respuesta": "q4_charadas_d1_excusa",
+						"anota": false,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "Actúa tú, Rasec, que lo haces todo el día.",
+							"en": "You act, Rasec, you do it all day."
+						},
+						"respuesta": "q4_charadas_d1_burla",
+						"anota": true,
+						"grupo": 1
+					}
+				]
+			},
+			{
+				"en": "mitad",
+				"pregunta": "q4_charadas_d2",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "¡Ya sé, ya sé, déjenme adivinar!",
+							"en": "I know, I know, let me guess!"
+						},
+						"respuesta": "q4_charadas_d2_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Que adivine otro, yo no veo bien la mímica.",
+							"en": "Let someone else guess, I can't see the miming well."
+						},
+						"respuesta": "q4_charadas_d2_excusa",
+						"anota": false,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "¿Es «renunciar»?",
+							"en": "Is it \"quitting\"?"
+						},
+						"respuesta": "q4_charadas_d2_burla",
+						"anota": true,
+						"grupo": 2
+					}
+				]
+			},
+			{
+				"en": "final",
+				"pregunta": "q4_charadas_d3",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "[Levantar la mano]",
+							"en": "[Raise your hand]"
+						},
+						"respuesta": "q4_charadas_d3_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Tengo que volver a Available, Rasec…",
+							"en": "I need to get back to Available, Rasec…"
+						},
+						"respuesta": "q4_charadas_d3_excusa",
+						"anota": false,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "[Dejar la mano abajo y mirar a los demás]",
+							"en": "[Keep your hand down and look at the others]"
+						},
+						"respuesta": "q4_charadas_d3_burla",
+						"anota": true,
+						"grupo": 2
+					}
+				]
+			}
+		],
+		"sillas": [
+			{
+				"en": "inicio",
+				"pregunta": "q4_sillas_d1",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "Muy justo, Rasec.",
+							"en": "Very fair, Rasec."
+						},
+						"respuesta": "q4_sillas_d1_seguir",
+						"anota": false,
+						"grupo": -1
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "No sé ningún secreto…",
+							"en": "I don't know any secrets…"
+						},
+						"respuesta": "q4_sillas_d1_excusa",
+						"anota": false,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "El secreto es que nadie quiere estar aquí.",
+							"en": "The secret is nobody wants to be here."
+						},
+						"respuesta": "q4_sillas_d1_burla",
+						"anota": true,
+						"grupo": 2
+					}
+				]
+			},
+			{
+				"en": "mitad",
+				"pregunta": "q4_sillas_d2",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "[Sacudirla del hombro] Llauri, despierta.",
+							"en": "[Shake her shoulder] Llauri, wake up."
+						},
+						"respuesta": "q4_sillas_d2_seguir",
+						"anota": false,
+						"grupo": -2
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Déjala, Rasec, lleva dos turnos sin dormir.",
+							"en": "Leave her, Rasec, she hasn't slept in two shifts."
+						},
+						"respuesta": "q4_sillas_d2_excusa",
+						"anota": true,
+						"grupo": 2
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "Shh, que si se despierta pierde la silla.",
+							"en": "Shh, if she wakes up she loses the chair."
+						},
+						"respuesta": "q4_sillas_d2_burla",
+						"anota": true,
+						"grupo": 1
+					}
+				],
+				"excluye": "Llauri"
+			},
+			{
+				"en": "final",
+				"pregunta": "q4_sillas_d3",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "Gracias, Rasec. Somos familia.",
+							"en": "Thanks, Rasec. We're family."
+						},
+						"respuesta": "q4_sillas_d3_seguir",
+						"anota": false,
+						"grupo": -2
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Mejor volvamos a trabajar…",
+							"en": "Let's just get back to work…"
+						},
+						"respuesta": "q4_sillas_d3_excusa",
+						"anota": false,
+						"grupo": 0
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "¿El premio es irme a casa?",
+							"en": "Is the prize going home?"
+						},
+						"respuesta": "q4_sillas_d3_burla",
+						"anota": true,
+						"grupo": 2
+					}
+				]
+			}
+		],
+		"comun": [
+			{
+				"en": "relleno",
+				"pregunta": "q4_comun_d1",
+				"opciones": [
+					{
+						"tipo": "seguir",
+						"texto": {
+							"es": "Que participe, como todos.",
+							"en": "He should join, like everyone."
+						},
+						"respuesta": "q4_comun_d1_seguir",
+						"anota": false,
+						"grupo": -2
+					},
+					{
+						"tipo": "excusa",
+						"texto": {
+							"es": "Si está en llamada, déjalo.",
+							"en": "If he's on a call, leave him."
+						},
+						"respuesta": "q4_comun_d1_excusa",
+						"anota": true,
+						"grupo": 1
+					},
+					{
+						"tipo": "burla",
+						"texto": {
+							"es": "Yo tampoco quiero participar.",
+							"en": "I don't want to take part either."
+						},
+						"respuesta": "q4_comun_d1_burla",
+						"anota": true,
+						"grupo": 2
+					}
+				],
+				"excluye": "Juan"
+			}
+		]
+	},
+	"decision_s": 11.0,
+	"anotaciones_advertencia": 2,
+	"_comentario_q4": "v0.3.1 Q4 (F22): cada evento tiene 3-4 decisiones con consecuencia ('decisiones.<tipo>' + 'comun'): seguirle el juego, poner una excusa o burlarte. 'anota' = Rasec lo anota en voz alta (2 anotaciones en un evento = una advertencia, la 2.ª advertencia del turno mata); 'grupo' = ánimo del grupo (los compañeros hartos reaccionan y te escriben). Sin respuesta en 'decision_s' segundos reales = silencio, también se anota. 'excluye' = no sale si juegas con ese agente (lo nombra). Los compañeros cansados (bostezos, cabeza baja, uno dormido) los pone scripts/personajes/agentes_hartos.gd."
+}

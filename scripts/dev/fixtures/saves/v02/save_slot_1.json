@@ -1,0 +1,47 @@
+{
+	"extra": {
+		"contact_index": 4
+	},
+	"fatigue": 37.0,
+	"game_state": {
+		"agent": "Jiroshi",
+		"clock_seconds": 6013.00887466666,
+		"current_floor": 2,
+		"distortions_seen": [],
+		"flags": {
+			"aux_menu_open": false,
+			"locker_done": true,
+			"lunch_stored": true
+		},
+		"logged_in": true,
+		"mode": 0,
+		"seated_at": "C-14",
+		"turno": 2
+	},
+	"kind": "contacto_par",
+	"metrics": {
+		"alerts": 0,
+		"angry_total": 0,
+		"aux": 0,
+		"contact_durations": [
+			1.33333333333331,
+			19.8718080000001,
+			19.8604799999998,
+			38.3969280000128
+		],
+		"contacts_handled": 4,
+		"incidents": 0,
+		"shift_seconds": 6720.13602666666,
+		"time_in_aux": {
+			"0": 6720.13602666666,
+			"1": 0.0,
+			"2": 0.0,
+			"3": 0.0,
+			"4": 0.0,
+			"5": 0.0,
+			"6": 0.0
+		},
+		"written_warnings": 0
+	},
+	"saved_at": "2026-11-09T23:38:15"
+}

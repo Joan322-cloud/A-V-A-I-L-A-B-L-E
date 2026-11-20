@@ -1,0 +1,316 @@
+keys,es,en
+GAME_TITLE,A V A I L A B L E,A V A I L A B L E
+GAME_SUBTITLE,No hay breaks,There Are No Breaks
+MENU_START,Iniciar turno,Start shift
+MENU_CONTINUE,Continuar turno,Continue shift
+MENU_FREE,Turno libre (bloqueado),Free shift (locked)
+MENU_MEMOS,Memos,Memos
+MENU_OPTIONS,Opciones,Options
+MENU_CREDITS,Créditos,Credits
+MENU_QUIT,Marcar salida,Clock out
+MENU_LANGUAGE,Idioma: Español,Language: English
+MENU_MODE,Modo,Mode
+MENU_MODE_NORMAL,Turno normal,Normal shift
+MENU_MODE_REAL,Turno real,Real shift
+MENU_MODE_NORMAL_DESC,Checkpoints según la dificultad. Morir = incidencia y vuelves al último checkpoint.,Checkpoints depend on the difficulty. Dying = incident and back to the last checkpoint.
+MENU_MODE_REAL_DESC,Siempre Difícil y sin checkpoints. Morir = el turno completo otra vez desde el casillero.,Always Hard and no checkpoints. Dying = the whole shift again from the locker.
+MENU_AGENT,Agente,Agent
+MENU_FONEX_LOGIN,Fonex · Inicio de sesión,Fonex · Sign in
+MENU_USER,Usuario,User
+MENU_PASSWORD,Contraseña,Password
+MENU_VERSION,v{ver} · Turnos 1-3,v{ver} · Shifts 1-3
+PAUSE_TITLE,Sesión bloqueada,Session locked
+PAUSE_RESUME,Reanudar,Resume
+PAUSE_RESTART_CONTACT,Reiniciar contacto,Restart contact
+PAUSE_QUIT,Marcar salida,Clock out
+AUX_AVAILABLE,Available,Available
+AUX_BO,BO · Back office,BO · Back office
+AUX_BREAK,Break,Break
+AUX_LUNCH,Lunch,Lunch
+AUX_BANO,Baño,Restroom
+AUX_COACHING,Coaching,Coaching
+AUX_TRAINING,Training,Training
+HUD_QUEUE,Cola,Queue
+HUD_CLIENT_WAITING,Cliente en espera {t},Customer on hold {t}
+HUD_INTERACT,[E] Interactuar,[E] Interact
+HUD_SIT,[E] Sentarse,[E] Sit down
+HUD_STAND,[E] Levantarse,[E] Stand up
+HUD_MONITOR_ZOOM,[E] Mirar la pantalla · [F] apagar,[E] Look at the screen · [F] power off
+HUD_MONITOR_OFF,Monitor apagado · [F] encender,Monitor off · [F] power on
+HUD_UNZOOM,[E] Apartar la vista,[E] Look away
+HUD_TERMINAL,[E] Terminal Fonex,[E] Fonex terminal
+HUD_LOCKER,[E] Casillero,[E] Locker
+HUD_ELEVATOR,[E] Ascensor,[E] Elevator
+HUD_DOOR,[E] Puerta,[E] Door
+HUD_DOOR_LOCKED,Puerta cerrada,Door locked
+HUD_FRIDGE,[E] Refri,[E] Fridge
+HUD_WATER,[E] Máquina de agua,[E] Water cooler
+HUD_MICROWAVE,[E] Microondas,[E] Microwave
+HUD_VENDING,[E] Expendedora (café S/ 2.50),[E] Vending machine (coffee S/ 2.50)
+HUD_MIRROR,Espejo,Mirror
+HUD_CLOCK,Reloj de pared,Wall clock
+HUD_TURNSTILE,[E] Molinete,[E] Turnstile
+HUD_PRINTER,Impresora,Printer
+HUD_FERMIN,Don Fermín,Don Fermín
+HUD_BATHROOM_TIMER,Baño {t},Restroom {t}
+FONEX_TITLE,Fonex 7.2 · Softphone,Fonex 7.2 · Softphone
+FONEX_LOGGED_OUT,Sin sesión,Logged out
+FONEX_LOGIN,Iniciar sesión,Sign in
+FONEX_LOGOUT,Cerrar sesión,Sign out
+FONEX_INCOMING_CALL,Llamada entrante · [Espacio] aceptar,Incoming call · [Space] accept
+FONEX_INCOMING_CHAT,Chat entrante · [Espacio] aceptar,Incoming chat · [Space] accept
+FONEX_INCOMING_EMAIL,Correo asignado · [Espacio] abrir,Email assigned · [Space] open
+FONEX_INCOMING_KYC,Verificación asignada · [Espacio] abrir,Verification assigned · [Space] open
+FONEX_ON_CALL,En llamada,On call
+FONEX_ON_HOLD,En hold,On hold
+FONEX_HOLD_HINT,[H] Hold,[H] Hold
+FONEX_AUX_HINT,[Q] Cambiar AUX,[Q] Change AUX
+FONEX_SHIFT_CLOSED,Turno cerrado. Available {pct} %. Incidencias: {inc}. WW: {ww}/3,Shift closed. Available {pct} %. Incidents: {inc}. WW: {ww}/3
+FONEX_TERMINAL_TITLE,Terminal Fonex · Cambiar AUX,Fonex terminal · Change AUX
+KARDEX_TITLE,Kardex · Gestión de casos,Kardex · Case management
+KARDEX_NO_CASE,Sin caso abierto,No open case
+KARDEX_CASE,Caso,Case
+KARDEX_CLIENT,Cliente,Customer
+KARDEX_SCRIPT,Guion · elige con 1-4,Script · pick with 1-4
+KARDEX_AHT,AHT,AHT
+KARDEX_EMAIL_TIMER,Reloj BO,BO clock
+KARDEX_EMAIL_TO,Destinatario,Recipient
+KARDEX_EMAIL_TEMPLATE,Plantilla,Template
+KARDEX_EMAIL_SEND,[Espacio] Enviar,[Space] Send
+KARDEX_TPL_POD,POD,POD
+KARDEX_TPL_REVERSAL,Reversal,Reversal
+KARDEX_TPL_STATUS,Status,Status
+KARDEX_RESOLVED,Caso cerrado,Case closed
+KARDEX_CLIENT_ANGRY,El cliente colgó molesto,The customer hung up angry
+IDENTA_TITLE,Identa · Verificación KYC,Identa · KYC verification
+IDENTA_DOC,Documento,Document
+IDENTA_SELFIE,Selfie,Selfie
+IDENTA_FIELD_NAME,Nombre,Name
+IDENTA_FIELD_DOB,Fecha de nacimiento,Date of birth
+IDENTA_APPROVE,[1] Aprobar,[1] Approve
+IDENTA_REJECT,[2] Rechazar,[2] Reject
+IDENTA_OK,Verificación registrada,Verification logged
+IDENTA_WRONG,Decisión incorrecta. Caso reportado a QA.,Wrong decision. Case reported to QA.
+EZLAK_TITLE,Ezlaki,Ezlaki
+EZLAK_CHANNEL,#los-de-madrugada,#los-de-madrugada
+EZLAK_FOCUSED,enfocado (Espacio responde),focused (Space replies)
+EZLAK_FOCUS_HINT,[Tab] enfocar,[Tab] focus
+EZLAK_DM,Mensaje directo,Direct message
+EZLAK_TYPING,Shero está escribiendo…,Shero is typing…
+EZLAK_WW_TITLE,Written warning,Written warning
+EZLAK_WW_CC,CC: 3 OM de la campaña,CC: 3 campaign OMs
+EZLAK_ACK,[Espacio] Ack,[Space] Ack
+EZLAK_ROOMS_TITLE,Ezlaki Rooms · Coaching,Ezlaki Rooms · Coaching
+EZLAK_ROOMS_JOIN,[Espacio] Unirse a la sala,[Space] Join room
+EZLAK_REACT,[Espacio] Reaccionar {emoji},[Space] React {emoji}
+EZLAK_PINNED_FLOOR5,Fijado: Piso 5: acceso restringido por reestructuración.,Pinned: Floor 5: access restricted due to restructuring.
+EZLAK_INDUCTION,Lista del Training: 1) Login en Fonex 2) Available 3) Aceptar con Espacio 4) Guion 1-4 5) Hold antes de levantarte,Training checklist: 1) Sign in to Fonex 2) Available 3) Accept with Space 4) Script 1-4 5) Hold before standing up
+EZLAK_INCIDENT,Incidencia registrada: {motivo},Incident logged: {motivo}
+EZLAK_PLAYER_ACK,ack,ack
+EZLAK_EXCUSE_TITLE,Responde a Shero,Reply to Shero
+EZLAK_EXCUSE_1,El partner demoró en responder.,The partner was slow to reply.
+EZLAK_EXCUSE_2,Revisé las notas dos veces para no duplicar el envío.,I checked the notes twice to avoid a duplicate send.
+EZLAK_EXCUSE_3,No vi el reloj.,I didn't see the clock.
+RTA_TAG,@{jugador} AUX incorrecto: {aux} {t}. Corrige.,@{jugador} wrong AUX: {aux} {t}. Fix it.
+RTA_ALL_AVAILABLE,"team, cola alta: todos Available","team, high queue: everyone Available"
+RTA_GO_BO,@{jugador} pasa a BO,@{jugador} switch to BO
+RTA_REPORT,Reporte de adherencia · ID {id},Adherence report · ID {id}
+DEATH_TITLE,Usuario desconectado.,User disconnected.
+DEATH_REASON,Motivo: {motivo},Reason: {motivo}
+DEATH_CONTINUE,[Espacio] Reconectar,[Space] Reconnect
+DEATH_REAL_MODE,Turno real: el turno se reinicia completo desde el casillero.,Real shift: the whole shift restarts from the locker.
+DEATH_NORMAL_MODE,Incidencia registrada. Vuelves al último checkpoint (Fatiga +15).,Incident logged. Back to the last checkpoint (Fatigue +15).
+SHIFTEND_TITLE,Turno cerrado,Shift closed
+SHIFTEND_AVAILABLE,Available,Available
+SHIFTEND_AHT,AHT medio,Average AHT
+SHIFTEND_CONTACTS,Contactos atendidos,Contacts handled
+SHIFTEND_ANGRY,Clientes molestos,Angry customers
+SHIFTEND_INCIDENTS,Incidencias,Incidents
+SHIFTEND_WW,Written warnings,Written warnings
+SHIFTEND_MODE,Modo,Mode
+SHIFTEND_NEXT,[Espacio] Marcar salida,[Space] Clock out
+SHIFTEND_FIRED,Fin de la relación laboral.,End of employment.
+ELEVATOR_TITLE,Konzentramance · Ascensor,Konzentramance · Elevator
+ELEVATOR_PLATE,Pisos 3-8: otras campañas. Acceso con fotocheck de la campaña.,Floors 3-8: other campaigns. Access with campaign badge.
+ELEVATOR_DENIED,Campaña no autorizada,Unauthorized campaign
+ELEVATOR_MAINT,En mantenimiento,Under maintenance
+ELEVATOR_FLOOR_M1,-1 · Ingreso / Cafetería,-1 · Entrance / Cafeteria
+ELEVATOR_FLOOR_1,1 · Tópico / Training / Baños,1 · Infirmary / Training / Restrooms
+ELEVATOR_FLOOR_2,2 · Operaciones,2 · Operations
+ELEVATOR_FLOOR_9,9 · Azotea,9 · Rooftop
+SIGN_AVAILABLE_ATTITUDE,AVAILABLE ES ACTITUD,AVAILABLE IS ATTITUDE
+SIGN_BREAK_PRIVILEGE,"Tu break es un privilegio, no un derecho","Your break is a privilege, not a right"
+SIGN_ISLAND,Fila C · Equipo KipuPay,Row C · KipuPay team
+SIGN_CENTRAL,La Central · Solo personal autorizado,The Hub · Authorized staff only
+SIGN_TOPICO,Tópico,Infirmary
+SIGN_TRAINING,Sala de training,Training room
+SIGN_ROOFTOP_LOCKED,Azotea cerrada de 10 PM a 6 AM,Rooftop closed 10 PM to 6 AM
+SIGN_FIRE_DOOR,Campaña no autorizada,Unauthorized campaign
+SIGN_CAFETERIA_CLOSED,Mostrador cerrado · Abre 7 AM,Counter closed · Opens 7 AM
+SIGN_BATHROOM,Baños,Restrooms
+SIGN_LOCKER,Casilleros · Equipo KipuPay,Lockers · KipuPay team
+OPT_FOV,Campo de visión,Field of view
+OPT_HEADBOB,Balanceo de cámara,Camera bob
+OPT_SUBTITLES,Subtítulos,Subtitles
+OPT_HELP_HUD,HUD de ayuda (barra de Fatiga),Help HUD (Fatigue bar)
+OPT_ACK_EXTRA,Tiempo extra para Ack (+50 %),Extra time for Ack (+50 %)
+OPT_FLASH_REDUCTION,Sin parpadeos de luz,No light flicker
+OPT_SCREAMER_WARN,Avisar antes de screamers,Warn before screamers
+OPT_BACK,Volver,Back
+SUB_BEEP,[pitido],[beep]
+SUB_MISSING_AUDIO,[audio pendiente: {file}],[missing audio: {file}]
+MSG_LOCKER_DONE,Celular y mochila guardados. Sin celular no hay linterna ni mapa.,Phone and backpack stored. No phone means no flashlight and no map.
+MSG_FRIDGE_LUNCH_IN,Taper guardado en la refri.,Lunchbox stored in the fridge.
+MSG_FRIDGE_LUNCH_OUT,Taper en la mano. Lunch: 30 min.,Lunchbox in hand. Lunch: 30 min.
+MSG_COFFEE,Café. Fatiga -15.,Coffee. Fatigue -15.
+MSG_COFFEE_USED,La expendedora ya no acepta tu moneda.,The vending machine no longer takes your coin.
+MSG_MICROWAVE,El microondas termina. Lunch completo.,The microwave dings. Full lunch.
+MSG_WATER,Agua. Nada cambia.,Water. Nothing changes.
+MSG_TURNSTILE_IN,Marcación de entrada registrada.,Clock-in recorded.
+MSG_TURNSTILE_OUT,Marcación de salida registrada.,Clock-out recorded.
+MSG_FERMIN,"Buenas noches. Pase, marque.","Good evening. Go ahead, clock in."
+MSG_FERMIN_OUT,Que descanse.,Get some rest.
+MSG_BATHROOM_LIGHT_OFF,La luz del baño se apaga.,The restroom light goes out.
+MSG_ROOFTOP,"Hace frío. Se ve la ciudad. No hay zumbido.","It's cold. You can see the city. No hum."
+MSG_SEAT_OTHER_ISLAND,Te sentaste fuera de la isla. Timer de la isla iniciado.,You sat outside the island. Island timer started.
+MSG_NOT_LOGGED,Inicia sesión en Fonex primero.,Sign in to Fonex first.
+MSG_NEED_HOLD,El cliente sigue en línea. Pon hold antes de levantarte.,The customer is still on the line. Put them on hold before standing up.
+MSG_STAIRS_UP,[E] Escalera · subir,[E] Stairs · up
+MSG_STAIRS_DOWN,[E] Escalera · bajar,[E] Stairs · down
+MSG_CHECKPOINT,Checkpoint,Checkpoint
+MSG_CALM,Shero está en reunión.,Shero is in a meeting.
+MSG_STRESS_BOT,Bot de prueba activo,Stress bot active
+CLIENT_HELLO_GENERIC,"Aló, ¿KipuPay?","Hello, KipuPay?"
+SIGN_METRICS_WALL,Available 80 % · AHT 6:00 · 0 WW · Este mes: tú,Available 80 % · AHT 6:00 · 0 WW · This month: you
+SIGN_TOPICO_CLOSED,Tópico · Atención de 8 AM a 8 PM,Infirmary · Open 8 AM to 8 PM
+SIGN_TRAINING_CLOSED,Sala reservada · Training KipuPay,Room reserved · KipuPay training
+SIGN_TRAINING_BOARD,"1. Empatía   2. Proceso
+3. Verificación   4. Cierre
+
+NUNCA cuelgues primero","1. Empathy   2. Process
+3. Verification   4. Closing
+
+NEVER hang up first"
+ELEVATOR_READER,Lector de fotocheck · otras campañas,Badge reader · other campaigns
+SIGN_STAIRS_FLOOR,PISO {n},FLOOR {n}
+SIGN_STAIRS_UP_ARROW,↑ SUBIDA,↑ UP
+SIGN_STAIRS_DOWN_ARROW,↓ BAJADA,↓ DOWN
+SIGN_FIRE_DOOR_PUSH,EMPUJAR PARA SALIR,PUSH TO EXIT
+MSG_STAIRS_AGAIN,El mismo tramo. Otra vez.,The same flight. Again.
+MSG_FERMIN_PASS,Pase limpio. Que sea tranquila.,Clean pass. Have a quiet one.
+COMP_NO_TE_PARES,"(susurro) No te pares. No ahora.","(whisper) Don't stand up. Not now."
+COMP_VIENE_SHERO,"(susurro) Viene. No lo mires.","(whisper) He's coming. Don't look at him."
+COMP_MIRA_EL_REFLEJO,"(susurro) Mira el reflejo. Está detrás.","(whisper) Look at the reflection. He's behind you."
+MENU_CAMPAIGN,Campaña,Campaign
+MENU_MEMOS_LOCKED,Memos (bloqueado),Memos (locked)
+MENU_STATUS_LINE,Servidor {srv} · Cola: — · {hora},Server {srv} · Queue: — · {hora}
+OPT_TITLE,Fonex · Configuración,Fonex · Settings
+OPT_GROUP_GAME,Juego,Game
+OPT_GROUP_GFX,Gráficos y estímulos,Graphics and stimuli
+OPT_GROUP_SOUND,Sonido,Sound
+OPT_GROUP_CONTROLS,Controles (pulsa para cambiar),Controls (click to rebind)
+OPT_SENSITIVITY,Sensibilidad,Sensitivity
+OPT_GRAIN,Grano de película,Film grain
+OPT_QUALITY,Calidad gráfica,Graphics quality
+OPT_QUALITY_LOW,Baja (web / sin GPU dedicada),Low (web / no dedicated GPU)
+OPT_QUALITY_MEDIUM,Media,Medium
+OPT_QUALITY_HIGH,Alta,High
+OPT_QUALITY_HINT,"Baja: 3D al 75 %, sin sombras ni MSAA, 60 fps máx. Media: 100 %, MSAA 2×. Alta: MSAA 4×.","Low: 3D at 75%, no shadows or MSAA, 60 fps cap. Medium: 100%, MSAA 2x. High: MSAA 4x."
+OPT_FULLSCREEN,Pantalla completa,Fullscreen
+OPT_VOL_MASTER,Volumen general,Master volume
+OPT_VOL_AURICULAR,Auricular (clientes),Headset (customers)
+OPT_VOL_SALA,Sala (voces y efectos),Floor (voices and effects)
+OPT_VOL_AMBIENTE,Ambiente,Ambience
+OPT_VOL_UI,Interfaz (Fonex/Ezlaki),Interface (Fonex/Ezlaki)
+OPT_ACTION,Acción,Action
+OPT_KEYBOARD,Teclado,Keyboard
+OPT_GAMEPAD,Mando,Gamepad
+OPT_REBIND_HINT,Pulsa un botón de la lista y luego la tecla o botón nuevo. Esc cancela.,Click a button in the list and then press the new key or button. Esc cancels.
+OPT_REBIND_WAIT,Esperando tecla o botón…,Waiting for key or button…
+OPT_RESET_CONTROLS,Restablecer controles,Reset controls
+CTRL_MOVE_FORWARD,Adelante,Forward
+CTRL_MOVE_BACK,Atrás,Back
+CTRL_MOVE_LEFT,Izquierda,Left
+CTRL_MOVE_RIGHT,Derecha,Right
+CTRL_INTERACT,Interactuar / sentarse,Interact / sit
+CTRL_ACCEPT,Aceptar / Ack / Enviar,Accept / Ack / Send
+CTRL_AUX_WHEEL,Rueda de AUX,AUX wheel
+CTRL_HOLD,Hold,Hold
+CTRL_AUX_MENU,Enfocar Ezlaki,Focus Ezlaki
+CTRL_MONITOR_TOGGLE,Encender/apagar monitor,Monitor on/off
+CTRL_RUB_EYES,Frotarse los ojos,Rub eyes
+CTRL_CROUCH,Agacharse,Crouch
+CTRL_WALK_FAST,Correr,Run
+CTRL_PHRASE_1,Frase 1,Phrase 1
+CTRL_PHRASE_2,Frase 2,Phrase 2
+CTRL_PHRASE_3,Frase 3,Phrase 3
+CTRL_PHRASE_4,Frase 4,Phrase 4
+CTRL_PAUSE,Pausa,Pause
+CREDITS_TITLE,Acerca de Fonex,About Fonex
+CREDITS_L1,Un juego de un solo turno de madrugada. Desarrollo: Estudio Amanecida.,A single graveyard-shift game. Development: Estudio Amanecida.
+CREDITS_L2,Idea y dirección: el que se sienta en C-14.,Idea and direction: whoever sits at C-14.
+CREDITS_L3,Programación y arte provisional: asistente de IA (Claude) bajo dirección del estudio.,Programming and provisional art: AI assistant (Claude) under the studio's direction.
+CREDITS_L4,"Voces provisionales: síntesis de voz (Kokoro-82M, Apache-2.0) y clips de los juegos anteriores del estudio. Efectos y ambientes: sintéticos por código.","Provisional voices: speech synthesis (Kokoro-82M, Apache-2.0) and clips from the studio's earlier games. Effects and ambiences: code-generated."
+CREDITS_L5,"Tipografía: DejaVu Sans Mono (licencia Bitstream Vera / DejaVu).","Typeface: DejaVu Sans Mono (Bitstream Vera / DejaVu license)."
+CREDITS_L6,"Konzentramance, KipuPay, Ezlaki, Fonex, Kardex, Identa y Vitzo son marcas inventadas para este juego.","Konzentramance, KipuPay, Ezlaki, Fonex, Kardex, Identa and Vitzo are made-up brands for this game."
+CREDITS_L7,"Cualquier parecido con empresas, productos o personas reales es coincidencia.","Any resemblance to real companies, products or people is coincidental."
+CREDITS_L8,Gracias a los de madrugada.,Thanks to the graveyard-shift crew.
+CREDITS_GODOT,Hecho con Godot Engine,Made with Godot Engine
+MENU_TURNO,Día,Day
+MENU_CONTINUE_NEXT,Continuar · {dia},Continue · {dia}
+SHIFTEND_UNLOCKED,{dia} desbloqueado,{dia} unlocked
+SHIFTEND_SALARY,Sueldo del turno: +{ganado} · Descuento WW: -{ww} · Saldo: {saldo},Shift pay: +{ganado} · WW deduction: -{ww} · Balance: {saldo}
+ECON_SALDO,Saldo,Balance
+ECON_TURNO,Turno,Shift
+ECON_PASAJE,Pasaje {monto}. Saldo {saldo}.,Fare {monto}. Balance {saldo}.
+ECON_NO_SALDO,No te alcanza: tienes {saldo} y cuesta {precio}.,Not enough: you have {saldo} and it costs {precio}.
+SHOP_VENDING_TITLE,Expendedora,Vending machine
+SHOP_MARLENY_TITLE,Mostrador de Marleny,Marleny's counter
+SHOP_CLOSE,[Q] Cerrar · [1-3] Comprar,[Q] Close · [1-3] Buy
+SHOP_ITEM_CAFE,Café,Coffee
+SHOP_ITEM_ENERGETICA,Energética,Energy drink
+SHOP_ITEM_GOTAS,Gotas para los ojos,Eye drops
+SHOP_ITEM_CALDO,Caldo de gallina,Chicken broth
+SHOP_ITEM_PAN_CHICHARRON,Pan con chicharrón,Pork crackling sandwich
+SHOP_ITEM_EMOLIENTE,Emoliente,Emoliente (herbal drink)
+MSG_COFFEE_T2,Café. Fatiga {n}.,Coffee. Fatigue {n}.
+MSG_ENERGETICA,Energética. Fatiga {n}. El corazón va rápido.,Energy drink. Fatigue {n}. Your heart races.
+MSG_GOTAS,Gotas. La vista se aclara un rato.,Eye drops. Your sight clears for a while.
+MSG_MARLENY_LUNCH,Comida caliente. Fatiga {n}.,Hot food. Fatigue {n}.
+HUD_VENDING_T2,[E] Expendedora,[E] Vending machine
+HUD_COUNTER,[E] Mostrador de Marleny,[E] Marleny's counter
+SIGN_CAFETERIA_OPEN,Mostrador · Marleny · Abierto,Counter · Marleny · Open
+HUD_TOPICO_DOOR,[E] Tópico,[E] Infirmary
+MSG_TRAINER_CHARLA,Repaso de la campaña. El reloj avanza {min} min.,Campaign refresher. The clock moves {min} min.
+RTA_ALLOCATION_MISS,@{jugador} allocation sin cumplir: esperado {aux}. Corrige.,@{jugador} allocation not met: expected {aux}. Fix it.
+KARDEX_CHAIN,Cliente recurrente · contacto {n} de {total},Returning customer · contact {n} of {total}
+KARDEX_CLIENT_LOST,Contacto perdido. El cliente cuelga molesto.,Contact lost. The customer hangs up angry.
+DEATH_COLLAPSE_MODE,Te desmayaste. Despiertas en el último checkpoint con Fatiga 60.,You passed out. You wake up at the last checkpoint with Fatigue 60.
+DEATH_BACK_MENU,[Esc] Volver al menú,[Esc] Back to menu
+MENU_DIFFICULTY,Dificultad,Difficulty
+DIFF_FACIL,Fácil,Easy
+DIFF_NORMAL,Normal,Normal
+DIFF_DIFICIL,Difícil,Hard
+DIFF_FACIL_DESC,"Plazos de Shero y Ack x1,5; checkpoint en cada contacto; pistas en las trampas.","Shero's deadlines and Ack x1.5; checkpoint at every contact; hints on traps."
+DIFF_NORMAL_DESC,Las reglas tal cual; checkpoints del turno.,The rules as they are; the shift's checkpoints.
+DIFF_DIFICIL_DESC,"Plazos y Ack x0,75; calma x0,5; checkpoints solo en login, break y lunch.","Deadlines and Ack x0.75; calm x0.5; checkpoints only at login, break and lunch."
+DIFF_REAL_LOCKED,Turno real: siempre Difícil.,Real shift: always Hard.
+SLOT_EMPTY,{agente} · Sin partida,{agente} · No save
+SLOT_LINE,{agente} · {dia} · {saldo} · {dif},{agente} · {dia} · {saldo} · {dif}
+SLOT_IN_PROGRESS,{dia} a medias ({hora}),{dia} in progress ({hora})
+MENU_SLOT,Partida,Save
+MENU_NEW_GAME,Nueva partida,New game
+MENU_NEW_GAME_CONFIRM,¿Borrar la partida de {agente}? Pulsa otra vez para confirmar.,Delete {agente}'s save? Press again to confirm.
+MENU_NEW_GAME_DONE,Partida de {agente} borrada.,{agente}'s save deleted.
+MENU_TUTORIAL,Training (el recuerdo),Training (the memory)
+MENU_TUTORIAL_SOON,Training · próximamente,Training · coming soon
+SHIFTEND_BREAKS,Breaks,Breaks
+SHIFTEND_DIFFICULTY,Dificultad,Difficulty
+SHIFTEND_CSAT,CSAT medio,Average CSAT
+CTRL_AUX_1,AUX 1 · Available,AUX 1 · Available
+CTRL_AUX_2,AUX 2 · BO,AUX 2 · BO
+CTRL_AUX_3,AUX 3 · Break,AUX 3 · Break
+CTRL_AUX_4,AUX 4 · Lunch,AUX 4 · Lunch
+CTRL_AUX_5,AUX 5 · Baño,AUX 5 · Restroom
+CTRL_AUX_6,AUX 6 · Coaching,AUX 6 · Coaching
+CTRL_AUX_7,AUX 7 · Training,AUX 7 · Training

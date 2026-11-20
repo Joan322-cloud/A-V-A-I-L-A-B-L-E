@@ -1,0 +1,71 @@
+keys,es,en
+PKG_V031_Q4_READY,"Cadenas del paquete Q4 (v0.3.1): clientes, Rasec, cinemáticas, taper y correo","Package Q4 strings (v0.3.1): customers, Rasec, cutscenes, lunchbox and email"
+Q4_STEP_KARDEX,Kardex,Kardex
+Q4_STEP_DESTINATARIO,Destinatario,Recipient
+Q4_STEP_PLANTILLA,Plantilla,Template
+Q4_STEP_CAMPOS,Campos,Fields
+Q4_STEP_ADJUNTO,Adjunto,Attachment
+Q4_STEP_ENVIAR,Enviar,Send
+Q4_STEP_TIPIFICAR,Tipificar,Categorize
+Q4_STEP_CERRAR,Cerrar,Close
+Q4_CASE_TIMER,Caso,Case
+Q4_MAIL_LOCKED,Busca la operación en Kardex,Look up the transaction in Kardex
+Q4_FIELD_ACTIVE_TIP,Siguiente campo vacío. Un clic en un valor de Kardex lo copia a su campo,Next empty field. Clicking a value in Kardex copies it to its own field
+Q4_KARDEX_COPIED,Copiado «{valor}» en {campo},"Copied ""{valor}"" into {campo}"
+Q4_KARDEX_RELATED,Otras operaciones del mismo cliente:,Other transactions from the same customer:
+Q4_GUIDE_OK,Entendido,Got it
+Q4_GUIDE_HEAD,Primer correo · paso {n} de {total}:,First email · step {n} of {total}:
+Q4_GUIDE_KARDEX,Abre Kardex (F1) y busca la operación del correo: clic en el número KP.,Open Kardex (F1) and look up the email's transaction: click the KP number.
+Q4_GUIDE_DESTINATARIO,Elige a quién le escribes: el partner pagador que dice Kardex.,Choose who you're writing to: the paying partner Kardex shows.
+Q4_GUIDE_PLANTILLA,Elige la plantilla según lo que pide el correo.,Choose the template based on what the email asks for.
+Q4_GUIDE_CAMPOS,"Haz clic en el n.º, el monto y la fecha de la operación en Kardex: cada uno se copia a su campo. Ojo: debajo hay operaciones parecidas.","Click the transaction's number, amount and date in Kardex: each one is copied to its field. Careful: similar transactions are listed below."
+Q4_GUIDE_ADJUNTO,Adjunta el POD que descargaste del Portal Vitzo: la casilla «Adjuntar POD» de aquí o «Adjuntar al caso» en el portal.,Attach the POD you downloaded from the Vitzo Portal: the «Attach POD» box here or «Attach to case» in the portal.
+Q4_GUIDE_ENVIAR,Revisa todo y envía. Enviar no se puede deshacer.,Check everything and send. Sending can't be undone.
+Q4_GUIDE_TIPIFICAR,Tipifica lo que hiciste en el caso.,Categorize what you did in the case.
+Q4_GUIDE_CERRAR,Cierra el caso. El reloj de 10 minutos no se detiene.,Close the case. The 10-minute clock doesn't stop.
+Q4_MENU_PLAY,Jugar,Play
+Q4_MENU_MANUAL,Manual del agente,Agent manual
+Q4_MENU_QUIT,Salir,Quit
+Q4_MENU_BACK,Atrás,Back
+Q4_AGENTS_TITLE,Elige tu agente,Choose your agent
+Q4_AGENTS_HINT,Cada agente es una partida. Haz clic en uno para ver su partida y elegir el modo y la dificultad.,Each agent is a save. Click one to see its save and choose mode and difficulty.
+Q4_AGENT_SETTINGS,Partida de {agente} · modo y dificultad,{agente}'s save · mode and difficulty
+Q4_AGENT_START,Empezar · Training,Start · Training
+Q4_INTRO_SKIP,Pulsa cualquier tecla para saltar,Press any key to skip
+Q4_INTRO_DISCONNECTED,Usuario desconectado.,User disconnected.
+Q4_INTRO_REASON,Motivo: —,Reason: —
+Q4_CINE_SKIP,Mantén [Espacio] para saltar,Hold [Space] to skip
+Q4_CINE_QUIZ,Pregunta 4: ¿Cuántos breaks hay por turno?,Question 4: How many breaks are there per shift?
+Q4_CINE_QUIZ_OPT,a) 2    b) 3    c) No hay breaks,a) 2    b) 3    c) There are no breaks
+Q4_CINE_REPLAY,Ver cinemáticas,Watch cutscenes
+Q4_HUD_FRIDGE_LEAVE,[E] Dejar tu taper en la refri,[E] Leave your lunchbox in the fridge
+Q4_HUD_FRIDGE_TAKE,[E] Sacar tu taper,[E] Take out your lunchbox
+Q4_MSG_TAPER_IN,Dejaste tu taper en la refri. Cinta: «{agente}».,"You left your lunchbox in the fridge. Tape: ""{agente}""."
+Q4_MSG_TAPER_OUT,Sacaste tu taper. Caliéntalo en un microondas de la cafetería del -1.,You took out your lunchbox. Heat it in a microwave in the -1 cafeteria.
+Q4_MSG_TAPER_WAIT,Tu taper está en la refri. Lo sacas en el lunch.,Your lunchbox is in the fridge. You take it out at lunch.
+Q4_MSG_TAPER_SPOILED,Abres el taper: huele mal. Se echó a perder en la mochila.,You open the lunchbox: it smells bad. It went off in your backpack.
+Q4_HUD_MW_BROKEN,Microondas · FUERA DE SERVICIO,Microwave · OUT OF ORDER
+Q4_HUD_MW_BUSY,Microondas ocupado · {t},Microwave busy · {t}
+Q4_HUD_MW_HEATING,Tu taper se está calentando · {t},Your lunchbox is heating · {t}
+Q4_HUD_MW_TAKE,[E] Sacar tu taper caliente,[E] Take out your hot lunchbox
+Q4_HUD_MW_HEAT,[E] Calentar tu taper (1 min),[E] Heat your lunchbox (1 min)
+Q4_MW_OUT_SIGN,"NO USAR
+(malogrado)","DO NOT USE
+(broken)"
+Q4_MSG_MW_BROKEN,Fuera de servicio. Alguien pegó una cinta: «no usar».,"Out of order. Someone taped a sign: ""do not use""."
+Q4_MSG_MW_BUSY,Ocupado: un taper ajeno ({etiqueta}) · faltan {t}.,Busy: someone else's lunchbox ({etiqueta}) · {t} left.
+Q4_MSG_MW_START,Tu taper se calienta. Un minuto.,Your lunchbox is heating. One minute.
+Q4_MSG_MW_DING,¡Ding! Tu taper está caliente.,Ding! Your lunchbox is hot.
+Q4_MSG_TAPER_HOT,Taper caliente. Siéntate a comer en una mesa.,Hot lunchbox. Sit down to eat at a table.
+Q4_MSG_MW_NOTHING,No tienes nada que calentar. Tu taper está en la refri o en tu mochila.,You have nothing to heat. Your lunchbox is in the fridge or your backpack.
+Q4_MSG_TAPER_DONE,Ya comiste.,You already ate.
+Q4_HUD_EAT,[E] Comer tu taper,[E] Eat your lunchbox
+Q4_MSG_TAPER_EATEN,Comiste tu taper caliente. Fatiga −{n} y un rato de energía.,You ate your hot lunch. Fatigue −{n} and a bit of energy.
+Q4_EVENT_NOTES,Rasec anotó: {n},Rasec noted: {n}
+Q4_WHISPER_WHO,"{agente}, en voz baja","{agente}, under their breath"
+Q4_STEP_PORTAL,Portal,Portal
+Q4_GUIDE_DESTINATARIO_VZ,El partner es Vitzo y a Vitzo no se le escribe nunca. Responde a quien te escribió: el banco o el cliente.,The partner is Vitzo and you never email Vitzo. Reply to whoever wrote to you: the bank or the customer.
+Q4_GUIDE_PORTAL_BUSCAR,El partner es Vitzo: todo lo de Vitzo se hace en el Portal Vitzo (F4). Busca ahí la operación.,The partner is Vitzo: everything with Vitzo is done in the Vitzo Portal (F4). Look up the transaction there.
+Q4_GUIDE_PORTAL_POD,Te piden el comprobante (POD): descárgalo en el Portal Vitzo con «Descargar POD».,They want the proof (POD): download it in the Vitzo Portal with «Download POD».
+Q4_GUIDE_PORTAL_REVERSAL,Registra la «Solicitud de reversal» en el Portal Vitzo.,File the «Reversal request» in the Vitzo Portal.
+Q4_GUIDE_PORTAL_CONTACTO,Usa «Contacto partner» en el Portal Vitzo.,Use «Partner contact» in the Vitzo Portal.

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dwec81ev1h6gb"
+
+[deps]
+
+files=["res://localization/strings_v032_gfx.es.translation", "res://localization/strings_v032_gfx.en.translation"]
+
+source_file="res://localization/strings_v032_gfx.csv"
+dest_files=["res://localization/strings_v032_gfx.es.translation", "res://localization/strings_v032_gfx.en.translation"]
+
+[params]
+
+compress=0
+delimiter=0
+unescape_keys=false
+unescape_translations=true

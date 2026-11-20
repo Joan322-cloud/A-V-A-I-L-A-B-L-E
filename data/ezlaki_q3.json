@@ -1,0 +1,1816 @@
+{
+	"_comentario": "AVAILABLE v0.3.1 · Q3 · Ezlaki: (1) respuesta escrita del jugador → intención por palabras clave (sin tildes, minúsculas; frases o palabras sueltas) y la respuesta del personaje según la intención; (2) variantes extra de las líneas de canales/Shero para no repetir en el turno; (3) charla extra de los compañeros por DM; (4) capturas de la vista de adherencia que Shero y el Perrito RTA pegan en #allocations (identidades ficticias del juego, dominio kipupay.kp). Todo [PROPUESTA] hasta que Joan lo revise.",
+	"intenciones": {
+		"_orden": [
+			"insulto",
+			"ayuda",
+			"ack",
+			"voy",
+			"excusa",
+			"negar",
+			"pregunta",
+			"gracias",
+			"broma",
+			"saludo",
+			"queja",
+			"ok"
+		],
+		"insulto": [
+			"idiota",
+			"estupido",
+			"imbecil",
+			"tarado",
+			"pelotudo",
+			"huevon",
+			"cojudo",
+			"mierda",
+			"carajo",
+			"te odio",
+			"vete a",
+			"jodete",
+			"maldito",
+			"basura",
+			"payaso",
+			"inutil",
+			"callate",
+			"no jodas",
+			"ctm",
+			"puta",
+			"tirano",
+			"explotador",
+			"esclavista",
+			"malnacido",
+			"calvo",
+			"idiot",
+			"stupid",
+			"moron",
+			"shut up",
+			"screw you",
+			"fuck",
+			"shit",
+			"hate you",
+			"asshole",
+			"jerk",
+			"clown",
+			"useless",
+			"tyrant",
+			"go to hell",
+			"bastard",
+			"baldy"
+		],
+		"ayuda": [
+			"me siento mal",
+			"estoy mal",
+			"mareado",
+			"mareo",
+			"me duele",
+			"vomit",
+			"no puedo mas",
+			"desmay",
+			"enfermo",
+			"necesito ayuda",
+			"ayuda",
+			"auxilio",
+			"no puedo respirar",
+			"feel sick",
+			"i feel bad",
+			"sick",
+			"dizzy",
+			"need help",
+			"help",
+			"my head",
+			"hurts",
+			"faint",
+			"cant breathe"
+		],
+		"ack": [
+			"ack",
+			"recibido",
+			"entendido",
+			"copiado",
+			"enterado",
+			"de acuerdo",
+			"doy ack",
+			"noted",
+			"received",
+			"understood",
+			"got it",
+			"roger",
+			"acknowledged",
+			"copy that"
+		],
+		"voy": [
+			"voy",
+			"ya voy",
+			"en camino",
+			"ahi voy",
+			"ya bajo",
+			"ya subo",
+			"entro",
+			"me uno",
+			"voy para alla",
+			"ya estoy yendo",
+			"on my way",
+			"omw",
+			"coming",
+			"be right there",
+			"joining",
+			"heading over",
+			"im going"
+		],
+		"excusa": [
+			"es que",
+			"porque",
+			"no pude",
+			"no vi",
+			"se me",
+			"no sabia",
+			"el sistema",
+			"se cayo",
+			"se colgo",
+			"estaba en",
+			"no me llego",
+			"no funciona",
+			"lento",
+			"el cliente",
+			"fue culpa",
+			"no fue mi",
+			"trafico",
+			"el bus",
+			"me demore",
+			"me quede",
+			"estaba ocupado",
+			"estaba atendiendo",
+			"el partner",
+			"la pc",
+			"se trabo",
+			"sorry but",
+			"because",
+			"i couldnt",
+			"i didnt see",
+			"the system",
+			"it crashed",
+			"it froze",
+			"i was in",
+			"not my fault",
+			"the customer",
+			"was busy",
+			"traffic",
+			"the bus",
+			"i didnt know",
+			"it wasnt",
+			"my pc",
+			"was slow"
+		],
+		"negar": [
+			"no gracias",
+			"no voy",
+			"paso",
+			"no quiero",
+			"no puedo",
+			"nop",
+			"nel",
+			"no thanks",
+			"i cant",
+			"i wont",
+			"pass",
+			"nope",
+			"no"
+		],
+		"pregunta": [
+			"?",
+			"que hago",
+			"como hago",
+			"cuando",
+			"donde",
+			"por que",
+			"quien",
+			"cual",
+			"what",
+			"how",
+			"when",
+			"where",
+			"why",
+			"who",
+			"can i",
+			"could i"
+		],
+		"gracias": [
+			"gracias",
+			"muchas gracias",
+			"te pasaste",
+			"thanks",
+			"thank you",
+			"thx",
+			"ty"
+		],
+		"broma": [
+			"jaja",
+			"jeje",
+			"jsjs",
+			"xd",
+			"lol",
+			"haha",
+			"lmao",
+			"jajaja"
+		],
+		"saludo": [
+			"hola",
+			"buenas",
+			"buenas noches",
+			"que tal",
+			"hey",
+			"hi",
+			"hello",
+			"good evening"
+		],
+		"queja": [
+			"cansado",
+			"tengo sueno",
+			"sueno",
+			"no aguanto",
+			"estoy harto",
+			"que asco",
+			"otra vez",
+			"odio este",
+			"tired",
+			"sleepy",
+			"fed up",
+			"sick of",
+			"again",
+			"this job"
+		],
+		"ok": [
+			"ok",
+			"okey",
+			"okay",
+			"vale",
+			"listo",
+			"dale",
+			"ya",
+			"si",
+			"claro",
+			"perfecto",
+			"bueno",
+			"sure",
+			"yes",
+			"yeah",
+			"fine",
+			"alright",
+			"done",
+			"will do"
+		]
+	},
+	"respuestas": {
+		"shero": {
+			"insulto": [
+				{
+					"es": "Guardé la captura. Tu file ya tiene foto.",
+					"en": "I saved the screenshot. Your file has a picture now."
+				},
+				{
+					"es": "¿Así le hablas a tu supervisor? Lo reenvío a los 3 OM. Con copia a RRHH.",
+					"en": "Is that how you talk to your supervisor? Forwarding to the 3 OMs. CC HR."
+				},
+				{
+					"es": "Interesante. Repítelo en persona. Estoy subiendo.",
+					"en": "Interesting. Say it in person. I'm coming up."
+				},
+				{
+					"es": "Eso no se borra, {agente}. En Ezlaki nada se borra.",
+					"en": "That doesn't get deleted, {agente}. Nothing gets deleted in Ezlaki."
+				}
+			],
+			"excusa": [
+				{
+					"es": "No te pedí un cuento. Te pedí Available.",
+					"en": "I didn't ask for a story. I asked for Available."
+				},
+				{
+					"es": "Excusa recibida. Excusa archivada. Excusa en tu evaluación.",
+					"en": "Excuse received. Excuse filed. Excuse in your review."
+				},
+				{
+					"es": "Todos tienen un «es que». Ninguno tiene bono.",
+					"en": "Everyone has an «it's just that». Nobody has a bonus."
+				},
+				{
+					"es": "El sistema funciona. El cliente funciona. ¿Qué es lo que no funciona, {agente}?",
+					"en": "The system works. The customer works. What doesn't work, {agente}?"
+				},
+				{
+					"es": "¿Sabes cuántas veces escuché eso esta noche? Tú eres la novena.",
+					"en": "Do you know how many times I heard that tonight? You're number nine."
+				}
+			],
+			"ack": [
+				{
+					"es": "Recibido. Queda en tu file.",
+					"en": "Received. It stays in your file."
+				},
+				{
+					"es": "Ack registrado a las {hora}. Sé exactamente cuánto tardaste.",
+					"en": "Ack logged at {hora}. I know exactly how long you took."
+				},
+				{
+					"es": "Bien. Ahora a la cola.",
+					"en": "Good. Now the queue."
+				}
+			],
+			"voy": [
+				{
+					"es": "Te estoy cronometrando.",
+					"en": "I'm timing you."
+				},
+				{
+					"es": "No «vas». Ya deberías estar.",
+					"en": "You're not «on your way». You should already be there."
+				},
+				{
+					"es": "Camina. No corras. Pero llega.",
+					"en": "Walk. Don't run. But arrive."
+				}
+			],
+			"ok": [
+				{
+					"es": "Ok no es una respuesta. Pero lo acepto. Por ahora.",
+					"en": "Ok isn't an answer. But I'll accept it. For now."
+				},
+				{
+					"es": "«Ok». Dos letras. Tienes tiempo para más, pero no para Available.",
+					"en": "«Ok». Two letters. Time for more, but not for Available."
+				},
+				{
+					"es": "Anotado.",
+					"en": "Noted."
+				},
+				{
+					"es": "Vi.",
+					"en": "Seen."
+				}
+			],
+			"negar": [
+				{
+					"es": "No es una pregunta, {agente}.",
+					"en": "It isn't a question, {agente}."
+				},
+				{
+					"es": "«No» no existe en el layout.",
+					"en": "«No» doesn't exist in the layout."
+				},
+				{
+					"es": "Lo vuelvo a escribir en mayúsculas si hace falta.",
+					"en": "I'll write it again in caps if needed."
+				}
+			],
+			"pregunta": [
+				{
+					"es": "La respuesta está en el procedimiento. El procedimiento está en Campus. Campus está en F5.",
+					"en": "The answer is in the procedure. The procedure is in Campus. Campus is on F5."
+				},
+				{
+					"es": "Pregúntale al Mentor. Yo no doy training, doy seguimiento.",
+					"en": "Ask the Mentor. I don't give training, I give follow-up."
+				},
+				{
+					"es": "Menos preguntas. Más contactos.",
+					"en": "Fewer questions. More contacts."
+				}
+			],
+			"gracias": [
+				{
+					"es": "No me agradezcas. Cumple.",
+					"en": "Don't thank me. Deliver."
+				},
+				{
+					"es": "De nada. Sigue en Available.",
+					"en": "You're welcome. Stay in Available."
+				},
+				{
+					"es": "Las gracias no suben el AHT.",
+					"en": "Thanks don't improve the AHT."
+				}
+			],
+			"broma": [
+				{
+					"es": "¿Te parece gracioso? A los OM no.",
+					"en": "You find it funny? The OMs don't."
+				},
+				{
+					"es": "Me alegra que la estés pasando bien. Eso también lo mido.",
+					"en": "Glad you're having fun. I measure that too."
+				},
+				{
+					"es": "Jaja. Ahora en serio: la cola.",
+					"en": "Haha. Now seriously: the queue."
+				}
+			],
+			"saludo": [
+				{
+					"es": "Buenas noches. No hay breaks.",
+					"en": "Good evening. There are no breaks."
+				},
+				{
+					"es": "Hola. Te estaba esperando. Desde las 23:59.",
+					"en": "Hello. I was waiting for you. Since 23:59."
+				},
+				{
+					"es": "Saluda menos y contesta más.",
+					"en": "Greet less, answer more."
+				}
+			],
+			"queja": [
+				{
+					"es": "Todos estamos cansados. Yo no.",
+					"en": "We're all tired. Not me."
+				},
+				{
+					"es": "El sueño es una decisión. Decide Available.",
+					"en": "Sleep is a decision. Decide Available."
+				},
+				{
+					"es": "Si no aguantas, el tópico está en el piso 1. Quince minutos. Ni uno más.",
+					"en": "If you can't take it, the infirmary is on floor 1. Fifteen minutes. Not one more."
+				}
+			],
+			"ayuda": [
+				{
+					"es": "Te sientes mal. Anotado. Baja al tópico. Quince minutos. Ni uno más.",
+					"en": "You feel sick. Noted. Go down to the infirmary. Fifteen minutes. Not one more."
+				}
+			],
+			"otro": [
+				{
+					"es": "¿Esto es trabajo?",
+					"en": "Is this work?"
+				},
+				{
+					"es": "No entendí. Tampoco me interesa. Available.",
+					"en": "Didn't understand. Don't care either. Available."
+				},
+				{
+					"es": "Escribes mucho para alguien con cola.",
+					"en": "You type a lot for someone with a queue."
+				},
+				{
+					"es": "…",
+					"en": "…"
+				},
+				{
+					"es": "Lo leí. Lo guardé.",
+					"en": "Read it. Saved it."
+				}
+			]
+		},
+		"haime": {
+			"voy": [
+				{
+					"es": "Te espero en la sala de calibración. Trae tu empatía.",
+					"en": "I'll wait for you in the calibration room. Bring your empathy."
+				},
+				{
+					"es": "Bien. La grabación ya empezó.",
+					"en": "Good. The recording already started."
+				},
+				{
+					"es": "Siéntate frente a mí. No mires el punto rojo.",
+					"en": "Sit in front of me. Don't look at the red dot."
+				}
+			],
+			"excusa": [
+				{
+					"es": "Eso que acabas de escribir también es un contacto. Y también lo voy a calibrar.",
+					"en": "What you just typed is also a contact. And I'll calibrate it too."
+				},
+				{
+					"es": "La empatía no tiene excusas. Tiene oportunidades. Tres.",
+					"en": "Empathy has no excuses. It has opportunities. Three."
+				},
+				{
+					"es": "Mm. Anoto «justificación» en la casilla de actitud.",
+					"en": "Mm. I'm writing «justification» in the attitude box."
+				}
+			],
+			"insulto": [
+				{
+					"es": "Estás grabado. Siempre estás grabado.",
+					"en": "You're recorded. You're always recorded."
+				},
+				{
+					"es": "Gracias por tu feedback. Lo voy a usar en el tuyo.",
+					"en": "Thanks for your feedback. I'll use it in yours."
+				},
+				{
+					"es": "Punto menos en cortesía. Y en todo lo demás.",
+					"en": "Point off for courtesy. And for everything else."
+				}
+			],
+			"pregunta": [
+				{
+					"es": "La rúbrica está en Campus. Léela despacio, como si te escuchara alguien.",
+					"en": "The rubric is in Campus. Read it slowly, as if someone were listening."
+				},
+				{
+					"es": "Pregunta en la calibración. Ahí respondo todo.",
+					"en": "Ask at calibration. I answer everything there."
+				},
+				{
+					"es": "¿Sabes qué pregunta el cliente? Lo mismo. Y tú no le respondes.",
+					"en": "Know what the customer asks? The same. And you don't answer."
+				}
+			],
+			"otro": [
+				{
+					"es": "Te leo. Te escucho. Te califico.",
+					"en": "I read you. I hear you. I grade you."
+				},
+				{
+					"es": "Mm-hm.",
+					"en": "Mm-hm."
+				},
+				{
+					"es": "Ese tono, {agente}. Ese tono.",
+					"en": "That tone, {agente}. That tone."
+				},
+				{
+					"es": "Lo guardo para tu próximo feedback.",
+					"en": "Saving it for your next feedback."
+				}
+			]
+		},
+		"trainer": {
+			"voy": [
+				{
+					"es": "SALA 2. AHORA. ¡GAAAA!",
+					"en": "ROOM 2. NOW. GAAAA!"
+				},
+				{
+					"es": "Bien. Corre. No: camina. ¡CORRE!",
+					"en": "Good. Run. No: walk. RUN!"
+				},
+				{
+					"es": "Tu silla está fría. Caliéntala.",
+					"en": "Your chair is cold. Warm it up."
+				}
+			],
+			"excusa": [
+				{
+					"es": "¡EN TRAINING NO HAY «ES QUE»!",
+					"en": "IN TRAINING THERE'S NO «IT'S JUST THAT»!"
+				},
+				{
+					"es": "Repite conmigo: «no tengo excusas». Otra vez. Más fuerte.",
+					"en": "Repeat after me: «I have no excuses». Again. Louder."
+				},
+				{
+					"es": "Excusa número uno del manual. Página doce. Reprobada.",
+					"en": "Excuse number one in the manual. Page twelve. Failed."
+				}
+			],
+			"insulto": [
+				{
+					"es": "¡GAAAAAA! ¡Eso va a la prueba!",
+					"en": "GAAAAAA! That's going on the test!"
+				},
+				{
+					"es": "Me gusta tu energía. Úsala para el quiz.",
+					"en": "I like your energy. Use it on the quiz."
+				},
+				{
+					"es": "Te espero. Con el plumón rojo.",
+					"en": "I'm waiting. With the red marker."
+				}
+			],
+			"otro": [
+				{
+					"es": "¡Atención! ¡Esto no es un chat! (Sí es un chat.)",
+					"en": "Attention! This isn't a chat! (It is a chat.)"
+				},
+				{
+					"es": "Anotado en la pizarra.",
+					"en": "Written on the whiteboard."
+				},
+				{
+					"es": "¿Eso viene en el quiz? Ahora sí.",
+					"en": "Is that on the quiz? Now it is."
+				}
+			]
+		},
+		"rasec": {
+			"voy": [
+				{
+					"es": "¡ESO! ¡Así me gusta, team! 🎉",
+					"en": "YES! That's what I like, team! 🎉"
+				},
+				{
+					"es": "Te guardé el micrófono. Calientito.",
+					"en": "I saved you the mic. Warm."
+				},
+				{
+					"es": "¡Integración! ¡Inte-gra-ción!",
+					"en": "Team building! Team-buil-ding!"
+				}
+			],
+			"negar": [
+				{
+					"es": "Lo anoto. Con cariño. En la lista.",
+					"en": "Writing it down. With love. On the list."
+				},
+				{
+					"es": "«No» también es una forma de participar. La peor.",
+					"en": "«No» is also a way to participate. The worst one."
+				},
+				{
+					"es": "Aquí todos participan, {agente}. Todos.",
+					"en": "Everybody participates here, {agente}. Everybody."
+				}
+			],
+			"excusa": [
+				{
+					"es": "¡Las excusas no bailan! ¡Arriba!",
+					"en": "Excuses don't dance! Up!"
+				},
+				{
+					"es": "Ajá. ¿Y eso cuánto dura? Porque la canción dura 3 minutos.",
+					"en": "Uh-huh. How long is that? Because the song is 3 minutes."
+				},
+				{
+					"es": "Te pongo como «motivado». Sorpresa.",
+					"en": "I'm marking you «motivated». Surprise."
+				}
+			],
+			"insulto": [
+				{
+					"es": "Jajaja. Qué chistoso. Lo voy a leer en el micrófono.",
+					"en": "Hahaha. So funny. I'll read it on the mic."
+				},
+				{
+					"es": "Te voy a dedicar la próxima canción.",
+					"en": "I'll dedicate the next song to you."
+				},
+				{
+					"es": "Eso no es buena vibra, {agente}.",
+					"en": "That's not good vibes, {agente}."
+				}
+			],
+			"otro": [
+				{
+					"es": "¡Buena vibra, team! 🎉",
+					"en": "Good vibes, team! 🎉"
+				},
+				{
+					"es": "Sube el volumen. No, más.",
+					"en": "Turn it up. No, more."
+				},
+				{
+					"es": "Te veo en la pista. Siempre te veo.",
+					"en": "See you on the dance floor. I always see you."
+				}
+			]
+		},
+		"enfermera": {
+			"ayuda": [
+				{
+					"es": "Baja al tópico, piso 1, al fondo del pasillo de training. Hay una silla de espera.",
+					"en": "Come down to the infirmary, floor 1, end of the training hall. There's a waiting chair."
+				},
+				{
+					"es": "Te tomo la presión. Y la hora.",
+					"en": "I'll take your blood pressure. And the time."
+				},
+				{
+					"es": "Siéntate y respira. Quince minutos. Lo dice el reglamento, no yo.",
+					"en": "Sit and breathe. Fifteen minutes. The rules say so, not me."
+				}
+			],
+			"otro": [
+				{
+					"es": "El tópico está abierto. Siempre está abierto.",
+					"en": "The infirmary is open. It's always open."
+				},
+				{
+					"es": "Anotado en la hoja de atenciones.",
+					"en": "Written on the care sheet."
+				},
+				{
+					"es": "¿Dolor del uno al diez? El diez está ocupado.",
+					"en": "Pain from one to ten? Ten is taken."
+				}
+			]
+		},
+		"mentor": {
+			"pregunta": [
+				{
+					"es": "Buena pregunta. La respuesta es: Available.",
+					"en": "Good question. The answer is: Available."
+				},
+				{
+					"es": "Te paso el link del procedimiento por DM. No lo abras en horario de cola.",
+					"en": "I'll DM you the procedure link. Don't open it during queue hours."
+				},
+				{
+					"es": "Eso lo vimos en el minitraining. ¿No lo hiciste?",
+					"en": "We covered that in the minitraining. You didn't do it?"
+				}
+			],
+			"excusa": [
+				{
+					"es": "Yo también tenía excusas. Ahora tengo un cargo.",
+					"en": "I had excuses too. Now I have a title."
+				},
+				{
+					"es": "Shero lee este canal, {agente}.",
+					"en": "Shero reads this channel, {agente}."
+				}
+			],
+			"otro": [
+				{
+					"es": "¡Vamos team! (Shero está leyendo.)",
+					"en": "Let's go team! (Shero is reading.)"
+				},
+				{
+					"es": "Ok, lo escalo.",
+					"en": "Ok, escalating."
+				},
+				{
+					"es": "Recuerden su minitraining 💪",
+					"en": "Remember your minitraining 💪"
+				}
+			]
+		},
+		"rta": {
+			"otro": [
+				{
+					"es": "Guau. Mensaje no válido en #allocations.",
+					"en": "Woof. Invalid message in #allocations."
+				},
+				{
+					"es": "Grr. Este canal es para órdenes. Las mías.",
+					"en": "Grr. This channel is for orders. Mine."
+				},
+				{
+					"es": "Te tengo en pantalla. Guau.",
+					"en": "I have you on screen. Woof."
+				}
+			],
+			"excusa": [
+				{
+					"es": "La adherencia no ladra excusas. Guau.",
+					"en": "Adherence doesn't bark excuses. Woof."
+				},
+				{
+					"es": "Captura guardada. Guau.",
+					"en": "Screenshot saved. Woof."
+				}
+			],
+			"insulto": [
+				{
+					"es": "GRRRRR.",
+					"en": "GRRRRR."
+				},
+				{
+					"es": "Te marco en rojo. Guau.",
+					"en": "Marking you red. Woof."
+				}
+			]
+		},
+		"om": {
+			"otro": [
+				{
+					"es": "Este canal es solo para comunicados. Gracias por su comprensión.",
+					"en": "This channel is for announcements only. Thank you for your understanding."
+				},
+				{
+					"es": "Su mensaje fue recibido y será atendido en orden de llegada.",
+					"en": "Your message was received and will be handled in order of arrival."
+				},
+				{
+					"es": "Operaciones agradece su participación.",
+					"en": "Operations thanks you for participating."
+				}
+			]
+		},
+		"vitzo": {
+			"otro": [
+				{
+					"es": "WORKFLOW: entrada no reconocida. Reaccione con el emoji indicado.",
+					"en": "WORKFLOW: input not recognized. React with the indicated emoji."
+				},
+				{
+					"es": "WORKFLOW: su respuesta fue registrada como «incumplimiento leve».",
+					"en": "WORKFLOW: your reply was logged as «minor non-compliance»."
+				},
+				{
+					"es": "WORKFLOW: ENVÍENME CORREOS.",
+					"en": "WORKFLOW: SEND ME EMAILS."
+				}
+			]
+		},
+		"sistema": {
+			"otro": [
+				{
+					"es": "Ezlaki: este canal no admite respuestas.",
+					"en": "Ezlaki: this channel does not accept replies."
+				}
+			]
+		},
+		"companero": {
+			"insulto": [
+				{
+					"es": "oye tranquilo, yo no soy shero",
+					"en": "hey easy, I'm not shero"
+				},
+				{
+					"es": "borra eso. lee todo.",
+					"en": "delete that. he reads everything."
+				},
+				{
+					"es": "uy. ok. no te hablo por un rato",
+					"en": "oof. ok. not talking to you for a while"
+				}
+			],
+			"excusa": [
+				{
+					"es": "no me expliques a mí, explícale a él",
+					"en": "don't explain it to me, explain it to him"
+				},
+				{
+					"es": "todos tenemos un es que. guárdalo para el feedback",
+					"en": "we all have an it's just that. save it for feedback"
+				},
+				{
+					"es": "te creo. él no te va a creer",
+					"en": "I believe you. he won't"
+				}
+			],
+			"pregunta": [
+				{
+					"es": "ni idea. pregúntale al mentor pero no le digas que te dije",
+					"en": "no idea. ask the mentor but don't tell him I sent you"
+				},
+				{
+					"es": "creo que está en campus. creo.",
+					"en": "I think it's in campus. I think."
+				},
+				{
+					"es": "pregunta en voz baja. las paredes tienen AUX",
+					"en": "ask quietly. the walls have AUX"
+				},
+				{
+					"es": "no sé. yo solo sobrevivo",
+					"en": "dunno. I just survive"
+				}
+			],
+			"gracias": [
+				{
+					"es": "de nada. sigue en Live.",
+					"en": "you're welcome. stay in Live."
+				},
+				{
+					"es": "no me agradezcas, avísame si viene.",
+					"en": "don't thank me, warn me if he comes."
+				},
+				{
+					"es": "cuando quieras",
+					"en": "anytime"
+				}
+			],
+			"broma": [
+				{
+					"es": "jaja shh",
+					"en": "haha shh"
+				},
+				{
+					"es": "no te rías muy fuerte, Haime escucha.",
+					"en": "don't laugh too loud, Haime listens."
+				},
+				{
+					"es": "jajaja. ay. ya no me río desde el T1",
+					"en": "hahaha. ugh. haven't laughed since T1"
+				}
+			],
+			"saludo": [
+				{
+					"es": "hola. sigues vivo, qué bien",
+					"en": "hi. you're still alive, nice"
+				},
+				{
+					"es": "buenas. no mires a la fila C",
+					"en": "hey. don't look at row C"
+				},
+				{
+					"es": "holi. qué turno",
+					"en": "hiii. what a shift"
+				}
+			],
+			"queja": [
+				{
+					"es": "somos dos. o cinco",
+					"en": "same. all five of us"
+				},
+				{
+					"es": "aguanta, a las 8:45 viene el bus",
+					"en": "hang in there, the bus comes at 8:45"
+				},
+				{
+					"es": "yo ya no siento las piernas",
+					"en": "I can't feel my legs anymore"
+				},
+				{
+					"es": "el café de la máquina no ayuda. nada ayuda",
+					"en": "the machine coffee doesn't help. nothing helps"
+				}
+			],
+			"ayuda": [
+				{
+					"es": "anda al tópico. di que te sientes mal en el DM de shero o te cuenta como abandono",
+					"en": "go to the infirmary. say you feel sick in shero's DM or it counts as abandoning"
+				},
+				{
+					"es": "uff. tómate agua. la máquina del pasillo funciona a veces",
+					"en": "ugh. drink water. the hallway machine works sometimes"
+				}
+			],
+			"voy": [
+				{
+					"es": "ok te espero",
+					"en": "ok I'll wait"
+				},
+				{
+					"es": "cuidado en la escalera",
+					"en": "careful on the stairs"
+				}
+			],
+			"ok": [
+				{
+					"es": "ok",
+					"en": "ok"
+				},
+				{
+					"es": "👍",
+					"en": "👍"
+				},
+				{
+					"es": "ya",
+					"en": "yeah"
+				}
+			],
+			"otro": [
+				{
+					"es": "mm",
+					"en": "mm"
+				},
+				{
+					"es": "no te entendí pero sí",
+					"en": "didn't get it but yes"
+				},
+				{
+					"es": "después hablamos, tengo cola",
+					"en": "talk later, queue"
+				},
+				{
+					"es": "¿qué?",
+					"en": "what?"
+				},
+				{
+					"es": "jaja ok",
+					"en": "haha ok"
+				}
+			]
+		}
+	},
+	"limite_jugador": {
+		"mensajes": 5,
+		"ventana_s": 15.0,
+		"aviso_shero": {
+			"es": "Menos chat, más Available.",
+			"en": "Less chat, more Available."
+		}
+	},
+	"variantes": {
+		"lineas_canales": {
+			"shero_saludo": [
+				{
+					"es": "Buenas noches, team. Hoy es una noche importante. Todas son importantes. No hay breaks.",
+					"en": "Good evening, team. Tonight is important. Every night is. There are no breaks."
+				},
+				{
+					"es": "Team, entramos en Available a las 00:00. No a las 00:01. No hay breaks.",
+					"en": "Team, we go Available at 00:00. Not 00:01. There are no breaks."
+				}
+			],
+			"shero_isla": [
+				{
+					"es": "Recordatorio: la fila C es su isla. Quien se sienta en otra isla, se va a otra isla. Lejos.",
+					"en": "Reminder: row C is your island. Whoever sits at another island goes to another island. Far away."
+				},
+				{
+					"es": "Vi a alguien en la fila B. Ya sé quién fue. Regresa.",
+					"en": "I saw someone at row B. I know who it was. Come back."
+				}
+			],
+			"shero_layout": [
+				{
+					"es": "Layout actualizado. Es el mismo. Pero ahora es oficial.",
+					"en": "Layout updated. It's the same. But now it's official."
+				},
+				{
+					"es": "Su sitio es su sitio. Mi sitio es todos los sitios.",
+					"en": "Your seat is your seat. My seat is every seat."
+				}
+			],
+			"shero_no_hay_breaks": [
+				{
+					"es": "@here Nos quedamos sin breaks.",
+					"en": "@here We're out of breaks."
+				},
+				{
+					"es": "Breaks: cero. Cola: subiendo. Ustedes: sentados.",
+					"en": "Breaks: zero. Queue: rising. You: seated."
+				}
+			],
+			"shero_correos_excedidos": [
+				{
+					"es": "Team, correos de más de 10 min. Otra vez. Adjunto evidencia.",
+					"en": "Team, emails over 10 min. Again. Evidence attached."
+				},
+				{
+					"es": "@here cerramos los casos. Ahora. Adjunto los que siguen abiertos.",
+					"en": "@here close the cases. Now. Attached are the ones still open."
+				}
+			],
+			"shero_breaks_excedidos": [
+				{
+					"es": "Breaks excedidos. Les dejo la captura para que se reconozcan.",
+					"en": "Breaks exceeded. I'm leaving the screenshot so you recognize yourselves."
+				},
+				{
+					"es": "Team, recuerden que el break es de 10 min. No de 10 min y lo que se demora el ascensor.",
+					"en": "Team, remember breaks are 10 min. Not 10 min plus however long the elevator takes."
+				}
+			],
+			"rta_todos_available": [
+				{
+					"es": "@here de momento no hay cola, pasamos a BO. Guau.",
+					"en": "@here no queue for now, switch to BO. Woof."
+				},
+				{
+					"es": "@here la cola sube. Todos a Available. Captura adjunta. Guau.",
+					"en": "@here the queue is rising. Everyone to Available. Screenshot attached. Woof."
+				}
+			],
+			"rta_npc_ttoom": [
+				{
+					"es": "@Ttoom sigue en Break. Captura adjunta. Guau.",
+					"en": "@Ttoom still on Break. Screenshot attached. Woof."
+				},
+				{
+					"es": "@Ttoom AUX incorrecto. Te veo. Guau.",
+					"en": "@Ttoom wrong AUX. I see you. Woof."
+				}
+			],
+			"rta_npc_marko": [
+				{
+					"es": "@Marko Baño excedido. Captura. Guau.",
+					"en": "@Marko Bathroom exceeded. Screenshot. Woof."
+				},
+				{
+					"es": "@Marko perdiste un contacto. Missed. Guau.",
+					"en": "@Marko you missed a contact. Missed. Woof."
+				}
+			],
+			"rta_npc_llauri": [
+				{
+					"es": "@Llauri ACW de 4 min. El ACW es de máx 2 min. Guau.",
+					"en": "@Llauri 4 min of ACW. ACW is max 2 min. Woof."
+				},
+				{
+					"es": "@Llauri tercer tag casi. Casi. Guau.",
+					"en": "@Llauri almost third tag. Almost. Woof."
+				}
+			],
+			"rta_npc_juan": [
+				{
+					"es": "@Juan Available sin contestar. ¿Duerme? Guau.",
+					"en": "@Juan Available without answering. Asleep? Woof."
+				},
+				{
+					"es": "@Juan perdido. Missed. Otra vez. Guau.",
+					"en": "@Juan missed. Again. Woof."
+				}
+			],
+			"om_metricas": [
+				{
+					"es": "Operaciones: el ranking de adherencia se publica al cierre. Por transparencia.",
+					"en": "Operations: the adherence ranking is published at closing. For transparency."
+				},
+				{
+					"es": "Operaciones: felicitamos a los agentes en verde. Los demás saben quiénes son.",
+					"en": "Operations: congratulations to agents in green. The rest know who they are."
+				}
+			],
+			"qa_rec": [
+				{
+					"es": "Calidad: todas las llamadas se graban. Las que no, también.",
+					"en": "Quality: all calls are recorded. The ones that aren't, too."
+				},
+				{
+					"es": "Tip de QA: sonrían. Se escucha. Se mide.",
+					"en": "QA tip: smile. It's heard. It's measured."
+				}
+			],
+			"tm_musica": [
+				{
+					"es": "¡Team! Les pongo música para la madrugada. Buena vibra obligatoria 🎉",
+					"en": "Team! Putting on some music for the night. Mandatory good vibes 🎉"
+				},
+				{
+					"es": "Música en los parlantes, team. Si la apagan, la vuelvo a prender.",
+					"en": "Music on the speakers, team. If you turn it off, I'll turn it back on."
+				}
+			],
+			"en_un_caso": [
+				{
+					"es": "Todos estamos en un caso.",
+					"en": "We're all in a case."
+				},
+				{
+					"es": "El caso eres tú.",
+					"en": "You are the case."
+				},
+				{
+					"es": "Ciérralo. Tienes 10 minutos. Tenías.",
+					"en": "Close it. You have 10 minutes. Had."
+				}
+			],
+			"shero_ack_ok": [
+				{
+					"es": "Ack registrado. A la cola.",
+					"en": "Ack logged. Back to the queue."
+				},
+				{
+					"es": "Recibido. Ese WW no se va a ningún lado.",
+					"en": "Received. That WW isn't going anywhere."
+				}
+			],
+			"shero_ok": [
+				{
+					"es": "«Ok». Anotado.",
+					"en": "«Ok». Noted."
+				},
+				{
+					"es": "Vi.",
+					"en": "Seen."
+				}
+			],
+			"rooms_invitacion": [
+				{
+					"es": "Ezlaki Rooms. Ahora. Cámara prendida.",
+					"en": "Ezlaki Rooms. Now. Camera on."
+				},
+				{
+					"es": "Te espero en Rooms. No me hagas esperar más.",
+					"en": "Waiting for you in Rooms. Don't make me wait longer."
+				}
+			],
+			"rta_acw_recordatorio": [
+				{
+					"es": "ACW = 2 min. No 3. No «ya casi». Guau.",
+					"en": "ACW = 2 min. Not 3. Not «almost». Woof."
+				},
+				{
+					"es": "Team, el ACW no es un break. Ojo con sus tiempos. Guau.",
+					"en": "Team, ACW is not a break. Watch your times. Woof."
+				}
+			],
+			"shero_bo_sin_cola": [
+				{
+					"es": "@here sin cola. Todos a BO hasta nuevo aviso. Nuevo aviso: pronto.",
+					"en": "@here no queue. Everyone to BO until further notice. Further notice: soon."
+				},
+				{
+					"es": "@here pasamos a BO. Los casos no se cierran solos.",
+					"en": "@here switch to BO. Cases don't close themselves."
+				}
+			],
+			"shero_cerramos_casos": [
+				{
+					"es": "@{agente} los casos abiertos tienen nombre. El tuyo.",
+					"en": "@{agente} open cases have a name. Yours."
+				},
+				{
+					"es": "@{agente} cerramos los casos. Hoy. Ahora.",
+					"en": "@{agente} close the cases. Today. Now."
+				}
+			],
+			"shero_sin_breaks": [
+				{
+					"es": "@here Se acabaron los breaks. Gracias por su comprensión.",
+					"en": "@here Breaks are over. Thank you for understanding."
+				},
+				{
+					"es": "@here Breaks agotados. El próximo que pida uno, lo pide en persona.",
+					"en": "@here Breaks used up. Next one who asks, asks in person."
+				}
+			],
+			"shero_madrugada": [
+				{
+					"es": "Las 6. La hora en que todos bajan. Yo no.",
+					"en": "6 o'clock. The hour everyone slows down. Not me."
+				},
+				{
+					"es": "Quedan 2 horas y 45 minutos. No es poco. Es mucho Available.",
+					"en": "2 hours and 45 minutes left. That's not little. That's a lot of Available."
+				}
+			],
+			"shero_cierre": [
+				{
+					"es": "Fin del turno. Adherencia adjunta. Los de la captura, a mi sitio a las 08:46.",
+					"en": "End of shift. Adherence attached. The ones in the screenshot, my desk at 08:46."
+				},
+				{
+					"es": "Cierre. Les dejo la foto del turno. Algunos salen muy bien. Otros salen.",
+					"en": "Closing. Here's the shift photo. Some look great. Others just show up."
+				}
+			],
+			"shero_despedida": [
+				{
+					"es": "Buen turno. Mañana es otro turno igual.",
+					"en": "Good shift. Tomorrow is another identical shift."
+				},
+				{
+					"es": "Descansen, team. Los espero a las 23:48. No a las 23:49.",
+					"en": "Rest, team. I expect you at 23:48. Not 23:49."
+				}
+			],
+			"om_cafe": [
+				{
+					"es": "Comunicado: el café es un beneficio. Los beneficios están en revisión.",
+					"en": "Notice: coffee is a benefit. Benefits are under review."
+				},
+				{
+					"es": "Operaciones informa: la máquina de café vuelve mañana. No pregunten qué mañana.",
+					"en": "Operations reports: the coffee machine is back tomorrow. Don't ask which tomorrow."
+				}
+			],
+			"om_simulacro": [
+				{
+					"es": "Operaciones: simulacro de sismo a las 05:00. Permanezcan en Available durante el sismo.",
+					"en": "Operations: earthquake drill at 05:00. Remain in Available during the quake."
+				},
+				{
+					"es": "Comunicado: las salidas de emergencia están señalizadas. Están cerradas, pero señalizadas.",
+					"en": "Notice: emergency exits are marked. They're locked, but marked."
+				}
+			],
+			"om_encuesta": [
+				{
+					"es": "Encuesta: del 1 al 10, ¿cuánto ama su trabajo? El 10 viene marcado por defecto.",
+					"en": "Survey: from 1 to 10, how much do you love your job? 10 is preselected."
+				},
+				{
+					"es": "Recordatorio: la encuesta de clima es obligatoria y voluntaria.",
+					"en": "Reminder: the climate survey is mandatory and voluntary."
+				}
+			],
+			"mentor_tip_1": [
+				{
+					"es": "Tip: si el cliente grita, bajen la voz. Si sigue gritando, bajen el AHT.",
+					"en": "Tip: if the customer yells, lower your voice. If they keep yelling, lower the AHT."
+				},
+				{
+					"es": "Tip del Mentor: Kardex primero, Identa después, correo al final. Siempre.",
+					"en": "Mentor tip: Kardex first, Identa second, email last. Always."
+				}
+			],
+			"mentor_tip_2": [
+				{
+					"es": "Tip: sonrían al hablar. El cliente no los ve, Haime sí.",
+					"en": "Tip: smile while talking. The customer can't see you, Haime can."
+				},
+				{
+					"es": "Recuerden su minitraining. Shero ya revisó quién no lo hizo.",
+					"en": "Remember your minitraining. Shero already checked who didn't."
+				}
+			],
+			"qa_muestreo": [
+				{
+					"es": "Calidad: hoy calibramos los contactos de las 3 am. Todos.",
+					"en": "Quality: tonight we calibrate the 3 am contacts. All of them."
+				},
+				{
+					"es": "Calidad: el punto rojo de la sala de calibración es nuevo. Es atención.",
+					"en": "Quality: the red dot in the calibration room is new. It's attention."
+				}
+			],
+			"qa_empatia": [
+				{
+					"es": "Calidad: «entiendo su molestia» suena a molestia. Varíen.",
+					"en": "Quality: «I understand your frustration» sounds frustrated. Vary it."
+				},
+				{
+					"es": "Tip de QA: no suspiren. Se escucha en la grabación. Y en mi sala.",
+					"en": "QA tip: don't sigh. It's heard on the recording. And in my room."
+				}
+			],
+			"tm_integracion": [
+				{
+					"es": "¡Integración a las 3! Traigan energía. La energía se toma lista.",
+					"en": "Team building at 3! Bring energy. Energy gets roll call."
+				},
+				{
+					"es": "¡Team! Hoy charadas. El que no adivine, explica por qué en coaching 🎉",
+					"en": "Team! Charades tonight. Whoever doesn't guess explains why in coaching 🎉"
+				}
+			],
+			"companero_madrugada": [
+				{
+					"es": "¿alguien más escucha pasos en el techo? el piso 3 no existe",
+					"en": "anyone else hear steps on the ceiling? floor 3 doesn't exist"
+				},
+				{
+					"es": "me quedan 2 cigarros de break. no fumo. es una forma de decir",
+					"en": "I have 2 cigarettes of break left. I don't smoke. it's a figure of speech"
+				}
+			],
+			"companero_sueno": [
+				{
+					"es": "tengo los ojos abiertos pero adentro estoy durmiendo",
+					"en": "my eyes are open but inside I'm asleep"
+				},
+				{
+					"es": "si me quedo dormido despiértenme antes que shero",
+					"en": "if I fall asleep wake me before shero does"
+				}
+			],
+			"companero_bus": [
+				{
+					"es": "8:45. 8:45. 8:45.",
+					"en": "8:45. 8:45. 8:45."
+				},
+				{
+					"es": "ya veo la luz del bus. o del monitor. no sé",
+					"en": "I can see the bus lights. or the monitor. not sure"
+				}
+			],
+			"rta_npc_keyla": [
+				{
+					"es": "@Keyla 14 min en Break. Tolerancia 10. Guau.",
+					"en": "@Keyla 14 min on Break. Tolerance 10. Woof."
+				},
+				{
+					"es": "@Keyla sigue en Break. Te veo en la tabla. Guau.",
+					"en": "@Keyla still on Break. I see you on the table. Woof."
+				}
+			],
+			"rta_npc_brando": [
+				{
+					"es": "@Brando Missed. El cliente esperó. Tú no. Guau.",
+					"en": "@Brando Missed. The customer waited. You didn't. Woof."
+				},
+				{
+					"es": "@Brando segundo contacto perdido. Guau.",
+					"en": "@Brando second missed contact. Woof."
+				}
+			],
+			"rta_npc_yesenia": [
+				{
+					"es": "@Yesenia ACW excedido. Captura. Guau.",
+					"en": "@Yesenia ACW exceeded. Screenshot. Woof."
+				},
+				{
+					"es": "@Yesenia ¿sigues tipificando? Guau.",
+					"en": "@Yesenia still wrapping up? Woof."
+				}
+			],
+			"rta_lista_available": [
+				{
+					"es": "@here foto del team en este momento. Guau.",
+					"en": "@here team snapshot right now. Woof."
+				},
+				{
+					"es": "@here adherencia en vivo. Rojo = conversación con Shero. Guau.",
+					"en": "@here live adherence. Red = talk with Shero. Woof."
+				}
+			],
+			"shero_foto_perfil": [
+				{
+					"es": "Pongan foto en Ezlaki. Una foto real. La de ustedes.",
+					"en": "Put a photo on Ezlaki. A real one. Yours."
+				},
+				{
+					"es": "Al que tenga de avatar un perrito: el Perrito RTA ya lo vio.",
+					"en": "Whoever has a dog avatar: the RTA Doggo already saw it."
+				}
+			],
+			"om_correo": [
+				{
+					"es": "Comunicado: los correos ya no tienen AUX propio. Tienen dueño: usted.",
+					"en": "Notice: emails no longer have their own AUX. They have an owner: you."
+				},
+				{
+					"es": "Operaciones: el AUX Correo fue retirado. Los correos siguen llegando. Más.",
+					"en": "Operations: the Email AUX was retired. Emails keep coming. More."
+				}
+			],
+			"om_bo": [
+				{
+					"es": "Comunicado: KYC pasa a llamarse BO. Las métricas de KYC pasan a llamarse suyas.",
+					"en": "Notice: KYC is now called BO. KYC metrics are now called yours."
+				},
+				{
+					"es": "Recordatorio: BO = Back Office. Back = atrás. Office = aquí. Toda la noche.",
+					"en": "Reminder: BO = Back Office. Back = behind. Office = here. All night."
+				}
+			],
+			"om_breaks": [
+				{
+					"es": "Recordatorio: 2 breaks de 10 minutos. Los minutos se cuentan desde que piensas en el break.",
+					"en": "Reminder: 2 breaks of 10 minutes. Minutes count from when you think about the break."
+				},
+				{
+					"es": "Operaciones: el tercer break está en evaluación. La evaluación es usted.",
+					"en": "Operations: the third break is under evaluation. The evaluation is you."
+				}
+			],
+			"qa_calibracion": [
+				{
+					"es": "Calidad: esta semana calibramos empatía. La empatía de las 4 am también cuenta.",
+					"en": "Quality: this week we calibrate empathy. 4 am empathy counts too."
+				},
+				{
+					"es": "Calidad: si Haime te llama, ve. Si no te llama, también te estoy escuchando.",
+					"en": "Quality: if Haime calls you, go. If not, I'm still listening."
+				}
+			],
+			"tm_ascensor": [
+				{
+					"es": "Site: el ascensor 2 hace ruido. Es normal. Si se detiene entre pisos, también es normal.",
+					"en": "Site: elevator 2 makes noise. That's normal. If it stops between floors, that's normal too."
+				},
+				{
+					"es": "Buenas noches. Usen la escalera de emergencia solo en emergencias. Y para subir. Y para bajar.",
+					"en": "Good evening. Use the emergency stairs only in emergencies. And to go up. And down."
+				}
+			],
+			"om_azotea": [
+				{
+					"es": "Comunicado: la azotea está abierta las 24 horas. La lluvia también.",
+					"en": "Notice: the rooftop is open 24 hours. So is the rain."
+				},
+				{
+					"es": "Operaciones recuerda: en la azotea no hay señal. Shero sí.",
+					"en": "Operations reminds you: no signal on the rooftop. Shero has one."
+				}
+			],
+			"tm_fotocheck": [
+				{
+					"es": "Site: apareció un fotocheck sin foto en el baño del piso 2. Sigue ahí. Mirándonos.",
+					"en": "Site: a badge with no photo showed up in the floor 2 restroom. Still there. Watching us."
+				},
+				{
+					"es": "Objetos perdidos: un audífono, un taper y un agente. Pasen por seguridad.",
+					"en": "Lost and found: one headset, one lunchbox and one agent. Stop by security."
+				}
+			],
+			"shero_cafe": [
+				{
+					"es": "Las tazas no van en el escritorio. El café no va en el AHT.",
+					"en": "Mugs don't go on the desk. Coffee doesn't go in the AHT."
+				},
+				{
+					"es": "Veo vapor de café en la fila C. El vapor también se mide.",
+					"en": "I see coffee steam in row C. Steam gets measured too."
+				}
+			],
+			"qa_suspiro": [
+				{
+					"es": "Calidad: un «ajá» seco cuesta 2 puntos. Un suspiro, 5.",
+					"en": "Quality: a dry «uh-huh» costs 2 points. A sigh, 5."
+				},
+				{
+					"es": "Tip de QA: no digan «no sé». Digan «déjeme validar». Y no validen nada.",
+					"en": "QA tip: don't say «I don't know». Say «let me check». And check nothing."
+				}
+			],
+			"shero_amonestacion": [
+				{
+					"es": "Hubo una amonestación hoy. No digo de quién. Lo sabe. Ustedes también.",
+					"en": "There was a reprimand today. I won't say whose. They know. So do you."
+				},
+				{
+					"es": "Amonestación emitida. Si te llegó, da Ack. Si no te llegó, todavía.",
+					"en": "Reprimand issued. If you got it, give Ack. If not, not yet."
+				}
+			]
+		},
+		"lineas_shero": {
+			"alerta": [
+				{
+					"es": "Alerta registrada. Una más y no te aviso.",
+					"en": "Alert logged. One more and I won't warn you."
+				},
+				{
+					"es": "Esto es una alerta, {agente}. Las alertas se acumulan.",
+					"en": "This is an alert, {agente}. Alerts add up."
+				}
+			],
+			"de_pie_en_live": [
+				{
+					"es": "Aquí se camina. Correr es de quien tiene breaks.",
+					"en": "We walk here. Running is for people with breaks."
+				},
+				{
+					"es": "Oigo tus pasos desde mi sitio. Más despacio.",
+					"en": "I can hear your steps from my desk. Slower."
+				},
+				{
+					"es": "¿Te persigue alguien? Todavía no.",
+					"en": "Is someone chasing you? Not yet."
+				}
+			],
+			"convocar_coaching": [
+				{
+					"es": "Rooms. Ya.",
+					"en": "Rooms. Now."
+				},
+				{
+					"es": "Te necesito en coaching. Ahora es un buen momento. Para mí.",
+					"en": "I need you in coaching. Now is a good time. For me."
+				}
+			],
+			"topico_anotado": [
+				{
+					"es": "El tópico me avisó. ¿Mejoraste? Bien. Available.",
+					"en": "The infirmary told me. Better? Good. Available."
+				}
+			],
+			"ascensor_pisos": [
+				{
+					"es": "El ascensor dice que paseaste. El ascensor no miente.",
+					"en": "The elevator says you went for a ride. The elevator doesn't lie."
+				}
+			]
+		}
+	},
+	"dm_extra": {
+		"_nota": "Charla extra de cada compañero por DM: el hub elige 3 por DM y turno al azar (sin repetir) a horas al azar entre 00:30 y 07:30.",
+		"jiroshi": [
+			{
+				"es": "¿viste a shero? no está en su sitio y eso me asusta más",
+				"en": "did you see shero? he's not at his desk and that scares me more"
+			},
+			{
+				"es": "el cliente de recién me lloró 6 minutos. AHT a la basura",
+				"en": "the last customer cried at me for 6 minutes. AHT in the trash"
+			},
+			{
+				"es": "si te llama haime no mires el punto rojo",
+				"en": "if haime calls you don't look at the red dot"
+			},
+			{
+				"es": "me tocó el que repite todo. repite todo. repite todo.",
+				"en": "I got the one who repeats everything. repeats everything. repeats everything."
+			},
+			{
+				"es": "alguien dejó un fotocheck en la escalera. no lo toques",
+				"en": "someone left a badge on the stairs. don't touch it"
+			},
+			{
+				"es": "el perrito me tageó por 3 segundos de ACW. 3",
+				"en": "the doggo tagged me for 3 seconds of ACW. 3"
+			}
+		],
+		"marko": [
+			{
+				"es": "me quedé dormido 2 seg y shero ya estaba escribiendo",
+				"en": "I dozed off 2 sec and shero was already typing"
+			},
+			{
+				"es": "rasec va a poner karaoke otra vez. son las 3 am",
+				"en": "rasec is doing karaoke again. it's 3 am"
+			},
+			{
+				"es": "tengo hambre. el taper está en la refri del -1. creo",
+				"en": "I'm hungry. my lunchbox is in the -1 fridge. I think"
+			},
+			{
+				"es": "¿cuántos breaks te quedan? yo cero desde las 2",
+				"en": "how many breaks do you have left? I've had zero since 2"
+			},
+			{
+				"es": "el bus de vuelta pasa a las 8:45. aguanta",
+				"en": "the bus home comes at 8:45. hang in there"
+			},
+			{
+				"es": "no mires el pasillo del piso 1 de noche",
+				"en": "don't look down the floor 1 hall at night"
+			}
+		],
+		"llauri": [
+			{
+				"es": "me llegó un correo de vitzo a las 3:33. vacío",
+				"en": "I got an email from vitzo at 3:33. empty"
+			},
+			{
+				"es": "creo que el ACW de 2 min es de 1 min ahora",
+				"en": "I think the 2 min ACW is 1 min now"
+			},
+			{
+				"es": "si te sientes mal di que te sientes mal ANTES. después no cuenta",
+				"en": "if you feel sick say it BEFORE. after doesn't count"
+			},
+			{
+				"es": "la impresora imprimió mi nombre sola",
+				"en": "the printer printed my name on its own"
+			},
+			{
+				"es": "no le respondas a shero con excusas. nunca",
+				"en": "never answer shero with excuses. never"
+			},
+			{
+				"es": "¿escuchaste eso en la escalera? dime que sí",
+				"en": "did you hear that on the stairs? tell me you did"
+			}
+		],
+		"ttoom": [
+			{
+				"es": "el perrito rta me ladró por ezlaki. por ezlaki",
+				"en": "the rta doggo barked at me on ezlaki. on ezlaki"
+			},
+			{
+				"es": "cambié a break y el AUX volvió solo a available",
+				"en": "I switched to break and the AUX went back to available by itself"
+			},
+			{
+				"es": "hoy shero está calvo. eso es malo",
+				"en": "shero is bald tonight. that's bad"
+			},
+			{
+				"es": "tengo 4 WW. uno más y ya sabes",
+				"en": "I have 4 WWs. one more and you know"
+			},
+			{
+				"es": "la azotea está abierta. llueve igual",
+				"en": "the rooftop is open. it's raining anyway"
+			},
+			{
+				"es": "cuidado con el microondas 4, está fuera de servicio desde 2019",
+				"en": "watch out for microwave 4, out of order since 2019"
+			}
+		],
+		"juan": [
+			{
+				"es": "zzz perdón. ¿qué hora es?",
+				"en": "zzz sorry. what time is it?"
+			},
+			{
+				"es": "me tagearon por respirar en available",
+				"en": "they tagged me for breathing in available"
+			},
+			{
+				"es": "si ves mi silla vacía no le digas a nadie",
+				"en": "if you see my chair empty don't tell anyone"
+			},
+			{
+				"es": "el café de la máquina sabe a monitor",
+				"en": "the machine coffee tastes like a monitor"
+			},
+			{
+				"es": "creo que haime me sonrió. no duermo hoy",
+				"en": "I think haime smiled at me. no sleep today"
+			},
+			{
+				"es": "ya van 3 clientes que me preguntan por ti. raro",
+				"en": "3 customers have asked about you now. weird"
+			}
+		]
+	},
+	"capturas": {
+		"_nota": "Vista de adherencia en tiempo real (la que pegan Shero y el Perrito RTA en #allocations): identidades del juego, inventadas, con el dominio de la campaña. Ninguna persona real.",
+		"dominio": "kipupay.kp",
+		"identidades": {
+			"jiroshi": [
+				"jkuwae-v",
+				"Kuwae Vela",
+				"Jiroshi"
+			],
+			"marko": [
+				"mquispehuaman-t",
+				"Quispehuamán Torre",
+				"Marko"
+			],
+			"llauri": [
+				"lpariona-s",
+				"Pariona Soto",
+				"Llauri"
+			],
+			"ttoom": [
+				"tchumpitaz-r",
+				"Chumpitaz Rey",
+				"Ttoom"
+			],
+			"juan": [
+				"jhuaylla-m",
+				"Huaylla Mori",
+				"Juan"
+			],
+			"keyla": [
+				"kccahuana-l",
+				"Ccahuana Llerena",
+				"Keyla"
+			],
+			"brando": [
+				"binga-a",
+				"Inga Arrunátegui",
+				"Brando"
+			],
+			"yesenia": [
+				"yvilca-t",
+				"Vilca Tello",
+				"Yesenia"
+			],
+			"dalton": [
+				"dyupanqui-c",
+				"Yupanqui Cárcamo",
+				"Dalton"
+			],
+			"mayumi": [
+				"mnakandakari-p",
+				"Nakandakari Palomino",
+				"Mayumi"
+			],
+			"ronald": [
+				"rchoquehuanca-b",
+				"Choquehuanca Bendezú",
+				"Ronald"
+			],
+			"ysabel": [
+				"yhuarcaya-o",
+				"Huarcaya Ortiz",
+				"Ysabel"
+			],
+			"piero": [
+				"paltamirano-q",
+				"Altamirano Quintanilla",
+				"Piero"
+			]
+		},
+		"estados": {
+			"available": {
+				"es": "Available",
+				"en": "Available"
+			},
+			"bo": {
+				"es": "BO",
+				"en": "BO"
+			},
+			"break": {
+				"es": "Break",
+				"en": "Break"
+			},
+			"lunch": {
+				"es": "Lunch",
+				"en": "Lunch"
+			},
+			"bano": {
+				"es": "Baño",
+				"en": "Bathroom"
+			},
+			"coaching": {
+				"es": "Coaching",
+				"en": "Coaching"
+			},
+			"training": {
+				"es": "Training",
+				"en": "Training"
+			},
+			"contacto": {
+				"es": "En contacto",
+				"en": "On contact"
+			},
+			"perdido": {
+				"es": "Perdido",
+				"en": "Missed"
+			},
+			"acw": {
+				"es": "Después de contacto",
+				"en": "After contact work"
+			}
+		},
+		"reacciones": [
+			"perrito_rta",
+			"shero",
+			"jiroshi",
+			"marko",
+			"llauri",
+			"ttoom",
+			"juan",
+			"haime",
+			"rasec",
+			"mentor",
+			"vitzo",
+			"om"
+		]
+	}
+}

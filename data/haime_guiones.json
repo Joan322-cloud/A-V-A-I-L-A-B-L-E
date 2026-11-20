@@ -1,0 +1,3112 @@
+{
+	"_comentario": "AVAILABLE v0.3.1 · Q4 (Joan 2026-11-10 11:14Z) · Guiones personalizados de Haime: cada feedback usa el TIPO real del caso (llamada, chat, correo, vitzo, kyc), sus marcas de QA reales (una oportunidad por marca) y el caso concreto (cliente / remitente y problema). 'tipos' = en qué tipo de caso puede salir la línea; nunca sale fuera de ese tipo. 'id' = voz voces/haime/<id>. La cita (tu frase, el valor que elegiste) la muestra la pantalla; Haime no la lee. Motor: scripts/personajes/haime_guion.gd.",
+	"intro": {
+		"llamada": {
+			"1": [
+				{
+					"id": "q4_in_llamada_1_1",
+					"es": "Siéntate. Escuchemos tu llamada. Yo ya la oí. Varias veces.",
+					"en": "Sit down. Let's hear your call. I already did. Several times."
+				},
+				{
+					"id": "q4_in_llamada_1_2",
+					"es": "Tengo tu llamada en el oído. Ahora la vas a tener tú.",
+					"en": "I've had your call in my ear. Now you'll have it too."
+				},
+				{
+					"id": "q4_in_llamada_1_3",
+					"es": "Una llamada. Una sola. Es increíble todo lo que cabe en una sola llamada.",
+					"en": "One call. Just one. It's amazing how much fits in a single call."
+				}
+			],
+			"2": [
+				{
+					"id": "q4_in_llamada_2_1",
+					"es": "Otra llamada tuya. Ya sé cómo tomas aire antes de contestar.",
+					"en": "Another call of yours. I know how you breathe before answering."
+				},
+				{
+					"id": "q4_in_llamada_2_2",
+					"es": "Volvemos a tu voz. Me la sé mejor que tú.",
+					"en": "Back to your voice. I know it better than you do."
+				},
+				{
+					"id": "q4_in_llamada_2_3",
+					"es": "Esta llamada la puse en bucle. No me cansé. Eso debería preocuparte.",
+					"en": "I put this call on a loop. I didn't get tired. That should worry you."
+				}
+			],
+			"3": [
+				{
+					"id": "q4_in_llamada_3_1",
+					"es": "Tu última llamada. Es la última vez que vas a oír tu voz así.",
+					"en": "Your last call. It's the last time you'll hear your voice like this."
+				},
+				{
+					"id": "q4_in_llamada_3_2",
+					"es": "Cierro la puerta. Ahora solo estamos tú, yo y tu llamada.",
+					"en": "I'm closing the door. Now it's just you, me and your call."
+				}
+			]
+		},
+		"chat": {
+			"1": [
+				{
+					"id": "q4_in_chat_1_1",
+					"es": "Siéntate. Vamos a leer tu chat juntos. Despacio. Yo lo leí despacio.",
+					"en": "Sit down. Let's read your chat together. Slowly. I read it slowly."
+				},
+				{
+					"id": "q4_in_chat_1_2",
+					"es": "Imprimí tu chat. Lo subrayé. Con rojo, para que se vea de lejos.",
+					"en": "I printed your chat. Underlined in red, so it shows from afar."
+				},
+				{
+					"id": "q4_in_chat_1_3",
+					"es": "Un chat. Pensaste que lo escrito no se escucha. Aquí todo se escucha.",
+					"en": "A chat. You thought writing can't be heard. Here everything is heard."
+				}
+			],
+			"2": [
+				{
+					"id": "q4_in_chat_2_1",
+					"es": "Otro chat tuyo. Ya reconozco tus pausas entre mensaje y mensaje.",
+					"en": "Another chat of yours. I already recognize your pauses between messages."
+				},
+				{
+					"id": "q4_in_chat_2_2",
+					"es": "Volví a abrir tu chat. Seguía ahí. Esperándote. Como el cliente.",
+					"en": "I opened your chat again. It was still there. Waiting for you. Like the customer."
+				},
+				{
+					"id": "q4_in_chat_2_3",
+					"es": "Leí tus mensajes en voz alta. Sonaban como tú. Eso es lo peor.",
+					"en": "I read your messages aloud. They sounded like you. That's the worst part."
+				}
+			],
+			"3": [
+				{
+					"id": "q4_in_chat_3_1",
+					"es": "Tu último chat. Léelo conmigo. Tú escribiste esto. Con esas manos.",
+					"en": "Your last chat. Read it with me. You wrote this. With those hands."
+				},
+				{
+					"id": "q4_in_chat_3_2",
+					"es": "Cierro la puerta. El chat sigue abierto. Tú no.",
+					"en": "I'm closing the door. The chat stays open. You don't."
+				}
+			]
+		},
+		"correo": {
+			"1": [
+				{
+					"id": "q4_in_correo_1_1",
+					"es": "Siéntate. Vamos a leer tu correo. Palabra por palabra.",
+					"en": "Sit down. Let's read your email. Word by word."
+				},
+				{
+					"id": "q4_in_correo_1_2",
+					"es": "Imprimí tu correo. Lo tengo aquí. Huele a apuro.",
+					"en": "I printed your email. I have it here. It smells of hurry."
+				},
+				{
+					"id": "q4_in_correo_1_3",
+					"es": "Un correo. Escrito no hay tono de voz, dicen. Sí hay. Yo lo escucho.",
+					"en": "One email. Writing has no tone of voice, they say. It does. I hear it."
+				}
+			],
+			"2": [
+				{
+					"id": "q4_in_correo_2_1",
+					"es": "Otro correo tuyo. Ya reconozco tu manera de no releer.",
+					"en": "Another email of yours. I already recognize your way of not rereading."
+				},
+				{
+					"id": "q4_in_correo_2_2",
+					"es": "Abrí tu caso otra vez. Tu borrador seguía caliente.",
+					"en": "I opened your case again. Your draft was still warm."
+				},
+				{
+					"id": "q4_in_correo_2_3",
+					"es": "Tu correo llegó a su destino. A mí también me llegó. Siempre me llegan.",
+					"en": "Your email reached its destination. It reached me too. They always do."
+				}
+			],
+			"3": [
+				{
+					"id": "q4_in_correo_3_1",
+					"es": "Tu último correo. Ya no hace falta que lo envíes. Ya lo leí yo.",
+					"en": "Your last email. You don't need to send it. I already read it."
+				},
+				{
+					"id": "q4_in_correo_3_2",
+					"es": "Cierro la puerta. El caso sigue abierto. Tú no.",
+					"en": "I'm closing the door. The case stays open. You don't."
+				}
+			]
+		},
+		"vitzo": {
+			"1": [
+				{
+					"id": "q4_in_vitzo_1_1",
+					"es": "Siéntate. Tu caso de Vitzo. El portal, el correo, todo.",
+					"en": "Sit down. Your Vitzo case. The portal, the email, all of it."
+				},
+				{
+					"id": "q4_in_vitzo_1_2",
+					"es": "Un caso de Vitzo. Hay una entrada. Tú entraste por otro lado.",
+					"en": "A Vitzo case. There's one way in. You went in another way."
+				}
+			],
+			"2": [
+				{
+					"id": "q4_in_vitzo_2_1",
+					"es": "Otra vez Vitzo. A él no le gusta que lo hagan esperar. A mí tampoco.",
+					"en": "Vitzo again. He doesn't like to be kept waiting. Neither do I."
+				},
+				{
+					"id": "q4_in_vitzo_2_2",
+					"es": "Tu caso del portal. Lo abrí. El portal también me abrió a mí.",
+					"en": "Your portal case. I opened it. The portal opened me too."
+				}
+			],
+			"3": [
+				{
+					"id": "q4_in_vitzo_3_1",
+					"es": "Tu último caso de Vitzo. Él está escuchando. Siempre escucha.",
+					"en": "Your last Vitzo case. He's listening. He always listens."
+				}
+			]
+		},
+		"kyc": {
+			"1": [
+				{
+					"id": "q4_in_kyc_1_1",
+					"es": "Tu verificación. Mirabas una cara. Yo te miraba a ti.",
+					"en": "Your identity check. You looked at a face. I looked at you."
+				},
+				{
+					"id": "q4_in_kyc_1_2",
+					"es": "Un KYC. Decidir quién es quién. Casi nadie lo hace bien.",
+					"en": "A KYC. Deciding who is who. Almost nobody does it right."
+				}
+			],
+			"2": [
+				{
+					"id": "q4_in_kyc_2_1",
+					"es": "Otro KYC tuyo. Otra cara que no conoces. Otra decisión.",
+					"en": "Another KYC of yours. Another face you don't know."
+				},
+				{
+					"id": "q4_in_kyc_2_2",
+					"es": "Abrí tu verificación. La foto seguía mirando a la cámara. A ti.",
+					"en": "I opened your check. The photo still stared at the camera. At you."
+				}
+			],
+			"3": [
+				{
+					"id": "q4_in_kyc_3_1",
+					"es": "Tu última verificación. Ahora me toca a mí verificar quién eres.",
+					"en": "Your last verification. Now it's my turn to verify who you are."
+				}
+			]
+		}
+	},
+	"marcas": {
+		"prometer_sin_verificar": [
+			{
+				"id": "q4_om_prometer_sin_verificar_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Lo prometiste sin mirar la pantalla. Yo colecciono promesas.",
+				"en": "You promised without looking at the screen. I collect promises."
+			},
+			{
+				"id": "q4_om_prometer_sin_verificar_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Lo escribiste sin revisar. Esa promesa se queda aquí. Conmigo.",
+				"en": "You typed it without checking. That promise stays here. With me."
+			},
+			{
+				"id": "q4_om_prometer_sin_verificar_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Prometiste sin saber. Alguien lo espera despierto. Como tú.",
+				"en": "You promised without knowing. Someone is waiting up for it. Like you."
+			}
+		],
+		"respuesta_vaga": [
+			{
+				"id": "q4_om_respuesta_vaga_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Fuiste vago. Se notó en la voz, en cómo bajaste el volumen al final.",
+				"en": "You were vague. It showed in your voice, in how you lowered the volume at the end."
+			},
+			{
+				"id": "q4_om_respuesta_vaga_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Fuiste vago por escrito. Es peor: lo escrito se lee dos veces.",
+				"en": "You were vague in writing. That's worse: it can be read twice."
+			},
+			{
+				"id": "q4_om_respuesta_vaga_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "«Depende». «Un rato». «Ya lo vemos». ¿Quiénes lo vemos? Dímelo despacio.",
+				"en": "\"It depends\". \"A while\". \"We'll see\". Who is we? Say it slowly."
+			}
+		],
+		"dato_personal": [
+			{
+				"id": "q4_om_dato_personal_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Pediste un dato que no debías. Ahora lo tengo yo. Y tengo el tuyo.",
+				"en": "You asked for data you shouldn't have. Now I have it. And yours."
+			},
+			{
+				"id": "q4_om_dato_personal_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Pediste un dato por chat. Lo escrito se copia. Ya lo copié.",
+				"en": "You asked for data in the chat. Written things get copied. I did."
+			},
+			{
+				"id": "q4_om_dato_personal_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Datos que no eran tuyos. Los guardaste. Yo guardé los tuyos.",
+				"en": "Data that wasn't yours. You kept it. I kept yours."
+			}
+		],
+		"culpar_cliente": [
+			{
+				"id": "q4_om_culpar_cliente_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Culpaste al cliente. Escucha ese silencio. Te está mirando.",
+				"en": "You blamed the customer. Hear that silence. It's looking at you."
+			},
+			{
+				"id": "q4_om_culpar_cliente_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Le escribiste que era su culpa. Tardó once segundos. Los conté.",
+				"en": "You wrote it was their fault. They took eleven seconds. I counted."
+			},
+			{
+				"id": "q4_om_culpar_cliente_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Aquí la culpa no se transfiere. Se archiva a tu nombre.",
+				"en": "Blame isn't transferred here. It's filed under your name."
+			}
+		],
+		"desentenderse": [
+			{
+				"id": "q4_om_desentenderse_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Te desentendiste. Se oye cuando alguien deja de estar en la línea.",
+				"en": "You checked out. You can hear when someone leaves the line."
+			},
+			{
+				"id": "q4_om_desentenderse_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Te desentendiste. Tres mensajes sin ti. Yo sí estuve. Leyendo.",
+				"en": "You checked out. Three messages without you. I was there. Reading."
+			},
+			{
+				"id": "q4_om_desentenderse_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "«No puedo hacer nada». Lo dijiste muy tranquilo. Eso me interesa.",
+				"en": "\"I can't do anything\". You said it so calmly. That interests me."
+			}
+		],
+		"colgar_primero": [
+			{
+				"id": "q4_om_colgar_primero_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Colgaste primero. Se quedó en la línea once minutos. Yo también.",
+				"en": "You hung up first. They stayed on eleven more minutes. So did I."
+			},
+			{
+				"id": "q4_om_colgar_primero_2",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Cortaste sin avisar. Eran tres avisos. Yo te doy tres.",
+				"en": "You cut it off with no warning. It takes three. I'm giving you three."
+			}
+		],
+		"prometer_reembolso": [
+			{
+				"id": "q4_om_prometer_reembolso_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Prometiste un reembolso. Con tu voz. La voz no reembolsa nada.",
+				"en": "You promised a refund. With your voice. A voice refunds nothing."
+			},
+			{
+				"id": "q4_om_prometer_reembolso_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Escribiste «te reembolsamos». En plural. ¿Quiénes? Yo no firmé eso.",
+				"en": "You wrote \"we'll refund you\". Plural. Who? I didn't sign that."
+			},
+			{
+				"id": "q4_om_prometer_reembolso_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Ese reembolso no existe. Lo esperan. Revisan la app cada rato.",
+				"en": "That refund doesn't exist. They're waiting. Checking the app."
+			}
+		],
+		"calmese": [
+			{
+				"id": "q4_om_calmese_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Le dijiste «cálmese». Se calmó. Escucha: ya no respira.",
+				"en": "You said \"calm down\". They did. Listen: they stopped breathing."
+			},
+			{
+				"id": "q4_om_calmese_2",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "«Cálmese». Nadie se calma porque se lo pidan. Tú tampoco, ahora.",
+				"en": "\"Calm down\". Nobody calms down when told to. Neither will you."
+			}
+		],
+		"respuesta_plantilla": [
+			{
+				"id": "q4_om_respuesta_plantilla_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Contestaste con plantilla. La máquina de agua tiene mejor CSAT.",
+				"en": "You answered with a template. The water cooler has better CSAT."
+			},
+			{
+				"id": "q4_om_respuesta_plantilla_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Pegaste una plantilla. Se nota. Se nota que no estabas.",
+				"en": "You pasted a template. It shows. It shows you weren't there."
+			},
+			{
+				"id": "q4_om_respuesta_plantilla_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Respondiste lo que todos responden. Aquí todos terminan igual.",
+				"en": "You answered what everyone answers. Here everyone ends the same."
+			}
+		],
+		"info_incorrecta": [
+			{
+				"id": "q4_om_info_incorrecta_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Dato incorrecto, dicho con seguridad. Esa seguridad la estudio.",
+				"en": "Wrong information, said with confidence. I'll study that confidence."
+			},
+			{
+				"id": "q4_om_info_incorrecta_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Escribiste algo falso con muy buena ortografía. Eso lo hace peor.",
+				"en": "You wrote something false with very good spelling. That makes it worse."
+			},
+			{
+				"id": "q4_om_info_incorrecta_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "No era cierto. Lo dijiste igual. Ahora alguien lo cree. Por tu culpa.",
+				"en": "It wasn't true. You said it anyway. Now someone believes it. Because of you."
+			}
+		],
+		"respuesta_sin_revisar": [
+			{
+				"id": "q4_om_respuesta_sin_revisar_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Contestaste sin revisar. Yo reviso todo antes de llamarte. Todo.",
+				"en": "You answered before checking. I check everything before I call you."
+			},
+			{
+				"id": "q4_om_respuesta_sin_revisar_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Respondiste sin abrir Kardex. Estaba ahí. Abierto. Esperándote.",
+				"en": "You replied without opening Kardex. It was right there. Waiting."
+			},
+			{
+				"id": "q4_om_respuesta_sin_revisar_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "No miraste. Dijiste «listo» sin mirar. Yo sí miré.",
+				"en": "You didn't look. You said \"done\" without looking. I looked."
+			}
+		],
+		"documento_sin_empatia": [
+			{
+				"id": "q4_om_documento_sin_empatia_1",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "El documento, sin empatía. La empatía va primero. Tú, al final.",
+				"en": "The document, without empathy. Empathy goes first. You, last."
+			},
+			{
+				"id": "q4_om_documento_sin_empatia_2",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Pediste el documento a alguien que lloraba. Escucha cómo traga saliva.",
+				"en": "You asked someone who was crying for a document. Listen to them swallow."
+			}
+		],
+		"transferir_sin_motivo": [
+			{
+				"id": "q4_om_transferir_sin_motivo_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Transferiste sin motivo. A una cola que no existe. Escúchalo.",
+				"en": "You transferred for no reason. To a queue that doesn't exist. Listen."
+			},
+			{
+				"id": "q4_om_transferir_sin_motivo_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "A otra cola, por chat. Seis minutos solo. Leí cada puntito.",
+				"en": "Another queue, in chat. Six minutes alone. I read every dot."
+			},
+			{
+				"id": "q4_om_transferir_sin_motivo_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Pasar el problema a otro no lo resuelve. Lo mudaste hacia mí.",
+				"en": "Passing the problem on doesn't solve it. You moved it toward me."
+			}
+		],
+		"proceso_innecesario": [
+			{
+				"id": "q4_om_proceso_innecesario_1",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Un proceso que no hacía falta. Quedó registrado. Todo queda.",
+				"en": "A process nobody needed. It got recorded. Everything does."
+			},
+			{
+				"id": "q4_om_proceso_innecesario_2",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Ofreciste escribirle a quien no se le escribe. Alguien te oyó.",
+				"en": "You offered to write to someone we never write to. Someone heard."
+			}
+		],
+		"partner_equivocado": [
+			{
+				"id": "q4_om_partner_equivocado_1",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Lo mandaste con el partner equivocado. Sigue caminando hacia allá.",
+				"en": "You sent them to the wrong partner. They're still walking there."
+			}
+		],
+		"info_sin_verificar": [
+			{
+				"id": "q4_om_info_sin_verificar_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "No verificaste. Yo sí. Hasta que tu voz dejó de ser tu voz.",
+				"en": "You didn't verify. I did. Until your voice stopped being yours."
+			},
+			{
+				"id": "q4_om_info_sin_verificar_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "No verificaste lo que escribiste. Lo verifiqué yo. No te va a gustar.",
+				"en": "You didn't verify what you wrote. I did. You won't like it."
+			},
+			{
+				"id": "q4_om_info_sin_verificar_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Dijiste «sí» sin saber. Es la palabra más peligrosa del piso.",
+				"en": "You said \"yes\" without knowing. The most dangerous word here."
+			}
+		],
+		"politica_sin_empatia": [
+			{
+				"id": "q4_om_politica_sin_empatia_1",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Leíste la política como tuya. No es tuya. Nada aquí es tuyo.",
+				"en": "You read the policy as if it were yours. Nothing here is yours."
+			},
+			{
+				"id": "q4_om_politica_sin_empatia_2",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "«Es la política». Lo dijiste con la misma voz con la que yo digo tu nombre.",
+				"en": "\"It's the policy\". You said it in the same voice I use to say your name."
+			}
+		],
+		"pedir_clave": [
+			{
+				"id": "q4_om_pedir_clave_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Pediste su clave. KipuPay nunca pide claves. Tú sí.",
+				"en": "You asked for their password. KipuPay never does. You did."
+			},
+			{
+				"id": "q4_om_pedir_clave_2",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Pediste su clave por chat. Casi la escribe. Vi los puntitos.",
+				"en": "You asked for their password in chat. They almost typed it."
+			},
+			{
+				"id": "q4_om_pedir_clave_3",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Una clave. Lo que nadie debe pedir. La pediste con amabilidad.",
+				"en": "A password. The one thing nobody asks for. You asked kindly."
+			}
+		],
+		"hold_innecesario": [
+			{
+				"id": "q4_om_hold_innecesario_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Lo pusiste en espera sin motivo. Cuarenta segundos de música.",
+				"en": "You put them on hold for no reason. Forty seconds of music."
+			},
+			{
+				"id": "q4_om_hold_innecesario_2",
+				"tipos": [
+					"llamada",
+					"chat"
+				],
+				"cita": true,
+				"es": "Esperar no era necesario. Hiciste esperar igual. Ahora espera tú.",
+				"en": "Waiting wasn't necessary. You made them wait anyway. Now you wait."
+			}
+		],
+		"molesto": [
+			{
+				"id": "q4_om_molesto_1",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Terminó molesto. Escucha el clic. Ese clic es tu nombre.",
+				"en": "It ended angry. Listen to the click. That click is your name."
+			},
+			{
+				"id": "q4_om_molesto_2",
+				"tipos": [
+					"llamada"
+				],
+				"cita": true,
+				"es": "Colgó con rabia. La rabia se queda en el auricular. Póntelo.",
+				"en": "They hung up in anger. Anger stays in the headset. Put it on."
+			},
+			{
+				"id": "q4_om_molesto_3",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "Cerró el chat molesto. Su último mensaje lo leí yo.",
+				"en": "They closed the chat angry. I read their last message for you."
+			},
+			{
+				"id": "q4_om_molesto_4",
+				"tipos": [
+					"chat"
+				],
+				"cita": true,
+				"es": "«[El cliente cerró el chat]». Qué frase tan bonita. Te la voy a enmarcar.",
+				"en": "\"[The customer closed the chat]\". Lovely sentence. I'll frame it."
+			}
+		],
+		"sin_enviar": [
+			{
+				"id": "q4_bo_sin_enviar_1",
+				"tipos": [
+					"correo"
+				],
+				"es": "No enviaste nada. El silencio también se audita. El tuyo pesa.",
+				"en": "You sent nothing. Silence gets audited too. Yours is heavy."
+			},
+			{
+				"id": "q4_bo_sin_enviar_2",
+				"tipos": [
+					"correo"
+				],
+				"es": "Cerraste sin enviar. La bandeja, vacía. Como tu silla, pronto.",
+				"en": "You closed without sending. Empty outbox. Like your chair, soon."
+			},
+			{
+				"id": "q4_bo_sin_enviar_3",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "No mandaste lo que había que mandar. Vitzo lo notó antes que yo.",
+				"en": "You didn't send what had to be sent. Vitzo noticed before I did."
+			}
+		],
+		"destinatario_equivocado": [
+			{
+				"id": "q4_bo_destinatario_equivocado_1",
+				"tipos": [
+					"correo"
+				],
+				"es": "Le escribiste a quien no era. Ahora ellos también saben tu nombre.",
+				"en": "You wrote to the wrong recipient. Now they know your name too."
+			},
+			{
+				"id": "q4_bo_destinatario_equivocado_2",
+				"tipos": [
+					"correo"
+				],
+				"es": "El destinatario. Elegiste otro. Tu correo llega a otra bandeja.",
+				"en": "The recipient. You chose another. Your email lands in the wrong inbox."
+			},
+			{
+				"id": "q4_bo_destinatario_equivocado_3",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "El correo fue a quien no era. Eso se paga. Pregúntale a Vitzo.",
+				"en": "The email went to the wrong party. That costs. Ask Vitzo."
+			}
+		],
+		"correo_plantilla": [
+			{
+				"id": "q4_bo_correo_plantilla_1",
+				"tipos": [
+					"correo"
+				],
+				"es": "La plantilla. Esa no era. Dice otra cosa, aunque tú no la leas.",
+				"en": "The template. That wasn't it. It says something else, read or not."
+			},
+			{
+				"id": "q4_bo_correo_plantilla_2",
+				"tipos": [
+					"correo"
+				],
+				"es": "Esa plantilla, sin pensar. Tienen tono. La tuya sonaba a excusa.",
+				"en": "That template, without thinking. They have a tone. Yours: an excuse."
+			},
+			{
+				"id": "q4_bo_correo_plantilla_3",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "Plantilla equivocada para un caso de Vitzo. El portal se rió.",
+				"en": "Wrong template for a Vitzo case. The portal laughed."
+			}
+		],
+		"correo_campo_id": [
+			{
+				"id": "q4_bo_correo_campo_id_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "El número de operación. Dos dígitos cambiados de lugar. Como tú.",
+				"en": "The transaction number. Two digits out of place. Like you."
+			},
+			{
+				"id": "q4_bo_correo_campo_id_2",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "El ID estaba en Kardex. Lo copiaste mal. Kardex no se equivoca.",
+				"en": "The ID was in Kardex. You copied it wrong. Kardex is never wrong."
+			}
+		],
+		"correo_campo_monto": [
+			{
+				"id": "q4_bo_correo_campo_monto_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "El monto. No era ese. Una coma mal y la plata no es de nadie.",
+				"en": "The amount. Not that one. One comma off and the money is no one's."
+			},
+			{
+				"id": "q4_bo_correo_campo_monto_2",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Escribiste otro monto. El partner lo va a buscar toda la noche.",
+				"en": "You wrote another amount. The partner will search for it all night."
+			}
+		],
+		"correo_campo_fecha": [
+			{
+				"id": "q4_bo_correo_campo_fecha_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "La fecha. Día y mes al revés. Aquí el tiempo ya va al revés.",
+				"en": "The date. Day and month backwards. Time here already is."
+			},
+			{
+				"id": "q4_bo_correo_campo_fecha_2",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Pusiste otra fecha. En el sistema, eso aún no pasó. Tú tampoco.",
+				"en": "Another date. In the system it hasn't happened yet. Neither have you."
+			}
+		],
+		"sin_pod": [
+			{
+				"id": "q4_bo_sin_pod_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Faltó el POD. La prueba. Aquí todo necesita prueba. Hasta tú.",
+				"en": "The POD was missing. Everything here needs proof. Even you."
+			},
+			{
+				"id": "q4_bo_sin_pod_2",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Sin adjunto. Pediste que te creyeran sin mostrar nada. Yo no.",
+				"en": "No attachment. You asked to be believed on your word. I don't."
+			}
+		],
+		"tipificacion": [
+			{
+				"id": "q4_bo_tipificacion_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "La tipificación. Un código mal y el caso no existe. Como tú.",
+				"en": "The typification. One wrong code and the case is gone. Like you."
+			},
+			{
+				"id": "q4_bo_tipificacion_2",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Tipificaste lo que no pasó. El reporte mentirá con tu nombre.",
+				"en": "You typified what didn't happen. The report will lie in your name."
+			},
+			{
+				"id": "q4_bo_tipificacion_3",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Elegiste ese código al azar. Como una silla. El azar se paga.",
+				"en": "You picked that code at random. Like a chair. Random gets paid for."
+			}
+		],
+		"correo_innecesario": [
+			{
+				"id": "q4_bo_correo_innecesario_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Un correo de más. Una persona más que sabe que existes.",
+				"en": "An email nobody needed. One more person who knows you exist."
+			},
+			{
+				"id": "q4_bo_correo_innecesario_2",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "Esto se resolvía en el portal. Sin correos. Escribiste igual.",
+				"en": "This was solved in the portal. No emails. You wrote anyway."
+			}
+		],
+		"falta_portal": [
+			{
+				"id": "q4_bo_falta_portal_1",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "No entraste al portal. El portal sí entró en ti. Lo veo en tus ojos.",
+				"en": "You didn't go into the portal. The portal went into you. I see it in your eyes."
+			},
+			{
+				"id": "q4_bo_falta_portal_2",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "El portal. Te saltaste el paso. Te espera al final del pasillo.",
+				"en": "The portal step. You skipped it. It waits at the end of the hall."
+			},
+			{
+				"id": "q4_bo_falta_portal_3",
+				"tipos": [
+					"vitzo"
+				],
+				"es": "Buscar, descargar, registrar. Hiciste menos. Siempre haces menos.",
+				"en": "Search, download, file. You did less. You always do."
+			}
+		],
+		"correo_tiempo": [
+			{
+				"id": "q4_bo_correo_tiempo_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Y el tiempo. Pasaste los diez minutos. Te vi mirar el reloj.",
+				"en": "And the time. Over ten minutes. I saw you look at the clock."
+			},
+			{
+				"id": "q4_bo_correo_tiempo_2",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Diez minutos era el límite. Lo cruzaste. Del otro lado estoy yo.",
+				"en": "Ten minutes was the limit. You crossed it. I'm on the other side."
+			}
+		],
+		"bo_miss": [
+			{
+				"id": "q4_bo_bo_miss_1",
+				"tipos": [
+					"correo",
+					"vitzo"
+				],
+				"es": "Cerraste el caso mal. No sabes en qué. Eso me preocupa de ti.",
+				"en": "You closed the case wrong. You don't know where. That worries me."
+			}
+		],
+		"kyc_aprobar": [
+			{
+				"id": "q4_kyc_aprobar_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Aprobaste. Pasó alguien que no es quien dice. Ya está adentro.",
+				"en": "You approved. Someone who isn't who they say got in. They're inside."
+			},
+			{
+				"id": "q4_kyc_aprobar_2",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Aprobado, dijiste. Sin mirar la fecha. Esa fecha no existe.",
+				"en": "Approved, you said. Without checking the date. It doesn't exist."
+			}
+		],
+		"kyc_rechazar": [
+			{
+				"id": "q4_kyc_rechazar_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Rechazaste a quien solo le faltaba un documento. Afuera llueve.",
+				"en": "You rejected someone one document short. It's raining outside."
+			},
+			{
+				"id": "q4_kyc_rechazar_2",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Rechazar es fácil. Un clic. Del otro lado del clic había una persona.",
+				"en": "Rejecting is easy. One click. Behind the click was a person."
+			}
+		],
+		"kyc_solicitar_id": [
+			{
+				"id": "q4_kyc_solicitar_id_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Otro documento, sin leer la regla. Estaba a la derecha. Siempre.",
+				"en": "Another document, rule unread. It was on the right. It always is."
+			}
+		],
+		"kyc_solicitar_comprobante": [
+			{
+				"id": "q4_kyc_solicitar_comprobante_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Ese comprobante no iba. Ahora espera una respuesta que no llega.",
+				"en": "That proof didn't apply. Now they wait for an answer that won't come."
+			}
+		],
+		"kyc_escalar": [
+			{
+				"id": "q4_kyc_escalar_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Escalaste lo que era tuyo. Subirlo no te sube. Te deja conmigo.",
+				"en": "You escalated what was yours. That leaves you down here. With me."
+			}
+		],
+		"kyc_resolver_recheck": [
+			{
+				"id": "q4_kyc_resolver_recheck_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "Resolviste un recheck que no era. Sigue abierto. Te mira.",
+				"en": "You resolved the wrong recheck. It stays open. It watches you."
+			}
+		],
+		"kyc_sin_decision": [
+			{
+				"id": "q4_kyc_sin_decision_1",
+				"tipos": [
+					"kyc"
+				],
+				"es": "No decidiste nada. Esa identidad quedó suspendida. Como la tuya.",
+				"en": "You decided nothing. That identity was left hanging. Like yours."
+			}
+		]
+	},
+	"genericas": {
+		"llamada": [
+			{
+				"id": "q4_gen_llamada_1",
+				"es": "Algo en tu llamada no tiene nombre todavía. Le pondré el tuyo.",
+				"en": "Something in your call has no name yet. I'll give it yours."
+			},
+			{
+				"id": "q4_gen_llamada_2",
+				"es": "Tu tono. Bajaste dos semitonos cuando el cliente se quejó. Los medí.",
+				"en": "Your tone. You dropped two semitones at the complaint. I measured."
+			},
+			{
+				"id": "q4_gen_llamada_3",
+				"es": "Respiraste antes de responder. Fuerte. El cliente lo oyó. Yo también.",
+				"en": "You breathed before answering. Loudly. The customer heard it. So did I."
+			}
+		],
+		"chat": [
+			{
+				"id": "q4_gen_chat_1",
+				"es": "Hay algo en tu chat que no tiene nombre todavía. Le voy a poner el tuyo.",
+				"en": "There's something in your chat that has no name yet. I'm going to give it yours."
+			},
+			{
+				"id": "q4_gen_chat_2",
+				"es": "Tardaste en escribir. Los puntitos parecían una boca abierta.",
+				"en": "You took long to type. The dots looked like an open mouth."
+			},
+			{
+				"id": "q4_gen_chat_3",
+				"es": "Tu redacción. Correcta. Fría. Como esta sala.",
+				"en": "Your writing. Correct. Cold. Like this room."
+			}
+		],
+		"correo": [
+			{
+				"id": "q4_gen_correo_1",
+				"es": "Algo en tu correo no tiene nombre todavía. Le pondré el tuyo.",
+				"en": "Something in your email has no name yet. I'll give it yours."
+			},
+			{
+				"id": "q4_gen_correo_2",
+				"es": "Tu redacción. No releíste. Se nota en la segunda línea. Se nota mucho.",
+				"en": "Your writing. You didn't reread. It shows in the second line. It shows a lot."
+			},
+			{
+				"id": "q4_gen_correo_3",
+				"es": "El caso no se cierra porque tú lo cierres. Sigue abierto. Dentro de ti.",
+				"en": "A case doesn't close because you close it. It stays open. In you."
+			}
+		],
+		"vitzo": [
+			{
+				"id": "q4_gen_vitzo_1",
+				"es": "Algo en tu caso de Vitzo no tiene nombre. Él ya se lo puso.",
+				"en": "Something in your Vitzo case has no name. He already gave it one."
+			},
+			{
+				"id": "q4_gen_vitzo_2",
+				"es": "El portal guarda cada clic. Tus clics no tenían orden. Tenían miedo.",
+				"en": "The portal keeps every click. Your clicks had no order. They had fear."
+			}
+		],
+		"kyc": [
+			{
+				"id": "q4_gen_kyc_1",
+				"es": "Algo en tu verificación no tiene nombre. Le pondré el tuyo.",
+				"en": "Something in your verification has no name. I'll give it yours."
+			},
+			{
+				"id": "q4_gen_kyc_2",
+				"es": "Miraste la foto dos segundos. Una identidad merece más.",
+				"en": "You looked at the photo for two seconds. An identity deserves more."
+			}
+		]
+	},
+	"casos": {
+		"t1c1": {
+			"id": "q4_caso_t1c1",
+			"es": "El señor Lizardo Paz. Su envío a México. «El estado», repetía.",
+			"en": "Lizardo Paz. His transfer to Mexico. \"The status\", he kept saying."
+		},
+		"t1c2": {
+			"id": "q4_caso_t1c2",
+			"es": "Rocío Tello. La plata de la operación de su mamá. Lloraba.",
+			"en": "Rocío Tello. The money for her mother's surgery. She was crying."
+		},
+		"t1c3": {
+			"id": "q4_caso_t1c3",
+			"es": "Gonzalo Arce. Por chat. «Dónde está mi plata», tres veces.",
+			"en": "Gonzalo Arce. In chat. \"Where's my money\", three times."
+		},
+		"t1c4": {
+			"id": "q4_caso_t1c4",
+			"es": "La señora Amelia Rojas. Tan amable. Te preguntó si habías comido.",
+			"en": "Mrs. Amelia Rojas. So kind. She asked if you had eaten."
+		},
+		"t1c6": {
+			"id": "q4_caso_t1c6",
+			"es": "Néstor Cahuana. Ochocientos KP a un desconocido. Estaba asustado.",
+			"en": "Néstor Cahuana. Eight hundred KP to a stranger. He was scared."
+		},
+		"t1c7": {
+			"id": "q4_caso_t1c7",
+			"es": "La señora Rocío Tello, otra vez. Volvió a llamar. Siempre vuelven.",
+			"en": "Mrs. Rocío Tello, again. She called back. They always come back."
+		},
+		"t1c8": {
+			"id": "q4_caso_t1c8",
+			"es": "Jimena Paucar. Por chat. Una equis por una jota. Una letra.",
+			"en": "Jimena Paucar. In chat. An X instead of a J. One letter."
+		},
+		"t1c9": {
+			"id": "q4_caso_t1c9",
+			"es": "Don Teófilo Huamán. Trescientos para su hija. Buscó sus lentes.",
+			"en": "Mr. Teófilo Huamán. Three hundred for his daughter. He got his glasses."
+		},
+		"t1c10": {
+			"id": "q4_caso_t1c10",
+			"es": "Brayan Ccori. El tipo de cambio. Tenía prisa. Tú también.",
+			"en": "Brayan Ccori. The exchange rate. He was in a hurry. So were you."
+		},
+		"t1r1": {
+			"id": "q4_caso_t1r1",
+			"es": "Rosalía Mamani. Su puesto del mercado, su proveedor de las seis.",
+			"en": "Rosalía Mamani. Her market stall, her six o'clock supplier."
+		},
+		"t1r2": {
+			"id": "q4_caso_t1r2",
+			"es": "La señora Delia Ríos. Por chat. Le robaron el celular. Confiaba en ti.",
+			"en": "Mrs. Delia Ríos. In chat. Her phone was stolen. She trusted you."
+		},
+		"t1r3": {
+			"id": "q4_caso_t1r3",
+			"es": "Norma Valdivia. Un mensaje pedía un código. No confiaba en nadie.",
+			"en": "Norma Valdivia. A text asking for a code. She trusted no one."
+		},
+		"t1r4": {
+			"id": "q4_caso_t1r4",
+			"es": "Ansel Varga. Su hermano y un pasaporte vencido. Te pidió perdón.",
+			"en": "Ansel Varga. His brother and an expired passport. He apologized."
+		},
+		"t1r5": {
+			"id": "q4_caso_t1r5",
+			"es": "Wilfredo Soto. Por chat. Un comprobante. Un punto en el correo.",
+			"en": "Wilfredo Soto. In chat. A receipt. A dot in an email address."
+		},
+		"t1r6": {
+			"id": "q4_caso_t1r6",
+			"es": "La llamada muda. La respiración. Dos mil diecinueve. Él sí esperó.",
+			"en": "The silent call. The breathing. Two thousand nineteen. He did wait."
+		},
+		"t2c1": {
+			"id": "q4_caso_t2c1",
+			"es": "La señora Amelia Rojas, que volvió. Siempre amable. Demasiado.",
+			"en": "Mrs. Amelia Rojas, who came back. Always kind. Too kind."
+		},
+		"t2c2": {
+			"id": "q4_caso_t2c2",
+			"es": "Mauro Linares. El primero de sus tres llamados. Ya venía molesto.",
+			"en": "Mauro Linares. The first of his three calls. Already angry."
+		},
+		"t2c3": {
+			"id": "q4_caso_t2c3",
+			"es": "Fabricio Neyra. Por chat. Su cuenta, alguien más dentro.",
+			"en": "Fabricio Neyra. In chat. His account, someone else inside."
+		},
+		"t2c5": {
+			"id": "q4_caso_t2c5",
+			"es": "El señor Mauro Linares, segunda vez. Su ticket. Tu voz.",
+			"en": "Mr. Mauro Linares, second time. His ticket. Your voice."
+		},
+		"t2c7": {
+			"id": "q4_caso_t2c7",
+			"es": "Mauro Linares, la tercera. A la tercera viene alguien. Vine yo.",
+			"en": "Mauro Linares, the third. On the third someone comes. I came."
+		},
+		"t2c8": {
+			"id": "q4_caso_t2c8",
+			"es": "Elsa Mori. Siete de la mañana. Respiraba raro. Tú también.",
+			"en": "Elsa Mori. Seven in the morning. She breathed strangely. So did you."
+		},
+		"t2c9": {
+			"id": "q4_caso_t2c9",
+			"es": "El señor Lizardo Paz y el portal de Vitzo. Su comprobante que no estaba.",
+			"en": "Mr. Lizardo Paz and the Vitzo portal. His proof that wasn't there."
+		},
+		"t2c10": {
+			"id": "q4_caso_t2c10",
+			"es": "Ítalo Zegarra. Su camioneta de premio. Cuatrocientos por adelantado.",
+			"en": "Ítalo Zegarra. His prize truck. Four hundred in advance."
+		},
+		"t2c11": {
+			"id": "q4_caso_t2c11",
+			"es": "Valeria Chumpitaz. Por chat. Dos cargos y la renta de mañana.",
+			"en": "Valeria Chumpitaz. In chat. Two charges and tomorrow's rent."
+		},
+		"t2r1": {
+			"id": "q4_caso_t2r1",
+			"es": "Don Eusebio Llanos. Un número equivocado. Llegabas a tiempo.",
+			"en": "Mr. Eusebio Llanos. A wrong number. There was still time."
+		},
+		"t2r2": {
+			"id": "q4_caso_t2r2",
+			"es": "Gladys Condori. Cinco proveedores y una revisión reforzada.",
+			"en": "Gladys Condori. Five suppliers and an enhanced review."
+		},
+		"t2r3": {
+			"id": "q4_caso_t2r3",
+			"es": "Renzo Aliaga. Por chat. Error 4012, en mayúsculas.",
+			"en": "Renzo Aliaga. In chat. Error 4012, in capitals."
+		},
+		"t2r4": {
+			"id": "q4_caso_t2r4",
+			"es": "Marisol Ortega. No quería mandar la foto de su documento.",
+			"en": "Marisol Ortega. She didn't want to send a photo of her ID."
+		},
+		"t2r5": {
+			"id": "q4_caso_t2r5",
+			"es": "Dmitri Kovač. Su madre de ochenta años caminando a la ventanilla.",
+			"en": "Dmitri Kovač. His mother, eighty, walking to the counter."
+		},
+		"t2r6": {
+			"id": "q4_caso_t2r6",
+			"es": "Kevin Salas. Por chat. Quería un supervisor. Me tiene a mí.",
+			"en": "Kevin Salas. In chat. He wanted a supervisor. He's got me."
+		},
+		"t3c1": {
+			"id": "q4_caso_t3c1",
+			"es": "Lizardo Paz. Ya no pregunta por el estado. Pregunta por ti.",
+			"en": "Lizardo Paz. He no longer asks about the status. He asks about you."
+		},
+		"t3c2": {
+			"id": "q4_caso_t3c2",
+			"es": "Joel Bendezú. Por chat. Escribía rápido y con rabia.",
+			"en": "Joel Bendezú. In chat. He typed fast and angry."
+		},
+		"t3c4": {
+			"id": "q4_caso_t3c4",
+			"es": "El señor Néstor Cahuana y un enlace que no era nuestro.",
+			"en": "Mr. Néstor Cahuana and a link that wasn't ours."
+		},
+		"t3c5": {
+			"id": "q4_caso_t3c5",
+			"es": "Joel Bendezú, otra vez. Por chat. Más rabia. Menos letras.",
+			"en": "Joel Bendezú, again. In chat. More anger. Fewer letters."
+		},
+		"t3c7": {
+			"id": "q4_caso_t3c7",
+			"es": "El señor Mauro Linares. Ya conoce tu voz. La reconoció.",
+			"en": "Mr. Mauro Linares. He knows your voice now. He recognized it."
+		},
+		"t3c8": {
+			"id": "q4_caso_t3c8",
+			"es": "El silencioso. Casi no habló. Tú hablaste por los dos.",
+			"en": "The silent one. He barely spoke. You spoke for both."
+		},
+		"t3c9": {
+			"id": "q4_caso_t3c9",
+			"es": "Gonzalo Arce. Por chat. Repetía. Tú también terminaste repitiendo.",
+			"en": "Gonzalo Arce. In chat. He repeated. You ended up repeating too."
+		},
+		"t3c10": {
+			"id": "q4_caso_t3c10",
+			"es": "La señora Celeste Arana. Un número equivocado. La pensión del colegio.",
+			"en": "Mrs. Celeste Arana. One wrong digit. The school fees."
+		},
+		"t3c11": {
+			"id": "q4_caso_t3c11",
+			"es": "Don Anselmo Prado. Preguntó por don Aurelio. Desde tu silla.",
+			"en": "Mr. Anselmo Prado. He asked for don Aurelio. From your chair."
+		},
+		"t3r1": {
+			"id": "q4_caso_t3r1",
+			"es": "Camila Huertas. Por chat. Tres claves mal puestas. Sueño.",
+			"en": "Camila Huertas. In chat. Three wrong passwords. Sleep."
+		},
+		"t3r2": {
+			"id": "q4_caso_t3r2",
+			"es": "Jordan Meléndez. Su envío en tránsito. Quería escribirle a Vitzo.",
+			"en": "Jordan Meléndez. His transfer in transit. He wanted to email Vitzo."
+		},
+		"t3r3": {
+			"id": "q4_caso_t3r3",
+			"es": "La señora Fortunata Quispe. Una factura para su contador.",
+			"en": "Mrs. Fortunata Quispe. An invoice for her accountant."
+		},
+		"t3r4": {
+			"id": "q4_caso_t3r4",
+			"es": "El señor Hugo Barreto. Dos comisiones. Mucho volumen.",
+			"en": "Mr. Hugo Barreto. Two fees. Lots of volume."
+		},
+		"t3r5": {
+			"id": "q4_caso_t3r5",
+			"es": "Tomasz Lind. Por chat. Una moneda equivocada.",
+			"en": "Tomasz Lind. In chat. A wrong currency."
+		},
+		"t3r6": {
+			"id": "q4_caso_t3r6",
+			"es": "Pilar Escobedo. Alguien la llamó con tu voz. ¿No fuiste tú?",
+			"en": "Pilar Escobedo. Someone called her with your voice. Wasn't it you?"
+		},
+		"t1_correo_pod": {
+			"id": "q4_caso_t1_correo_pod",
+			"es": "El correo de Odalis. Su depósito no llega. Tres noches escribiendo.",
+			"en": "Odalis's email. Her deposit never arrives. Three nights writing."
+		},
+		"vz_status": {
+			"id": "q4_caso_vz_status",
+			"es": "El correo de Teodomira Sauce. Su mamá esperando en el banco.",
+			"en": "Teodomira Sauce's email. Her mother waiting at the bank."
+		},
+		"t2_correo_reversal": {
+			"id": "q4_caso_t2_correo_reversal",
+			"es": "Lisandro Ortúzar. Quería cancelar. Dice que la voz no respira.",
+			"en": "Lisandro Ortúzar's email. To cancel. He says the voice doesn't breathe."
+		},
+		"vz_pod": {
+			"id": "q4_caso_vz_pod",
+			"es": "Conciliaciones de Banco Andino. Pedían el POD. Plazo: hoy.",
+			"en": "Banco Andino Reconciliations. They want the POD. Today."
+		},
+		"t3_correo_status": {
+			"id": "q4_caso_t3_correo_status",
+			"es": "El correo de C. Leuro. Su alquiler. Escribiría desde la calle, dijo.",
+			"en": "C. Leuro's email. The rent. Would write from the street, it said."
+		},
+		"vz_reversal": {
+			"id": "q4_caso_vz_reversal",
+			"es": "Eulalia Brenes. Pedía el correo de Vitzo. Para escribirle ella.",
+			"en": "Eulalia Brenes. She wanted Vitzo's address. To write to him herself."
+		},
+		"t1_kyc_norvalia": {
+			"id": "q4_caso_t1_kyc_norvalia",
+			"es": "Rufino Akel Varda. Norvalia. Un treinta y uno de febrero.",
+			"en": "Rufino Akel Varda. Norvalia. A thirty-first of February."
+		},
+		"t2_kyc_valdesia": {
+			"id": "q4_caso_t2_kyc_valdesia",
+			"es": "Mayte Orsini Cárcamo. Valdesia. Su cuarto envío.",
+			"en": "Mayte Orsini Cárcamo. Valdesia. Her fourth transfer."
+		},
+		"t2_kyc_recheck": {
+			"id": "q4_caso_t2_kyc_recheck",
+			"es": "Bastián Oyola Rey. Su documento. Un dígito de menos.",
+			"en": "Bastián Oyola Rey. His ID. One digit short."
+		},
+		"t3_kyc_taren": {
+			"id": "q4_caso_t3_kyc_taren",
+			"es": "Ilen Savaro Quint. Islas Taren. Letra por letra, decía la regla.",
+			"en": "Ilen Savaro Quint. Islas Taren. Letter by letter, the rule said."
+		},
+		"t3_kyc_reforzada": {
+			"id": "q4_caso_t3_kyc_reforzada",
+			"es": "Griselda Nuño Palau. Revisión reforzada. Solo Cumplimiento.",
+			"en": "Griselda Nuño Palau. Enhanced review. Compliance only."
+		},
+		"kyc_relleno_ok": {
+			"id": "q4_caso_kyc_relleno_ok",
+			"es": "Tobías Lerma Icaza. Norvalia. Un caso limpio. Casi.",
+			"en": "Tobías Lerma Icaza. Norvalia. A clean case. Almost."
+		},
+		"kyc_relleno_recheck": {
+			"id": "q4_caso_kyc_relleno_recheck",
+			"es": "Ana Lucía Ferro Díaz. Cambió su dirección. Tú no cambiaste nada.",
+			"en": "Ana Lucía Ferro Díaz. She changed her address. You changed nothing."
+		},
+		"t1r7": {
+			"id": "q4_caso_t1r7",
+			"es": "Ulises Carhuaz. Doscientos cincuenta a su ex. ¿Llegaste a tiempo?",
+			"en": "Ulises Carhuaz. Two fifty to his ex. Did you make it in time?"
+		},
+		"t2r7": {
+			"id": "q4_caso_t2r7",
+			"es": "Ruperto Salvatierra. Preguntó quién más leía el chat. Yo.",
+			"en": "Ruperto Salvatierra. He asked who else was reading the chat. Me."
+		},
+		"t2r8": {
+			"id": "q4_caso_t2r8",
+			"es": "Mirtha Benavides. Cuarenta sueldos. Tres fallaron. Uno eras tú.",
+			"en": "Mirtha Benavides. Forty salaries. Three failed. One was you."
+		},
+		"t3r7": {
+			"id": "q4_caso_t3r7",
+			"es": "Benigno Yupanqui. Oía teclear al de al lado. Al lado no hay nadie.",
+			"en": "Benigno Yupanqui. He heard typing next to you. There's no one there."
+		},
+		"t3r8": {
+			"id": "q4_caso_t3r8",
+			"es": "El señor Clodomiro Paredes. Quería borrar su voz. La tengo aquí.",
+			"en": "Mr. Clodomiro Paredes. He wanted his voice deleted. I have it."
+		},
+		"t3r9": {
+			"id": "q4_caso_t3r9",
+			"es": "Verónica Saldarriaga. Pidió un nombre. Casi se lo das.",
+			"en": "Verónica Saldarriaga. She asked for a name. You almost gave it to her."
+		},
+		"t3r10": {
+			"id": "q4_caso_t3r10",
+			"es": "La señora Eulalia Ventura. Su capitán. Su límite. Su soledad.",
+			"en": "Mrs. Eulalia Ventura. Her captain. Her limit. Her loneliness."
+		},
+		"t3r11": {
+			"id": "q4_caso_t3r11",
+			"es": "Ariana Tapullima. El alquiler. Completado. Repetimos lo que dijiste.",
+			"en": "Ariana Tapullima. The rent. Completed. Let's replay what you said."
+		}
+	},
+	"caso_tipo": {
+		"llamada": {
+			"id": "q4_caso_tipo_llamada",
+			"es": "Tu llamada. Repasemos lo que dijiste. Lo que dijiste de verdad.",
+			"en": "Your call. Let's go over what you said. What you really said."
+		},
+		"chat": {
+			"id": "q4_caso_tipo_chat",
+			"es": "Tu chat. Repasemos lo que escribiste. Lo que escribiste de verdad.",
+			"en": "Your chat. Let's go over what you wrote. What you really wrote."
+		},
+		"correo": {
+			"id": "q4_caso_tipo_correo",
+			"es": "Tu correo. Repasemos lo que enviaste. Y lo que no.",
+			"en": "Your email. Let's go over what you sent. And what you didn't."
+		},
+		"vitzo": {
+			"id": "q4_caso_tipo_vitzo",
+			"es": "Tu caso del portal. Repasemos cada clic.",
+			"en": "Your portal case. Let's go over every click."
+		},
+		"kyc": {
+			"id": "q4_caso_tipo_kyc",
+			"es": "Tu verificación. Repasemos lo que viste. Y lo que no miraste.",
+			"en": "Your verification. Let's go over what you saw. And what you didn't look at."
+		}
+	},
+	"v032": {
+		"_comentario": "v0.3.2 (Joan: calibraciones con suspenso, agresivas, no repetitivas, rápidas). Grupos de líneas del constructor de sesiones (HaimeGuion.build_session): 'nivel' = en qué calibración del turno pueden salir (1 fría, 2 golpea y corta, 3 última advertencia, 4 la fatal; sin 'nivel' = todas), 'tipos' = tipo del caso, 'estilo' = toma de voz (susurro). 'preguntas' = consignas rápidas con 4 opciones (teclas 1-4); 'opciones' = el texto en pantalla (no se dice en voz alta).",
+		"lineas": {
+			"llegaste": [
+				{
+					"id": "h2_llegaste_6",
+					"es": "Pasa. Siéntate frente a mí. Ahí no. Ahí.",
+					"en": "Come in. Sit across from me. Not there. There."
+				},
+				{
+					"id": "h2_llegaste_7",
+					"es": "Te escuché llegar. Respiras fuerte en el pasillo.",
+					"en": "I heard you coming. You breathe loud in the hallway."
+				},
+				{
+					"id": "h2_llegaste_1",
+					"es": "Llegaste. Conté cada minuto.",
+					"en": "You made it. I counted every minute."
+				},
+				{
+					"id": "h2_llegaste_2",
+					"es": "Siéntate. Llegaste justo. Casi.",
+					"en": "Sit down. Just in time. Almost."
+				},
+				{
+					"id": "h2_llegaste_3",
+					"es": "Ahí estás. Te estaba escuchando caminar.",
+					"en": "There you are. I was listening to you walk."
+				},
+				{
+					"id": "h2_llegaste_4",
+					"es": "Llegaste. La silla todavía está tibia. No es tuya.",
+					"en": "You made it. The chair is still warm. It isn't yours."
+				},
+				{
+					"id": "h2_llegaste_5",
+					"es": "Llegas tarde. Igual te iba a esperar.",
+					"en": "You're late. I was going to wait anyway."
+				}
+			],
+			"puerta": [
+				{
+					"id": "h2_puerta_1",
+					"es": "La puerta se queda cerrada. Por la grabación.",
+					"en": "The door stays shut. For the recording."
+				},
+				{
+					"id": "h2_puerta_2",
+					"es": "Ya cerré. Nadie entra. Nadie sale.",
+					"en": "I locked it. Nobody comes in. Nobody leaves."
+				},
+				{
+					"id": "h2_puerta_3",
+					"es": "No mires la puerta. Mírame a mí.",
+					"en": "Don't look at the door. Look at me."
+				},
+				{
+					"id": "h2_puerta_4",
+					"es": "Esa puerta solo abre desde aquí. Desde mi lado.",
+					"en": "That door only opens from here. From my side."
+				},
+				{
+					"id": "h2_puerta_5",
+					"es": "Escuchaste el seguro. Bien. Ahora escúchame a mí.",
+					"en": "You heard the lock. Good. Now hear me."
+				}
+			],
+			"directo": [
+				{
+					"id": "h2_directo_1",
+					"es": "No vamos a saludar. Vamos directo a tu error.",
+					"en": "We're not doing greetings. Straight to your mistake."
+				},
+				{
+					"id": "h2_directo_2",
+					"es": "Empecemos por lo peor.",
+					"en": "Let's start with the worst."
+				},
+				{
+					"id": "h2_directo_3",
+					"es": "Sin rodeos. Mira la pantalla.",
+					"en": "No small talk. Look at the screen."
+				},
+				{
+					"id": "h2_directo_4",
+					"es": "Tengo una lista. Tú estás arriba.",
+					"en": "I have a list. You're at the top."
+				},
+				{
+					"id": "h2_directo_5",
+					"es": "No te pongas cómodo. Esto es rápido.",
+					"en": "Don't get comfortable. This is quick."
+				},
+				{
+					"id": "h2_directo_6",
+					"es": "Otra vez tú. Directo al punto. Al tuyo.",
+					"en": "You again. Straight to the point. Yours.",
+					"nivel": [
+						2,
+						3
+					]
+				}
+			],
+			"conector": [
+				{
+					"id": "h2_con_11",
+					"es": "Mírala bien.",
+					"en": "Look at it closely."
+				},
+				{
+					"id": "h2_con_12",
+					"es": "Esta otra.",
+					"en": "This other one."
+				},
+				{
+					"id": "h2_con_13",
+					"es": "Todavía hay más.",
+					"en": "There's more."
+				},
+				{
+					"id": "h2_con_14",
+					"es": "Ahora esta.",
+					"en": "Now this one."
+				},
+				{
+					"id": "h2_con_1",
+					"es": "Aquí.",
+					"en": "Here."
+				},
+				{
+					"id": "h2_con_2",
+					"es": "Otra.",
+					"en": "Another."
+				},
+				{
+					"id": "h2_con_3",
+					"es": "Y esta.",
+					"en": "And this one."
+				},
+				{
+					"id": "h2_con_4",
+					"es": "Mira esta.",
+					"en": "Look at this one."
+				},
+				{
+					"id": "h2_con_5",
+					"es": "Esta me gusta.",
+					"en": "I like this one."
+				},
+				{
+					"id": "h2_con_6",
+					"es": "Sigue.",
+					"en": "Next."
+				},
+				{
+					"id": "h2_con_7",
+					"es": "No he terminado.",
+					"en": "I'm not done."
+				},
+				{
+					"id": "h2_con_8",
+					"es": "Lee esto.",
+					"en": "Read this."
+				},
+				{
+					"id": "h2_con_9",
+					"es": "Fíjate en el rojo.",
+					"en": "Look at the red."
+				},
+				{
+					"id": "h2_con_10",
+					"es": "Una más.",
+					"en": "One more."
+				}
+			],
+			"rafaga": [
+				{
+					"id": "h2_raf_1",
+					"es": "Y otra.",
+					"en": "And another."
+				},
+				{
+					"id": "h2_raf_2",
+					"es": "Esta también.",
+					"en": "This one too."
+				},
+				{
+					"id": "h2_raf_3",
+					"es": "Suma.",
+					"en": "Count it."
+				},
+				{
+					"id": "h2_raf_4",
+					"es": "Más.",
+					"en": "More."
+				},
+				{
+					"id": "h2_raf_5",
+					"es": "Esta ni la explico.",
+					"en": "I won't even explain this one."
+				},
+				{
+					"id": "h2_raf_6",
+					"es": "Un error más.",
+					"en": "Another mistake."
+				},
+				{
+					"id": "h2_raf_7",
+					"es": "Y esto.",
+					"en": "And this one."
+				},
+				{
+					"id": "h2_raf_8",
+					"es": "También esto. Rojo.",
+					"en": "This too. Red."
+				},
+				{
+					"id": "h2_raf_9",
+					"es": "Sigue la lista.",
+					"en": "The list goes on."
+				},
+				{
+					"id": "h2_raf_10",
+					"es": "Otra más. Rápido.",
+					"en": "One more. Quick."
+				}
+			],
+			"replay_pre": [
+				{
+					"id": "h2_rpre_1",
+					"es": "Ponte el auricular. Escúchate.",
+					"en": "Put the headset on. Listen to yourself.",
+					"tipos": [
+						"llamada"
+					]
+				},
+				{
+					"id": "h2_rpre_2",
+					"es": "Escucha. Esto es tuyo.",
+					"en": "Listen. This is yours."
+				},
+				{
+					"id": "h2_rpre_3",
+					"es": "Te voy a poner tu contacto. Más fuerte.",
+					"en": "I'm going to play your contact. Louder."
+				},
+				{
+					"id": "h2_rpre_4",
+					"es": "Silencio. Ahí viene tu voz.",
+					"en": "Quiet. Here comes your voice.",
+					"tipos": [
+						"llamada"
+					]
+				},
+				{
+					"id": "h2_rpre_5",
+					"es": "Esto lo grabó el sistema. Yo lo arreglé un poco.",
+					"en": "The system recorded this. I fixed it a little."
+				},
+				{
+					"id": "h2_rpre_6",
+					"es": "Escucha cómo suena desde aquí.",
+					"en": "Listen to how it sounds from here.",
+					"tipos": [
+						"llamada"
+					]
+				},
+				{
+					"id": "h2_rpre_t1",
+					"es": "Escucha tus teclas. Grabé cada una.",
+					"en": "Listen to your keys. I recorded every one.",
+					"tipos": [
+						"chat",
+						"correo",
+						"vitzo",
+						"kyc"
+					]
+				},
+				{
+					"id": "h2_rpre_t2",
+					"es": "Así sonaste escribiéndolo. Ponte el auricular.",
+					"en": "This is how you sounded typing it. Put the headset on.",
+					"tipos": [
+						"chat",
+						"correo",
+						"vitzo",
+						"kyc"
+					]
+				},
+				{
+					"id": "h2_rpre_t3",
+					"es": "Tus dedos dudaron aquí. Escucha.",
+					"en": "Your fingers hesitated here. Listen.",
+					"tipos": [
+						"chat",
+						"correo",
+						"vitzo",
+						"kyc"
+					]
+				},
+				{
+					"id": "h2_rpre_t4",
+					"es": "No era una llamada. Igual la grabé.",
+					"en": "It wasn't a call. I recorded it anyway.",
+					"tipos": [
+						"chat",
+						"correo",
+						"vitzo",
+						"kyc"
+					]
+				}
+			],
+			"replay_post": [
+				{
+					"id": "h2_rpost_7",
+					"es": "Te equivocaste igual las tres veces que lo escuché.",
+					"en": "You made the same mistake all three times I listened."
+				},
+				{
+					"id": "h2_rpost_8",
+					"es": "Ahí. Justo ahí dejaste de ser amable.",
+					"en": "There. Right there you stopped being kind."
+				},
+				{
+					"id": "h2_rpost_1",
+					"es": "¿Lo oíste? Yo lo oigo todas las noches.",
+					"en": "Did you hear it? I hear it every night."
+				},
+				{
+					"id": "h2_rpost_2",
+					"es": "Otra vez. No. Ya fue suficiente.",
+					"en": "Again. No. That was enough."
+				},
+				{
+					"id": "h2_rpost_3",
+					"es": "Así suenas. Así te recuerda el cliente.",
+					"en": "That's how you sound. That's how the customer remembers you."
+				},
+				{
+					"id": "h2_rpost_4",
+					"es": "Lo puse más lento. Así se te entiende mejor el miedo.",
+					"en": "I slowed it down. Your fear is easier to hear that way."
+				},
+				{
+					"id": "h2_rpost_5",
+					"es": "Eso no lo puedes borrar. Yo sí.",
+					"en": "You can't erase that. I can."
+				},
+				{
+					"id": "h2_rpost_6",
+					"es": "Ese ruido de fondo eres tú respirando.",
+					"en": "That background noise is you breathing."
+				}
+			],
+			"golpe": [
+				{
+					"id": "h2_golpe_9",
+					"es": "¡Contesta cuando te pregunto!",
+					"en": "Answer when I ask you!"
+				},
+				{
+					"id": "h2_golpe_10",
+					"es": "¡Las manos sobre la mesa!",
+					"en": "Hands on the table!"
+				},
+				{
+					"id": "h2_golpe_1",
+					"es": "¡Mírame cuando te hablo!",
+					"en": "Look at me when I'm talking to you!"
+				},
+				{
+					"id": "h2_golpe_2",
+					"es": "¡No! ¡Escucha!",
+					"en": "No! Listen!"
+				},
+				{
+					"id": "h2_golpe_3",
+					"es": "¡Otra vez lo mismo!",
+					"en": "The same thing again!"
+				},
+				{
+					"id": "h2_golpe_4",
+					"es": "¡Deja de mirar la puerta!",
+					"en": "Stop looking at the door!"
+				},
+				{
+					"id": "h2_golpe_5",
+					"es": "¿Te parece gracioso?",
+					"en": "Do you think this is funny?"
+				},
+				{
+					"id": "h2_golpe_6",
+					"es": "¡Ya basta! Atiéndeme a mí.",
+					"en": "Enough! Attend to me."
+				},
+				{
+					"id": "h2_golpe_7",
+					"es": "Eso fue la mesa. La próxima no es la mesa.",
+					"en": "That was the table. Next time it isn't the table."
+				},
+				{
+					"id": "h2_golpe_8",
+					"es": "¡Siéntate derecho!",
+					"en": "Sit up straight!"
+				}
+			],
+			"corta": [
+				{
+					"id": "h2_corta_1",
+					"es": "Para. Muy lento.",
+					"en": "Stop. Too slow."
+				},
+				{
+					"id": "h2_corta_2",
+					"es": "No. Te corto. Otra vez.",
+					"en": "No. I'm cutting you off. Again."
+				},
+				{
+					"id": "h2_corta_3",
+					"es": "Ya. Cállate. Desde el principio.",
+					"en": "Enough. Quiet. From the top."
+				},
+				{
+					"id": "h2_corta_4",
+					"es": "No me sirve. Repítelo.",
+					"en": "That's no use to me. Repeat it."
+				},
+				{
+					"id": "h2_corta_5",
+					"es": "¿Eso es el guion? Otra vez.",
+					"en": "Is that the script? Again."
+				},
+				{
+					"id": "h2_corta_6",
+					"es": "Te tiembla la voz. Otra vez, sin temblar.",
+					"en": "Your voice is shaking. Again, without shaking."
+				}
+			],
+			"p_hora": [
+				{
+					"id": "h2_p_hora_1",
+					"es": "¿A qué hora fue tu contacto? Rápido.",
+					"en": "What time was your contact? Quick."
+				},
+				{
+					"id": "h2_p_hora_2",
+					"es": "Dime la hora. La hora exacta.",
+					"en": "Tell me the time. The exact time."
+				},
+				{
+					"id": "h2_p_hora_3",
+					"es": "¿Cuándo pasó? Tú estabas ahí.",
+					"en": "When did it happen? You were there."
+				}
+			],
+			"p_canal": [
+				{
+					"id": "h2_p_canal_1",
+					"es": "¿Qué era? ¿Llamada, chat, correo? Elige.",
+					"en": "What was it? Call, chat, email? Choose."
+				},
+				{
+					"id": "h2_p_canal_2",
+					"es": "¿Por dónde te llegó? Contesta.",
+					"en": "How did it reach you? Answer."
+				}
+			],
+			"p_marcas": [
+				{
+					"id": "h2_p_marcas_1",
+					"es": "¿Cuántos errores tuviste? Cuéntalos.",
+					"en": "How many mistakes did you make? Count them."
+				},
+				{
+					"id": "h2_p_marcas_2",
+					"es": "¿Cuántas marcas rojas hay? Sin mirar.",
+					"en": "How many red marks are there? Don't look."
+				},
+				{
+					"id": "h2_p_marcas_3",
+					"es": "Dime cuántos. Yo ya sé.",
+					"en": "Tell me how many. I already know."
+				}
+			],
+			"p_quedan": [
+				{
+					"id": "h2_p_quedan_1",
+					"es": "¿Cuántas calibraciones te quedan?",
+					"en": "How many calibrations do you have left?"
+				},
+				{
+					"id": "h2_p_quedan_2",
+					"es": "Cuenta conmigo. ¿Cuántas faltan?",
+					"en": "Count with me. How many are left?"
+				},
+				{
+					"id": "h2_p_quedan_3",
+					"es": "¿Sabes cuántas te quedan? Dímelo.",
+					"en": "Do you know how many you have left? Tell me."
+				}
+			],
+			"p_grabacion": [
+				{
+					"id": "h2_p_grab_1",
+					"es": "¿Qué dice la grabación al empezar? Palabra por palabra.",
+					"en": "What does the recording say at the start? Word for word."
+				},
+				{
+					"id": "h2_p_grab_2",
+					"es": "La frase del inicio. La que me deja entrar. Elígela.",
+					"en": "The opening line. The one that lets me in. Pick it."
+				}
+			],
+			"p_nombre": [
+				{
+					"id": "h2_p_nombre_1",
+					"es": "¿Cómo te llamas?",
+					"en": "What's your name?"
+				},
+				{
+					"id": "h2_p_nombre_2",
+					"es": "Dime tu nombre. Quiero ver si lo recuerdas.",
+					"en": "Tell me your name. I want to see if you remember it."
+				},
+				{
+					"id": "h2_p_nombre_3",
+					"es": "¿Quién eres? Rápido.",
+					"en": "Who are you? Quick."
+				}
+			],
+			"t_cierre": [
+				{
+					"id": "h2_t_cierre_1",
+					"es": "Léeme el speech de cierre.",
+					"en": "Read me the closing speech."
+				},
+				{
+					"id": "h2_t_cierre_2",
+					"es": "Despídete del cliente. Como dice el guion.",
+					"en": "Say goodbye to the customer. The way the script says."
+				},
+				{
+					"id": "h2_t_cierre_3",
+					"es": "El cierre. Ahora. Sin errores.",
+					"en": "The closing. Now. No mistakes."
+				}
+			],
+			"t_saludo": [
+				{
+					"id": "h2_t_saludo_1",
+					"es": "Repite el guion. Desde el saludo.",
+					"en": "Repeat the script. From the greeting."
+				},
+				{
+					"id": "h2_t_saludo_2",
+					"es": "El saludo. Como lo dice el guion. No como lo dices tú.",
+					"en": "The greeting. The way the script says it. Not the way you say it."
+				},
+				{
+					"id": "h2_t_saludo_3",
+					"es": "Otra vez el saludo. Hasta que te salga.",
+					"en": "The greeting again. Until you get it right."
+				}
+			],
+			"t_espera": [
+				{
+					"id": "h2_t_espera_1",
+					"es": "Ponme en espera. Con el speech correcto.",
+					"en": "Put me on hold. With the right speech."
+				},
+				{
+					"id": "h2_t_espera_2",
+					"es": "Dime el speech de espera. Despacio.",
+					"en": "Tell me the hold speech. Slowly."
+				}
+			],
+			"bien": [
+				{
+					"id": "h2_bien_1",
+					"es": "Correcto. No te felicito.",
+					"en": "Correct. I'm not congratulating you."
+				},
+				{
+					"id": "h2_bien_2",
+					"es": "Bien. Eso no te salva.",
+					"en": "Good. That doesn't save you."
+				},
+				{
+					"id": "h2_bien_3",
+					"es": "Sí. ¿Ves que sabías?",
+					"en": "Yes. See, you knew."
+				},
+				{
+					"id": "h2_bien_4",
+					"es": "Correcto. Lo anoto igual.",
+					"en": "Correct. I'm writing it down anyway."
+				},
+				{
+					"id": "h2_bien_5",
+					"es": "Bien. Qué pena.",
+					"en": "Good. What a shame."
+				},
+				{
+					"id": "h2_bien_6",
+					"es": "Eso es. Ahora ya no tienes excusa.",
+					"en": "That's it. Now you have no excuse."
+				}
+			],
+			"mal": [
+				{
+					"id": "h2_mal_1",
+					"es": "No.",
+					"en": "No."
+				},
+				{
+					"id": "h2_mal_2",
+					"es": "Mal. Lo anoto.",
+					"en": "Wrong. I'm writing it down."
+				},
+				{
+					"id": "h2_mal_3",
+					"es": "No. Mírame. No.",
+					"en": "No. Look at me. No."
+				},
+				{
+					"id": "h2_mal_4",
+					"es": "Incorrecto. Como tu contacto.",
+					"en": "Incorrect. Like your contact."
+				},
+				{
+					"id": "h2_mal_5",
+					"es": "¿Eso crees? Eso no es.",
+					"en": "You think so? That's not it."
+				},
+				{
+					"id": "h2_mal_6",
+					"es": "Mal. Cada error me acerca un poco.",
+					"en": "Wrong. Every mistake brings me a little closer."
+				}
+			],
+			"tarde": [
+				{
+					"id": "h2_tarde_1",
+					"es": "Tarde.",
+					"en": "Too late."
+				},
+				{
+					"id": "h2_tarde_2",
+					"es": "Se acabó el tiempo. Como al cliente.",
+					"en": "Time's up. Like it was for the customer."
+				},
+				{
+					"id": "h2_tarde_3",
+					"es": "Tardaste. Yo no tardo.",
+					"en": "You took too long. I don't."
+				},
+				{
+					"id": "h2_tarde_4",
+					"es": "¿Te quedaste callado? El silencio también se califica.",
+					"en": "Went quiet? Silence gets scored too."
+				},
+				{
+					"id": "h2_tarde_5",
+					"es": "Demasiado lento. Otra marca.",
+					"en": "Too slow. Another mark."
+				},
+				{
+					"id": "h2_tarde_6",
+					"es": "Te esperé. No me gusta esperar.",
+					"en": "I waited for you. I don't like waiting."
+				}
+			],
+			"silencio": [
+				{
+					"id": "h2_sil_8",
+					"es": "Eso. Así de callado te quiero.",
+					"en": "That's it. That's how quiet I want you."
+				},
+				{
+					"id": "h2_sil_9",
+					"es": "Contaste hasta diez. Yo hasta mil.",
+					"en": "You counted to ten. I counted to a thousand."
+				},
+				{
+					"id": "h2_sil_10",
+					"es": "Ni el cliente se quedó tan quieto.",
+					"en": "Not even the customer stayed this still."
+				},
+				{
+					"id": "h2_sil_1",
+					"es": "¿Sigues ahí?",
+					"en": "Are you still there?"
+				},
+				{
+					"id": "h2_sil_2",
+					"es": "Te asusté. Bien. Ahora sí me escuchas.",
+					"en": "I scared you. Good. Now you're listening."
+				},
+				{
+					"id": "h2_sil_3",
+					"es": "No respires tan fuerte. Se graba.",
+					"en": "Don't breathe so loud. It's being recorded."
+				},
+				{
+					"id": "h2_sil_4",
+					"es": "Estaba contando tus latidos.",
+					"en": "I was counting your heartbeats."
+				},
+				{
+					"id": "h2_sil_5",
+					"es": "Shhh. No te muevas.",
+					"en": "Shhh. Don't move."
+				},
+				{
+					"id": "h2_sil_6",
+					"es": "¿Escuchaste eso? Yo tampoco.",
+					"en": "Did you hear that? Neither did I."
+				},
+				{
+					"id": "h2_sil_7",
+					"es": "Así se siente el cliente cuando no contestas.",
+					"en": "That's how the customer feels when you don't answer."
+				}
+			],
+			"amenaza": [
+				{
+					"id": "h2_amz_11",
+					"es": "Esta sala no tiene ventanas. Ya lo notaste.",
+					"en": "This room has no windows. You noticed.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_12",
+					"es": "Voy a estar en tu próxima llamada. Callado.",
+					"en": "I'll be on your next call. Quiet.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_1",
+					"es": "Sé dónde te sientas. Sé a qué hora sales.",
+					"en": "I know where you sit. I know when you leave.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_2",
+					"es": "La próxima no es una conversación.",
+					"en": "The next one isn't a conversation.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_3",
+					"es": "Tu nombre ya está en mi pizarra. Solo falta tacharlo.",
+					"en": "Your name is already on my board. All that's left is to cross it out.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_4",
+					"es": "Nadie va a escuchar esta grabación. Solo yo.",
+					"en": "Nobody will listen to this recording. Only me.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_5",
+					"es": "Respira. Te quedan pocas.",
+					"en": "Breathe. You don't have many left.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_6",
+					"es": "Cuando vuelvas, la puerta ya va a estar cerrada.",
+					"en": "When you come back, the door will already be shut.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_7",
+					"es": "Me gusta tu voz. La voy a guardar.",
+					"en": "I like your voice. I'm going to keep it.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_8",
+					"es": "No le cuentes a nadie. Igual nadie te va a creer.",
+					"en": "Don't tell anyone. Nobody would believe you anyway.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_9",
+					"es": "Te estoy calibrando ahora mismo. Desde adentro.",
+					"en": "I'm calibrating you right now. From the inside.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_amz_10",
+					"es": "Una más y te archivo. Para siempre.",
+					"en": "One more and I file you. Forever.",
+					"estilo": "susurro"
+				}
+			],
+			"auricular": [
+				{
+					"id": "h2_aur_1",
+					"es": "Dame eso.",
+					"en": "Give me that."
+				},
+				{
+					"id": "h2_aur_2",
+					"es": "Esto ya no lo necesitas.",
+					"en": "You don't need this anymore."
+				},
+				{
+					"id": "h2_aur_3",
+					"es": "Escucha esto de cerca. Más cerca.",
+					"en": "Listen to this up close. Closer."
+				},
+				{
+					"id": "h2_aur_4",
+					"es": "Sin auricular no hay cliente. Solo yo.",
+					"en": "No headset, no customer. Only me."
+				},
+				{
+					"id": "h2_aur_5",
+					"es": "Quieto. Te lo voy a quitar despacio.",
+					"en": "Hold still. I'm going to take it off slowly."
+				}
+			],
+			"adv_intro": [
+				{
+					"id": "h2_adv_in_1",
+					"es": "Mírame. No. Más cerca.",
+					"en": "Look at me. No. Closer."
+				},
+				{
+					"id": "h2_adv_in_2",
+					"es": "Esta vez no me siento.",
+					"en": "This time I'm not sitting down."
+				},
+				{
+					"id": "h2_adv_in_3",
+					"es": "Ya no hay oportunidades de mejora. Solo hay oportunidades.",
+					"en": "There are no more areas for improvement. Only areas."
+				},
+				{
+					"id": "h2_adv_in_4",
+					"es": "Te dije que volverías. Siempre vuelven.",
+					"en": "I told you you'd be back. They always come back."
+				},
+				{
+					"id": "h2_adv_in_5",
+					"es": "Otra vez aquí. Ya no te voy a explicar nada.",
+					"en": "Here again. I'm not explaining anything anymore."
+				}
+			],
+			"cierre_1": [
+				{
+					"id": "h2_c1_5",
+					"es": "Te dejo ir. Esta vez.",
+					"en": "I'm letting you go. This time."
+				},
+				{
+					"id": "h2_c1_6",
+					"es": "Ese número va a tu legajo. Y a mi cuaderno.",
+					"en": "That number goes in your file. And in my notebook."
+				},
+				{
+					"id": "h2_c1_7",
+					"es": "Anótalo tú también. Yo ya lo anoté.",
+					"en": "Write it down too. I already did."
+				},
+				{
+					"id": "h2_c1_1",
+					"es": "Ese es tu número. No es malo. Es un número. Vuelve a Available.",
+					"en": "That's your number. It's not bad. It's a number. Back to Available."
+				},
+				{
+					"id": "h2_c1_2",
+					"es": "Mira el número. Llévatelo. Pesa poco, por ahora.",
+					"en": "Look at the number. Take it with you. It weighs little, for now."
+				},
+				{
+					"id": "h2_c1_3",
+					"es": "Ya está. Tu número queda grabado. Tú también.",
+					"en": "That's it. Your number is recorded. So are you."
+				},
+				{
+					"id": "h2_c1_4",
+					"es": "Puedes irte. El número se queda conmigo.",
+					"en": "You can go. The number stays with me."
+				}
+			],
+			"cierre_2": [
+				{
+					"id": "h2_c2_5",
+					"es": "Más bajo. Siempre más bajo. Como tu voz.",
+					"en": "Lower. Always lower. Like your voice."
+				},
+				{
+					"id": "h2_c2_6",
+					"es": "No te despidas. Nos vamos a ver pronto.",
+					"en": "Don't say goodbye. We'll see each other soon."
+				},
+				{
+					"id": "h2_c2_7",
+					"es": "Sal. Y cierra despacio. La puerta ya sabe tu nombre.",
+					"en": "Go. And close it softly. The door already knows your name."
+				},
+				{
+					"id": "h2_c2_1",
+					"es": "Mira el número. Bajó. Tú también vas a bajar.",
+					"en": "Look at the number. It dropped. You'll drop too."
+				},
+				{
+					"id": "h2_c2_2",
+					"es": "Ese número es más bajo que el anterior. Lo sabías.",
+					"en": "That number is lower than the last one. You knew."
+				},
+				{
+					"id": "h2_c2_3",
+					"es": "Vete. Antes de que cambie de opinión.",
+					"en": "Go. Before I change my mind."
+				},
+				{
+					"id": "h2_c2_4",
+					"es": "La próxima vez no traigo la pantalla. Traigo otra cosa.",
+					"en": "Next time I don't bring the screen. I bring something else."
+				}
+			],
+			"fatal_pre": [
+				{
+					"id": "h2_fatal_1",
+					"es": "Se acabó la grabación.",
+					"en": "The recording is over."
+				},
+				{
+					"id": "h2_fatal_2",
+					"es": "Ahora no te muevas.",
+					"en": "Now don't move."
+				},
+				{
+					"id": "h2_fatal_3",
+					"es": "Esta no la vas a escuchar después.",
+					"en": "You won't get to listen to this one later."
+				},
+				{
+					"id": "h2_fatal_4",
+					"es": "Apaga la luz. No. Yo la apago.",
+					"en": "Turn off the light. No. I'll do it.",
+					"antes": true
+				},
+				{
+					"id": "h2_fatal_5",
+					"es": "Ya no anoto. Ya no pregunto. Ya está.",
+					"en": "No more notes. No more questions. It's done."
+				},
+				{
+					"id": "h2_fatal_6",
+					"es": "Mírame bien. Así me vas a recordar.",
+					"en": "Look at me closely. This is how you'll remember me."
+				}
+			],
+			"fatal_om": [
+				{
+					"id": "h2_fom_1",
+					"es": "Y la última: sigues sentado. Como si todavía pudieras irte.",
+					"en": "And the last one: you're still sitting. As if you could still leave."
+				},
+				{
+					"id": "h2_fom_2",
+					"es": "Queda una. Es mía: te dejé venir hasta aquí.",
+					"en": "One left. It's mine: I let you come this far."
+				},
+				{
+					"id": "h2_fom_3",
+					"es": "El último error no es del contacto. Fue sentarte.",
+					"en": "The last mistake isn't from the contact. It was sitting down."
+				},
+				{
+					"id": "h2_fom_4",
+					"es": "Una más. No la anoto. Ya no hay dónde.",
+					"en": "One more. I won't write it down. There's nowhere left to write."
+				}
+			],
+			"mentira": [
+				{
+					"id": "h2_mentira_1",
+					"es": "Me escribiste que no había pasado nada. Lo leí. Mentiste.",
+					"en": "You wrote me that nothing happened. I read it. You lied."
+				},
+				{
+					"id": "h2_mentira_2",
+					"es": "En Ezlaki me dijiste otra cosa. Tengo las dos grabaciones.",
+					"en": "On Ezlaki you told me something else. I have both recordings."
+				},
+				{
+					"id": "h2_mentira_3",
+					"es": "Me mentiste por escrito. Eso también se audita.",
+					"en": "You lied to me in writing. That gets audited too."
+				}
+			],
+			"adv_puerta": [
+				{
+					"id": "h2_advp_1",
+					"es": "Dos vueltas de llave. Hoy no nos interrumpen.",
+					"en": "Two turns of the key. Nobody interrupts us today."
+				},
+				{
+					"id": "h2_advp_2",
+					"es": "Cerré dos veces. La segunda es por ti.",
+					"en": "I locked it twice. The second one is for you."
+				},
+				{
+					"id": "h2_advp_3",
+					"es": "Dos seguros. Uno para la puerta. Otro para ti.",
+					"en": "Two locks. One for the door. One for you."
+				},
+				{
+					"id": "h2_advp_4",
+					"es": "Siéntate. Despacio. Tenemos toda la noche.",
+					"en": "Sit. Slowly. We have all night."
+				}
+			],
+			"recuerdo": [
+				{
+					"id": "h2_rec_err_1",
+					"es": "Este error ya lo vimos. Tú y yo. En esta mesa.",
+					"en": "We've seen this mistake before. You and I. At this table.",
+					"si": "repite_error"
+				},
+				{
+					"id": "h2_rec_err_2",
+					"es": "Otra vez lo mismo. La vez pasada dijiste que no volvía a pasar.",
+					"en": "The same thing again. Last time you said it wouldn't happen again.",
+					"si": "repite_error"
+				},
+				{
+					"id": "h2_rec_tarde_1",
+					"es": "La vez pasada tardaste en contestarme. Hoy no te voy a esperar.",
+					"en": "Last time you took too long to answer me. Today I won't wait.",
+					"si": "tardaste"
+				},
+				{
+					"id": "h2_rec_tarde_2",
+					"es": "Me acuerdo de tus respuestas. Las malas. Las guardo aparte.",
+					"en": "I remember your answers. The wrong ones. I keep them apart.",
+					"si": "tardaste"
+				},
+				{
+					"id": "h2_rec_bien_1",
+					"es": "La vez pasada contestaste todo bien. Mira dónde estás igual.",
+					"en": "Last time you answered everything right. Look where you are anyway.",
+					"si": "todo_bien"
+				},
+				{
+					"id": "h2_rec_bien_2",
+					"es": "Sabías las respuestas. No sirvió de nada. Me gusta eso.",
+					"en": "You knew the answers. It made no difference. I like that.",
+					"si": "todo_bien"
+				},
+				{
+					"id": "h2_rec_mitad_1",
+					"es": "La vez pasada te paraste a la mitad. Hoy la puerta tiene dos seguros.",
+					"en": "Last time you stood up halfway. Today the door has two locks.",
+					"si": "a_mitad"
+				},
+				{
+					"id": "h2_rec_mitad_2",
+					"es": "Te fuiste sin que yo terminara. Eso también lo anoté.",
+					"en": "You left before I was done. I wrote that down too.",
+					"si": "a_mitad"
+				},
+				{
+					"id": "h2_rec_muerte_1",
+					"es": "Ya te calibré una vez. Volviste a sentarte. Nadie aprende.",
+					"en": "I already calibrated you once. You sat down again. Nobody learns.",
+					"si": "ya_moriste"
+				},
+				{
+					"id": "h2_rec_muerte_2",
+					"es": "Tú y yo ya terminamos esto antes. ¿Te acuerdas del final? Yo sí.",
+					"en": "You and I have finished this before. Remember the ending? I do.",
+					"si": "ya_moriste"
+				},
+				{
+					"id": "h2_rec_mentira_1",
+					"es": "También guardo lo que me escribiste por Ezlaki. Lo que no era cierto.",
+					"en": "I also keep what you wrote me on Ezlaki. The part that wasn't true.",
+					"si": "mentiste"
+				},
+				{
+					"id": "h2_rec_mentira_2",
+					"es": "Lee la pantalla. Eso me lo escribiste tú. Yo tenía la grabación abierta.",
+					"en": "Read the screen. You wrote me that. I had the recording open.",
+					"si": "mentiste"
+				},
+				{
+					"id": "h2_rec_lleg_1",
+					"es": "Me hiciste esperar en esta sala. Yo anoto los minutos. Todos.",
+					"en": "You kept me waiting in this room. I write down the minutes. All of them.",
+					"si": "tarde_llegada"
+				},
+				{
+					"id": "h2_rec_lleg_2",
+					"es": "Cuento las veces que llegaste tarde. Están en la lista.",
+					"en": "I count the times you came late. They're on the list.",
+					"si": "tarde_llegada"
+				},
+				{
+					"id": "h2_rec_baja_1",
+					"es": "Tus números bajan cada vez. Míralos en fila.",
+					"en": "Your numbers drop every time. Look at them in a row.",
+					"si": "baja"
+				},
+				{
+					"id": "h2_rec_baja_2",
+					"es": "Cada vez un número más bajo. Yo no los bajo. Tú sí.",
+					"en": "A lower number every time. I don't lower them. You do.",
+					"si": "baja"
+				},
+				{
+					"id": "h2_rec_muchas_1",
+					"es": "Mira cuántas veces has venido. Las cuento todas.",
+					"en": "Look how many times you've been here. I count them all.",
+					"si": "muchas"
+				},
+				{
+					"id": "h2_rec_todo_1",
+					"es": "Tengo todas tus veces. Mira la lista. No falta ninguna.",
+					"en": "I have every one of your visits. Look at the list. None are missing.",
+					"si": "siempre"
+				},
+				{
+					"id": "h2_rec_todo_2",
+					"es": "Me acuerdo de todo lo que dijiste aquí. Tú no.",
+					"en": "I remember everything you said here. You don't.",
+					"si": "siempre"
+				}
+			],
+			"adv_corta": [
+				{
+					"id": "h2_advc_1",
+					"es": "No. Ya sé lo que ibas a decir.",
+					"en": "No. I know what you were going to say."
+				},
+				{
+					"id": "h2_advc_2",
+					"es": "Silencio. Ya no hace falta.",
+					"en": "Hush. There's no need anymore."
+				},
+				{
+					"id": "h2_advc_3",
+					"es": "Tarde. Siempre un poco tarde.",
+					"en": "Late. Always a little late."
+				},
+				{
+					"id": "h2_advc_4",
+					"es": "No termines. Me aburre el final.",
+					"en": "Don't finish. The ending bores me."
+				},
+				{
+					"id": "h2_advc_5",
+					"es": "Suficiente. Lo anoto como silencio.",
+					"en": "Enough. I'm writing it down as silence."
+				}
+			],
+			"da_igual": [
+				{
+					"id": "h2_igual_1",
+					"es": "Da igual. Ya estaba escrito.",
+					"en": "It makes no difference. It was already written."
+				},
+				{
+					"id": "h2_igual_2",
+					"es": "Correcto o no. Hoy no cuenta.",
+					"en": "Right or wrong. It doesn't count today."
+				},
+				{
+					"id": "h2_igual_3",
+					"es": "No importa lo que contestes. Pregunto por costumbre.",
+					"en": "It doesn't matter what you answer. I ask out of habit."
+				},
+				{
+					"id": "h2_igual_4",
+					"es": "Gracias. No lo necesitaba.",
+					"en": "Thank you. I had no use for it."
+				}
+			],
+			"detras": [
+				{
+					"id": "h2_det_1",
+					"es": "No te des vuelta.",
+					"en": "Don't turn around.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_det_2",
+					"es": "Desde aquí te escucho pensar.",
+					"en": "From here I can hear your thoughts.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_det_3",
+					"es": "Quieto ahí. Así. Mirando al frente.",
+					"en": "Still. Like that. Eyes front.",
+					"estilo": "susurro"
+				},
+				{
+					"id": "h2_det_4",
+					"es": "Aquí atrás no llega la cámara.",
+					"en": "The camera doesn't reach back here.",
+					"estilo": "susurro"
+				}
+			],
+			"adv_pluma": [
+				{
+					"id": "h2_plu_1",
+					"es": "Dejé de anotar. Ya no hace falta.",
+					"en": "I stopped writing. There's no need anymore."
+				},
+				{
+					"id": "h2_plu_2",
+					"es": "Ya no anoto. Me lo sé de memoria.",
+					"en": "I don't take notes anymore. I know it by heart."
+				},
+				{
+					"id": "h2_plu_3",
+					"es": "Se acabó la tinta. Qué oportuno.",
+					"en": "The ink ran out. How convenient."
+				},
+				{
+					"id": "h2_plu_4",
+					"es": "¿Oyes? Ya no escribo. Ya está todo.",
+					"en": "Hear that? I'm not writing. It's all done."
+				}
+			],
+			"tu_voz": [
+				{
+					"id": "h2_voz_1",
+					"es": "Ese saludo es tuyo. Lo guardo. Lo voy a seguir usando.",
+					"en": "That greeting is yours. I'm keeping it. I'll keep using it."
+				},
+				{
+					"id": "h2_voz_2",
+					"es": "Tu voz. Cuando todavía creías en el guion.",
+					"en": "Your voice. Back when you still believed in the script."
+				},
+				{
+					"id": "h2_voz_3",
+					"es": "La puse lenta. Así dura más. Tú no.",
+					"en": "I slowed it down. It lasts longer that way. You won't."
+				},
+				{
+					"id": "h2_voz_4",
+					"es": "Qué amable suenas. Hoy no suenas así.",
+					"en": "How kind you sound. You don't sound like that anymore."
+				}
+			],
+			"adv_fin": [
+				{
+					"id": "h2_advf_1",
+					"es": "No va a haber otra calibración. Te lo digo tranquilo. Vete.",
+					"en": "There won't be another calibration. I'm telling you calmly. Go."
+				},
+				{
+					"id": "h2_advf_2",
+					"es": "Esta fue la última con número. La siguiente no se corrige.",
+					"en": "This was the last one with a number. The next one can't be corrected."
+				},
+				{
+					"id": "h2_advf_3",
+					"es": "No habrá próxima vez. No grito. Ya no hace falta gritar.",
+					"en": "There will be no next time. I'm not shouting. There's no need to shout anymore."
+				},
+				{
+					"id": "h2_advf_4",
+					"es": "Puedes irte. Es la última vez que te lo digo.",
+					"en": "You can go. It's the last time I'll say that."
+				}
+			],
+			"fatal_in": [
+				{
+					"id": "h2_fin4_1",
+					"es": "Siéntate. Como siempre. Hoy va a ser breve. No. Mentí.",
+					"en": "Sit down. Like always. This will be quick. No. I lied."
+				},
+				{
+					"id": "h2_fin4_2",
+					"es": "Buenas noches. Tu puntaje ya está escrito. Siéntate igual.",
+					"en": "Good evening. Your score is already written. Sit down anyway."
+				},
+				{
+					"id": "h2_fin4_3",
+					"es": "Llegaste. Qué puntual. Hoy no hacía falta correr.",
+					"en": "You made it. So punctual. No need to run today."
+				},
+				{
+					"id": "h2_fin4_4",
+					"es": "Pasa. Hoy calibramos por última vez. Con calma.",
+					"en": "Come in. We calibrate one last time today. Calmly."
+				}
+			],
+			"fatal_luz": [
+				{
+					"id": "h2_luz_1",
+					"es": "No mires la luz. Se va sola.",
+					"en": "Don't look at the light. It goes on its own."
+				},
+				{
+					"id": "h2_luz_2",
+					"es": "Otra luz. Ya casi no hacen falta.",
+					"en": "Another light. We barely need them now."
+				},
+				{
+					"id": "h2_luz_3",
+					"es": "Así está mejor. Menos luz, más voz.",
+					"en": "Better this way. Less light, more voice."
+				}
+			],
+			"no_sales": [
+				{
+					"id": "h2_nos_1",
+					"es": "La puerta ya no abre. Ni desde mi lado.",
+					"en": "The door doesn't open anymore. Not even from my side."
+				},
+				{
+					"id": "h2_nos_2",
+					"es": "Nadie te espera afuera. Ya avisé.",
+					"en": "Nobody is waiting for you outside. I already let them know."
+				},
+				{
+					"id": "h2_nos_3",
+					"es": "Tu puesto ya tiene otro nombre. Lo vi al venir.",
+					"en": "Your desk already has another name on it. I saw it on my way here."
+				},
+				{
+					"id": "h2_nos_4",
+					"es": "No mires la puerta. Ya no es una puerta.",
+					"en": "Don't look at the door. It's not a door anymore."
+				}
+			],
+			"fin": [
+				{
+					"id": "h2_fin_5",
+					"es": "Vete. Te estoy contando los pasos.",
+					"en": "Go. I'm counting your steps."
+				},
+				{
+					"id": "h2_fin_6",
+					"es": "Ponte en Available. Yo me pongo a escuchar.",
+					"en": "Go to Available. I'll start listening."
+				},
+				{
+					"id": "h2_fin_7",
+					"es": "Abrí la puerta. No mires atrás. Yo sí miro.",
+					"en": "I opened the door. Don't look back. I will."
+				},
+				{
+					"id": "h2_fin_1",
+					"es": "Sal de Coaching. Y no vuelvas pronto.",
+					"en": "Leave Coaching. And don't come back soon."
+				},
+				{
+					"id": "h2_fin_2",
+					"es": "Ya abrí. Vete antes de que cierre.",
+					"en": "It's unlocked. Go before I lock it again."
+				},
+				{
+					"id": "h2_fin_3",
+					"es": "Vuelve a tu puesto. Te estoy escuchando igual.",
+					"en": "Back to your seat. I'm listening anyway."
+				},
+				{
+					"id": "h2_fin_4",
+					"es": "La puerta está abierta. Por ahora.",
+					"en": "The door is open. For now."
+				}
+			]
+		},
+		"preguntas": {
+			"p_hora": {
+				"niveles": [
+					1,
+					2,
+					3,
+					4
+				]
+			},
+			"p_canal": {
+				"niveles": [
+					1,
+					2
+				]
+			},
+			"p_marcas": {
+				"niveles": [
+					1,
+					2,
+					3,
+					4
+				]
+			},
+			"p_quedan": {
+				"niveles": [
+					2,
+					3
+				]
+			},
+			"p_grabacion": {
+				"niveles": [
+					1,
+					2
+				]
+			},
+			"p_nombre": {
+				"niveles": [
+					3,
+					4
+				]
+			},
+			"t_cierre": {
+				"niveles": [
+					1,
+					2,
+					3,
+					4
+				],
+				"tarea": true
+			},
+			"t_saludo": {
+				"niveles": [
+					2,
+					3
+				],
+				"tarea": true,
+				"repite": true
+			},
+			"t_espera": {
+				"niveles": [
+					1,
+					3,
+					4
+				],
+				"tarea": true
+			}
+		},
+		"opciones": {
+			"t_cierre": {
+				"correcta": {
+					"es": "¿Hay algo más en lo que le pueda ayudar? Gracias por comunicarse con KipuPay. Que tenga una buena noche.",
+					"en": "Is there anything else I can help you with? Thank you for contacting KipuPay. Have a good night."
+				},
+				"falsas": [
+					{
+						"es": "Gracias por llamar. Chau.",
+						"en": "Thanks for calling. Bye."
+					},
+					{
+						"es": "¿Algo más? Bueno. Buenas noches.",
+						"en": "Anything else? Fine. Good night."
+					},
+					{
+						"es": "Gracias por comunicarse con KipuPay. No cuelgue.",
+						"en": "Thank you for contacting KipuPay. Don't hang up."
+					},
+					{
+						"es": "Que tenga una buena noche. Si puede.",
+						"en": "Have a good night. If you can."
+					},
+					{
+						"es": "Gracias por su paciencia. La vamos a necesitar.",
+						"en": "Thank you for your patience. We'll need it."
+					}
+				]
+			},
+			"t_saludo": {
+				"correcta": {
+					"es": "Gracias por comunicarse con KipuPay, le habla {agente}. ¿En qué le puedo ayudar?",
+					"en": "Thank you for contacting KipuPay, this is {agente}. How can I help you?"
+				},
+				"falsas": [
+					{
+						"es": "KipuPay, buenas noches. ¿Qué pasó?",
+						"en": "KipuPay, good evening. What happened?"
+					},
+					{
+						"es": "Hola, le habla {agente}. ¿Qué necesita?",
+						"en": "Hi, this is {agente}. What do you need?"
+					},
+					{
+						"es": "Gracias por comunicarse con KipuPay. Esta llamada no termina.",
+						"en": "Thank you for contacting KipuPay. This call doesn't end."
+					},
+					{
+						"es": "Le habla {agente}. Lo estaba esperando.",
+						"en": "This is {agente}. I've been expecting you."
+					}
+				]
+			},
+			"t_espera": {
+				"correcta": {
+					"es": "Le voy a colocar en espera un momento mientras reviso su caso. Por favor, no cuelgue.",
+					"en": "I'm going to place you on hold for a moment while I review your case. Please don't hang up."
+				},
+				"falsas": [
+					{
+						"es": "Espere.",
+						"en": "Hold on."
+					},
+					{
+						"es": "No cuelgue. Nunca cuelgue.",
+						"en": "Don't hang up. Never hang up."
+					},
+					{
+						"es": "Lo pongo en espera. Vuelvo cuando pueda.",
+						"en": "I'm putting you on hold. I'll be back when I can."
+					},
+					{
+						"es": "Un momento, voy a buscar a alguien que sepa.",
+						"en": "One moment, I'll find someone who knows."
+					}
+				]
+			},
+			"p_grabacion": {
+				"correcta": {
+					"es": "Esta llamada puede ser monitoreada para fines de calidad.",
+					"en": "This call may be monitored for quality purposes."
+				},
+				"falsas": [
+					{
+						"es": "Esta llamada será borrada al terminar.",
+						"en": "This call will be deleted when it ends."
+					},
+					{
+						"es": "Esta llamada no está siendo grabada.",
+						"en": "This call is not being recorded."
+					},
+					{
+						"es": "Esta llamada puede ser escuchada por cualquiera.",
+						"en": "This call may be heard by anyone."
+					},
+					{
+						"es": "Esta llamada es privada.",
+						"en": "This call is private."
+					}
+				]
+			},
+			"canal": {
+				"llamada": {
+					"es": "Llamada",
+					"en": "Call"
+				},
+				"chat": {
+					"es": "Chat",
+					"en": "Chat"
+				},
+				"correo": {
+					"es": "Correo",
+					"en": "Email"
+				},
+				"vitzo": {
+					"es": "Caso Vitzo",
+					"en": "Vitzo case"
+				},
+				"kyc": {
+					"es": "KYC",
+					"en": "KYC"
+				}
+			}
+		},
+		"tiempo_respuesta_s": {
+			"1": 4.2,
+			"2": 3.6,
+			"3": 3.0,
+			"4": 3.0
+		}
+	}
+}

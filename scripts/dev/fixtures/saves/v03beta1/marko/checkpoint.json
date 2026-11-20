@@ -1,0 +1,66 @@
+{
+	"agente": "Marko",
+	"dificultad": "normal",
+	"discipline": {
+		"counters": {
+			"llamados": 0,
+			"por_pista": {},
+			"verbales": 0,
+			"ww": 0
+		}
+	},
+	"extra": {},
+	"fatigue": 25.0,
+	"game_state": {
+		"agent": "Marko",
+		"clock_seconds": 0.0,
+		"current_floor": 2,
+		"distortions_seen": [],
+		"flags": {
+			"aux_menu_open": false,
+			"bus_llegada_visto": true,
+			"locker_done": true,
+			"lunch_stored": true,
+			"pc_text_focus": false,
+			"pc_zoom": false
+		},
+		"logged_in": true,
+		"mode": 0,
+		"seated_at": "C-14",
+		"turno": 2
+	},
+	"kind": "login",
+	"metrics": {
+		"alerts": 0,
+		"angry_total": 0,
+		"authorizations": [],
+		"aux": 0,
+		"aux_since": 0.0,
+		"breaks_used": 0,
+		"contact_durations": [],
+		"contacts_handled": 0,
+		"csat_values": [],
+		"incidents": 0,
+		"outcomes": {
+			"molesto": 0,
+			"neutral": 0,
+			"satisfecho": 0
+		},
+		"shift_seconds": 0.0,
+		"time_in_aux": {
+			"0": 0.0,
+			"1": 0.0,
+			"2": 0.0,
+			"3": 0.0,
+			"4": 0.0,
+			"5": 0.0,
+			"6": 0.0
+		},
+		"version": 3,
+		"written_warnings": 0
+	},
+	"modo": 0,
+	"saved_at": "2026-11-09T23:40:07",
+	"turno": 2,
+	"version": 3
+}

@@ -1,0 +1,825 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P4 · Ezlaki (PLAN §6.4, §2 #41-45): canales, autores, DMs por agente, respuestas rápidas y mensajes programados (quién escribe dónde y a qué hora). Las líneas están en lineas_canales.json (canales) y lineas_agentes.json (DMs entre agentes). Otros paquetes publican con EventBus.ezlak_post(canal, autor, texto, meta). 'edita' = el mensaje se edita a los N s reales; 'borra' = se elimina; 'typing_s' = primero 'escribiendo…'. Solo [PROPUESTA]. v0.3.1 Q3: 23 publicaciones nuevas (el doble que en la v0.3.0) y 'captura' = la vista de adherencia que se pega como imagen (tipo uno|lista, estado, quien, n, tema oscuro|claro).",
+	"canales": [
+		{
+			"id": "#allocations",
+			"tema": {
+				"es": "Órdenes de AUX del RTA y excesos. Léelo.",
+				"en": "AUX orders from the RTA and excesses. Read it."
+			}
+		},
+		{
+			"id": "#site-updates",
+			"tema": {
+				"es": "TM · QA · OM · Vitzo. Reacciona cuando te lo pidan.",
+				"en": "TM · QA · OM · Vitzo. React when asked."
+			}
+		},
+		{
+			"id": "#team-familia",
+			"tema": {
+				"es": "El team de Shero. Somos familia. No hay breaks.",
+				"en": "Shero's team. We're family. There are no breaks."
+			}
+		}
+	],
+	"autores": {
+		"shero": {
+			"nombre": "Shero",
+			"rol": {
+				"es": "Supervisor",
+				"en": "Supervisor"
+			},
+			"avatar": "shero",
+			"color": "#e0b25a"
+		},
+		"rta": {
+			"nombre": "Perrito RTA",
+			"rol": {
+				"es": "RTA",
+				"en": "RTA"
+			},
+			"avatar": "perrito_rta",
+			"color": "#c98a5a"
+		},
+		"mentor": {
+			"nombre": "Mentor",
+			"rol": {
+				"es": "Mentor del team",
+				"en": "Team mentor"
+			},
+			"avatar": "mentor",
+			"color": "#8fb0d8"
+		},
+		"vitzo": {
+			"nombre": "Vitzo · WORKFLOW",
+			"rol": {
+				"es": "Bot",
+				"en": "Bot"
+			},
+			"avatar": "vitzo",
+			"color": "#6fd08a",
+			"bot": true
+		},
+		"om": {
+			"nombre": "OM Operaciones",
+			"rol": {
+				"es": "Operaciones",
+				"en": "Operations"
+			},
+			"avatar": "om",
+			"color": "#b0b0c8"
+		},
+		"rasec": {
+			"nombre": "Rasec",
+			"rol": {
+				"es": "TM",
+				"en": "TM"
+			},
+			"avatar": "rasec",
+			"color": "#d88fb4"
+		},
+		"haime": {
+			"nombre": "Haime",
+			"rol": {
+				"es": "QA",
+				"en": "QA"
+			},
+			"avatar": "haime",
+			"color": "#e06a6a"
+		},
+		"trainer": {
+			"nombre": "Trainer",
+			"rol": {
+				"es": "Training",
+				"en": "Training"
+			},
+			"avatar": "trainer",
+			"color": "#9ad0c8"
+		},
+		"enfermera": {
+			"nombre": "Tópico",
+			"rol": {
+				"es": "Enfermería",
+				"en": "Infirmary"
+			},
+			"avatar": "enfermera",
+			"color": "#e8e8e8"
+		},
+		"jiroshi": {
+			"nombre": "Jiroshi",
+			"rol": {
+				"es": "Agente · C-13",
+				"en": "Agent · C-13"
+			},
+			"avatar": "jiroshi",
+			"color": "#a0c4ff"
+		},
+		"marko": {
+			"nombre": "Marko",
+			"rol": {
+				"es": "Agente · C-15",
+				"en": "Agent · C-15"
+			},
+			"avatar": "marko",
+			"color": "#ffd6a5"
+		},
+		"llauri": {
+			"nombre": "Llauri",
+			"rol": {
+				"es": "Agente · C-12",
+				"en": "Agent · C-12"
+			},
+			"avatar": "llauri",
+			"color": "#caffbf"
+		},
+		"ttoom": {
+			"nombre": "Ttoom",
+			"rol": {
+				"es": "Agente · C-16",
+				"en": "Agent · C-16"
+			},
+			"avatar": "ttoom",
+			"color": "#fdffb6"
+		},
+		"juan": {
+			"nombre": "Juan",
+			"rol": {
+				"es": "Agente · C-11",
+				"en": "Agent · C-11"
+			},
+			"avatar": "juan",
+			"color": "#bdb2ff"
+		},
+		"sistema": {
+			"nombre": "Ezlaki",
+			"rol": {
+				"es": "Sistema",
+				"en": "System"
+			},
+			"avatar": "",
+			"color": "#8a9aa6",
+			"bot": true
+		}
+	},
+	"dms_por_agente": {
+		"Jiroshi": [
+			"marko",
+			"llauri",
+			"juan"
+		],
+		"Marko": [
+			"jiroshi",
+			"ttoom"
+		],
+		"Llauri": [
+			"jiroshi",
+			"ttoom",
+			"juan"
+		],
+		"Ttoom": [
+			"marko",
+			"llauri"
+		],
+		"Juan": [
+			"jiroshi",
+			"llauri"
+		]
+	},
+	"dms_al_escribir": [
+		"trainer",
+		"haime",
+		"rasec",
+		"enfermera"
+	],
+	"respuestas_rapidas": {
+		"dm:shero": [
+			"ack",
+			"ok",
+			"me_siento_mal",
+			"en_un_caso"
+		],
+		"agente": [
+			"jaja",
+			"no_me_metas",
+			"gracias"
+		],
+		"dm:rasec": [
+			"voy",
+			"no_gracias"
+		],
+		"dm:haime": [
+			"voy",
+			"ok"
+		],
+		"dm:trainer": [
+			"voy",
+			"ok"
+		],
+		"dm:enfermera": [
+			"ok"
+		]
+	},
+	"textos_respuesta": {
+		"ack": {
+			"es": "Ack",
+			"en": "Ack"
+		},
+		"ok": {
+			"es": "Ok",
+			"en": "Ok"
+		},
+		"me_siento_mal": {
+			"es": "Me siento mal",
+			"en": "I feel sick"
+		},
+		"en_un_caso": {
+			"es": "Estoy en un caso",
+			"en": "I'm in a case"
+		},
+		"jaja": {
+			"es": "jaja",
+			"en": "haha"
+		},
+		"no_me_metas": {
+			"es": "no me metas",
+			"en": "leave me out of it"
+		},
+		"gracias": {
+			"es": "gracias",
+			"en": "thanks"
+		},
+		"voy": {
+			"es": "Voy",
+			"en": "On my way"
+		},
+		"no_gracias": {
+			"es": "No, gracias",
+			"en": "No, thanks"
+		},
+		"excusa_1": {
+			"es": "El partner demoró en responder.",
+			"en": "The partner was slow to reply."
+		},
+		"excusa_2": {
+			"es": "Revisé las notas dos veces para no duplicar el envío.",
+			"en": "I checked the notes twice to avoid a duplicate send."
+		},
+		"excusa_3": {
+			"es": "No vi el reloj.",
+			"en": "I didn't see the clock."
+		}
+	},
+	"programados": [
+		{
+			"hora": "00:01",
+			"canal": "#team-familia",
+			"autor": "shero",
+			"linea": "shero_saludo",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0
+		},
+		{
+			"hora": "00:02",
+			"canal": "#site-updates",
+			"autor": "om",
+			"linea": "om_correo",
+			"turnos": [
+				1
+			]
+		},
+		{
+			"hora": "00:08",
+			"canal": "#allocations",
+			"autor": "rta",
+			"linea": "rta_acw_recordatorio",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "lista",
+				"estado": "acw",
+				"n": 4,
+				"tema": "claro"
+			}
+		},
+		{
+			"hora": "00:25",
+			"canal": "#team-familia",
+			"autor": "mentor",
+			"linea": "mentor_tip_1",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0
+		},
+		{
+			"hora": "00:30",
+			"canal": "#site-updates",
+			"autor": "haime",
+			"linea": "qa_calibracion",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "00:48",
+			"canal": "#allocations",
+			"autor": "shero",
+			"linea": "shero_bo_sin_cola",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0,
+			"captura": {
+				"tipo": "lista",
+				"estado": "bo",
+				"n": 8,
+				"tema": "oscuro"
+			}
+		},
+		{
+			"hora": "01:00",
+			"canal": "#site-updates",
+			"autor": "rasec",
+			"linea": "tm_ascensor",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "01:10",
+			"canal": "#team-familia",
+			"autor": "companero",
+			"linea": "companero_madrugada",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "01:40",
+			"canal": "#allocations",
+			"autor": "rta",
+			"linea": "rta_npc_ttoom",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "uno",
+				"estado": "break",
+				"quien": "ttoom",
+				"tema": "oscuro"
+			}
+		},
+		{
+			"hora": "02:10",
+			"canal": "#site-updates",
+			"autor": "om",
+			"linea": "om_bono",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"borra": "om_bono_borrado",
+			"borra_s": 9.0
+		},
+		{
+			"hora": "02:20",
+			"canal": "#team-familia",
+			"autor": "shero",
+			"linea": "shero_foto_perfil",
+			"turnos": [
+				1,
+				2
+			],
+			"typing_s": 2.0
+		},
+		{
+			"hora": "02:50",
+			"canal": "#allocations",
+			"autor": "shero",
+			"linea": "shero_cerramos_casos",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0,
+			"captura": {
+				"tipo": "lista",
+				"estado": "contacto",
+				"quien": "jugador",
+				"n": 2,
+				"tema": "oscuro"
+			}
+		},
+		{
+			"hora": "03:05",
+			"canal": "#team-familia",
+			"autor": "rasec",
+			"linea": "tm_integracion",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "03:20",
+			"canal": "#allocations",
+			"autor": "shero",
+			"linea": "shero_correos_excedidos",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "lista",
+				"estado": "contacto",
+				"n": 3,
+				"tema": "oscuro",
+				"quien": "llauri,juan"
+			}
+		},
+		{
+			"hora": "03:25",
+			"canal": "#site-updates",
+			"autor": "rasec",
+			"linea": "tm_musica",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "04:00",
+			"canal": "#site-updates",
+			"autor": "om",
+			"linea": "om_simulacro",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "04:15",
+			"canal": "#team-familia",
+			"autor": "companero",
+			"linea": "companero_sueno",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "04:30",
+			"canal": "#site-updates",
+			"autor": "rasec",
+			"linea": "tm_fotocheck",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "04:40",
+			"canal": "#allocations",
+			"autor": "shero",
+			"linea": "shero_sin_breaks",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0,
+			"captura": {
+				"tipo": "lista",
+				"estado": "break",
+				"n": 6,
+				"tema": "oscuro"
+			}
+		},
+		{
+			"hora": "05:00",
+			"canal": "#site-updates",
+			"autor": "haime",
+			"linea": "qa_rec",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "05:10",
+			"canal": "#team-familia",
+			"autor": "mentor",
+			"linea": "mentor_tip_2",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0
+		},
+		{
+			"hora": "05:20",
+			"canal": "#allocations",
+			"autor": "rta",
+			"linea": "rta_npc_yesenia",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "uno",
+				"estado": "acw",
+				"quien": "yesenia",
+				"tema": "claro"
+			}
+		},
+		{
+			"hora": "05:45",
+			"canal": "#site-updates",
+			"autor": "haime",
+			"linea": "qa_suspiro",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "06:05",
+			"canal": "#allocations",
+			"autor": "rta",
+			"linea": "rta_npc_llauri",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "uno",
+				"estado": "acw",
+				"quien": "llauri",
+				"tema": "claro"
+			}
+		},
+		{
+			"hora": "06:10",
+			"canal": "#team-familia",
+			"autor": "shero",
+			"linea": "shero_madrugada",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0
+		},
+		{
+			"hora": "06:35",
+			"canal": "#site-updates",
+			"autor": "om",
+			"linea": "om_metricas",
+			"turnos": [
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "06:45",
+			"canal": "#allocations",
+			"autor": "rta",
+			"linea": "rta_lista_available",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "lista",
+				"estado": "available",
+				"n": 7,
+				"tema": "oscuro"
+			}
+		},
+		{
+			"hora": "07:00",
+			"canal": "#team-familia",
+			"autor": "shero",
+			"linea": "EZLAKI_SHERO_COACHING_LISTA",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0,
+			"tags": "coaching",
+			"reacciones": true
+		},
+		{
+			"hora": "07:15",
+			"canal": "#site-updates",
+			"autor": "om",
+			"linea": "om_encuesta",
+			"turnos": [
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "07:25",
+			"canal": "#allocations",
+			"autor": "rta",
+			"linea": "rta_npc_juan",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"captura": {
+				"tipo": "uno",
+				"estado": "perdido",
+				"quien": "juan",
+				"tema": "claro"
+			}
+		},
+		{
+			"hora": "07:45",
+			"canal": "#team-familia",
+			"autor": "companero",
+			"linea": "companero_bus",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"hora": "08:10",
+			"canal": "#allocations",
+			"autor": "shero",
+			"linea": "shero_cierre",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0,
+			"captura": {
+				"tipo": "lista",
+				"estado": "bo",
+				"n": 6,
+				"tema": "claro"
+			}
+		},
+		{
+			"hora": "08:20",
+			"canal": "#team-familia",
+			"autor": "shero",
+			"linea": "shero_despedida",
+			"turnos": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"typing_s": 2.0
+		}
+	],
+	"typing_fantasma": {
+		"_nota": "Shero 'escribiendo…' en tu DM que no termina en nada (o termina en 'Vi.'). Horas por turno; dura typing_s reales.",
+		"1": [
+			"02:55",
+			"06:45"
+		],
+		"2": [
+			"01:50",
+			"04:10",
+			"07:15"
+		],
+		"3": [
+			"00:50",
+			"02:35",
+			"04:05",
+			"05:55",
+			"07:45"
+		],
+		"typing_s": 6.0,
+		"final_vi": {
+			"es": "Vi.",
+			"en": "Seen."
+		}
+	}
+}

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/personajes/perrito_rta.gd" id="1_rta"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rta"]
+size = Vector3(0.5, 0.7, 1.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rta"]
+size = Vector3(0.5, 0.6, 1.0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rta"]
+albedo_color = Color(0.9, 0.9, 0.9, 1)
+
+[node name="PerritoRTA" type="CharacterBody3D"]
+collision_layer = 4
+script = ExtResource("1_rta")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_rta")
+
+[node name="Cuerpo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+mesh = SubResource("BoxMesh_rta")
+material_override = SubResource("StandardMaterial3D_rta")
+
+[node name="Estado" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+pixel_size = 0.006
+billboard = 1
+text = "RTA"

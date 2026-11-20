@@ -1,0 +1,10 @@
+keys,es,en
+PKG_V031_Q1_READY,"Cadenas del paquete Q1 (v0.3.1): bugs, reglas, reloj y PC","Package Q1 strings (v0.3.1): bugs, rules, clock and PC"
+Q1_OPT_SHIFT_LENGTH,Duración del turno ({agente}),Shift length ({agente})
+Q1_SHIFT_CORTA,Corta (~18 min),Short (~18 min)
+Q1_SHIFT_NORMAL,Normal (~22 min),Normal (~22 min)
+Q1_SHIFT_LARGA,Larga (~30 min),Long (~30 min)
+Q1_OPT_SHIFT_LENGTH_HINT,"Solo acelera las esperas sin cola, la llegada, el break y el lunch. Los plazos no cambian. Vale desde el próximo turno.","Only speeds up the idle waits, arrival, break and lunch. Deadlines stay the same. Applies from the next shift."
+Q1_TRAINER_PONE_TRAINING,"Siéntate. Te pongo en Training yo. GAAAA… digo, bienvenido.","Sit down. I'll put you in Training myself. GAAAA… I mean, welcome."
+Q1_HINT_RUB_EYES,"Tienes la vista cansada (Fatiga): todo se desenfoca. Pulsa [{tecla}] para frotarte los ojos.","Your eyes are tired (Fatigue): everything blurs. Press [{tecla}] to rub your eyes."
+CTRL_JUMP,Saltar (de pie),Jump (standing)

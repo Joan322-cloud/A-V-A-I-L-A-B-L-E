@@ -1,0 +1,70 @@
+keys,es,en
+PKG_V032_GFX_READY,"Cadenas del paquete de gráficos (v0.3.2): opciones avanzadas, brillo y rendimiento","Graphics package strings (v0.3.2): advanced options, brightness and performance"
+GFX_OPEN,Gráficos avanzados…,Advanced graphics…
+GFX_TITLE,Gráficos avanzados,Advanced graphics
+GFX_STATE,"Calidad: %s · Renderizador en uso: %s","Quality: %s · Renderer in use: %s"
+GFX_R_FORWARD,Forward+ (Vulkan / Direct3D 12),Forward+ (Vulkan / Direct3D 12)
+GFX_R_COMPAT,Compatibilidad (OpenGL),Compatibility (OpenGL)
+GFX_R_AUTO,Automático,Automatic
+GFX_LOW_NOTE,"En Baja y en Modo liviano estas mejoras están apagadas (es la versión mínima para la web y para equipos sin tarjeta gráfica). Elige Media o Alta en «Calidad gráfica» para usarlas.","On Low and in Lite mode these improvements are off (it is the minimum version for the web and for machines without a graphics card). Choose Medium or High under “Graphics quality” to use them."
+GFX_G_LIGHT,Luz y aire,Light and air
+GFX_G_SURF,Superficies y detalle,Surfaces and detail
+GFX_G_LENS,Lente y película (sensibles al movimiento),Lens and film (motion-sensitive)
+GFX_G_SYSTEM,Pantalla y rendimiento,Display and performance
+GFX_O_LUZ_TERROR,Iluminación nocturna (pozas de luz),Night lighting (pools of light)
+GFX_O_SOMBRAS,Sombras,Shadows
+GFX_O_NIEBLA,Niebla,Fog
+GFX_O_SSAO,Oclusión ambiental,Ambient occlusion
+GFX_O_SSIL,Luz indirecta en pantalla,Screen-space indirect light
+GFX_O_REFLEJOS,Reflejos,Reflections
+GFX_O_GLOW,Resplandor,Glow
+GFX_O_ADAPTACION,Adaptación de la exposición,Exposure adaptation
+GFX_O_MATERIALES,Relieve de materiales,Material relief
+GFX_O_DETALLE,Geometría de detalle,Detail geometry
+GFX_O_PERSONAJES,"Sombreado de piel, ojos y tela","Skin, eye and cloth shading"
+GFX_O_ESCALA_3D,Escala de resolución 3D,3D resolution scale
+GFX_O_LENTE,Lente (etalonaje por piso),Lens (per-floor grading)
+GFX_O_ABERRACION,Aberración cromática,Chromatic aberration
+GFX_O_GRANO,Intensidad del grano,Grain intensity
+GFX_O_VINETA,Viñeta,Vignette
+GFX_O_PARPADEO,Intensidad de los parpadeos,Flicker intensity
+GFX_V_OFF,No,Off
+GFX_V_LOW,Baja,Low
+GFX_V_MED,Media,Medium
+GFX_V_HIGH,Alta,High
+GFX_V_FOG_BASIC,Simple,Basic
+GFX_V_FOG_DEPTH,Por profundidad,Depth
+GFX_V_FOG_VOL,Volumétrica,Volumetric
+GFX_V_REFL_PROBES,Sondas,Probes
+GFX_V_REFL_SSR,Sondas + pantalla,Probes + screen-space
+GFX_V_GLOW_SOFT,Contenido,Restrained
+GFX_V_GLOW_FULL,Completo,Full
+GFX_V_DETAIL_BASIC,Esencial,Essential
+GFX_V_DETAIL_FULL,Completa,Full
+GFX_ONLY_FORWARD,(solo con Forward+),(Forward+ only)
+GFX_FALLBACK,(con Compatibilidad: %s),(on Compatibility: %s)
+GFX_FLICKER_NOTE,"«Sin parpadeos de luz» (en Opciones) deja los parpadeos en lo mínimo aunque esta barra esté alta.","“No light flicker” (in Options) keeps flicker at the minimum even if this slider is high."
+GFX_BRILLO,Brillo,Brightness
+GFX_CALIBRAR,Calibrar brillo…,Calibrate brightness…
+GFX_FPS,Mostrar contador de FPS,Show FPS counter
+GFX_VSYNC,Sincronización vertical (V-Sync),Vertical sync (V-Sync)
+GFX_RENDERER,Renderizador,Renderer
+GFX_RENDERER_NOTE,Se aplica al reiniciar el juego.,Applies when the game restarts.
+GFX_RENDERER_AUTO_NOTE,"Automático: Forward+ si la tarjeta lo permite; si no, Compatibilidad.","Automatic: Forward+ if the graphics card allows it; otherwise Compatibility."
+GFX_SUB_PLATE,Fondo oscuro tras los subtítulos,Dark plate behind subtitles
+GFX_RESET,Volver al ajuste de la calidad,Reset to the quality preset
+GFX_BENCH,Medir y elegir calidad,Measure and choose quality
+GFX_BENCH_NEED_FLOOR,"Para medir, entra a un turno y abre Opciones desde la pausa.","To measure, enter a shift and open Options from the pause menu."
+GFX_BENCH_RUNNING,Midiendo… %s,Measuring… %s
+GFX_BENCH_RESULT,"%s → elegida: %s","%s → chosen: %s"
+GFX_BENCH_AUTO,"Calidad gráfica ajustada a tu equipo: %s (Opciones → Calidad gráfica).","Graphics quality adjusted to your machine: %s (Options → Graphics quality)."
+GFX_CAL_TITLE,Brillo,Brightness
+GFX_CAL_TEXT,"Mueve la barra hasta que el símbolo de la izquierda apenas se vea y el de la derecha se vea con claridad. El juego es oscuro a propósito.","Move the slider until the symbol on the left is barely visible and the one on the right is clearly visible. The game is dark on purpose."
+GFX_CAL_LEFT,Apenas visible,Barely visible
+GFX_CAL_RIGHT,Bien visible,Clearly visible
+GFX_CAL_DEFAULT,Restablecer,Reset
+GFX_CAL_OK,Aceptar,Accept
+GFX_FPS_FMT,"%d fps · %.1f ms","%d fps · %.1f ms"
+GFX_QUALITY_HINT,"Liviano y Baja: la versión mínima (web y equipos sin tarjeta gráfica). Media: iluminación nocturna con sombras, relieve de materiales y detalle esencial. Alta: además niebla volumétrica, reflejos, luz indirecta y detalle completo. En «Gráficos avanzados» se ajusta cada cosa.","Lite and Low: the minimum version (web and machines without a graphics card). Medium: night lighting with shadows, material relief and essential detail. High: adds volumetric fog, reflections, indirect light and full detail. “Advanced graphics” lets you tune each one."
+GFX_MAX_FPS,"Límite de FPS (temperatura)","FPS limit (thermal control)"
+GFX_V_UNLIMITED,"Sin límite (máx. calor)","Unlimited (max heat)"

@@ -1,0 +1,343 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P5 · Rasec (TM de otro equipo; no es agresivo como Shero: alegre, servicial, insoportablemente animado) [PROPUESTA, provisional hasta que Joan lo describa]. Calvo; con pelo solo mientras suena su música o en un evento. Audio: voces/rasec/<id>.ogg (P6). Las líneas de las pistas de coaching (DM y advertencias) las publica P3; aquí están las de Rasec en persona, sus eventos y su música.",
+	"musica_on": {
+		"es": "Un poquito de música, team. Para que nadie se duerma. Nadie se duerme.",
+		"en": "A little music, team. So nobody falls asleep. Nobody falls asleep."
+	},
+	"musica_off": {
+		"es": "Listo. Se acabó la música. Ya pueden volver a escuchar el zumbido.",
+		"en": "Done. Music's over. You can go back to hearing the hum."
+	},
+	"musica_pa": {
+		"es": "♪ … ♪ (los parlantes de la sala, bajito, un poco lento)",
+		"en": "♪ … ♪ (the room speakers, low, a little slow)"
+	},
+	"evento_anuncio": {
+		"es": "¡Site! Hoy celebramos {tema}. Mini evento de integración en el centro de la sala, ahora: {actividad}. Cuatro minutos. Participación voluntaria y obligatoria.",
+		"en": "Site! Today we celebrate {tema}. Mini team-building event in the middle of the room, now: {actividad}. Four minutes. Participation is voluntary and mandatory."
+	},
+	"evento_dm": {
+		"es": "@{agente} pasa a BO y ven al centro de la sala. Te guardé un sitio. Ya tiene tu nombre.",
+		"en": "@{agente} switch to BO and come to the middle of the room. I saved you a spot. It already has your name."
+	},
+	"evento_pa": {
+		"es": "Agente {agente}, al centro de la sala. Todos te estamos esperando. Sonriendo.",
+		"en": "Agent {agente}, to the middle of the room. We're all waiting for you. Smiling."
+	},
+	"evento_voy": {
+		"es": "¡Eso! Te esperamos. No te demores, que la sonrisa cansa.",
+		"en": "That's it! We'll wait. Don't be long, smiling gets tiring."
+	},
+	"evento_sin_bo": {
+		"es": "Pasa a BO, como te dije. Así el sistema sabe que estás trabajando mientras te diviertes.",
+		"en": "Switch to BO, like I said. That way the system knows you're working while you have fun."
+	},
+	"evento_recordatorio": {
+		"es": "{agente}… te estamos esperando. Todos. Hace rato que nadie parpadea.",
+		"en": "{agente}… we're waiting for you. All of us. Nobody has blinked in a while."
+	},
+	"actividad_karaoke": {
+		"es": "karaoke",
+		"en": "karaoke"
+	},
+	"actividad_charadas": {
+		"es": "charadas",
+		"en": "charades"
+	},
+	"actividad_sillas": {
+		"es": "el juego de la silla",
+		"en": "musical chairs"
+	},
+	"inicio_karaoke": {
+		"es": "¡Bienvenidos al karaoke de {tema}! Canten conmigo. Todos. Con ganas. Las ganas se miden.",
+		"en": "Welcome to the {tema} karaoke! Sing with me. Everyone. With feeling. Feeling gets measured."
+	},
+	"inicio_charadas": {
+		"es": "¡Charadas de {tema}! Yo actúo, ustedes adivinan. El que adivina, se queda. Bueno, todos se quedan.",
+		"en": "{tema} charades! I act, you guess. Whoever guesses stays. Well, everyone stays."
+	},
+	"inicio_sillas": {
+		"es": "¡El juego de la silla por {tema}! Cuando pare la música, siéntense. Cada silla tiene un nombre.",
+		"en": "Musical chairs for {tema}! When the music stops, sit down. Every chair has a name."
+	},
+	"karaoke_bien": {
+		"es": "¡Eso! Más fuerte. Que te escuche Shero.",
+		"en": "Yes! Louder. Let Shero hear you."
+	},
+	"karaoke_mal": {
+		"es": "Más fuerte. Nadie te escucha. Bueno, alguien sí.",
+		"en": "Louder. Nobody can hear you. Well, someone can."
+	},
+	"karaoke_lento": {
+		"es": "[la pista se arrastra; todos siguen cantando con la boca demasiado abierta]",
+		"en": "[the track drags; everyone keeps singing with their mouths too wide]"
+	},
+	"sillas_para": {
+		"es": "¡Paró! ¡Siéntense!",
+		"en": "It stopped! Sit down!"
+	},
+	"sillas_bien": {
+		"es": "Esa silla era tuya. Siempre fue tuya.",
+		"en": "That chair was yours. It was always yours."
+	},
+	"sillas_ultima": {
+		"es": "Se acabaron las sillas. Solo queda la tuya. Los demás se quedan de pie. Mirándote.",
+		"en": "We're out of chairs. Only yours is left. Everyone else stays standing. Looking at you."
+	},
+	"relleno_1": {
+		"es": "Todavía no se sienten. Todavía no termina.",
+		"en": "Don't sit down yet. It isn't over yet."
+	},
+	"relleno_2": {
+		"es": "[todos aplauden a destiempo, sin sonido]",
+		"en": "[everyone claps off-beat, without a sound]"
+	},
+	"relleno_3": {
+		"es": "Sonrían. La cámara del techo también participa.",
+		"en": "Smile. The ceiling camera is taking part too."
+	},
+	"relleno_4": {
+		"es": "[la música vuelve a empezar desde el principio; nadie lo menciona]",
+		"en": "[the music starts over from the beginning; nobody mentions it]"
+	},
+	"relleno_5": {
+		"es": "Un minuto más. Ese minuto es mío. Lo voy a guardar.",
+		"en": "One more minute. That minute is mine. I'm keeping it."
+	},
+	"relleno_6": {
+		"es": "[alguien de la fila C susurra tu nombre al compás]",
+		"en": "[someone in row C whispers your name to the beat]"
+	},
+	"fin_evento": {
+		"es": "¡Gracias por participar! Vuelvan a sus sitios. Vuelvan a Available. Esto no sale en sus métricas. Bueno, sí sale.",
+		"en": "Thanks for taking part! Back to your seats. Back to Available. This doesn't show in your metrics. Well, it does."
+	},
+	"advertencia_rechazo": {
+		"es": "¿«No, gracias»? Aquí nadie dice «no, gracias». Primera advertencia. Te espero igual.",
+		"en": "\"No, thanks\"? Nobody says \"no, thanks\" here. First warning. I'll wait for you anyway."
+	},
+	"advertencia_tarde": {
+		"es": "Dos minutos, {agente}. Te esperamos dos minutos sonriendo. Primera advertencia. Ven.",
+		"en": "Two minutes, {agente}. We waited two minutes smiling. First warning. Come."
+	},
+	"advertencia_sin_bo": {
+		"es": "Viniste, pero no pusiste BO. Así no cuenta. Primera advertencia.",
+		"en": "You came, but you didn't switch to BO. That doesn't count. First warning."
+	},
+	"advertencia_fallo": {
+		"es": "Te quedaste de pie. Aquí todos tienen silla. Primera advertencia.",
+		"en": "You stayed standing. Everyone has a chair here. First warning."
+	},
+	"advertencia_final": {
+		"es": "Segunda advertencia. Ya no te advierto más. Ya no.",
+		"en": "Second warning. I won't warn you again. Not anymore."
+	},
+	"en_persona_coaching": {
+		"es": "Oye. ¿Coaching? ¿Con quién? Yo no te convoqué. Nadie te convocó. Vuelve a Available, ¿ya?",
+		"en": "Hey. Coaching? With whom? I didn't call you. Nobody did. Back to Available, okay?"
+	},
+	"en_persona_exceso": {
+		"es": "Tu sesión terminó hace rato. El coaching no es un sitio para quedarse a vivir.",
+		"en": "Your session ended a while ago. Coaching isn't a place to move into."
+	},
+	"en_persona_ww": {
+		"es": "No me gusta hacer esto. Me gusta mucho hacer esto.",
+		"en": "I don't like doing this. I really like doing this."
+	},
+	"scr_evento": {
+		"es": "¡AQUÍ TODOS PARTICIPAN!",
+		"en": "EVERYONE TAKES PART HERE!"
+	},
+	"q4_karaoke_d1": {
+		"es": "¿Quién abre el karaoke? {agente}, tú tienes cara de voz bonita. ¿Verdad que sí?",
+		"en": "Who opens the karaoke? {agente}, you've got a pretty-voice face. Right?"
+	},
+	"q4_karaoke_d1_seguir": {
+		"es": "¡Eso! Así me gusta. Aplausos para {agente}. Más fuerte los aplausos.",
+		"en": "That's it! That's what I like. Applause for {agente}. Louder applause."
+	},
+	"q4_karaoke_d1_excusa": {
+		"es": "La garganta. Ya. La garganta sirve para contestar llamadas, ¿no? Entonces sirve para cantar. Lo anoto.",
+		"en": "The throat. Right. The throat works for answering calls, doesn't it? Then it works for singing. I'm noting it."
+	},
+	"q4_karaoke_d1_burla": {
+		"es": "Jaja. Muy bien. Muy gracioso. Lo anoto. Con tu nombre completo.",
+		"en": "Haha. Very good. Very funny. I'm noting it. With your full name."
+	},
+	"q4_karaoke_d2": {
+		"es": "¡Ahora un solo! Solo tú, {agente}. Los demás, palmas. Palmas, Ttoom. Te veo.",
+		"en": "Now a solo! Just you, {agente}. Everyone else, clap. Clap, Ttoom. I see you."
+	},
+	"q4_karaoke_d2_seguir": {
+		"es": "¡Eso es actitud de campaña! Eso va a tu legajo. Lo bueno también se anota.",
+		"en": "That's campaign attitude! That goes in your file. Good things get noted too."
+	},
+	"q4_karaoke_d2_excusa": {
+		"es": "Todos juntos. Qué bonito. Qué trabajo en equipo. Está bien, esta vez sí.",
+		"en": "All together. How lovely. What teamwork. Fine, this time yes."
+	},
+	"q4_karaoke_d2_burla": {
+		"es": "Desafinaste a propósito. Lo escuché. La cámara también. Anotado.",
+		"en": "You sang off-key on purpose. I heard it. So did the camera. Noted."
+	},
+	"q4_karaoke_d3": {
+		"es": "¿Y? Del uno al diez, ¿cuánto te divertiste? Piénsalo bien. Es una encuesta.",
+		"en": "So? From one to ten, how much fun did you have? Think carefully. It's a survey."
+	},
+	"q4_karaoke_d3_seguir": {
+		"es": "¡Diez! Lo sabía. Diez sobre diez. Igual que tu Available, ¿no?",
+		"en": "Ten! I knew it. Ten out of ten. Same as your Available, right?"
+	},
+	"q4_karaoke_d3_excusa": {
+		"es": "Cansado. Nadie está cansado. Cansancio no es una opción de la encuesta. Lo anoto como cinco.",
+		"en": "Tired. Nobody's tired. Tired isn't an option in the survey. I'll note it as a five."
+	},
+	"q4_karaoke_d3_burla": {
+		"es": "¿Tres? ¿Tres? La música la elegí yo. Tres. Lo anoto. Grande.",
+		"en": "Three? Three? I picked the music. Three. I'm noting it. In big letters."
+	},
+	"q4_charadas_d1": {
+		"es": "Antes de empezar: ¿quién quiere actuar primero? {agente}, levantaste la mano. Yo la vi.",
+		"en": "Before we start: who wants to act first? {agente}, you raised your hand. I saw it."
+	},
+	"q4_charadas_d1_seguir": {
+		"es": "¡Valiente! Mejor actúo yo, igual. Pero valiente. Lo anoto a favor.",
+		"en": "Brave! I'll act anyway. But brave. Noted in your favor."
+	},
+	"q4_charadas_d1_excusa": {
+		"es": "Frotándote los ojos. A las cinco. Bueno, bueno. Te creo. Esta vez.",
+		"en": "Rubbing your eyes. At five. Okay, okay. I believe you. This time."
+	},
+	"q4_charadas_d1_burla": {
+		"es": "Jaja. Ja. Qué rápido eres para las bromas. Para los casos, no tanto. Lo anoto.",
+		"en": "Haha. Ha. You're so quick with jokes. With cases, not so much. I'm noting it."
+	},
+	"q4_charadas_d2": {
+		"es": "Pista extra: es algo que todos ustedes hacen. Cada noche. ¿Lo ayudan a {agente}, team?",
+		"en": "Extra clue: it's something all of you do. Every night. Will you help {agente}, team?"
+	},
+	"q4_charadas_d2_seguir": {
+		"es": "¡Esa es la energía! Así se adivina. Con hambre.",
+		"en": "That's the energy! That's how you guess. Hungry."
+	},
+	"q4_charadas_d2_excusa": {
+		"es": "No ves bien. Son las gotas, ¿no? La expendedora tiene gotas. Te las descuentan, pero tiene.",
+		"en": "You can't see well. It's the eye drops, right? The vending machine has drops. They charge you, but it has them."
+	},
+	"q4_charadas_d2_burla": {
+		"es": "…No. No es «renunciar». Esa palabra no está en el juego. Anotado. Subrayado.",
+		"en": "…No. It isn't \"quitting\". That word isn't in the game. Noted. Underlined."
+	},
+	"q4_charadas_d3": {
+		"es": "¿Les gustaron las charadas? ¿Repetimos el próximo turno? Levanten la mano. Todos.",
+		"en": "Did you like the charades? Shall we do it again next shift? Raise your hands. Everyone."
+	},
+	"q4_charadas_d3_seguir": {
+		"es": "¡Unanimidad! Bueno, casi. Casi es unanimidad aquí.",
+		"en": "Unanimous! Well, almost. Almost counts as unanimous here."
+	},
+	"q4_charadas_d3_excusa": {
+		"es": "Available. Muy bien. Me gusta que pienses en tus métricas. No es una excusa. Casi.",
+		"en": "Available. Very good. I like that you think about your metrics. It isn't an excuse. Almost."
+	},
+	"q4_charadas_d3_burla": {
+		"es": "Mano abajo. Y miras a los demás para que te sigan. Lo vi. Lo anoto. A ti y a los que te siguieron.",
+		"en": "Hand down. And you look at the others so they follow you. I saw it. I'm noting it. You and whoever followed."
+	},
+	"q4_sillas_d1": {
+		"es": "Reglas: el que se queda sin silla, cuenta un secreto de la campaña. ¿Te parece justo, {agente}?",
+		"en": "Rules: whoever's left without a chair tells a campaign secret. Sound fair, {agente}?"
+	},
+	"q4_sillas_d1_seguir": {
+		"es": "¡Muy justo! Justo es la palabra. Aquí todo es justo.",
+		"en": "Very fair! Fair is the word. Everything's fair here."
+	},
+	"q4_sillas_d1_excusa": {
+		"es": "Todos saben uno. Tú sabes el de C-13. No te hagas. Bueno, sigamos.",
+		"en": "Everyone knows one. You know the C-13 one. Don't play dumb. Fine, let's go on."
+	},
+	"q4_sillas_d1_burla": {
+		"es": "…Eso no es un secreto. Eso es una opinión. Las opiniones se anotan.",
+		"en": "…That isn't a secret. That's an opinion. Opinions get noted."
+	},
+	"q4_sillas_d2": {
+		"es": "¡Llauri se quedó dormida en su silla! ¿La despertamos, {agente}? Despiértala tú.",
+		"en": "Llauri fell asleep in her chair! Shall we wake her, {agente}? You wake her."
+	},
+	"q4_sillas_d2_seguir": {
+		"es": "Así. Con cariño. Con firmeza. Como Shero.",
+		"en": "Like that. With affection. With firmness. Like Shero."
+	},
+	"q4_sillas_d2_excusa": {
+		"es": "Dos turnos. Ya. La defiendes. Qué bonito compañerismo. Los anoto a los dos.",
+		"en": "Two shifts. Right. You defend her. Such lovely camaraderie. I'm noting you both."
+	},
+	"q4_sillas_d2_burla": {
+		"es": "Jaja. Inteligente. Muy inteligente. Lo anoto, por inteligente.",
+		"en": "Haha. Clever. Very clever. I'm noting it, for being clever."
+	},
+	"q4_sillas_d3": {
+		"es": "¡Ganaste! Una sola silla y es tuya. ¿Unas palabras para el team?",
+		"en": "You won! One chair left and it's yours. A few words for the team?"
+	},
+	"q4_sillas_d3_seguir": {
+		"es": "«Somos familia». Lo voy a imprimir. Lo voy a pegar en tu monitor.",
+		"en": "\"We're family\". I'm going to print it. I'm going to tape it to your monitor."
+	},
+	"q4_sillas_d3_excusa": {
+		"es": "Trabajar. Qué responsable. Bueno, vuelvan. Pero la silla se queda contigo.",
+		"en": "Work. How responsible. Okay, go back. But the chair stays with you."
+	},
+	"q4_sillas_d3_burla": {
+		"es": "No hay premio. Nunca hubo. Ganaste. Anotado.",
+		"en": "There's no prize. There never was. You won. Noted."
+	},
+	"q4_comun_d1": {
+		"es": "Juan dice que no participa, que está «en llamada». ¿Tú qué opinas, {agente}? Dilo fuerte.",
+		"en": "Juan says he's not taking part, that he's \"on a call\". What do you think, {agente}? Say it loud."
+	},
+	"q4_comun_d1_seguir": {
+		"es": "¡Exacto! Como todos. Juan, ven. Juan… lo anoto a él, entonces. J, U, A, N.",
+		"en": "Exactly! Like everyone. Juan, come. Juan… I'll note him, then. J, U, A, N."
+	},
+	"q4_comun_d1_excusa": {
+		"es": "En llamada. Revisé Fonex: no está en llamada. Lo anoto. A él. Y a ti, por creerle.",
+		"en": "On a call. I checked Fonex: he's not on a call. I'm noting it. Him. And you, for believing him."
+	},
+	"q4_comun_d1_burla": {
+		"es": "Tú tampoco. Ajá. Pero estás aquí. Eso es participar. Lo anoto igual.",
+		"en": "You either. Uh-huh. But you're here. That's taking part. I'm noting it anyway."
+	},
+	"q4_timeout": {
+		"es": "¿Nada? ¿Te quedaste callado? El silencio también es una respuesta. La anoto.",
+		"en": "Nothing? Gone quiet? Silence is an answer too. I'm noting it."
+	},
+	"q4_anotado_1": {
+		"es": "Llevas una anotación, {agente}. Una. No pasa nada. Todavía.",
+		"en": "You've got one note, {agente}. One. It's nothing. Yet."
+	},
+	"q4_anotado_2": {
+		"es": "Dos anotaciones en un solo evento. Eso ya es una advertencia. Lo siento. No lo siento.",
+		"en": "Two notes in a single event. That's a warning now. I'm sorry. I'm not sorry."
+	},
+	"q4_juan_anotado": {
+		"es": "Y para el acta: Juan no participó. Lo digo en voz alta para que quede grabado. Juan. No. Participó.",
+		"en": "And for the record: Juan didn't take part. I'm saying it aloud so it gets recorded. Juan. Did not. Take part."
+	},
+	"q4_dormido": {
+		"es": "Ttoom… ¿Ttoom? Se durmió de pie. Eso es compromiso. Lo anoto como compromiso.",
+		"en": "Ttoom… Ttoom? He fell asleep standing up. That's commitment. I'm noting it as commitment."
+	},
+	"q4_grupo_bien": {
+		"es": "Qué buen ambiente hay hoy. Se ríen bajito. Me gusta. Me preocupa, pero me gusta.",
+		"en": "What a good vibe today. You laugh quietly. I like it. It worries me, but I like it."
+	},
+	"q4_grupo_mal": {
+		"es": "Qué caras. Sonrían. Sonrían, que no les cuesta nada. Bueno, les cuesta.",
+		"en": "Those faces. Smile. Smile, it costs you nothing. Well, it costs you."
+	},
+	"advertencia_anotado": {
+		"es": "Te burlaste, pusiste excusas, te callaste. Todo anotado. Primera advertencia. Sigue participando.",
+		"en": "You mocked, made excuses, went quiet. All noted. First warning. Keep taking part."
+	}
+}

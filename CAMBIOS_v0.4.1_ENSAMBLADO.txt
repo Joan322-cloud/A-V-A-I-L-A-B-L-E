@@ -1,0 +1,36 @@
+A V A I L A B L E v0.4.1 FINAL — Ensamblado y verificado (18-nov-2026)
+=====================================================================
+
+Motor: Godot 4.7.2-stable (editor + plantillas oficiales).
+Partes unidas: Parte1 (código/3D/caché) + Parte2 (audio/SFX/voces2) + Parte3 (voces1).
+El paquete "Solo_Codigo_y_Datos" era idéntico a lo que trae la Parte1 (sin diferencias).
+
+Correcciones aplicadas (necesarias para que --check-all pase con 0 errores):
+
+1) scripts/niveles/floor_09.gd  (Sábado: batalla con GRASA en la Azotea)
+   - Error de parseo: "Cannot infer the type of 'sr'". Además, P5Actor NO tiene propiedad
+     "rig", así que el script no cargaba y el piso 9 quedaba roto.
+   - Fix: el ScreamRig se engancha directo al modelo del actor
+     (ScreamRig.attach(grasa_actor.model, "grasa")), manteniendo los mismos valores:
+     deform inicial 0.42, gore 0.85, tremor 1.8, deformación según distancia y mirada fija al jugador.
+
+2) data/muertes.json
+   - Faltaba la causa "grasa_azotea" (sí existía en screamers.json). Agregada con asesino
+     "grasa" y motivo ES/EN.
+
+3) export_presets.cfg
+   - custom_template/debug y /release tenían marcadores (__TEMPLATE_WINDOWS_RELEASE__, etc.)
+     que hacían fallar la exportación. Se dejaron vacíos => Godot usa sus plantillas oficiales
+     4.7.2 instaladas (Editor > Manage Export Templates).
+
+Resultado de la auditoría:
+   check_all: 276 archivos revisados, 0 errores
+   26 causas de muerte (34 pares causa/asesino) todas en muertes.json con screamer
+   Regla de nombres: 0 problemas · 55 JSON válidos · arranque headless sin errores
+
+Calibración v0.4.1: sin cambios (165x / 18x / 10x / 8.5x / 45x / 5.5x; Haime 10 min, piso 55 s).
+
+Pendiente antes de Steam:
+   - DEV_TOOLS_ENABLED sigue en true en scripts/autoload/game_state.gd (cámbialo a false).
+   - Carpeta asr/ (reconocimiento de voz Vosk): el sidecar tools/asr_sidecar/ no venía en
+     los paquetes, así que el .exe no la incluye.

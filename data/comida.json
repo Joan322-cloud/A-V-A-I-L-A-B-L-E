@@ -1,0 +1,17 @@
+{
+	"_comentario": "AVAILABLE v0.3.1 · Q4 (F15, D4, D5): el taper es la única comida gratis; lo traes en la mochila. Se deja en cualquier refri (-1 o piso 2) antes de que pasen 'se_malogra_tras_h' horas de turno (si no, se echa a perder); en el lunch se saca, se calienta 'calentar_s_juego' en uno de los microondas de la cafetería del -1 (2 filas de 3 + lavadero; uno fuera de servicio y otros ocupados por tapers ajenos) y se come en una mesa: Fatiga 'fatiga', 'energia_s_real' segundos reales sin desenfoque ni microsueños y aliento x'aliento_x' hasta el fin del lunch. Animaciones en primera persona: scripts/jugador/manos_fx.gd. Lógica: scripts/mundo/world_objects.gd (Locker, Fridge, Microwave, EatSpot, TaperFlow).",
+	"taper": {
+		"fatiga": -20.0,
+		"energia_s_real": 180.0,
+		"aliento_x": 1.5,
+		"calentar_s_juego": 60.0,
+		"se_malogra_tras_h": 4.0,
+		"fatiga_malogrado": 0.0
+	},
+	"microondas": {
+		"fuera_de_servicio": [2],
+		"ocupados": [0, 3, 5],
+		"ocupado_s_juego": [30.0, 110.0],
+		"etiquetas_ajenas": ["C-13", "MARLENY", "E-07", "NO TOCAR", "C-13"]
+	}
+}

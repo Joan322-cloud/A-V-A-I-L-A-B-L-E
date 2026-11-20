@@ -1,0 +1,957 @@
+{
+	"_comentario": "AVAILABLE v0.3 P6b · Manual del agente (glosario + reglas) y tooltips de primera vez. 'plan': los 16 términos de PLAN §2 #84 (+ Available %, hold, tipificación, partner). Lo usan ui/agent_manual.gd (pausa), Campus → Manual (ui/pc/campus.gd) y ui/agent_tips.gd.",
+	"categorias": {
+		"aux": {
+			"es": "AUX y métricas",
+			"en": "AUX and metrics"
+		},
+		"metricas": {
+			"es": "Métricas",
+			"en": "Metrics"
+		},
+		"casos": {
+			"es": "Contactos y casos",
+			"en": "Contacts and cases"
+		},
+		"ezlak": {
+			"es": "Ezlaki",
+			"en": "Ezlaki"
+		},
+		"jefes": {
+			"es": "Jefes y escalera",
+			"en": "Bosses and the ladder"
+		},
+		"pc": {
+			"es": "Programas de la PC",
+			"en": "PC programs"
+		},
+		"turno": {
+			"es": "Turno y partidas",
+			"en": "Shift and saves"
+		}
+	},
+	"terminos": [
+		{
+			"id": "aux",
+			"cat": "aux",
+			"termino": {
+				"es": "AUX",
+				"en": "AUX"
+			},
+			"def": {
+				"es": "Tu estado en Fonex: le dice al sistema qué estás haciendo. Hay siete: Available, BO, Break, Lunch, Baño, Coaching y Training. Se cambia con [Q] y las teclas 1-7.",
+				"en": "Your status in Fonex: it tells the system what you're doing. There are seven: Available, BO, Break, Lunch, Bathroom, Coaching and Training. Change it with [Q] and keys 1-7."
+			},
+			"plan": true
+		},
+		{
+			"id": "available",
+			"cat": "aux",
+			"termino": {
+				"es": "Available",
+				"en": "Available"
+			},
+			"def": {
+				"es": "AUX «disponible»: te entran llamadas, chats y correos. Es lo que la empresa quiere que estés casi siempre.",
+				"en": "\"Ready\" AUX: calls, chats and emails come in. It's what the company wants you to be almost all the time."
+			},
+			"plan": false
+		},
+		{
+			"id": "available_pct",
+			"cat": "aux",
+			"termino": {
+				"es": "Available %",
+				"en": "Available %"
+			},
+			"def": {
+				"es": "Tiempo en Available ÷ (Available + BO). Sube en Available, baja en BO y se congela en el resto. El target es 70 %; el Mentor lo publica cada 90 min y Shero solo se entera por esa lista.",
+				"en": "Time in Available ÷ (Available + BO). It rises in Available, drops in BO and freezes otherwise. Target is 70 %; the Mentor posts it every 90 min and Shero only learns it from that list."
+			},
+			"plan": true
+		},
+		{
+			"id": "bo",
+			"cat": "aux",
+			"termino": {
+				"es": "BO (back office)",
+				"en": "BO (back office)"
+			},
+			"def": {
+				"es": "AUX de trabajo interno (los KYC). Solo se pone cuando el RTA o el Mentor te lo piden (allocation) o en el evento de Rasec. Baja tu Available %.",
+				"en": "Internal-work AUX (KYCs). Only set it when the RTA or the Mentor asks (allocation) or for Rasec's event. It lowers your Available %."
+			},
+			"plan": true
+		},
+		{
+			"id": "break",
+			"cat": "aux",
+			"termino": {
+				"es": "Break",
+				"en": "Break"
+			},
+			"def": {
+				"es": "Descanso: 2 por turno, de 10 min de juego cada uno. Te deja salir de la sala a cualquier piso. El 3.º te mata; pasarte de 10 min escala.",
+				"en": "Rest: 2 per shift, 10 game minutes each. It lets you leave the room to any floor. The 3rd kills you; going over 10 min escalates."
+			},
+			"plan": false
+		},
+		{
+			"id": "lunch",
+			"cat": "aux",
+			"termino": {
+				"es": "Lunch",
+				"en": "Lunch"
+			},
+			"def": {
+				"es": "Almuerzo de 45 min a la hora del turno (T1 04:00, T2 03:45, T3 04:20). Puedes comer en la cafetería del -1 o en la azotea. Pasarte escala.",
+				"en": "45-min meal at the shift's time (S1 04:00, S2 03:45, S3 04:20). You can eat in the -1 cafeteria or on the rooftop. Going over escalates."
+			},
+			"plan": false
+		},
+		{
+			"id": "bano",
+			"cat": "aux",
+			"termino": {
+				"es": "Baño",
+				"en": "Bathroom"
+			},
+			"def": {
+				"es": "AUX para ir al baño: te deja salir de la sala, con un cupo de tiempo que vigila el RTA.",
+				"en": "AUX to go to the bathroom: lets you leave the room, with a time allowance the RTA watches."
+			},
+			"plan": false
+		},
+		{
+			"id": "coaching",
+			"cat": "aux",
+			"termino": {
+				"es": "Coaching",
+				"en": "Coaching"
+			},
+			"def": {
+				"es": "Reunión con un jefe. Solo si te convoca Shero, un TM (Rasec) o la QA (Haime). Sin permiso, o quedarte después de la sesión, te lo cobra Rasec.",
+				"en": "Meeting with a boss. Only if Shero, a TM (Rasec) or the QA (Haime) calls you. Without permission, or staying after the session, Rasec makes you pay."
+			},
+			"plan": false
+		},
+		{
+			"id": "training",
+			"cat": "aux",
+			"termino": {
+				"es": "Training",
+				"en": "Training"
+			},
+			"def": {
+				"es": "Capacitación en el piso 1 a la hora que dice el Trainer (T2 02:20, T3 01:40), con un quiz al final. Solo cuando te convocan.",
+				"en": "Training on floor 1 at the time the Trainer says (S2 02:20, S3 01:40), with a quiz at the end. Only when you're called."
+			},
+			"plan": false
+		},
+		{
+			"id": "aht",
+			"cat": "metricas",
+			"termino": {
+				"es": "AHT",
+				"en": "AHT"
+			},
+			"def": {
+				"es": "Average Handling Time: lo que tardas en promedio por contacto. Fonex lo pinta verde, amarillo o rojo.",
+				"en": "Average Handling Time: how long you take per contact on average. Fonex shows it green, yellow or red."
+			},
+			"plan": true
+		},
+		{
+			"id": "csat",
+			"cat": "metricas",
+			"termino": {
+				"es": "CSAT",
+				"en": "CSAT"
+			},
+			"def": {
+				"es": "Customer Satisfaction: nota del cliente al terminar, de 1 (molesto) a 5 (satisfecho). Tres molestos seguidos son peligrosos.",
+				"en": "Customer Satisfaction: the customer's score at the end, from 1 (angry) to 5 (satisfied). Three angry in a row are dangerous."
+			},
+			"plan": true
+		},
+		{
+			"id": "adherencia",
+			"cat": "metricas",
+			"termino": {
+				"es": "Adherencia",
+				"en": "Adherence"
+			},
+			"def": {
+				"es": "Estar en el AUX que te toca a la hora que te toca. La vigila el Perrito RTA.",
+				"en": "Being in the AUX you should be in at the right time. Perrito RTA watches it."
+			},
+			"plan": false
+		},
+		{
+			"id": "contacto",
+			"cat": "casos",
+			"termino": {
+				"es": "Contacto",
+				"en": "Contact"
+			},
+			"def": {
+				"es": "Cualquier cosa que atiendes: llamada, chat, correo o KYC.",
+				"en": "Anything you handle: call, chat, email or KYC."
+			},
+			"plan": false
+		},
+		{
+			"id": "llamada_perdida",
+			"cat": "casos",
+			"termino": {
+				"es": "Llamada perdida (missed contact)",
+				"en": "Missed call (missed contact)"
+			},
+			"def": {
+				"es": "Una llamada o chat que sonó y no tomaste (de pie, lejos, distraído). Shero las cuenta: a la 4.ª te persigue. Los casos de BO no se pierden.",
+				"en": "A call or chat that rang and you didn't take (standing, away, distracted). Shero counts them: at the 4th he chases you. BO cases are never lost."
+			},
+			"plan": false
+		},
+		{
+			"id": "hold",
+			"cat": "casos",
+			"termino": {
+				"es": "Hold",
+				"en": "Hold"
+			},
+			"def": {
+				"es": "Poner al cliente en espera con música ([H]). Si te levantas en una llamada sin hold, el cliente cuelga molesto.",
+				"en": "Putting the customer on hold with music ([H]). If you stand up during a call without hold, the customer hangs up angry."
+			},
+			"plan": true
+		},
+		{
+			"id": "tipificacion",
+			"cat": "casos",
+			"termino": {
+				"es": "Tipificación",
+				"en": "Categorization"
+			},
+			"def": {
+				"es": "Etiquetar un caso con lo que hiciste (POD solicitado, status informado…) antes de cerrarlo. Tipificar mal es un error de QA.",
+				"en": "Labeling a case with what you did (POD requested, status reported…) before closing it. A wrong label is a QA error."
+			},
+			"plan": true
+		},
+		{
+			"id": "caso_bo",
+			"cat": "casos",
+			"termino": {
+				"es": "Caso de BO",
+				"en": "BO case"
+			},
+			"def": {
+				"es": "Correo, caso de Vitzo o KYC: trabajo con pasos. Tiene 10 min de juego (60 s reales); pasarte escala con Shero.",
+				"en": "Email, Vitzo case or KYC: work with steps. It has 10 game minutes (60 real seconds); going over escalates with Shero."
+			},
+			"plan": false
+		},
+		{
+			"id": "kyc",
+			"cat": "casos",
+			"termino": {
+				"es": "KYC",
+				"en": "KYC"
+			},
+			"def": {
+				"es": "Know Your Customer: comprobar que el cliente es quien dice ser (documento, selfie, región) antes de dejarlo seguir enviando. Solo llega en BO, en la app Identa.",
+				"en": "Know Your Customer: checking the customer is who they claim to be (ID, selfie, region) before letting them keep sending. Only arrives in BO, in the Identa app."
+			},
+			"plan": true
+		},
+		{
+			"id": "everif",
+			"cat": "casos",
+			"termino": {
+				"es": "E-verificación",
+				"en": "E-verification"
+			},
+			"def": {
+				"es": "Chequeo automático de datos (nombre, documento, fecha). Si falla, toca revisión documental según la región.",
+				"en": "Automatic data check (name, ID, date). If it fails, document review applies depending on the region."
+			},
+			"plan": false
+		},
+		{
+			"id": "recheck",
+			"cat": "casos",
+			"termino": {
+				"es": "KYC Recheck",
+				"en": "KYC Recheck"
+			},
+			"def": {
+				"es": "Si después de aprobado cambian el nombre, la fecha de nacimiento o la dirección, hay que revisarlo primero.",
+				"en": "If the name, date of birth or address change after approval, it must be checked first."
+			},
+			"plan": false
+		},
+		{
+			"id": "reforzada",
+			"cat": "casos",
+			"termino": {
+				"es": "Revisión reforzada",
+				"en": "Enhanced review"
+			},
+			"def": {
+				"es": "Etiqueta de KYC: solo Cumplimiento puede cambiar el estado. Tu acción correcta es Escalar.",
+				"en": "KYC tag: only Compliance can change the status. Your correct action is Escalate."
+			},
+			"plan": false
+		},
+		{
+			"id": "regiones",
+			"cat": "casos",
+			"termino": {
+				"es": "Regiones (Norvalia, Valdesia, Islas Taren)",
+				"en": "Regions (Norvalia, Valdesia, Taren Islands)"
+			},
+			"def": {
+				"es": "Norvalia: KYC completo antes de 1.500 KP. Valdesia: nombre + documento por e-verificación; si falla, revisión documental desde 600 KP o el 4.º envío. Islas Taren: revisión documental antes del primer envío, nombre letra por letra.",
+				"en": "Norvalia: full KYC before 1,500 KP. Valdesia: name + ID via e-verification; if it fails, document review from 600 KP or the 4th transfer. Taren Islands: document review before the first transfer, name letter by letter."
+			},
+			"plan": false
+		},
+		{
+			"id": "kp",
+			"cat": "casos",
+			"termino": {
+				"es": "KP",
+				"en": "KP"
+			},
+			"def": {
+				"es": "La moneda de las cuentas de KipuPay (inventada). Los montos de Kardex y los umbrales de KYC van en KP.",
+				"en": "The (made-up) currency of KipuPay accounts. Kardex amounts and KYC thresholds are in KP."
+			},
+			"plan": false
+		},
+		{
+			"id": "partner",
+			"cat": "casos",
+			"termino": {
+				"es": "Partner",
+				"en": "Partner"
+			},
+			"def": {
+				"es": "La empresa que paga el envío del otro lado (Banco Andino, Caja Mirador, RemesaYa, Vitzo). Kardex dice cuál es. A los partners normales se les escribe un correo; a Vitzo, jamás.",
+				"en": "The company that pays out the transfer on the other side (Banco Andino, Caja Mirador, RemesaYa, Vitzo). Kardex says which. You email regular partners; Vitzo, never."
+			},
+			"plan": true
+		},
+		{
+			"id": "pod",
+			"cat": "casos",
+			"termino": {
+				"es": "POD",
+				"en": "POD"
+			},
+			"def": {
+				"es": "Proof of Delivery: comprobante de que el dinero se entregó. Se le PIDE al partner por correo (no se adjunta nada: todavía no lo tienes). Con Vitzo no se pide: se descarga del Portal Vitzo y se adjunta en la respuesta a quien lo pidió.",
+				"en": "Proof of Delivery: proof the money was delivered. You REQUEST it from the partner by email (nothing to attach: you don't have it yet). With Vitzo you don't request it: download it from the Vitzo Portal and attach it to your reply to whoever asked."
+			},
+			"plan": true
+		},
+		{
+			"id": "reversal",
+			"cat": "casos",
+			"termino": {
+				"es": "Reversal",
+				"en": "Reversal"
+			},
+			"def": {
+				"es": "Pedir que un envío se revierta (devuelva). Con un partner normal, por correo; con Vitzo, en el formulario del portal.",
+				"en": "Asking for a transfer to be reversed (returned). With a regular partner, by email; with Vitzo, in the portal form."
+			},
+			"plan": true
+		},
+		{
+			"id": "status",
+			"cat": "casos",
+			"termino": {
+				"es": "Status",
+				"en": "Status"
+			},
+			"def": {
+				"es": "Estado de un envío (recibido, liberado, depositado, en revisión, revertido). Con Vitzo se consulta en el portal y al cliente se le responde por correo.",
+				"en": "Status of a transfer (received, released, deposited, under review, reversed). With Vitzo you check it in the portal and reply to the customer by email."
+			},
+			"plan": false
+		},
+		{
+			"id": "wmm",
+			"cat": "casos",
+			"termino": {
+				"es": "WMM",
+				"en": "WMM"
+			},
+			"def": {
+				"es": "Where's My Money: el cliente que llama o escribe «¿dónde está mi plata?». Si el partner es Vitzo, la respuesta está en el portal; pedírsela a Vitzo por correo es mortal.",
+				"en": "Where's My Money: the customer calling or writing \"where's my money?\". If the partner is Vitzo, the answer is in the portal; asking Vitzo by email is deadly."
+			},
+			"plan": true
+		},
+		{
+			"id": "ezlak",
+			"cat": "ezlak",
+			"termino": {
+				"es": "Ezlaki",
+				"en": "Ezlaki"
+			},
+			"def": {
+				"es": "El chat de la empresa: #allocations, #site-updates, #team-familia y tus DMs, con respuestas rápidas, reacciones y Rooms.",
+				"en": "The company chat: #allocations, #site-updates, #team-familia and your DMs, with quick replies, reactions and Rooms."
+			},
+			"plan": false
+		},
+		{
+			"id": "rooms",
+			"cat": "ezlak",
+			"termino": {
+				"es": "Ezlaki Rooms",
+				"en": "Ezlaki Rooms"
+			},
+			"def": {
+				"es": "Videollamadas de coaching o feedback. Si te convocan, te unes con el botón «Unirse»; no ir escala.",
+				"en": "Coaching or feedback video calls. If you're called, join with the \"Join\" button; not going escalates."
+			},
+			"plan": false
+		},
+		{
+			"id": "llamado",
+			"cat": "jefes",
+			"termino": {
+				"es": "Llamado",
+				"en": "Call-out"
+			},
+			"def": {
+				"es": "1.er escalón de Shero: te escribe (DM o canal).",
+				"en": "Shero's 1st step: he writes to you (DM or channel)."
+			},
+			"plan": false
+		},
+		{
+			"id": "verbal",
+			"cat": "jefes",
+			"termino": {
+				"es": "Verbal warning",
+				"en": "Verbal warning"
+			},
+			"def": {
+				"es": "2.º escalón: te habla en persona o por los parlantes. Dos verbales hacen un WW.",
+				"en": "2nd step: he talks to you in person or over the speakers. Two verbals make a WW."
+			},
+			"plan": false
+		},
+		{
+			"id": "ww",
+			"cat": "jefes",
+			"termino": {
+				"es": "WW (written warning)",
+				"en": "WW (written warning)"
+			},
+			"def": {
+				"es": "3.er escalón: advertencia escrita con copia a los OM. Hay que darle Ack. Tres WW = despido. Cada WW se descuenta del sueldo.",
+				"en": "3rd step: written warning copied to the OMs. You must Ack it. Three WWs = fired. Each WW is deducted from your pay."
+			},
+			"plan": true
+		},
+		{
+			"id": "ack",
+			"cat": "jefes",
+			"termino": {
+				"es": "Ack",
+				"en": "Ack"
+			},
+			"def": {
+				"es": "Acknowledge: confirmar que leíste el WW (botón Ack, [Espacio] o la respuesta rápida). En una PC de la sala tienes 8 s; lejos, 60 s (90 desde otro piso) para llegar a uno. Sin Ack, Shero te persigue.",
+				"en": "Acknowledge: confirming you read the WW (Ack button, [Space] or the quick reply). At a PC in the room you have 8 s; away, 60 s (90 from another floor) to reach one. Without Ack, Shero chases you."
+			},
+			"plan": true
+		},
+		{
+			"id": "persecucion",
+			"cat": "jefes",
+			"termino": {
+				"es": "Persecución (amonestación)",
+				"en": "Chase (reprimand)"
+			},
+			"def": {
+				"es": "4.º escalón: el jefe te busca por todo el edificio con la amonestación impresa. Volver a tu sitio no la detiene.",
+				"en": "4th step: the boss hunts you across the building with the printed reprimand. Going back to your seat doesn't stop it."
+			},
+			"plan": false
+		},
+		{
+			"id": "allocation",
+			"cat": "jefes",
+			"termino": {
+				"es": "Allocation",
+				"en": "Allocation"
+			},
+			"def": {
+				"es": "Asignación de tiempo a un AUX (por ejemplo, 20 min de BO) que publica el Mentor y ordena el RTA. También la lista de allocations con el Available % de todos.",
+				"en": "Time assigned to an AUX (for example, 20 min of BO) that the Mentor posts and the RTA orders. Also the allocations list with everyone's Available %."
+			},
+			"plan": true
+		},
+		{
+			"id": "isla",
+			"cat": "jefes",
+			"termino": {
+				"es": "Isla",
+				"en": "Island"
+			},
+			"def": {
+				"es": "Grupo de puestos de un equipo. La tuya es la de Shero (fila C, tu C-14). Quedarte sentado mucho en otra isla escala.",
+				"en": "A team's group of desks. Yours is Shero's (row C, your C-14). Sitting a long time at another island escalates."
+			},
+			"plan": true
+		},
+		{
+			"id": "tm",
+			"cat": "jefes",
+			"termino": {
+				"es": "TM",
+				"en": "TM"
+			},
+			"def": {
+				"es": "Team Manager: jefe de un equipo. Shero es el tuyo; Rasec es el TM de otro equipo (coaching y mini eventos).",
+				"en": "Team Manager: a team's boss. Shero is yours; Rasec is another team's TM (coaching and mini events)."
+			},
+			"plan": true
+		},
+		{
+			"id": "qa",
+			"cat": "jefes",
+			"termino": {
+				"es": "QA",
+				"en": "QA"
+			},
+			"def": {
+				"es": "Quality Assurance: quien escucha y califica tus contactos. Haime te llama a feedback si uno sale mal; el 3.º del turno es el último.",
+				"en": "Quality Assurance: who listens to and grades your contacts. Haime calls you to feedback if one goes badly; the 3rd in a shift is the last."
+			},
+			"plan": true
+		},
+		{
+			"id": "om",
+			"cat": "jefes",
+			"termino": {
+				"es": "OM",
+				"en": "OM"
+			},
+			"def": {
+				"es": "Operations Manager: los jefes de los jefes. Reciben copia de cada WW y escriben comunicados en #site-updates.",
+				"en": "Operations Manager: the bosses' bosses. They get a copy of every WW and post notices in #site-updates."
+			},
+			"plan": true
+		},
+		{
+			"id": "rta",
+			"cat": "jefes",
+			"termino": {
+				"es": "RTA",
+				"en": "RTA"
+			},
+			"def": {
+				"es": "Real Time Analyst: controla en tiempo real que cada uno esté en su AUX. Aquí es el Perrito RTA: ordena en #allocations, taguea y al tercer tag caza.",
+				"en": "Real Time Analyst: checks in real time that everyone is in their AUX. Here it's Perrito RTA: orders in #allocations, tags you and hunts at the third tag."
+			},
+			"plan": true
+		},
+		{
+			"id": "mentor",
+			"cat": "jefes",
+			"termino": {
+				"es": "Mentor",
+				"en": "Mentor"
+			},
+			"def": {
+				"es": "Compañero «modelo» de tu equipo: publica la lista de allocations, las asignaciones a BO y minitrainings en Campus.",
+				"en": "Your team's \"model\" coworker: posts the allocations list, BO assignments and minitrainings in Campus."
+			},
+			"plan": false
+		},
+		{
+			"id": "feedback",
+			"cat": "jefes",
+			"termino": {
+				"es": "Feedback",
+				"en": "Feedback"
+			},
+			"def": {
+				"es": "Sesión con la QA en la sala de calibración (piso 2) sobre un contacto tuyo. Si te llama y no llegas a tiempo (la cuenta atrás sale en pantalla)…",
+				"en": "Session with the QA in the calibration room (floor 2) about one of your contacts. If she calls and you don't arrive in time (the countdown is on screen)…"
+			},
+			"plan": false
+		},
+		{
+			"id": "topico",
+			"cat": "jefes",
+			"termino": {
+				"es": "Tópico",
+				"en": "Infirmary"
+			},
+			"def": {
+				"es": "Enfermería del piso 1 (desde el T2). Se pide permiso a Shero con «Me siento mal», una vez por turno.",
+				"en": "Floor 1 infirmary (from S2). You ask Shero with \"I feel sick\", once per shift."
+			},
+			"plan": false
+		},
+		{
+			"id": "fonex",
+			"cat": "pc",
+			"termino": {
+				"es": "Fonex",
+				"en": "Fonex"
+			},
+			"def": {
+				"es": "El softphone: sesión, AUX, contacto entrante, KPI (Available, AHT, WW, Breaks, Feedback QA).",
+				"en": "The softphone: session, AUX, incoming contact, KPIs (Available, AHT, WW, Breaks, QA feedback)."
+			},
+			"plan": false
+		},
+		{
+			"id": "kardex",
+			"cat": "pc",
+			"termino": {
+				"es": "Kardex",
+				"en": "Kardex"
+			},
+			"def": {
+				"es": "El CRM: datos del cliente y de cada operación KP-… (partner, monto, fecha, estado, notas).",
+				"en": "The CRM: customer data and each KP-… transaction (partner, amount, date, status, notes)."
+			},
+			"plan": false
+		},
+		{
+			"id": "identa",
+			"cat": "pc",
+			"termino": {
+				"es": "Identa",
+				"en": "Identa"
+			},
+			"def": {
+				"es": "App de KYC: perfil, región, total en KP, e-verificación, documentos, selfie y las acciones.",
+				"en": "KYC app: profile, region, KP total, e-verification, documents, selfie and the actions."
+			},
+			"plan": false
+		},
+		{
+			"id": "portal_vitzo",
+			"cat": "pc",
+			"termino": {
+				"es": "Portal Vitzo",
+				"en": "Vitzo Portal"
+			},
+			"def": {
+				"es": "Donde se hace TODO con Vitzo: estado, POD, reversal y contacto partner. Nunca por correo.",
+				"en": "Where you do EVERYTHING with Vitzo: status, POD, reversal and partner contact. Never by email."
+			},
+			"plan": false
+		},
+		{
+			"id": "campus",
+			"cat": "pc",
+			"termino": {
+				"es": "Campus",
+				"en": "Campus"
+			},
+			"def": {
+				"es": "App de minitrainings del Mentor y guías de la campaña (también este Manual).",
+				"en": "App with the Mentor's minitrainings and campaign guides (this Manual too)."
+			},
+			"plan": false
+		},
+		{
+			"id": "siguiente_paso",
+			"cat": "pc",
+			"termino": {
+				"es": "Siguiente paso",
+				"en": "Next step"
+			},
+			"def": {
+				"es": "Panel verde de la PC que te dice qué hacer ahora con el contacto o caso abierto.",
+				"en": "Green PC panel telling you what to do now with the open contact or case."
+			},
+			"plan": false
+		},
+		{
+			"id": "sala",
+			"cat": "turno",
+			"termino": {
+				"es": "Sala de PCs",
+				"en": "PC room"
+			},
+			"def": {
+				"es": "Donde trabajas (piso 2). De pie dentro es libre; salir sin Break, Lunch, Baño o una convocatoria es abandono.",
+				"en": "Where you work (floor 2). Standing inside is fine; leaving without Break, Lunch, Bathroom or being called is abandonment."
+			},
+			"plan": false
+		},
+		{
+			"id": "fatiga",
+			"cat": "turno",
+			"termino": {
+				"es": "Fatiga",
+				"en": "Fatigue"
+			},
+			"def": {
+				"es": "Cansancio que sube con las horas y los sustos. No hay barra: se nota en la vista. Baja con agua, frotarte los ojos ([R]) y, sobre todo, durmiendo en el -1. A 100: colapso.",
+				"en": "Tiredness that rises with the hours and scares. No bar: you see it. It goes down with water, rubbing your eyes ([R]) and above all sleeping on -1. At 100: collapse."
+			},
+			"plan": false
+		},
+		{
+			"id": "colapso",
+			"cat": "turno",
+			"termino": {
+				"es": "Colapso",
+				"en": "Collapse"
+			},
+			"def": {
+				"es": "Muerte por Fatiga 100, sin screamer. Al reconectar despiertas con Fatiga 60.",
+				"en": "Death by Fatigue 100, no screamer. When you reconnect you wake with Fatigue 60."
+			},
+			"plan": false
+		},
+		{
+			"id": "checkpoint",
+			"cat": "turno",
+			"termino": {
+				"es": "Checkpoint",
+				"en": "Checkpoint"
+			},
+			"def": {
+				"es": "Punto de guardado automático (login, contactos, break, lunch, según la dificultad). Al morir vuelves al último.",
+				"en": "Automatic save point (login, contacts, break, lunch, depending on difficulty). When you die you return to the last one."
+			},
+			"plan": false
+		},
+		{
+			"id": "turno_real",
+			"cat": "turno",
+			"termino": {
+				"es": "Turno real",
+				"en": "Real shift"
+			},
+			"def": {
+				"es": "Modo Difícil sin checkpoints: si mueres, el turno empieza de nuevo desde tu casillero (23:48).",
+				"en": "Hard mode with no checkpoints: if you die, the shift starts again from your locker (11:48 PM)."
+			},
+			"plan": false
+		},
+		{
+			"id": "rama",
+			"cat": "turno",
+			"termino": {
+				"es": "Elegir turno (rama)",
+				"en": "Choose shift (branch)"
+			},
+			"def": {
+				"es": "Rejugar un turno que ya alcanzaste sin tocar tu partida, salvo que al final elijas «Seguir desde aquí». Los finales vistos quedan para siempre.",
+				"en": "Replaying a shift you already reached without touching your save, unless you choose \"Continue from here\" at the end. Endings seen stay forever."
+			},
+			"plan": false
+		}
+	],
+	"reglas": [
+		{
+			"id": "turno",
+			"titulo": {
+				"es": "El turno",
+				"en": "The shift"
+			},
+			"texto": {
+				"es": "De 00:00 a 08:45 (unos 27 min reales). Llegas a las 23:48, pasas la revisión de Don Fermín, subes al piso 2, te sientas en C-14 e inicias sesión. Al final, «Marcar salida».",
+				"en": "From 00:00 to 08:45 (about 27 real minutes). You arrive at 23:48, pass Don Fermín's check, go up to floor 2, sit at C-14 and log in. At the end, \"Clock out\"."
+			}
+		},
+		{
+			"id": "aux",
+			"titulo": {
+				"es": "AUX y Available %",
+				"en": "AUX and Available %"
+			},
+			"texto": {
+				"es": "Available casi siempre. BO solo cuando te lo asignan. Available % = Available ÷ (Available + BO), target 70 %; la lista del Mentor cada 90 min es lo único que ve Shero: 1.ª vez bajo 70 % verbal, 2.ª WW, 3.ª persecución.",
+				"en": "Available almost always. BO only when assigned. Available % = Available ÷ (Available + BO), target 70 %; the Mentor's list every 90 min is all Shero sees: 1st time under 70 % verbal, 2nd WW, 3rd chase."
+			}
+		},
+		{
+			"id": "sala",
+			"titulo": {
+				"es": "Salir de la sala",
+				"en": "Leaving the room"
+			},
+			"texto": {
+				"es": "Te autorizan a salir: Break, Lunch y Baño (todo el edificio); Coaching si te convocan (Shero, Rasec o Haime: a esa sala); Training (piso 1); el permiso del tópico; el evento de Rasec. Sin eso: llamado 1:00, verbal 4:00, WW 5:30, persecución 7:00.",
+				"en": "You may leave with: Break, Lunch and Bathroom (whole building); Coaching if called (Shero, Rasec or Haime: to that room); Training (floor 1); the infirmary permit; Rasec's event. Otherwise: call-out 1:00, verbal 4:00, WW 5:30, chase 7:00."
+			}
+		},
+		{
+			"id": "breaks",
+			"titulo": {
+				"es": "Breaks y lunch",
+				"en": "Breaks and lunch"
+			},
+			"texto": {
+				"es": "2 breaks de 10 min (el 3.º mata; con el comodín vale 10 min). Lunch de 45 min a su hora. Si te pasas: llamado, verbal, WW y Shero sale; cada exceso deja una marca y el margen baja. En el lunch, dormido en un sofá o puff del -1 Shero te perdona una vez (WW en vez de muerte).",
+				"en": "2 breaks of 10 min (the 3rd kills; with the lifeline it lasts 10 min). Lunch of 45 min at its time. If you go over: call, verbal, WW and Shero leaves; each excess leaves a mark and the margin shrinks. During lunch, asleep on a -1 sofa or pouf, Shero spares you once (WW instead of death)."
+			}
+		},
+		{
+			"id": "casos",
+			"titulo": {
+				"es": "Correos y casos",
+				"en": "Emails and cases"
+			},
+			"texto": {
+				"es": "Kardex → destinatario (el partner pagador) → plantilla → 3 campos con datos de Kardex → enviar → tipificar → cerrar. Sin adjuntos: si piden un POD, se lo pides al partner (plantilla «POD» o «POD request») y tipificas «POD solicitado al partner». 10 min de juego por caso (llamado 10, verbal 13, WW 16, persecución 19).",
+				"en": "Kardex → recipient (the paying partner) → template → 3 fields with Kardex data → send → categorize → close. No attachments: if a POD is requested, you ask the partner for it («POD» or «POD request» template) and categorize «POD requested from partner». 10 game minutes per case (call-out 10, verbal 13, WW 16, chase 19)."
+			}
+		},
+		{
+			"id": "vitzo",
+			"titulo": {
+				"es": "Vitzo",
+				"en": "Vitzo"
+			},
+			"texto": {
+				"es": "Si el partner es Vitzo: solo el Portal Vitzo (estado, POD, reversal, contacto partner). El POD se descarga ahí y se adjunta en la respuesta a quien lo pidió (plantilla «POD», tipificación «POD enviado al solicitante»). Un correo a Vitzo, por la razón que sea, mata. Al cliente sí se le responde por correo. Su recordatorio de madrugada hay que reaccionarlo a tiempo.",
+				"en": "If the partner is Vitzo: only the Vitzo Portal (status, POD, reversal, partner contact). You download the POD there and attach it to your reply to whoever asked («POD» template, category «POD sent to requester»). An email to Vitzo, for any reason, kills. You do reply to the customer by email. Its pre-dawn reminder must be reacted to in time."
+			}
+		},
+		{
+			"id": "escalera",
+			"titulo": {
+				"es": "La escalera de Shero",
+				"en": "Shero's ladder"
+			},
+			"texto": {
+				"es": "Llamado → verbal → WW (con Ack) → persecución con la amonestación → screamer. Dos verbales = un WW; tres WW = despido. Si reincides, la escalera empieza más arriba.",
+				"en": "Call-out → verbal → WW (with Ack) → chase with the reprimand → screamer. Two verbals = one WW; three WWs = fired. If you repeat, the ladder starts higher."
+			}
+		},
+		{
+			"id": "jefes",
+			"titulo": {
+				"es": "Los demás",
+				"en": "The others"
+			},
+			"texto": {
+				"es": "Perrito RTA: 3 tags y caza (se corrige en tu PC o en cualquier PC de la sala; lejos, con el comodín [C]). Haime (QA): feedback en la sala de calibración, el 3.º es el último; no ir a tiempo, también. Trainer: training a su hora en el piso 1 y quiz. Rasec: coaching sin permiso o excedido, y sus eventos (BO + ir al centro; 2 rechazos matan). Vitzo: correo o recordatorio sin reacción.",
+				"en": "Perrito RTA: 3 tags and a hunt (fix it at your PC or any PC in the room; away, with the lifeline [C]). Haime (QA): feedback in the calibration room, the 3rd is the last; not going in time too. Trainer: training at its time on floor 1 and a quiz. Rasec: unauthorized or overtime coaching, and his events (BO + go to the middle; 2 refusals kill). Vitzo: an email or an unreacted reminder."
+			}
+		},
+		{
+			"id": "fatiga",
+			"titulo": {
+				"es": "Fatiga",
+				"en": "Fatigue"
+			},
+			"texto": {
+				"es": "+4 por hora y con los sustos. Desde 40: hay que frotarse los ojos ([R]); desde 70: microsueños. Agua del dispensador: −2. Dormir en el -1: baja mucho (el reloj corre a 30x). A 100: colapso (Fatiga 60 al reconectar).",
+				"en": "+4 per hour and with scares. From 40: you need to rub your eyes ([R]); from 70: microsleeps. Cooler water: −2. Sleeping on -1: lowers it a lot (the clock runs at 30x). At 100: collapse (Fatigue 60 when you reconnect)."
+			}
+		},
+		{
+			"id": "partidas",
+			"titulo": {
+				"es": "Partidas y dificultad",
+				"en": "Saves and difficulty"
+			},
+			"texto": {
+				"es": "Una partida por agente. Fácil: plazos ×1,5, más pistas y avisos. Normal ×1. Difícil ×0,75 y sin pistas (los 10 min del break, los 45 del lunch y los 10 del correo no cambian: cambia lo que tarda Shero después). Turno real: Difícil sin checkpoints. «Elegir turno» rejuega en rama; «Seguir desde aquí» la hace tu partida.",
+				"en": "One save per agent. Easy: deadlines ×1.5, more hints and warnings. Normal ×1. Hard ×0.75 and no hints (the 10-minute break, 45-minute lunch and 10-minute email don't change: what changes is how fast Shero reacts after that). Real shift: Hard with no checkpoints. \"Choose shift\" replays in a branch; \"Continue from here\" makes it your save."
+			}
+		}
+	],
+	"tooltips": {
+		"login": {
+			"es": "Fonex mide todo lo que haces. Quédate en Available salvo que te pidan otro AUX. [Q] cambia de AUX.",
+			"en": "Fonex measures everything you do. Stay in Available unless asked for another AUX. [Q] changes AUX."
+		},
+		"contacto": {
+			"es": "Contacto entrante: [Espacio] para aceptar. Si estás de pie o lejos, se pierde y Shero lo cuenta.",
+			"en": "Incoming contact: [Space] to accept. If you're standing or away, it's lost and Shero counts it."
+		},
+		"arbol": {
+			"es": "Elige qué decir con [1]-[4]. Las respuestas cómodas a veces son trampas (prometer sin revisar). [H] = hold.",
+			"en": "Choose what to say with [1]-[4]. Comfortable answers are sometimes traps (promising without checking). [H] = hold."
+		},
+		"correo": {
+			"es": "Caso de correo: 10 min de juego. Kardex → destinatario (partner pagador) → plantilla → campos de Kardex → enviar → tipificar → cerrar.",
+			"en": "Email case: 10 game minutes. Kardex → recipient (paying partner) → template → Kardex fields → send → categorize → close."
+		},
+		"kyc": {
+			"es": "KYC en Identa: mira región, total en KP, e-verificación y documentos. Las reglas están en Campus → Manual.",
+			"en": "KYC in Identa: check region, KP total, e-verification and documents. The rules are in Campus → Manual."
+		},
+		"vitzo_caso": {
+			"es": "El partner es Vitzo: solo el Portal Vitzo. Nunca un correo a Vitzo.",
+			"en": "The partner is Vitzo: only the Vitzo Portal. Never an email to Vitzo."
+		},
+		"vitzo_reminder": {
+			"es": "Recordatorio de Vitzo en #site-updates: reacciona con su emoji (clic o [Enter]) antes de que venza.",
+			"en": "Vitzo reminder in #site-updates: react with its emoji (click or [Enter]) before it expires."
+		},
+		"ww": {
+			"es": "Written warning: dale Ack ya (botón, [Espacio] o «Ack» en el DM). Sin Ack, Shero te persigue.",
+			"en": "Written warning: Ack it now (button, [Space] or \"Ack\" in the DM). Without Ack, Shero chases you."
+		},
+		"break": {
+			"es": "Break: 10 min de juego, 2 por turno. Puedes ir a cualquier piso. No te pases.",
+			"en": "Break: 10 game minutes, 2 per shift. You can go to any floor. Don't go over."
+		},
+		"fuera_sala": {
+			"es": "Saliste de la sala sin Break, Lunch, Baño ni convocatoria: Shero te llama al minuto. Vuelve o pon un AUX que te autorice.",
+			"en": "You left the room without Break, Lunch, Bathroom or being called: Shero calls you within a minute. Go back or set an AUX that allows it."
+		},
+		"allocation": {
+			"es": "El RTA te ordena un AUX en #allocations: ponlo ahora (y vuelve a Available cuando termine).",
+			"en": "The RTA orders an AUX in #allocations: set it now (and go back to Available when it ends)."
+		},
+		"lista": {
+			"es": "Lista de allocations del Mentor: Shero mira tu Available % solo aquí. Bajo 70 %, escala.",
+			"en": "Mentor's allocations list: Shero only sees your Available % here. Under 70 %, he escalates."
+		},
+		"rooms": {
+			"es": "Te convocan por Ezlaki Rooms: únete con «Unirse» (o [Enter]). No ir escala.",
+			"en": "You're called on Ezlaki Rooms: join with \"Join\" (or [Enter]). Not going escalates."
+		},
+		"qa": {
+			"es": "Haime (QA) te llama a feedback: pon Coaching y ve a la sala de calibración (piso 2) antes de que se acabe la cuenta atrás.",
+			"en": "Haime (QA) calls you to feedback: set Coaching and go to the calibration room (floor 2) before the countdown runs out."
+		},
+		"training": {
+			"es": "Training: pon AUX Training y baja a la sala 2 del piso 1. Hay quiz al final.",
+			"en": "Training: set AUX Training and go down to room 2 on floor 1. There's a quiz at the end."
+		},
+		"lunch": {
+			"es": "Es la hora del lunch: pon AUX Lunch (45 min). Puedes comer en el -1 o en la azotea.",
+			"en": "It's lunch time: set AUX Lunch (45 min). You can eat on -1 or on the rooftop."
+		},
+		"fatiga": {
+			"es": "Tienes la Fatiga alta: frótate los ojos con [R]; en Break o Lunch, duerme en un sofá o puff del -1.",
+			"en": "Your Fatigue is high: rub your eyes with [R]; on Break or Lunch, sleep on a sofa or pouf on -1."
+		},
+		"persecucion": {
+			"es": "Te persiguen. Volver a tu sitio no lo detiene.",
+			"en": "You're being chased. Going back to your seat doesn't stop it."
+		},
+		"persecucion_facil": {
+			"es": "En Fácil, sentado en tu C-14 en Available te salvas (WW en vez de muerte).",
+			"en": "On Easy, sitting at your C-14 in Available saves you (WW instead of death)."
+		},
+		"rasec": {
+			"es": "Evento de Rasec: pon AUX BO y ve al centro de la sala en 2 min. Rechazarlo dos veces es mortal.",
+			"en": "Rasec's event: set AUX BO and go to the middle of the room within 2 min. Refusing twice is deadly."
+		}
+	}
+}

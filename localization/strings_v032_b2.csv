@@ -1,0 +1,67 @@
+keys,es,en
+PKG_V032_B2_READY,"Cadenas de los arreglos de Joan (v0.3.2): microondas, Ezlaki, lunch inmune, mesas, espejo, fatiga","Joan's fixes (v0.3.2): microwave, Ezlaki, lunch immunity, tables, mirror, fatigue"
+B2_HUD_EAT_SIT,[E] Sentarte a comer tu taper,[E] Sit down and eat your lunchbox
+B2_HUD_TABLE_HEAT,Mesa · primero calienta tu taper en el microondas,Table · heat your lunchbox in the microwave first
+B2_HUD_TABLE_TAKE,Mesa · tu taper está listo en el microondas,Table · your lunchbox is ready in the microwave
+B2_EZLAKI_TOAST_DM,Nuevo DM de {quien} · {n},New DM from {quien} · {n}
+B2_EZLAKI_TOAST_MENTION,{canal} · {quien} te mencionó · {n},{canal} · {quien} mentioned you · {n}
+B2_HUD_LUNCH_SAFE,Lunch · nadie te convoca ({t}),Lunch · nobody can summon you ({t})
+B2_HUD_LUNCH_GRACE,Volviendo del lunch · {s} s,Back from lunch · {s} s
+B2_FONEX_QUEUE,Cola: {n} ({t}),Queue: {n} ({t})
+B2_COLA_SHERO,"Hay {n} en cola y el más antiguo lleva {espera}, ¿dónde están?","{n} in queue and the oldest has waited {espera}. Where is everyone?"
+B2_HUD_ACK_FAR,"Te llegó un written warning. Ack desde tu PC o cualquier PC de la sala: {s} s","You got a written warning. Ack from your PC or any PC in the room: {s} s"
+B2_COMODIN_HUD_FREE,Comodín 0/1 · mantén [C],Lifeline 0/1 · hold [C]
+B2_COMODIN_HUD_USED,Comodín usado (1/1),Lifeline used (1/1)
+B2_COMODIN_TITLE,Comodín · llamas a un compañero para que te marque el AUX en tu PC,Lifeline · call a coworker to set your AUX at your PC
+B2_COMODIN_PICK_AUX,¿Qué te marca? [1-7] · [Esc] cancelar,What should they set? [1-7] · [Esc] cancel
+B2_COMODIN_PICK_WHO,¿A quién llamas? [1-4] · [Esc] cancelar,Who do you call? [1-4] · [Esc] cancel
+B2_COMODIN_RETRY,"No contestó. Prueba con otro [1-4] · quedan {s} s","No answer. Try someone else [1-4] · {s} s left"
+B2_COMODIN_RINGING,Llamando a {quien}…,Calling {quien}…
+B2_COMODIN_AT_PC,Estás en una PC: cambia el AUX ahí.,You're at a PC: change your AUX there.
+B2_COMODIN_SPENT,Ya usaste tu comodín este turno.,You already used your lifeline this shift.
+B2_COMODIN_DONE,{quien} te marcó {aux} en tu PC.,{quien} set your AUX to {aux}.
+B2_COMODIN_NO_ANSWER,{quien} no contesta.,{quien} doesn't answer.
+B2_COMODIN_LOST,Nadie contestó: perdiste el comodín.,Nobody answered: lifeline lost.
+B2_COMODIN_LINE_1,"Ya, ya, te lo marco. Me debes una.","Yeah, yeah, I'll set it. You owe me one."
+B2_COMODIN_LINE_2,"Listo, ya está. Que Shero no se entere.","Done. Don't let Shero find out."
+B2_COMODIN_LINE_3,"Uf, bueno… ya te lo puse. Corre.","Ugh, fine… it's set. Run."
+B2_COMODIN_DM,"Te marqué {aux}. Me debes un café.","Set you to {aux}. You owe me a coffee"
+B2_COMODIN_SHERO_DM,"Qué curioso, @{agente}: tu PC se puso en {aux} sola y tú no estabas sentado. Esta vez lo dejo pasar.","Funny, @{agente}: your PC switched to {aux} by itself and you weren't sitting there. I'll let it slide this time."
+B2_COMODIN_SHERO_DM_2,"Otra vez tu PC marcando sola, @{agente}. Eso es un verbal.","Your PC changing by itself again, @{agente}. That's a verbal."
+B2_COMODIN_ASLEEP,(suena y suena: {quien} está dormido en su sitio),(it rings and rings: {quien} is asleep at their desk)
+B2_COMODIN_LUNCH,({quien} está en lunch y no contesta),({quien} is at lunch and doesn't answer)
+B2_COMODIN_BUSY,({quien} está en una llamada),({quien} is on a call)
+B2_AUX_RECONNECTING,Reconectando,Reconnecting
+B2_RECON_HUD,"Reconectando… {s} s · elige un AUX [1-7] (si no, pasas a Available)","Reconnecting… {s} s · pick an AUX [1-7] (otherwise you go Available)"
+B2_RECON_RESUME,"Te quedaban {min} min de {aux}: [{n}] para seguir","You had {min} min of {aux} left: [{n}] to resume"
+B2_RECON_AVL,"Incidencia registrada. Tu Available % se cuenta de nuevo desde ahora.","Incident logged. Your Available % is counted again from now."
+B2_RECON_DESCONECTADO,"Contacto desconectado: vuelve a la cola (no cuenta como perdido ni para el AHT)","Contact disconnected: it goes back to the queue (not missed, not in AHT)"
+B2_COMODIN_BREAK,({quien} está en break: no ve el teléfono),({quien} is on break: doesn't see the phone)
+B2_COMODIN_TRAINING,({quien} está en Training y no contesta),({quien} is in Training and doesn't answer)
+B2_COMODIN_COACHING,({quien} está en coaching con Shero),({quien} is in coaching with Shero)
+B2_COMODIN_AWAY,({quien} no está en su sitio),({quien} is away from their desk)
+B2_COMODIN_IGNORED,({quien} vio tu llamada… y no contestó),({quien} saw your call… and didn't pick up)
+B2_COMODIN_TRIED,no contestó,no answer
+B2_COMODIN_ONLY_ACTIVE,Solo contesta quien está «activo».,Only someone who is «active» will pick up.
+B2_COMODIN_NOBODY,"Nadie está activo ahora: quien llames no va a contestar. Espera a que alguien se desocupe o [Esc] (no gastas el comodín).","Nobody is active right now: whoever you call won't pick up. Wait for someone to free up or press [Esc] (your lifeline is not spent)."
+B2_COMODIN_NOBODY_RETRY,"Nadie más está activo ahora: espera a que alguien se desocupe antes de que se acabe el tiempo.","Nobody else is active right now: wait for someone to free up before time runs out."
+OPT_EMOJI_TEXTO,Emojis como texto (accesibilidad),Emojis as text (accessibility)
+CTRL_COMODIN,Comodín (mantener),Lifeline (hold)
+CTRL_IA_HABLAR,Micrófono (mantener),Microphone (hold)
+CORE3_DEATH_MODE,Incidencia registrada. Vuelves al último checkpoint.,Incident logged. Back to the last checkpoint.
+CORE3_FATIGA_COLAPSO,"Te desplomaste. Reapareces más descansado: Fatiga {n}.","You collapsed. You come back more rested: Fatigue {n}."
+CORE3_FATIGA_BAJA,"Reapareces más descansado: Fatiga {n}.","You come back more rested: Fatigue {n}."
+CORE3_AYUDA,"Segunda caída desde el mismo punto. Reapareces con Fatiga {n}, el tópico te atiende una vez más y la máquina te debe un café.","Second fall from the same point. You come back with Fatigue {n}, the infirmary will see you once more and the machine owes you a coffee."
+CORE3_CAFE_CORTESIA,Café de cortesía: no se cobra.,Courtesy coffee: no charge.
+CORE3_RECON_QUEDA,"Pasaste a Available. Te siguen quedando {min} min de {aux}: puedes retomarlo desde el menú de AUX.","You went to Available. You still have {min} min of {aux} left: you can resume it from the AUX menu."
+CORE3_DEATH_COLLAPSE,Te desmayaste. Despiertas en el último checkpoint con Fatiga {n}.,You passed out. You wake up at the last checkpoint with Fatigue {n}.
+CORE3_AYUDA_T1,"Segunda caída desde el mismo punto. Reapareces con Fatiga {n} y la máquina te debe un café.","Second fall from the same point. You come back with Fatigue {n} and the machine owes you a coffee."
+CORE3_CAFE_GRATIS,cortesía (S/ 0.00),on the house (S/ 0.00)
+CORE3_RECON_BREAK_FIN,"Pasaste a Available: el Break que tenías a medias se da por terminado. Breaks del turno: {n} de {max}.","You went to Available: the Break you were on is over. Breaks this shift: {n} of {max}."
+C4_HUD_MARGEN,margen {t},margin {t}
+C4_HUD_SALE,Shero sale a los {t},Shero leaves at {t}
+C4_HUD_MARCA_1,1 marca,1 mark
+C4_HUD_MARCAS,{n} marcas,{n} marks
+C4_HUD_COMODIN,comodín {t},lifeline {t}
+C4_HUD_COMODIN_FIN,comodín vencido,lifeline expired
+C4_DESPIERTA_PARLANTES,Los parlantes te despiertan: se acabó tu break.,The speakers wake you up: your break is over.

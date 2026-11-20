@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/personajes/shero.gd" id="1_shero"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_shero"]
+radius = 0.35
+height = 1.85
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_shero"]
+radius = 0.32
+height = 1.85
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shero"]
+albedo_color = Color(0.45, 0.6, 0.75, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_clipboard"]
+size = Vector3(0.25, 0.35, 0.02)
+
+[node name="Shero" type="CharacterBody3D"]
+collision_layer = 4
+script = ExtResource("1_shero")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925, 0)
+shape = SubResource("CapsuleShape3D_shero")
+
+[node name="Cuerpo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925, 0)
+mesh = SubResource("CapsuleMesh_shero")
+material_override = SubResource("StandardMaterial3D_shero")
+
+[node name="Clipboard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 1.1, -0.25)
+mesh = SubResource("BoxMesh_clipboard")
+
+[node name="Estado" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
+pixel_size = 0.006
+billboard = 1
+text = "Shero"

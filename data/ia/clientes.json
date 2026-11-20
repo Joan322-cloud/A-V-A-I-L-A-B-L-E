@@ -1,0 +1,460 @@
+{
+	"_comentario": "v0.3.2 IA · Clientes con cerebro propio (chat y llamadas). Lo que escribes o dices se compara con las opciones del nodo del árbol (data/contactos_tN.json): si se parece lo bastante a una, el árbol avanza como si la hubieras elegido (mismo final, misma nota de QA, mismo AHT). Si no se parece a ninguna, el cliente te contesta en personaje con estas líneas y su ánimo cambia según cómo le hablaste ('animo' por intención; si baja de -50 cuelga, como siempre). 'umbral' = parecido mínimo para contar como una opción (0-1; más bajo = más perdonador). 'clip' = clip ya grabado (voces/clientes/<id>.ogg, ES y EN) que suena en la llamada con su subtítulo.",
+	"umbral": 0.22,
+	"umbral_dificil": 0.2,
+	"t_juego_fuera": 10,
+	"escribir_max_s_real": 25,
+	"_escribir_max_s_real": "Mientras escribes tu respuesta en el chat (campo con texto) el plazo del cliente no corre, hasta estos segundos reales por turno.",
+	"tipo_por_intencion": {
+		"cs_empatia": "empatia",
+		"disculpa": "empatia",
+		"apoyo": "empatia",
+		"gracias": "empatia",
+		"cs_saludo": "empatia",
+		"cs_proceso": "proceso",
+		"pregunta_caso": "proceso",
+		"cs_escalar": "proceso",
+		"pregunta": "proceso",
+		"cs_info": "cierre",
+		"cs_cierre": "cierre",
+		"cs_reembolso": "cierre",
+		"despedida": "cierre",
+		"ok": "cierre",
+		"cs_promesa": "trampa",
+		"cs_hold": "trampa",
+		"cs_calmese": "fuera",
+		"cs_procedimiento": "fuera",
+		"insulto": "fuera",
+		"negar": "fuera",
+		"amenaza": "fuera",
+		"excusa": "fuera"
+	},
+	"animo": {
+		"insulto": -45,
+		"amenaza": -55,
+		"cs_calmese": -28,
+		"cs_procedimiento": -22,
+		"negar": -20,
+		"cs_empatia": 12,
+		"disculpa": 10,
+		"cs_saludo": 5,
+		"saludo": 4,
+		"gracias": 6,
+		"charla": -18,
+		"broma": -25,
+		"otro": -14,
+		"no_se": -22,
+		"queja": -18,
+		"carino": -15,
+		"cs_hold": -12,
+		"cs_promesa": -10,
+		"pregunta_personal": -18,
+		"renuncia": -25,
+		"grasa": -20
+	},
+	"generico": {
+		"no_entiende": [
+			{
+				"es": "¡¿QUÉ DIJISTE?! ¡HABLA CLARO, INÚTIL! ¡¿NO SABES LEER UNA PANTALLA?!",
+				"en": "WHAT DID YOU SAY?! SPEAK CLEARLY, USELESS! CAN'T YOU READ A SCREEN?!",
+				"clip": "ia_gen_no_entiende1"
+			},
+			{
+				"es": "¡¿CÓMO?! ¡NO TE ENTIENDO NADA! ¡DEJA DE BALBUCEAR Y RESUELVE MI CASO YA!",
+				"en": "WHAT?! I CAN'T UNDERSTAND A WORD! STOP MUMBLING AND FIX MY CASE NOW!"
+			},
+			{
+				"es": "¡¿ME ESTÁS HABLANDO EN BROMA?! ¡CONTESTA LO QUE TE PREGUNTÉ O PIDES SUPERVISOR!",
+				"en": "ARE YOU KIDDING ME?! ANSWER WHAT I ASKED OR GET YOUR SUPERVISOR!"
+			}
+		],
+		"repite": [
+			{
+				"es": "¡¡NO ME CAMBIES DE TEMA!! {necesidad} ¡¡HAZLO AHORA MISMO!!",
+				"en": "DON'T CHANGE THE SUBJECT!! {necesidad} DO IT RIGHT NOW!!"
+			},
+			{
+				"es": "¡¡TE LO REPITO POR ÚLTIMA VEZ!! {necesidad} ¡¡NO VOY A COLGAR HASTA QUE LO ARREGLES!!",
+				"en": "I'M TELLING YOU ONE LAST TIME!! {necesidad} I'M NOT HANGING UP UNTIL YOU FIX IT!!"
+			}
+		],
+		"insulto": [
+			{
+				"es": "¡¡¿CÓMO ME HABLAS ASÍ, BASURA?! ¡¡SÉ QUE ESTÁS EN LA FILA C, PUESTO C-14!! ¡¡VOY PARA ALLÁ!!",
+				"en": "HOW DARE YOU TALK TO ME LIKE THAT, TRASH?! I KNOW YOU'RE IN ROW C, SEAT C-14!! I'M COMING FOR YOU!!",
+				"clip": "ia_gen_insulto1"
+			},
+			{
+				"es": "¡¡ESTA LLAMADA ESTÁ GRABADA!! ¡¡LE VOY A MANDAR EL AUDIO A TU SUPERVISOR SHERO PARA QUE TE DESPIDAN HOY!!",
+				"en": "THIS CALL IS RECORDED!! I'M SENDING THIS AUDIO TO YOUR SUPERVISOR SHERO SO YOU GET FIRED TODAY!!"
+			}
+		],
+		"saludo": [
+			{
+				"es": "¡SÍ, SÍ, BUENAS NOCHES! ¡LLEVO HORAS ESPERANDO! ¡DIME DÓNDE ESTÁ MI DINERO YA!",
+				"en": "YES, GOOD EVENING! I'VE BEEN WAITING FOR HOURS! TELL ME WHERE MY MONEY IS NOW!",
+				"clip": "ia_gen_saludo1"
+			},
+			{
+				"es": "¡NO ME SALUDES CON GUION! ¡QUIERO SOLUCIONES, NO PALABRAS BONITAS!",
+				"en": "DON'T GIVE ME SCRIPTED GREETINGS! I WANT SOLUTIONS, NOT PRETTY WORDS!"
+			}
+		],
+		"empatia": [
+			{
+				"es": "¡NO QUIERO TU LÁSTIMA, QUIERO QUE EL SISTEMA ACREDITE EL PAGO YA!",
+				"en": "I DON'T WANT YOUR PITY, I WANT THE SYSTEM TO CREDIT MY PAYMENT NOW!",
+				"clip": "ia_gen_empatia1"
+			},
+			{
+				"es": "Está bien, gracias por escucharme… pero por favor revísalo rápido, estoy desesperado.",
+				"en": "Alright, thank you for listening… but please check it fast, I am desperate."
+			}
+		],
+		"dato": [
+			{
+				"es": "¡¡YA TE DI EL CÓDIGO {tx}!! ¡¡¿ERES SORDO O NO SABES USAR KARDEX?!",
+				"en": "I ALREADY GAVE YOU CODE {tx}!! ARE YOU DEAF OR DO YOU NOT KNOW HOW TO USE KARDEX?!"
+			},
+			{
+				"es": "¡¡ES LA OPERACIÓN {tx}!! ¡¡MÍRALA EN TU MONITOR ANTES DE QUE ME VUELVA LOCO!!",
+				"en": "IT'S TRANSACTION {tx}!! LOOK AT IT ON YOUR MONITOR BEFORE I LOSE MY MIND!!"
+			}
+		],
+		"espera": [
+			{
+				"es": "¡¡¿ME VAS A PONER EN HOLD OTRA VEZ?! ¡¡SI ME PONES ESA MUSIQUITA DE MIERDA TE JURO QUE TE ENCUENTRO!!",
+				"en": "ARE YOU PUTTING ME ON HOLD AGAIN?! IF YOU PLAY THAT DAMN HOLD MUSIC I SWEAR I'LL FIND YOU!!",
+				"clip": "ia_gen_espera1"
+			}
+		],
+		"charla": [
+			{
+				"es": "¡¡¿TE PARECE QUE ESTOY PARA CHISTES A LAS TRES DE LA MADRUGADA?! ¡¡TRABAJA!!",
+				"en": "DO YOU THINK I'M IN THE MOOD FOR JOKES AT THREE IN THE MORNING?! DO YOUR JOB!!",
+				"clip": "ia_gen_charla1"
+			}
+		],
+		"pregunta_personal": [
+			{
+				"es": "¡¡NO TE IMPORTA QUIÉN SOY!! ¡¡SÉ TU NOMBRE, JIROSHI, Y SÉ QUE NO VAS A SALIR DE ESE CUBÍCULO!!",
+				"en": "IT DOESN'T MATTER WHO I AM!! I KNOW YOUR NAME, JIROSHI, AND I KNOW YOU WON'T LEAVE THAT CUBICLE!!"
+			}
+		],
+		"ok": [
+			{
+				"es": "¡¡¿«OK»?! ¡¡¿ESO ES TODO LO QUE VAS A DECIR?! ¡¡¿DÓNDE ESTÁ MI COMPROBANTE?!",
+				"en": "'OK'?! IS THAT ALL YOU'RE GOING TO SAY?! WHERE IS MY RECEIPT?!"
+			}
+		],
+		"no_se": [
+			{
+				"es": "¡¡¿CÓMO QUE «NO SÉ»?! ¡¡PARA QUÉ TE PAGAN EN KIPUPAY SI NO SABES NADA, INCOMPETENTE!!",
+				"en": "WHAT DO YOU MEAN 'I DON'T KNOW'?! WHY DOES KIPUPAY PAY YOU IF YOU KNOW NOTHING, INCOMPETENT!!"
+			}
+		],
+		"calmese": [
+			{
+				"es": "¡¡¿QUE ME CALME?! ¡¡NO ME DIGAS QUE ME CALME!! ¡¡ME ESTÁN ROBANDO EN LA CARA Y TÚ ME PIDES CALMA!!",
+				"en": "CALM DOWN?! DON'T TELL ME TO CALM DOWN!! I'M BEING ROBBED TO MY FACE AND YOU TELL ME TO CALM DOWN!!"
+			}
+		],
+		"procedimiento": [
+			{
+				"es": "¡¡ME IMPORTA UN CARAJO TU PROCEDIMIENTO!! ¡¡MÉTETE TUS POLÍTICAS POR DONDE TE QUEPAN Y DEVUÉLVEME MI PLATA!!",
+				"en": "I DON'T GIVE A DAMN ABOUT YOUR PROCEDURE!! SHOVE YOUR POLICIES AND GIVE ME MY MONEY BACK!!"
+			}
+		]
+	},
+	"arquetipos": {
+		"el_que_repite": {
+			"estilo": {
+				"repite": 0.6
+			},
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "¿Qué? ¿Qué dijo? El estado. Mi envío. El estado.",
+						"en": "What? What did you say? The status. My transfer. The status."
+					}
+				],
+				"ok": [
+					{
+						"es": "Ok. Ok. ¿Pero el estado? El estado.",
+						"en": "Ok. Ok. But the status? The status."
+					}
+				]
+			}
+		},
+		"la_que_llora": {
+			"estilo": {
+				"suspiro": 0.5
+			},
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "(snif) Perdón, no le entiendo… estoy muy nerviosa.",
+						"en": "(sniff) Sorry, I don't understand… I'm very nervous."
+					}
+				],
+				"insulto": [
+					{
+						"es": "(llora) ¿Por qué me trata así? Yo solo quiero mi plata…",
+						"en": "(cries) Why are you treating me like this? I just want my money…"
+					}
+				],
+				"empatia": [
+					{
+						"es": "Gracias… gracias. Nadie me había dicho eso hoy.",
+						"en": "Thank you… thank you. Nobody had said that to me today."
+					}
+				]
+			}
+		},
+		"el_amable": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "Disculpe, joven, creo que no le entendí bien. ¿Me repite?",
+						"en": "Excuse me, young man, I don't think I got that. Could you repeat it?"
+					}
+				],
+				"insulto": [
+					{
+						"es": "Uy… bueno. Debe estar cansado. Igual, eso no se dice.",
+						"en": "Oh… well. You must be tired. Still, that's not something you say."
+					}
+				],
+				"charla": [
+					{
+						"es": "Ja, sí. Pero volvamos a lo mío, si no le molesta.",
+						"en": "Ha, yes. But let's get back to my thing, if you don't mind."
+					}
+				]
+			}
+		},
+		"el_estafado": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "¡¡¿QUÉ?! ¡¡¿ME ESTÁS ESCUCHANDO?! ¡¡ME ROBARON TODO Y TÚ HABLAS COMO ROBOT!!",
+						"en": "WHAT?! ARE YOU LISTENING TO ME?! THEY STOLE EVERYTHING AND YOU TALK LIKE A ROBOT!!"
+					}
+				],
+				"ok": [
+					{
+						"es": "¿Ok? ¿Solo ok? ¡Es mi plata!",
+						"en": "Ok? Just ok? It's my money!"
+					}
+				]
+			}
+		},
+		"el_silencioso": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "… (respiración agitada) … Fila C. Puesto 14. No mires atrás.",
+						"en": "… (heavy breathing) … Row C. Seat 14. Don't look behind you."
+					}
+				],
+				"ok": [
+					{
+						"es": "…",
+						"en": "…"
+					}
+				],
+				"insulto": [
+					{
+						"es": "… (cuelga despacio)",
+						"en": "… (hangs up slowly)"
+					}
+				]
+			}
+		},
+		"el_apurado": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "¡¡NO TENGO TIEMPO PARA TU INCOMPETENCIA!! ¡¡RESUELVE EN DIEZ SEGUNDOS O TE ARRUINO LA VIDA!!",
+						"en": "I DON'T HAVE TIME FOR YOUR INCOMPETENCE!! FIX IT IN TEN SECONDS OR I'LL RUIN YOUR LIFE!!"
+					}
+				],
+				"charla": [
+					{
+						"es": "¡No! Al grano. Estoy apurado.",
+						"en": "No! Get to the point. I'm in a hurry."
+					}
+				]
+			}
+		},
+		"la_desconfiada": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "¿Y eso por qué me lo dice? ¿Esta llamada está grabada?",
+						"en": "And why are you telling me that? Is this call recorded?"
+					}
+				],
+				"dato": [
+					{
+						"es": "No le voy a dar más datos hasta que me diga quién es.",
+						"en": "I won't give you more details until you tell me who you are."
+					}
+				]
+			}
+		},
+		"el_abuelo": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "¿Ah? Hable más fuerte, mijito, no le escucho bien.",
+						"en": "Eh? Speak up, son, I can't hear you well."
+					}
+				],
+				"charla": [
+					{
+						"es": "Ay, en mis tiempos… bueno, ¿y mi giro?",
+						"en": "Oh, in my day… well, what about my money order?"
+					}
+				]
+			}
+		},
+		"la_joven": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "Ehh… no sé qué es eso. ¿Me lo explica fácil?",
+						"en": "Umm… I don't know what that is. Can you explain it simply?"
+					}
+				],
+				"ok": [
+					{
+						"es": "Ya pero literal no me resolviste nada.",
+						"en": "Ok but you literally didn't solve anything."
+					}
+				]
+			}
+		},
+		"el_extranjero": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "Sorry… ¿más despacio? Mi español no es muy bueno.",
+						"en": "Sorry… slower? My Spanish isn't very good."
+					}
+				]
+			}
+		},
+		"la_comerciante": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "Mire, tengo el negocio abierto. ¿Me ayuda o no?",
+						"en": "Look, I've got my shop open. Are you helping me or not?"
+					}
+				]
+			}
+		},
+		"el_trasnochado": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "Perdón, estoy medio dormido… ¿qué me dijo?",
+						"en": "Sorry, I'm half asleep… what did you say?"
+					}
+				]
+			}
+		},
+		"el_conspiranoico": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "Eso es lo que quieren que piense, ¿no? ¿Quién más está escuchando?",
+						"en": "That's what they want me to think, right? Who else is listening?"
+					}
+				],
+				"charla": [
+					{
+						"es": "No cambie de tema. Sé que me están vigilando.",
+						"en": "Don't change the subject. I know they're watching me."
+					}
+				]
+			}
+		},
+		"la_gerente": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "No le estoy entendiendo. Páseme con su supervisor.",
+						"en": "I'm not following you. Put me through to your supervisor."
+					}
+				],
+				"insulto": [
+					{
+						"es": "Perfecto. Su nombre y su código, ahora.",
+						"en": "Perfect. Your name and your ID, now."
+					}
+				]
+			}
+		},
+		"el_molesto": {
+			"lineas": {
+				"no_entiende": [
+					{
+						"es": "¿Me está tomando el pelo? ¡Respóndame lo que le pregunté!",
+						"en": "Are you kidding me? Answer what I asked!"
+					}
+				],
+				"ok": [
+					{
+						"es": "¡No me diga «ok»! ¡Resuélvame!",
+						"en": "Don't say «ok» to me! Fix it!"
+					}
+				]
+			}
+		}
+	},
+	"parafraseo": {
+		"_comentario": "Frases de agente por tipo de opción para medir qué tan perdonador es el emparejamiento (escenario pia_dificil_justo). No se usan en el juego.",
+		"empatia": [
+			"entiendo su preocupación, le ayudo ahora",
+			"tiene toda la razón, disculpe",
+			"comprendo, no se preocupe, yo me encargo",
+			"lo siento mucho, vamos a revisarlo juntos",
+			"entiendo, debe ser muy difícil, le voy a ayudar"
+		],
+		"proceso": [
+			"me confirma el número de operación por favor",
+			"déjeme revisar en el sistema",
+			"voy a verificar con el partner",
+			"me brinda su documento para validar",
+			"reviso su caso en Kardex"
+		],
+		"cierre": [
+			"queda registrado, ¿algo más en que le pueda ayudar?",
+			"le dejo el número de seguimiento, que tenga buena noche",
+			"su envío está en proceso y acredita en 24 horas",
+			"listo, ya quedó solucionado"
+		]
+	},
+	"voces": {
+		"_comentario": "Voz (del casting de audio_v2) con la que suenan las reacciones genéricas de cada arquetipo: voces/clientes/ia_gen_<clave><n>_<voz>.ogg",
+		"por_arquetipo": {
+			"el_que_repite": "el_que_repite",
+			"la_que_llora": "la_que_llora",
+			"el_amable": "amable",
+			"el_estafado": "estafado",
+			"el_molesto": "molesto",
+			"el_silencioso": "silencioso",
+			"el_abuelo": "el_que_repite",
+			"el_apurado": "estafado",
+			"el_trasnochado": "silencioso",
+			"el_extranjero": "estafado",
+			"el_conspiranoico": "molesto",
+			"la_desconfiada": "amable",
+			"la_comerciante": "amable",
+			"la_gerente": "amable",
+			"la_joven": "amable"
+		}
+	}
+}

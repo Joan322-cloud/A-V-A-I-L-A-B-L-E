@@ -1,0 +1,71 @@
+keys,es,en
+DAY_TRAINING,Training,Training
+DAY_FALLBACK,Día {n},Day {n}
+FB_RECUERDO,R E C U E R D O,M E M O R Y
+FB_RECUERDO_SUB,"Training KipuPay · tu primer día en Konzentramance","KipuPay Training · your first day at Konzentramance"
+FB_FOTO_PENDIENTE,FOTO PENDIENTE,PHOTO PENDING
+FB_FOTOCHECK_ROL,Agente · Atención al cliente,Agent · Customer service
+FB_PROMOCION_NUEVA,Nueva,New hire
+FB_PROMOCION_NUEVO,Nuevo,New hire
+CONTRACT_CLAUSE,Cláusula,Clause
+CONTRACT_CLEAR,Borrar firma,Clear signature
+CONTRACT_SIGN,Firmar,Sign
+UPDATE_CAMPAIGN,Actualización de campaña,Campaign update
+UPDATE_CAMPAIGN_HUD,ACTUALIZACIÓN DE CAMPAÑA,CAMPAIGN UPDATE
+TS_TRAINING_ROW,"Training · el recuerdo ({fecha})","Training · the memory ({fecha})"
+TS_TRAINING_REPLAY,Volver a vivirlo (menú Training),Live it again (Training menu)
+TS_TRAINING_RESUME,Seguir el Training · tema {n} de {total},Resume Training · topic {n} of {total}
+CONTRACT_INDEFINITE,A plazo indefinido,Indefinite term
+HUD_TRAINING_CAFE,[E] Servirte café y una empanadita,[E] Grab a coffee and an empanada
+MSG_TRAINING_CAFE,"Café caliente y una empanadita de carne. Qué rico.","Hot coffee and a beef empanada. Delicious."
+HUD_TRAINING_BRINDIS,[E] Brindar con tu promoción,[E] Toast with your class
+MSG_TRAINING_BRINDIS,"¡Salud! Las cinco tazas chocan a la vez.","Cheers! Five cups clink at once."
+TUT_CAFE_SIGN,"¡BIENVENIDOS, PROMOCIÓN!","WELCOME, NEW HIRES!"
+TUT_QUIZ_OK,✓ ¡Correcto!,✓ Correct!
+TUT_QUIZ_WRONG,✗ La respuesta era: {r}.,✗ The answer was: {r}.
+TUT_KEY_QUIZ,← responde: tecla o clic,← answer: key or click
+TUT_FOTO_CAPTION,"Promoción · {fecha}
+¡Bienvenidos a la familia!","Class of {fecha}
+Welcome to the family!"
+HUD_ECO_FOTO,[E] Mirar la foto de tu promoción,[E] Look at your class photo
+HUD_ECO_CONTRATO,[E] Mirar tu contrato,[E] Look at your contract
+HUD_ECO_MURAL,[E] Buscar tu promoción en el mural,[E] Find your class on the mural
+ECO_MURAL_TITULO,PROMOCIONES KIPUPAY,KIPUPAY TRAINING CLASSES
+ECO_CLAUSULA,"Contrato {num} · Cláusula {n}. {texto}","Contract {num} · Clause {n}. {texto}"
+ECO_CLAUSULA_SIN_LEER,"Contrato {num} · Cláusula {n}. La firmaste sin leerla.","Contract {num} · Clause {n}. You signed it without reading it."
+ECO_FOTO_SONRIE,Sales sonriendo.,You came out smiling.
+ECO_FOTO_SERIO,Sales serio. Como si supieras.,You came out serious. As if you knew.
+ECO_FOTO_BORRADA,La foto se borró con el sol. Queda la fecha.,The photo faded in the sun. The date is still there.
+TUT_SLIDE_TITLE,"Training · Día 1","Training · Day 1"
+TUT_SLIDE_SUB,"Hoy entran como postulantes. Hoy salen como familia.","Today you walk in as applicants. Today you walk out as family."
+TUT_AGENDA,"VIERNES · INDUCCIÓN
+1. Tu PC y tu AUX
+2. Tus números
+3. Llamadas, chats, correos
+4. BO · Vitzo · Ezlaki
+5. Breaks y jefes
+6. Descanso
+★ FIRMA Y FOTO ★","FRIDAY · INDUCTION
+1. Your PC and your AUX
+2. Your numbers
+3. Calls, chats, emails
+4. BO · Vitzo · Ezlaki
+5. Breaks and bosses
+6. Rest
+★ SIGNING AND PHOTO ★"
+TUT_POSTER_1,"EL CLIENTE
+PRIMERO.
+SIEMPRE.","THE CUSTOMER
+FIRST.
+ALWAYS."
+TUT_POSTER_2,"SOMOS
+FAMILIA.
+PARA SIEMPRE.","WE ARE
+FAMILY.
+FOREVER."
+FBUI_CAMPUS_MT_HOY,Minitrainings de hoy · {hechos} de {total},Today's minitrainings · {hechos} of {total}
+FBUI_QUIZ_STATUS,Correctas: {n} · Mínimo para aprobar: {min} de {total},Correct: {n} · Minimum to pass: {min} of {total}
+FBUI_QUIZ_RESULT,Resultado: {n} de {total} · Mínimo para aprobar: {min},Result: {n} of {total} · Minimum to pass: {min}
+FBUI_CAMPUS_UPD,"HOY {hora} · Actualización de campaña: «{tema}». Piso 1, asistencia obligatoria. Quiz: mínimo {min} de {total} · {estado}","TODAY {hora} · Campaign update: ""{tema}"". 1st floor, mandatory attendance. Quiz: minimum {min} of {total} · {estado}"
+FBUI_CAMPUS_UPD_PENDING,pendiente,pending
+FBUI_CAMPUS_UPD_DONE,asististe,attended

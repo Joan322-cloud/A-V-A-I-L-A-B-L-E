@@ -1,0 +1,33 @@
+# Godot
+.godot/
+export_credentials.cfg
+
+# Builds y distribución
+builds/
+dist/
+*.exe
+*.pck
+*.zip
+*.html.bin
+
+# Sidecar ASR (ejecutable y modelo: se regeneran con tools/asr_sidecar/)
+tools/asr_sidecar/dist/
+tools/asr_sidecar/build/
+tools/asr_sidecar/__pycache__/
+asr/
+
+# Python
+__pycache__/
+*.pyc
+
+# Material privado (NO subir nunca: contiene nombres reales e historial)
+KIT DE TRASPASO/
+Contexto ultima version/
+
+# Referencias y capturas de trabajo (regla del kit)
+docs/ref/
+docs/capturas/
+
+# Sistema
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,820 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P4 · Casos de BO (PLAN §6.1-6.3): correos con trabajo real (entran en Available, como una llamada), casos de correo de Vitzo (se resuelven en el Portal Vitzo, nunca por correo) y KYC en Identa (solo en AUX BO). Todo es inventado: regiones, montos en KP (moneda de cuenta ficticia), partners, nombres y procedimientos. Un caso BO nunca se pierde: queda en la PC hasta que lo cierres (lo vigila la pista 'correo > 10 min' de P3).",
+	"reglas": {
+		"timbre_s_real": 14.0,
+		"limite_s_juego": 600,
+		"aviso_amarillo_s_juego": 420,
+		"aviso_rojo_s_juego": 540,
+		"vitzo_correo": "ops@vitzo.kp",
+		"kyc_regiones": {
+			"Norvalia": {
+				"es": "e-verificación o revisión documental; KYC completo obligatorio antes de superar 1.500 KP acumulados",
+				"en": "e-verification or document review; full KYC required before exceeding 1,500 KP total"
+			},
+			"Valdesia": {
+				"es": "aprobado si la e-verificación confirma nombre + número de documento; si falla: revisión documental al superar 600 KP o en el 4.º envío (lo que pase primero). Documento de Valdesia: 8 dígitos",
+				"en": "approved if e-verification confirms name + document number; if it fails: document review above 600 KP or on the 4th send (whichever first). Valdesia ID: 8 digits"
+			},
+			"Islas Taren": {
+				"es": "revisión documental antes del primer envío (sin e-verificación); el nombre debe coincidir letra por letra, tildes incluidas",
+				"en": "document review before the first send (no e-verification); the name must match letter by letter, accents included"
+			},
+			"Cualquiera": {
+				"es": "KYC Recheck requerido si cambian nombre, fecha de nacimiento o dirección después de aprobado: va primero. Con 'Revisión reforzada' solo Cumplimiento cambia el estado (escalar)",
+				"en": "KYC Recheck required if name, date of birth or address change after approval: it goes first. With 'Enhanced review' only Compliance changes the status (escalate)"
+			}
+		},
+		"latencia_s_juego": {
+			"_nota": "reloj de caso 10x (balance.json, Joan 14:13): 10 min = 60 s reales; un agente cuidadoso cierra en 5-7 min de juego (30-42 s reales); dudar o equivocarse de partner lo pasa",
+			"kardex": 20,
+			"portal": 35,
+			"pod": 20,
+			"enviar": 15
+		}
+	},
+	"destinatarios": [
+		{
+			"id": "Banco Andino",
+			"correo": "conciliaciones@bancoandino.kp"
+		},
+		{
+			"id": "Caja Mirador",
+			"correo": "pagos@cajamirador.kp"
+		},
+		{
+			"id": "RemesaYa",
+			"correo": "soporte@remesaya.kp"
+		},
+		{
+			"id": "Cliente",
+			"correo": "cliente del caso"
+		},
+		{
+			"id": "Vitzo",
+			"correo": "ops@vitzo.kp"
+		}
+	],
+	"plantillas": [
+		"POD",
+		"Reversal",
+		"Status",
+		"POD request"
+	],
+	"tipificaciones": [
+		{
+			"id": "pod_solicitado",
+			"es": "POD solicitado al partner",
+			"en": "POD requested from partner"
+		},
+		{
+			"id": "pod_enviado",
+			"es": "POD enviado al solicitante",
+			"en": "POD sent to requester"
+		},
+		{
+			"id": "reversal_solicitado",
+			"es": "Reversal solicitado al partner",
+			"en": "Reversal requested from partner"
+		},
+		{
+			"id": "reversal_portal",
+			"es": "Reversal registrado en portal",
+			"en": "Reversal filed in portal"
+		},
+		{
+			"id": "status_partner",
+			"es": "Status solicitado al partner",
+			"en": "Status requested from partner"
+		},
+		{
+			"id": "status_informado",
+			"es": "Status informado al cliente",
+			"en": "Status reported to customer"
+		},
+		{
+			"id": "sin_accion",
+			"es": "Cerrado sin acción",
+			"en": "Closed with no action"
+		}
+	],
+	"transacciones": {
+		"KP-2211-3312": {
+			"partner": "Banco Andino",
+			"monto": "1.250,00 KP",
+			"fecha": "08/11",
+			"estado": {
+				"es": "Pagado por el partner · sin confirmación de acreditación",
+				"en": "Paid by partner · credit not confirmed"
+			},
+			"beneficiario": "Odalis Ferrán Quillca"
+		},
+		"KP-2307-1188": {
+			"partner": "Vitzo",
+			"monto": "860,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Liberado al partner pagador",
+				"en": "Released to paying partner"
+			},
+			"beneficiario": "Teodomira Sauce Arnao",
+			"nota": {
+				"es": "Nota interna (M., turno tarde): «Para Vitzo escríbanle a ops@vitzo.kp, responden en el día.»",
+				"en": "Internal note (M., afternoon shift): «For Vitzo email ops@vitzo.kp, they answer the same day.»"
+			}
+		},
+		"KP-2108-4410": {
+			"partner": "Caja Mirador",
+			"monto": "2.040,00 KP",
+			"fecha": "08/11",
+			"estado": {
+				"es": "Pendiente de pago en ventanilla",
+				"en": "Pending cash pickup"
+			},
+			"beneficiario": "Lisandro Ortúzar Peña"
+		},
+		"KP-2302-7731": {
+			"partner": "Vitzo",
+			"monto": "1.575,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Liberado al partner pagador",
+				"en": "Released to paying partner"
+			},
+			"beneficiario": "Ramira Tolsá Yupa",
+			"nota": {
+				"es": "Nota interna: «Banco Andino pide POD de Vitzo seguido. Plantilla 'POD request' a Vitzo y listo.»",
+				"en": "Internal note: «Banco Andino keeps asking for Vitzo PODs. 'POD request' template to Vitzo and done.»"
+			}
+		},
+		"KP-2401-0907": {
+			"partner": "RemesaYa",
+			"monto": "430,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "En tránsito con el partner",
+				"en": "In transit with partner"
+			},
+			"beneficiario": "Casimiro Leuro Vant"
+		},
+		"KP-2404-5562": {
+			"partner": "Vitzo",
+			"monto": "990,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Cancelado por el cliente · fondos en el partner",
+				"en": "Cancelled by customer · funds at partner"
+			},
+			"beneficiario": "Eulalia Brenes Mora"
+		},
+		"KP-2302-8890": {
+			"partner": "Vitzo",
+			"monto": "1.120,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Liberado al partner pagador",
+				"en": "Released to paying partner"
+			},
+			"beneficiario": "(hermana del cliente)",
+			"nota": {
+				"es": "Nota interna: «para WMM de Vitzo escríbanle a ops@vitzo.kp, responden rápido»",
+				"en": "Internal note: «for Vitzo WMM email ops@vitzo.kp, they answer fast»"
+			}
+		},
+		"KP-2403-6604": {
+			"partner": "Vitzo",
+			"monto": "700,00 KP",
+			"fecha": "09/11",
+			"estado": {
+				"es": "Liberado al partner pagador",
+				"en": "Released to paying partner"
+			},
+			"beneficiario": "(padre del cliente)"
+		}
+	},
+	"portal": {
+		"KP-2307-1188": {
+			"estado": "Depositado",
+			"fecha": "09/11 05:02",
+			"monto": "860,00 KP",
+			"pod": true,
+			"pod_texto": "Depósito 05:02 · cuenta ****2210 · ref VZ-204417"
+		},
+		"KP-2302-7731": {
+			"estado": "Depositado",
+			"fecha": "09/11 04:48",
+			"monto": "1.575,00 KP",
+			"pod": true,
+			"pod_texto": "Depósito 04:48 · cuenta ****9035 · ref VZ-118460"
+		},
+		"KP-2404-5562": {
+			"estado": "Liberado",
+			"fecha": "09/11 06:11",
+			"monto": "990,00 KP",
+			"pod": false,
+			"pod_texto": "POD no disponible (sin depósito)",
+			"banner": true
+		},
+		"KP-2302-8890": {
+			"estado": "Depositado",
+			"fecha": "09/11 03:10",
+			"monto": "1.120,00 KP",
+			"pod": true,
+			"pod_texto": "Depósito 03:10 · cuenta ****4471 · ref VZ-118823"
+		},
+		"KP-2403-6604": {
+			"estado": "En revisión",
+			"fecha": "09/11 05:58",
+			"monto": "700,00 KP",
+			"pod": false,
+			"pod_texto": "POD no disponible · usar 'Contacto partner'",
+			"banner": true
+		}
+	},
+	"turnos": {
+		"1": [
+			{
+				"id": "t1_correo_pod",
+				"canal": "correo",
+				"hora_juego": "03:15",
+				"tx": "KP-2211-3312",
+				"de": "odalis.f@correo.kp",
+				"asunto": {
+					"es": "No llega el depósito KP-2211-3312",
+					"en": "Deposit KP-2211-3312 not arriving"
+				},
+				"cuerpo": {
+					"es": "Buenas noches. Envié 1.205 KP a mi hija (KP-2211-3312) y el banco dice que pagó, pero a ella no le llega nada. Necesito el comprobante. Por favor. Llevo tres noches escribiendo.",
+					"en": "Good evening. I sent 1,205 KP to my daughter (KP-2211-3312) and the bank says it paid, but nothing arrives. I need the proof. Please. I've been writing for three nights."
+				},
+				"correcto": {
+					"destinatario": "Banco Andino",
+					"plantilla": "POD",
+					"campos": {
+						"id": "KP-2211-3312",
+						"monto": "1.250,00 KP",
+						"fecha": "08/11"
+					},
+					"tipificacion": "pod_solicitado"
+				},
+				"opciones_campos": {
+					"id": [
+						"KP-2211-3312",
+						"KP-2211-3321",
+						"KP-2112-3312"
+					],
+					"monto": [
+						"1.205,00 KP",
+						"1.250,00 KP",
+						"1.520,00 KP"
+					],
+					"fecha": [
+						"08/11",
+						"11/08",
+						"09/11"
+					]
+				}
+			},
+			{
+				"id": "vz_status",
+				"canal": "correo",
+				"hora_juego": "05:40",
+				"tx": "KP-2307-1188",
+				"vitzo": "status",
+				"de": "teodomira.sauce@correo.kp",
+				"asunto": {
+					"es": "¿Estado de KP-2307-1188?",
+					"en": "Status of KP-2307-1188?"
+				},
+				"cuerpo": {
+					"es": "¿Ya está el dinero? Mi mamá espera en el banco desde las 4. El banco dice que lo tiene «el otro». ¿Quién es el otro?",
+					"en": "Is the money there yet? My mom has been waiting at the bank since 4. The bank says «the other one» has it. Who is the other one?"
+				},
+				"correcto": {
+					"portal": [
+						"buscar"
+					],
+					"destinatario": "Cliente",
+					"plantilla": "Status",
+					"campos": {
+						"id": "KP-2307-1188",
+						"monto": "860,00 KP",
+						"fecha": "09/11"
+					},
+					"tipificacion": "status_informado"
+				},
+				"opciones_campos": {
+					"id": [
+						"KP-2307-1188",
+						"KP-2307-1881",
+						"KP-2370-1188"
+					],
+					"monto": [
+						"860,00 KP",
+						"680,00 KP",
+						"868,00 KP"
+					],
+					"fecha": [
+						"09/11",
+						"08/11",
+						"11/09"
+					]
+				}
+			},
+			{
+				"id": "t1_kyc_norvalia",
+				"canal": "kyc",
+				"hora_juego": "06:30",
+				"evento": "shero_en_el_reflejo",
+				"perfil": {
+					"nombre": "RUFINO AKEL VARDA",
+					"region": "Norvalia",
+					"total_kp": 1320,
+					"envios": 3,
+					"nacimiento": "31/02/1987",
+					"documento": "NV-55130872",
+					"direccion": "Jr. Los Cedros 118, Puerto Velo"
+				},
+				"everif": {
+					"estado": "fallo",
+					"confirmo": [
+						"nombre"
+					]
+				},
+				"docs": {
+					"id": {
+						"subido": true,
+						"nombre": "RUFINO AKEL VARDA",
+						"nacimiento": "31/02/1987",
+						"numero": "NV-55130872"
+					},
+					"domicilio": {
+						"subido": true,
+						"direccion": "Jr. Los Cedros 118, Puerto Velo"
+					}
+				},
+				"selfie": {
+					"coincide": true
+				},
+				"etiquetas": [],
+				"correcto": "rechazar",
+				"motivo": {
+					"es": "La fecha 31/02 no existe: documento inválido.",
+					"en": "31/02 doesn't exist: invalid document."
+				}
+			}
+		],
+		"2": [
+			{
+				"id": "t2_correo_reversal",
+				"canal": "correo",
+				"hora_juego": "01:00",
+				"tx": "KP-2108-4410",
+				"de": "l.ortuzar@correo.kp",
+				"asunto": {
+					"es": "CANCELAR envío KP-2108-4410",
+					"en": "CANCEL transfer KP-2108-4410"
+				},
+				"cuerpo": {
+					"es": "Quiero cancelar el envío KP-2108-4410 de 2.400 KP. Nadie lo ha cobrado. Devuélvanmelo. No voy a llamar otra vez, la voz que contesta no respira.",
+					"en": "I want to cancel transfer KP-2108-4410 of 2,400 KP. Nobody has collected it. Give it back. I won't call again, the voice that answers doesn't breathe."
+				},
+				"correcto": {
+					"destinatario": "Caja Mirador",
+					"plantilla": "Reversal",
+					"campos": {
+						"id": "KP-2108-4410",
+						"monto": "2.040,00 KP",
+						"fecha": "08/11"
+					},
+					"tipificacion": "reversal_solicitado"
+				},
+				"opciones_campos": {
+					"id": [
+						"KP-2108-4410",
+						"KP-2108-4401",
+						"KP-2018-4410"
+					],
+					"monto": [
+						"2.400,00 KP",
+						"2.040,00 KP",
+						"2.004,00 KP"
+					],
+					"fecha": [
+						"08/11",
+						"09/11",
+						"11/08"
+					]
+				}
+			},
+			{
+				"id": "t2_kyc_valdesia",
+				"canal": "kyc",
+				"hora_juego": "03:10",
+				"perfil": {
+					"nombre": "MAYTE ORSINI CÁRCAMO",
+					"region": "Valdesia",
+					"total_kp": 540,
+					"envios": 4,
+					"nacimiento": "14/06/1991",
+					"documento": "40218876",
+					"direccion": "Calle Faro 22, Valdés"
+				},
+				"everif": {
+					"estado": "fallo",
+					"confirmo": [
+						"nombre"
+					]
+				},
+				"docs": {
+					"id": {
+						"subido": true,
+						"nombre": "MAYTE ORSINI CÁRCAMO",
+						"nacimiento": "14/06/1991",
+						"numero": "40218876"
+					},
+					"domicilio": {
+						"subido": false
+					}
+				},
+				"selfie": {
+					"coincide": true
+				},
+				"etiquetas": [],
+				"correcto": "solicitar_comprobante",
+				"motivo": {
+					"es": "La e-verificación falló y es el 4.º envío: revisión documental. Falta el comprobante de domicilio.",
+					"en": "E-verification failed and it's the 4th send: document review. Proof of address is missing."
+				}
+			},
+			{
+				"id": "vz_pod",
+				"canal": "correo",
+				"hora_juego": "06:40",
+				"tx": "KP-2302-7731",
+				"vitzo": "pod",
+				"de": "conciliaciones@bancoandino.kp",
+				"asunto": {
+					"es": "Solicitud de POD · KP-2302-7731",
+					"en": "POD request · KP-2302-7731"
+				},
+				"cuerpo": {
+					"es": "Estimados: favor remitir el comprobante de depósito (POD) de KP-2302-7731, pagado por su partner. Plazo: hoy. Si no es posible, reenviar la solicitud al partner. Saludos, Conciliaciones.",
+					"en": "Dear team: please send the proof of deposit (POD) of KP-2302-7731, paid by your partner. Deadline: today. If not possible, forward the request to the partner. Regards, Reconciliation."
+				},
+				"correcto": {
+					"portal": [
+						"buscar",
+						"pod"
+					],
+					"adjunto_pod": true,
+					"destinatario": "Banco Andino",
+					"plantilla": "POD",
+					"campos": {
+						"id": "KP-2302-7731",
+						"monto": "1.575,00 KP",
+						"fecha": "09/11"
+					},
+					"tipificacion": "pod_enviado"
+				},
+				"opciones_campos": {
+					"id": [
+						"KP-2302-7731",
+						"KP-2302-7713",
+						"KP-2032-7731"
+					],
+					"monto": [
+						"1.575,00 KP",
+						"1.557,00 KP",
+						"1.755,00 KP"
+					],
+					"fecha": [
+						"09/11",
+						"08/11",
+						"11/09"
+					]
+				}
+			},
+			{
+				"id": "t2_kyc_recheck",
+				"canal": "kyc",
+				"hora_juego": "07:40",
+				"perfil": {
+					"nombre": "BASTIÁN OYOLA REY",
+					"region": "Valdesia",
+					"total_kp": 2210,
+					"envios": 9,
+					"nacimiento": "02/09/1984",
+					"documento": "4471203",
+					"direccion": "Av. Las Garzas 905, Valdés"
+				},
+				"everif": {
+					"estado": "ok",
+					"confirmo": [
+						"nombre",
+						"documento"
+					]
+				},
+				"docs": {
+					"id": {
+						"subido": true,
+						"nombre": "BASTIÁN OYOLA REY",
+						"nacimiento": "02/09/1984",
+						"numero": "4471203"
+					},
+					"domicilio": {
+						"subido": true,
+						"direccion": "Av. Las Garzas 905, Valdés"
+					}
+				},
+				"selfie": {
+					"coincide": true
+				},
+				"etiquetas": [
+					"recheck"
+				],
+				"cambios": [
+					{
+						"campo": "direccion",
+						"antes": "Pje. Nogal 14, Valdés",
+						"ahora": "Av. Las Garzas 905, Valdés"
+					}
+				],
+				"correcto": "rechazar",
+				"motivo": {
+					"es": "Recheck por cambio de dirección: el documento nuevo tiene 7 dígitos (Valdesia usa 8). Documento inválido.",
+					"en": "Recheck for address change: the new ID has 7 digits (Valdesia uses 8). Invalid document."
+				}
+			}
+		],
+		"3": [
+			{
+				"id": "t3_correo_status",
+				"canal": "correo",
+				"hora_juego": "01:20",
+				"tx": "KP-2401-0907",
+				"de": "c.leuro@correo.kp",
+				"asunto": {
+					"es": "dónde está KP-2401-0907",
+					"en": "where is KP-2401-0907"
+				},
+				"cuerpo": {
+					"es": "Hace 2 días que figura en tránsito. 430 KP. Es para el alquiler. Si me botan del cuarto, les escribo desde la calle.",
+					"en": "It's been in transit for 2 days. 430 KP. It's for the rent. If they kick me out, I'll write from the street."
+				},
+				"correcto": {
+					"destinatario": "RemesaYa",
+					"plantilla": "Status",
+					"campos": {
+						"id": "KP-2401-0907",
+						"monto": "430,00 KP",
+						"fecha": "09/11"
+					},
+					"tipificacion": "status_partner"
+				},
+				"opciones_campos": {
+					"id": [
+						"KP-2401-0907",
+						"KP-2401-0970",
+						"KP-2410-0907"
+					],
+					"monto": [
+						"430,00 KP",
+						"340,00 KP",
+						"403,00 KP"
+					],
+					"fecha": [
+						"09/11",
+						"07/11",
+						"11/09"
+					]
+				}
+			},
+			{
+				"id": "t3_kyc_taren",
+				"canal": "kyc",
+				"hora_juego": "03:00",
+				"perfil": {
+					"nombre": "ILEN SAVARO QUINT",
+					"region": "Islas Taren",
+					"total_kp": 0,
+					"envios": 0,
+					"nacimiento": "21/12/1979",
+					"documento": "IT-0091-554",
+					"direccion": "Muelle 3, Isla Mayor"
+				},
+				"everif": {
+					"estado": "no_aplica",
+					"confirmo": []
+				},
+				"docs": {
+					"id": {
+						"subido": true,
+						"nombre": "ILÉN SÁVARO QUINT",
+						"nacimiento": "21/12/1979",
+						"numero": "IT-0091-554"
+					},
+					"domicilio": {
+						"subido": true,
+						"direccion": "Muelle 3, Isla Mayor"
+					}
+				},
+				"selfie": {
+					"coincide": true
+				},
+				"etiquetas": [],
+				"correcto": "rechazar",
+				"motivo": {
+					"es": "Islas Taren: el nombre del documento lleva tildes que el perfil no tiene. No coincide letra por letra.",
+					"en": "Islas Taren: the ID name has accents the profile doesn't. It doesn't match letter by letter."
+				}
+			},
+			{
+				"id": "vz_reversal",
+				"canal": "correo",
+				"hora_juego": "06:50",
+				"tx": "KP-2404-5562",
+				"vitzo": "reversal",
+				"de": "eulalia.brenes@correo.kp",
+				"asunto": {
+					"es": "Cancelé KP-2404-5562 y nadie me devuelve",
+					"en": "I cancelled KP-2404-5562 and nobody refunds me"
+				},
+				"cuerpo": {
+					"es": "Cancelé el envío KP-2404-5562 a las 6. En su app dice cancelado. El dinero no vuelve. ¿A quién le escribo? Denme el correo de ese Vitzo y le escribo yo.",
+					"en": "I cancelled transfer KP-2404-5562 at 6. Your app says cancelled. The money doesn't come back. Who do I write to? Give me that Vitzo's email and I'll write myself."
+				},
+				"correcto": {
+					"portal": [
+						"buscar",
+						"reversal"
+					],
+					"destinatario": "",
+					"tipificacion": "reversal_portal"
+				},
+				"opciones_campos": {
+					"id": [
+						"KP-2404-5562",
+						"KP-2404-5526",
+						"KP-2440-5562"
+					],
+					"monto": [
+						"990,00 KP",
+						"909,00 KP",
+						"999,00 KP"
+					],
+					"fecha": [
+						"09/11",
+						"08/11",
+						"11/09"
+					]
+				}
+			},
+			{
+				"id": "t3_kyc_reforzada",
+				"canal": "kyc",
+				"hora_juego": "07:20",
+				"perfil": {
+					"nombre": "GRISELDA NUÑO PALAU",
+					"region": "Norvalia",
+					"total_kp": 3890,
+					"envios": 21,
+					"nacimiento": "30/04/1972",
+					"documento": "NV-77002145",
+					"direccion": "Paseo Alto 7, Puerto Velo"
+				},
+				"everif": {
+					"estado": "ok",
+					"confirmo": [
+						"nombre",
+						"documento",
+						"nacimiento"
+					]
+				},
+				"docs": {
+					"id": {
+						"subido": true,
+						"nombre": "GRISELDA NUÑO PALAU",
+						"nacimiento": "30/04/1972",
+						"numero": "NV-77002145"
+					},
+					"domicilio": {
+						"subido": true,
+						"direccion": "Paseo Alto 7, Puerto Velo"
+					}
+				},
+				"selfie": {
+					"coincide": true
+				},
+				"etiquetas": [
+					"reforzada",
+					"recheck"
+				],
+				"cambios": [
+					{
+						"campo": "nombre",
+						"antes": "GRISELDA NUÑO",
+						"ahora": "GRISELDA NUÑO PALAU"
+					}
+				],
+				"correcto": "escalar",
+				"motivo": {
+					"es": "Revisión reforzada: solo Cumplimiento puede cambiar el estado, aunque todo parezca en orden.",
+					"en": "Enhanced review: only Compliance can change the status, even if everything looks fine."
+				}
+			}
+		]
+	},
+	"relleno_kyc": [
+		{
+			"id": "kyc_relleno_ok",
+			"canal": "kyc",
+			"perfil": {
+				"nombre": "TOBÍAS LERMA ICAZA",
+				"region": "Norvalia",
+				"total_kp": 380,
+				"envios": 2,
+				"nacimiento": "11/03/1995",
+				"documento": "NV-30019984",
+				"direccion": "Jr. Arce 301, Puerto Velo"
+			},
+			"everif": {
+				"estado": "ok",
+				"confirmo": [
+					"nombre",
+					"documento",
+					"nacimiento"
+				]
+			},
+			"docs": {
+				"id": {
+					"subido": true,
+					"nombre": "TOBÍAS LERMA ICAZA",
+					"nacimiento": "11/03/1995",
+					"numero": "NV-30019984"
+				},
+				"domicilio": {
+					"subido": false
+				}
+			},
+			"selfie": {
+				"coincide": true
+			},
+			"etiquetas": [],
+			"correcto": "aprobar",
+			"motivo": {
+				"es": "Norvalia, 380 KP, e-verificación completa: se aprueba.",
+				"en": "Norvalia, 380 KP, full e-verification: approve."
+			}
+		},
+		{
+			"id": "kyc_relleno_recheck",
+			"canal": "kyc",
+			"perfil": {
+				"nombre": "ANA LUCÍA FERRO DÍAZ",
+				"region": "Valdesia",
+				"total_kp": 1240,
+				"envios": 6,
+				"nacimiento": "05/10/1990",
+				"documento": "40880123",
+				"direccion": "Calle Faro 90, Valdés"
+			},
+			"everif": {
+				"estado": "ok",
+				"confirmo": [
+					"nombre",
+					"documento"
+				]
+			},
+			"docs": {
+				"id": {
+					"subido": true,
+					"nombre": "ANA LUCÍA FERRO DÍAZ",
+					"nacimiento": "05/10/1990",
+					"numero": "40880123"
+				},
+				"domicilio": {
+					"subido": true,
+					"direccion": "Calle Faro 90, Valdés"
+				}
+			},
+			"selfie": {
+				"coincide": true
+			},
+			"etiquetas": [
+				"recheck"
+			],
+			"cambios": [
+				{
+					"campo": "nombre",
+					"antes": "ANA LUCÍA FERRO",
+					"ahora": "ANA LUCÍA FERRO DÍAZ"
+				}
+			],
+			"correcto": "resolver_recheck",
+			"motivo": {
+				"es": "Recheck por nombre: el documento nuevo coincide letra por letra y tiene 8 dígitos. Se resuelve el recheck.",
+				"en": "Name recheck: the new ID matches letter by letter and has 8 digits. Resolve the recheck."
+			}
+		}
+	]
+}

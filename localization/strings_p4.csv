@@ -1,0 +1,163 @@
+keys,es,en
+PKG_P4_READY,Cadenas del paquete P4 (v0.3),Package P4 strings (v0.3)
+P4_APP_KARDEX,Kardex,Kardex
+P4_APP_CORREO,Correo,Mail
+P4_APP_IDENTA,Identa,Identa
+P4_APP_PORTAL,Portal Vitzo,Vitzo Portal
+P4_APP_CAMPUS,Campus,Campus
+P4_NEXT,Siguiente paso:,Next step:
+P4_NEXT_LOGIN,[Espacio] o «Aceptar» en Fonex para iniciar sesión.,[Space] or «Accept» in Fonex to sign in.
+P4_NEXT_ACK,¡Written warning! [Espacio] Ack antes de que venza.,Written warning! [Space] Ack before it expires.
+P4_NEXT_VITZO,Reacciona al recordatorio de Vitzo en #site-updates (clic en la reacción o [Enter]).,React to Vitzo's reminder in #site-updates (click the reaction or [Enter]).
+P4_NEXT_ROOMS,Shero te espera en Ezlaki Rooms: [Enter] o «Unirse».,Shero is waiting in Ezlaki Rooms: [Enter] or «Join».
+P4_NEXT_CASE_IN,"Caso de BO asignado: [Espacio] o «Aceptar» para abrirlo. No se pierde, pero el reloj de Shero empieza al abrirlo.","BO case assigned: [Space] or «Accept» to open it. It won't be lost, but Shero's clock starts when you open it."
+P4_NEXT_SIT,¡Tu teléfono suena y no estás en tu sitio! Siéntate en tu PC y contesta.,Your phone is ringing and you're not at your seat! Sit at your PC and answer.
+P4_NEXT_ACCEPT,Contacto entrante: [Espacio] o «Aceptar».,Incoming contact: [Space] or «Accept».
+P4_NEXT_COMPOSER,Correo abierto desde la llamada. Mira bien a quién va antes de enviar.,Email opened from the call. Look closely at who it goes to before sending.
+P4_NEXT_TREE,Elige qué decir (1-4 o clic). [H] hold antes de levantarte.,Choose what to say (1-4 or click). [H] hold before you stand up.
+P4_NEXT_ON_HOLD,Cliente en hold. Elige una opción para volver con él.,Customer on hold. Pick an option to get back to them.
+P4_NEXT_BO,AUX BO: los KYC entran en Identa. El BO baja tu Available %.,AUX BO: KYCs arrive in Identa. BO lowers your Available %.
+P4_NEXT_AVAILABLE,"En Available. Quédate sentado: si suena y no estás, es una llamada perdida.","In Available. Stay seated: if it rings and you're not there, it's a missed call."
+P4_NEXT_AUX,AUX {aux}. Shero lo está viendo.,AUX {aux}. Shero is watching.
+P4_STEP_KYC,"Revisa el perfil, la e-verificación y los documentos con las reglas de la región. Decide.","Check the profile, e-verification and documents against the region's rules. Decide."
+P4_STEP_KARDEX,Busca la operación en Kardex (clic en el KP o escríbelo) para ver el partner pagador.,Look up the transaction in Kardex (click the KP or type it) to see the paying partner.
+P4_STEP_PARTNER,"Gestiona según el partner pagador: correo con la plantilla y los 3 campos, o su portal.","Handle it according to the paying partner: email with the template and 3 fields, or its portal."
+P4_STEP_TIPIFICAR,Tipifica el caso en Correo.,Categorize the case in Mail.
+P4_STEP_CERRAR,Cierra el caso. El reloj sigue corriendo.,Close the case. The clock keeps running.
+P4_WAIT_PORTAL,Busca la operación en el Portal Vitzo (F4). El cliente espera.,Look up the transaction in the Vitzo Portal (F4). The customer is waiting.
+P4_WAIT_CORREO,Hay un correo abierto en Correo (F2).,There's an email open in Mail (F2).
+P4_HINT_SURE,¿seguro?,sure?
+P4_OUTCOME_OK,Cliente satisfecho,Customer satisfied
+P4_OUTCOME_NEUTRAL,Contacto cerrado (neutral),Contact closed (neutral)
+P4_CASE_MISS,Caso cerrado con errores. QA lo verá.,Case closed with errors. QA will see it.
+P4_MISSED,Llamada perdida ({n}). Shero las cuenta.,Missed call ({n}). Shero counts them.
+P4_FONEX_ACCEPT,Aceptar [Espacio],Accept [Space]
+P4_FONEX_HOLD,Hold [H],Hold [H]
+P4_FONEX_LOGIN_HINT,Sin sesión · siéntate y pulsa Aceptar,Signed out · sit down and press Accept
+P4_FONEX_CASE,Caso BO abierto,BO case open
+P4_FONEX_WAITING,Esperando contacto… no te levantes,Waiting for a contact… don't get up
+P4_FONEX_NOT_PRODUCTIVE,AUX no productivo · el reloj de Shero corre,Non-productive AUX · Shero's clock is running
+P4_KPI_BELOW,▼ bajo el target,▼ below target
+P4_KPI_MISSED,Perdidas,Missed
+P4_HELP_PC,Ratón: clic en las apps · 1-4 decir · Espacio aceptar/Ack · H hold · Enter reaccionar · F1-F5 apps · Tab pantallas · Q AUX · E salir,Mouse: click the apps · 1-4 say · Space accept/Ack · H hold · Enter react · F1-F5 apps · Tab screens · Q AUX · E exit
+P4_HELP_TERMINAL,Terminal Fonex: clic o 1-7 para el AUX · clic o Enter para reaccionar · Q / E salir,Fonex terminal: click or 1-7 for AUX · click or Enter to react · Q / E exit
+P4_KARDEX_SEARCH,Buscar operación,Look up transaction
+P4_SEARCH,Buscar,Search
+P4_KARDEX_IDLE,Cuando entre un contacto aparecerá aquí. Mientras tanto puedes buscar cualquier operación KP-…,When a contact arrives it will appear here. Meanwhile you can look up any KP-… transaction.
+P4_KARDEX_CASE_HINT,Caso de BO: busca la operación para ver quién la pagó. El correo está en Correo (F2).,BO case: look up the transaction to see who paid it. The email is in Mail (F2).
+P4_KARDEX_TX,Operación,Transaction
+P4_KARDEX_PARTNER,Partner pagador,Paying partner
+P4_KARDEX_AMOUNT,Monto,Amount
+P4_KARDEX_DATE,Fecha,Date
+P4_KARDEX_STATE,Estado,Status
+P4_KARDEX_BENEF,Beneficiario,Beneficiary
+P4_KARDEX_NOT_FOUND,{tx}: no existe en Kardex.,{tx}: not found in Kardex.
+P4_CANAL_LLAMADA,Llamada,Call
+P4_CANAL_CHAT,Chat,Chat
+P4_CANAL_CORREO,Correo BO,BO email
+P4_MOOD,Cliente,Customer
+P4_MOOD_TRANQUILO,tranquilo,calm
+P4_MOOD_TENSO,tenso,tense
+P4_MOOD_A_PUNTO,a punto de colgar,about to hang up
+P4_CHAT_TIMER,responde en,reply within
+P4_MAIL_INBOX,Bandeja,Inbox
+P4_MAIL_EMPTY,Sin correos asignados.,No emails assigned.
+P4_MAIL_HOWTO,"Los correos de BO entran en Available, como una llamada. Pasos: leer · buscar en Kardex · destinatario según el partner · plantilla · 3 campos · enviar · tipificar · cerrar.","BO emails arrive in Available, like a call. Steps: read · look up in Kardex · recipient by partner · template · 3 fields · send · categorize · close."
+P4_MAIL_FROM,De,From
+P4_MAIL_OPEN_KARDEX,Ver en Kardex,View in Kardex
+P4_MAIL_SENT,Enviados,Sent
+P4_FIELD_ID,N.º operación,Transaction ID
+P4_FIELD_MONTO,Monto,Amount
+P4_FIELD_FECHA,Fecha,Date
+P4_FIELDS_LOCKED,Busca la operación en Kardex para completar los campos.,Look up the transaction in Kardex to fill in the fields.
+P4_MAIL_ATTACH_POD,Adjuntar POD (descargado del portal),Attach POD (downloaded from the portal)
+P4_MAIL_SEND,Enviar,Send
+P4_MAIL_CANCEL,Cancelar,Cancel
+P4_MAIL_TYPIFY,Tipificación,Category
+P4_MAIL_CLOSE,Cerrar caso,Close case
+P4_MAIL_NEW,Nuevo correo,New email
+P4_MAIL_FROM_CALL,Abierto desde la conversación en curso.,Opened from the current conversation.
+P4_MAIL_FROM_BANNER,Abierto desde el aviso del portal.,Opened from the portal banner.
+P4_MAIL_TREE_BODY,Estimados: favor confirmar {tpl} de la operación {tx}. Quedo atento. Saludos.,Dear team: please confirm {tpl} of transaction {tx}. Looking forward. Regards.
+P4_KYC_APROBAR,Aprobar,Approve
+P4_KYC_RECHAZAR,Rechazar,Reject
+P4_KYC_SOLICITAR_ID,Solicitar documento de identidad,Request ID document
+P4_KYC_SOLICITAR_COMPROBANTE,Solicitar comprobante de domicilio,Request proof of address
+P4_KYC_ESCALAR,Escalar a Cumplimiento,Escalate to Compliance
+P4_KYC_RESOLVER_RECHECK,Resolver Recheck,Resolve Recheck
+P4_KYC_IDLE,Sin verificación asignada.,No verification assigned.
+P4_KYC_IDLE_HINT,Los KYC solo entran en AUX BO (cuando el Mentor publica una allocation). Las reglas de cada región están a la derecha y en Campus.,KYCs only arrive in AUX BO (when the Mentor posts an allocation). Each region's rules are on the right and in Campus.
+P4_KYC_RULES,Reglas KYC,KYC rules
+P4_KYC_ANY,Todas las regiones,All regions
+P4_KYC_TAG_REFORZADA,REVISIÓN REFORZADA,ENHANCED REVIEW
+P4_KYC_TAG_RECHECK,KYC RECHECK REQUERIDO,KYC RECHECK REQUIRED
+P4_KYC_REGION,Región de envío,Sending region
+P4_KYC_TOTAL,Total enviado,Total sent
+P4_KYC_SENDS,Envíos,Sends
+P4_KYC_DOCNUM,N.º documento,ID number
+P4_KYC_ADDRESS,Dirección,Address
+P4_KYC_CHANGE_DIRECCION,Cambio de dirección,Address change
+P4_KYC_CHANGE_NOMBRE,Cambio de nombre,Name change
+P4_KYC_CHANGE_NACIMIENTO,Cambio de fecha de nacimiento,Date of birth change
+P4_KYC_EVERIF,E-verificación,E-verification
+P4_KYC_EV_OK,confirmada,confirmed
+P4_KYC_EV_FALLO,falló,failed
+P4_KYC_EV_NO_APLICA,no aplica en esta región,not available in this region
+P4_KYC_EV_NO_DISPONIBLE,no disponible,not available
+P4_KYC_CONFIRMED,confirmó,confirmed
+P4_KYC_F_NOMBRE,nombre,name
+P4_KYC_F_DOCUMENTO,n.º de documento,ID number
+P4_KYC_F_NACIMIENTO,fecha de nacimiento,date of birth
+P4_KYC_DOCS,Documentos subidos,Uploaded documents
+P4_KYC_DOC_ID,Documento de identidad,ID document
+P4_KYC_DOC_ADDR,Comprobante de domicilio,Proof of address
+P4_KYC_NOT_UPLOADED,no subido,not uploaded
+P4_KYC_SELFIE_OK,coincide con el documento,matches the document
+P4_KYC_SELFIE_NO,NO coincide,does NOT match
+P4_PORTAL_TITLE,Portal Vitzo · Partners · Konzentramance / KipuPay,Vitzo Portal · Partners · Konzentramance / KipuPay
+P4_PORTAL_BANNER,"Mantenimiento programado. Si es urgente, escríbanos a ops@vitzo.kp","Scheduled maintenance. If urgent, email us at ops@vitzo.kp"
+P4_PORTAL_SEARCH,Buscar transacción,Search transaction
+P4_PORTAL_USE_CASE,KP del caso,Case KP
+P4_PORTAL_EMPTY,Escribe un KP-… o usa «KP del caso». Vitzo responde aquí. Vitzo siempre responde aquí.,Type a KP-… or use «Case KP». Vitzo answers here. Vitzo always answers here.
+P4_PORTAL_NOT_FOUND,{tx}: sin resultados en el portal.,{tx}: no results in the portal.
+P4_PORTAL_STATE,Estado,Status
+P4_PORTAL_ST_RECIBIDO,Recibido,Received
+P4_PORTAL_ST_LIBERADO,Liberado,Released
+P4_PORTAL_ST_DEPOSITADO,Depositado,Deposited
+P4_PORTAL_ST_EN_REVISIÓN,En revisión,Under review
+P4_PORTAL_ST_EN_REVISION,En revisión,Under review
+P4_PORTAL_ST_REVERTIDO,Revertido,Reversed
+P4_PORTAL_POD_OK,POD disponible: {pod}.,POD available: {pod}.
+P4_PORTAL_POD_NO,POD no disponible. Use «Contacto partner» desde este portal.,POD not available. Use «Partner contact» from this portal.
+P4_PORTAL_DOWNLOAD,Descargar POD,Download POD
+P4_PORTAL_ATTACH,Adjuntar al caso,Attach to case
+P4_PORTAL_DOWNLOADED,POD descargado.,POD downloaded.
+P4_PORTAL_ATTACHED,POD adjuntado al caso.,POD attached to the case.
+P4_PORTAL_REVERSAL,Solicitud de reversal,Reversal request
+P4_PORTAL_REVERSAL_OK,Solicitud de reversal registrada en el portal.,Reversal request filed in the portal.
+P4_PORTAL_CONTACT,Contacto partner,Partner contact
+P4_PORTAL_CONTACT_OK,Solicitud {n} registrada. Vitzo responderá por este portal.,Request {n} filed. Vitzo will reply through this portal.
+P4_CAMPUS_MT,Minitrainings,Minitrainings
+P4_CAMPUS_DONE,completado,completed
+P4_CAMPUS_PENDING,pendiente,pending
+P4_CAMPUS_LOCKED,disponible a las,available at
+P4_CAMPUS_GUIDES,Guías,Guides
+P4_CAMPUS_G_VITZO,Vitzo: solo portal,Vitzo: portal only
+P4_CAMPUS_G_KYC,Reglas KYC por región,KYC rules by region
+P4_CAMPUS_G_AVAILABLE,Available %,Available %
+P4_CAMPUS_TXT_VITZO,"Si el partner pagador es Vitzo: status, POD, reversal y contacto se hacen en el Portal Vitzo. Nunca por correo, aunque una nota interna, el banco o el propio portal digan otra cosa. Al cliente sí se le responde por correo.","If the paying partner is Vitzo: status, POD, reversal and contact are done in the Vitzo Portal. Never by email, even if an internal note, the bank or the portal itself says otherwise. The customer does get an email reply."
+P4_CAMPUS_TXT_KYC,Primero el Recheck. Después la región. Una etiqueta de Revisión reforzada manda sobre todo lo demás.,Recheck first. Then the region. An Enhanced review tag overrides everything else.
+P4_CAMPUS_TXT_AVAILABLE,"Available % = Available / (Available + BO). Break, Lunch, Baño, Coaching y Training lo congelan. El Mentor publica la lista cada 90 minutos y Shero solo se entera por ella. El target es 70 %.","Available % = Available / (Available + BO). Break, Lunch, Bathroom, Coaching and Training freeze it. The Mentor posts the list every 90 minutes and Shero only finds out from it. The target is 70 %."
+P4_CAMPUS_WELCOME,Campus Konzentramance. Aprender es parte del turno. El turno no se detiene mientras aprendes.,Konzentramance Campus. Learning is part of the shift. The shift doesn't stop while you learn.
+P4_CAMPUS_OK,Correcto. Minitraining completado.,Correct. Minitraining completed.
+P4_CAMPUS_WRONG,Incorrecto. Vuelve a leer. Shero ve tus intentos.,Wrong. Read it again. Shero sees your attempts.
+P4_EZLAK_CHANNELS,CANALES,CHANNELS
+P4_EZLAK_DMS,MENSAJES DIRECTOS,DIRECT MESSAGES
+P4_EZLAK_TYPING,{quien} está escribiendo,{quien} is typing
+P4_EZLAK_DELETED,Este mensaje fue eliminado.,This message was deleted.
+P4_EZLAK_EDITED,editado,edited
+P4_EZLAK_EMPTY,Nada todavía. Ya llegará.,Nothing yet. It will come.
+P4_EZLAK_REACT,Reaccionar,React
+P4_EZLAK_REACTED,reaccionaste,you reacted
+P4_EZLAK_REACT_HINT,clic o [Enter],click or [Enter]
+P4_EZLAK_INDUCTION,Lista del Training: 1) Login en Fonex 2) Available 3) Aceptar con Espacio 4) Responde con 1-4 o clic 5) Hold antes de levantarte 6) [E] sobre el monitor para usar el ratón.,Training checklist: 1) Sign in to Fonex 2) Available 3) Accept with Space 4) Answer with 1-4 or a click 5) Hold before standing up 6) [E] on the monitor to use the mouse.

@@ -1,0 +1,735 @@
+{
+	"_comentario": "AVAILABLE v0.4 · Cinemáticas completas (Lunes a Sábado + Salida). Explican las mecánicas reales de un call center a cualquier jugador mientras escalan el terror psicológico.",
+	"turnos": {
+		"1": "intro_t1",
+		"2": "t2_capacitacion",
+		"3": "t3_allocations",
+		"4": "t4_papayala",
+		"5": "t5_vacios",
+		"6": "t6_climax_grasa"
+	},
+	"salida": "salida",
+	"cinematicas": {
+		"intro_t1": {
+			"escena": "mundo_m1",
+			"titulo": {
+				"es": "Lunes 26 de octubre de 2026 · 1 año después",
+				"en": "Monday, October 26, 2026 · 1 year later"
+			},
+			"tomas": [
+				{
+					"dur": 5.5,
+					"desde": [
+						-7.0,
+						1.5,
+						33.0
+					],
+					"mira_desde": [
+						6.0,
+						1.6,
+						26.0
+					],
+					"hasta": [
+						-4.0,
+						1.7,
+						32.0
+					],
+					"mira_hasta": [
+						9.0,
+						2.0,
+						25.0
+					],
+					"texto": {
+						"es": "23:48. El último bus de la línea 47 te deja frente a KONZENTRAMANCE. Ha pasado un año desde tu contrato indefinido.",
+						"en": "11:48 PM. The last bus on line 47 drops you in front of KONZENTRAMANCE. One year since you signed your indefinite contract."
+					},
+					"sonidos": [
+						[
+							0.2,
+							"sfx/bus_frenos_aire"
+						],
+						[
+							2.6,
+							"sfx/bus_puerta"
+						]
+					]
+				},
+				{
+					"dur": 5.5,
+					"desde": [
+						1.0,
+						1.1,
+						29.0
+					],
+					"mira_desde": [
+						0.0,
+						6.0,
+						13.5
+					],
+					"hasta": [
+						0.5,
+						1.3,
+						27.5
+					],
+					"mira_hasta": [
+						0.0,
+						34.0,
+						13.5
+					],
+					"texto": {
+						"es": "Turno de madrugada en la campaña KipuPay: de 00:00 a 08:45. Si tu tiempo en línea ('Available') baja del 80 %, te amonestan.",
+						"en": "Graveyard shift on the KipuPay campaign: 12:00 AM to 8:45 AM. If your online time ('Available') drops below 80%, you get written up."
+					},
+					"sonidos": [
+						[
+							3.4,
+							"ambiente/trueno_lejano_01"
+						]
+					]
+				},
+				{
+					"dur": 5.2,
+					"desde": [
+						-3.5,
+						4.6,
+						23.0
+					],
+					"mira_desde": [
+						-3.5,
+						6.4,
+						13.9
+					],
+					"hasta": [
+						-3.5,
+						5.6,
+						18.6
+					],
+					"mira_hasta": [
+						-3.5,
+						6.2,
+						13.9
+					],
+					"texto": {
+						"es": "Piso 2. Tu supervisor Shero ya vigila desde el vidrio. Dos breaks de 10 minutos. Tres Written Warnings… y no sales vivo.",
+						"en": "Floor 2. Your supervisor Shero is already watching from the glass. Two 10-minute breaks. Three Written Warnings… and you don't leave alive."
+					},
+					"silueta": true,
+					"sonidos": [
+						[
+							1.0,
+							"sfx/latido_lento"
+						],
+						[
+							3.9,
+							"sfx/tono_grave_sting"
+						]
+					]
+				},
+				{
+					"dur": 4.8,
+					"desde": [
+						-2.5,
+						1.6,
+						17.5
+					],
+					"mira_desde": [
+						-8.0,
+						1.5,
+						12.1
+					],
+					"hasta": [
+						-4.5,
+						1.6,
+						15.6
+					],
+					"mira_hasta": [
+						-8.0,
+						1.6,
+						12.1
+					],
+					"texto": {
+						"es": "Primero pasa por el mostrador de Don Fermín. Nadie cruza los molinetes sin revisión.",
+						"en": "First stop at Don Fermín's desk. Nobody crosses the turnstiles without inspection."
+					},
+					"voz": [
+						0.8,
+						"otros",
+						"fermin_buenas_noches"
+					]
+				},
+				{
+					"dur": 3.5,
+					"jugador": true,
+					"texto": {
+						"es": "Pasa la revisión, sube al Piso 2 y marca tu entrada en C-14 antes de las 00:00.",
+						"en": "Clear inspection, go up to Floor 2, and log in at C-14 before midnight."
+					}
+				}
+			]
+		},
+		"t2_capacitacion": {
+			"escena": "set_training",
+			"titulo": {
+				"es": "Martes 27 de octubre · Actualización de Campaña 3.2",
+				"en": "Tuesday, October 27 · Campaign Update 3.2"
+			},
+			"tomas": [
+				{
+					"dur": 4.8,
+					"desde": [
+						0.0,
+						1.35,
+						6.5
+					],
+					"mira_desde": [
+						0.0,
+						1.6,
+						-2.0
+					],
+					"hasta": [
+						0.0,
+						1.4,
+						4.6
+					],
+					"mira_hasta": [
+						0.0,
+						1.7,
+						-2.0
+					],
+					"texto": {
+						"es": "Piso 1. El mismo Trainer que te recibió hace un año con café y sonrisas hoy dicta las reglas nuevas.",
+						"en": "Floor 1. The same Trainer who welcomed you a year ago with coffee and smiles now dictates the new rules."
+					},
+					"sonidos": [
+						[
+							0.5,
+							"ambiente/fluorescente_zumbido"
+						]
+					]
+				},
+				{
+					"dur": 4.5,
+					"desde": [
+						1.4,
+						1.5,
+						3.4
+					],
+					"mira_desde": [
+						-1.0,
+						1.7,
+						-2.4
+					],
+					"hasta": [
+						0.6,
+						1.55,
+						2.6
+					],
+					"mira_hasta": [
+						-0.4,
+						1.8,
+						-2.4
+					],
+					"texto": {
+						"es": "«La campaña cambió, Jiroshi. Aquí solo importan los números. Si repruebas el quiz… te quedas en el aula.»",
+						"en": "'The campaign changed, Jiroshi. Only metrics matter here. If you fail the quiz… you stay in the classroom.'"
+					},
+					"evento": "trainer_pizarra"
+				},
+				{
+					"dur": 3.6,
+					"desde": [
+						0.3,
+						1.6,
+						1.9
+					],
+					"mira_desde": [
+						0.0,
+						1.75,
+						-1.0
+					],
+					"hasta": [
+						0.1,
+						1.65,
+						0.95
+					],
+					"mira_hasta": [
+						0.0,
+						1.8,
+						-0.6
+					],
+					"texto": {
+						"es": "",
+						"en": ""
+					},
+					"evento": "trainer_grito",
+					"voz": [
+						0.25,
+						"trainer",
+						"trainer_gaaaa_01"
+					],
+					"sonidos": [
+						[
+							0.2,
+							"sfx/trainer_golpe"
+						]
+					]
+				}
+			]
+		},
+		"t3_allocations": {
+			"escena": "set_mentor",
+			"titulo": {
+				"es": "Miércoles 28 de octubre · Allocations y Calidad",
+				"en": "Wednesday, October 28 · Allocations & QA"
+			},
+			"tomas": [
+				{
+					"dur": 4.8,
+					"desde": [
+						3.2,
+						1.5,
+						3.4
+					],
+					"mira_desde": [
+						0.0,
+						1.2,
+						0.0
+					],
+					"hasta": [
+						2.2,
+						1.45,
+						2.4
+					],
+					"mira_hasta": [
+						0.0,
+						1.25,
+						0.0
+					],
+					"texto": {
+						"es": "Cada 90 minutos el Mentor publica la lista de adherencia. Quien quede abajo es reportado directo a Shero.",
+						"en": "Every 90 minutes the Mentor posts the adherence list. Anyone at the bottom is reported straight to Shero."
+					},
+					"sonidos": [
+						[
+							0.6,
+							"sfx/ezlak_escribiendo"
+						]
+					]
+				},
+				{
+					"dur": 4.8,
+					"desde": [
+						0.0,
+						1.7,
+						3.0
+					],
+					"mira_desde": [
+						0.0,
+						2.0,
+						-2.9
+					],
+					"hasta": [
+						0.0,
+						1.85,
+						1.2
+					],
+					"mira_hasta": [
+						0.0,
+						2.1,
+						-2.9
+					],
+					"texto": {
+						"es": "Y Haime, de Calidad (QA), graba cada palabra que dices al cliente. Una respuesta fría… y te llama a calibración.",
+						"en": "And Haime, from Quality Assurance (QA), records every word you say to customers. One cold reply… and you're called for calibration."
+					},
+					"evento": "lista",
+					"sonidos": [
+						[
+							0.3,
+							"sfx/ezlak_notificacion"
+						]
+					]
+				},
+				{
+					"dur": 3.8,
+					"desde": [
+						-2.6,
+						1.6,
+						1.8
+					],
+					"mira_desde": [
+						-1.4,
+						1.7,
+						-1.9
+					],
+					"hasta": [
+						-1.9,
+						1.65,
+						1.1
+					],
+					"mira_hasta": [
+						-1.4,
+						1.75,
+						-1.9
+					],
+					"texto": {
+						"es": "Shero ya vio tu nombre al final de la tabla.",
+						"en": "Shero already saw your name at the bottom of the board."
+					},
+					"evento": "shero_mira",
+					"sonidos": [
+						[
+							0.2,
+							"sfx/tono_grave_sting"
+						]
+					]
+				}
+			]
+		},
+		"t4_papayala": {
+			"escena": "set_mentor",
+			"titulo": {
+				"es": "Jueves 29 de octubre · Auditoría y el Puesto Ocupado",
+				"en": "Thursday, October 29 · Audit & The Occupied Seat"
+			},
+			"tomas": [
+				{
+					"dur": 5.0,
+					"desde": [
+						2.6,
+						1.5,
+						3.0
+					],
+					"mira_desde": [
+						0.0,
+						1.4,
+						-0.5
+					],
+					"hasta": [
+						1.2,
+						1.5,
+						2.0
+					],
+					"mira_hasta": [
+						0.0,
+						1.4,
+						-0.5
+					],
+					"texto": {
+						"es": "Algo anda mal en la Fila C. La polaroid de tu promoción está perdiendo rostros. Hoy llegó Papayala a auditar tu sitio.",
+						"en": "Something is wrong in Row C. Your wave's polaroid is losing faces. Today Papayala arrived to audit your desk."
+					},
+					"sonidos": [
+						[
+							0.4,
+							"sfx/latido_lento"
+						],
+						[
+							2.2,
+							"sfx/ezlak_notificacion"
+						]
+					]
+				},
+				{
+					"dur": 4.2,
+					"desde": [
+						-2.2,
+						1.6,
+						1.8
+					],
+					"mira_desde": [
+						-1.4,
+						1.7,
+						-1.9
+					],
+					"hasta": [
+						-1.6,
+						1.65,
+						1.1
+					],
+					"mira_hasta": [
+						-1.4,
+						1.75,
+						-1.9
+					],
+					"texto": {
+						"es": "Los clientes están fuera de control y las luces fallan por fila. No dejes que ocupen tu sesión.",
+						"en": "Customers are out of control and lights are failing row by row. Don't let them take over your session."
+					},
+					"evento": "shero_mira",
+					"sonidos": [
+						[
+							0.2,
+							"sfx/tono_grave_sting"
+						]
+					]
+				}
+			]
+		},
+		"t5_vacios": {
+			"escena": "set_mentor",
+			"titulo": {
+				"es": "Viernes 30 de octubre · Shero Gigante",
+				"en": "Friday, October 30 · Giant Shero"
+			},
+			"tomas": [
+				{
+					"dur": 5.0,
+					"desde": [
+						0.0,
+						1.7,
+						3.0
+					],
+					"mira_desde": [
+						0.0,
+						2.0,
+						-2.9
+					],
+					"hasta": [
+						0.0,
+						1.85,
+						1.2
+					],
+					"mira_hasta": [
+						0.0,
+						2.1,
+						-2.9
+					],
+					"texto": {
+						"es": "Juan y Ttoom ya no vinieron hoy. Sus sillas están vacías, pero en Ezlaki siguen conectados en verde: 'Available.'",
+						"en": "Juan and Ttoom didn't show up today. Their chairs are empty, yet on Ezlaki they remain green: 'Available.'"
+					},
+					"evento": "lista",
+					"sonidos": [
+						[
+							0.5,
+							"sfx/latido_lento"
+						]
+					]
+				},
+				{
+					"dur": 4.5,
+					"desde": [
+						-2.5,
+						1.6,
+						1.8
+					],
+					"mira_desde": [
+						-1.4,
+						1.7,
+						-1.9
+					],
+					"hasta": [
+						-1.7,
+						1.65,
+						1.1
+					],
+					"mira_hasta": [
+						-1.4,
+						1.75,
+						-1.9
+					],
+					"texto": {
+						"es": "Shero perdió el afro y está mutando en un coloso de seis metros. El Piso 2 empieza a derrumbarse. Sobrevive hasta las 08:45.",
+						"en": "Shero lost his afro and is mutating into a twenty-foot colossus. Floor 2 is starting to collapse. Survive until 8:45 AM."
+					},
+					"evento": "shero_mira",
+					"sonidos": [
+						[
+							0.3,
+							"sfx/tono_grave_sting"
+						]
+					]
+				}
+			]
+		},
+		"t6_climax_grasa": {
+			"escena": "set_training",
+			"titulo": {
+				"es": "Sábado 31 de octubre · Halloween · GRASA (Jefe Final)",
+				"en": "Saturday, October 31 · Halloween · GRASA (Final Boss)"
+			},
+			"tomas": [
+				{
+					"dur": 5.2,
+					"desde": [
+						0.0,
+						1.4,
+						6.0
+					],
+					"mira_desde": [
+						0.0,
+						1.7,
+						-2.0
+					],
+					"hasta": [
+						0.0,
+						1.5,
+						3.8
+					],
+					"mira_hasta": [
+						0.0,
+						1.7,
+						-2.0
+					],
+					"texto": {
+						"es": "Noche de Halloween. El Aula 1 está vacía. El Trainer dejó de fingir ser humano: allá arriba en la azotea ahora es GRASA.",
+						"en": "Halloween night. Classroom 1 is empty. The Trainer stopped pretending to be human: up on the rooftop, he is now GRASA."
+					},
+					"sonidos": [
+						[
+							0.3,
+							"ambiente/trueno_lejano_01"
+						],
+						[
+							2.0,
+							"sfx/latido_lento"
+						]
+					]
+				},
+				{
+					"dur": 5.2,
+					"desde": [
+						1.4,
+						1.5,
+						3.4
+					],
+					"mira_desde": [
+						-1.0,
+						1.7,
+						-2.4
+					],
+					"hasta": [
+						0.6,
+						1.55,
+						2.6
+					],
+					"mira_hasta": [
+						-0.4,
+						1.8,
+						-2.4
+					],
+					"texto": {
+						"es": "A las 05:59 AM el reloj se detendrá por la Cláusula 15. Reúne los 3 fragmentos de tu carta de renuncia en la torre para romper el bucle.",
+						"en": "At 5:59 AM the clock will freeze under Clause 15. Gather the 3 resignation letter fragments across the tower to break the loop."
+					},
+					"sonidos": [
+						[
+							0.5,
+							"sfx/fluorescente_estallido"
+						]
+					]
+				},
+				{
+					"dur": 4.8,
+					"desde": [
+						0.3,
+						1.6,
+						1.9
+					],
+					"mira_desde": [
+						0.0,
+						1.75,
+						-1.0
+					],
+					"hasta": [
+						0.1,
+						1.65,
+						0.95
+					],
+					"mira_hasta": [
+						0.0,
+						1.8,
+						-0.6
+					],
+					"texto": {
+						"es": "Sube a la Azotea (Piso 9) y enfrenta a GRASA antes de las 08:45 para llegar al Domingo y descubrir tu final.",
+						"en": "Climb to the Rooftop (Floor 9) and face GRASA before 8:45 AM to reach Sunday and uncover your ending."
+					},
+					"evento": "trainer_grito",
+					"sonidos": [
+						[
+							0.2,
+							"sfx/tono_grave_sting"
+						]
+					]
+				}
+			]
+		},
+		"salida": {
+			"escena": "set_salida",
+			"titulo": {
+				"es": "08:45 · Fin del turno",
+				"en": "8:45 AM · End of shift"
+			},
+			"tomas": [
+				{
+					"dur": 4.5,
+					"desde": [
+						0.0,
+						1.6,
+						4.0
+					],
+					"mira_desde": [
+						0.0,
+						1.4,
+						0.0
+					],
+					"hasta": [
+						1.2,
+						1.7,
+						3.2
+					],
+					"mira_hasta": [
+						3.0,
+						1.4,
+						0.0
+					],
+					"texto": {
+						"es": "08:45. Cruzas los molinetes hacia la calle gris de Lima. Sobreviviste otra madrugada en KipuPay.",
+						"en": "8:45 AM. You cross the turnstiles onto Lima's gray street. You survived another dawn at KipuPay."
+					},
+					"sonidos": [
+						[
+							0.2,
+							"sfx/puerta_vidrio"
+						]
+					]
+				},
+				{
+					"dur": 4.5,
+					"desde": [
+						2.0,
+						1.5,
+						3.5
+					],
+					"mira_desde": [
+						0.0,
+						10.0,
+						-4.0
+					],
+					"hasta": [
+						2.6,
+						1.7,
+						3.8
+					],
+					"mira_hasta": [
+						-1.2,
+						9.6,
+						-3.9
+					],
+					"texto": {
+						"es": "Pero desde la ventana del Piso 2… la silueta sigue mirando hacia abajo.",
+						"en": "Yet from the Floor 2 window… the silhouette is still looking down."
+					},
+					"sonidos": [
+						[
+							0.6,
+							"sfx/tono_grave_sting"
+						]
+					]
+				}
+			]
+		}
+	}
+}

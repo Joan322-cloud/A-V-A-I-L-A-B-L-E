@@ -1,0 +1,443 @@
+{
+	"_comentario": "Escalera de Shero (docs/SHERO_ESCALADA.md §2.2, dificultad Normal). Lo crea P1 con el esquema y los valores; el dueño es P3 (Discipline). Minutos de JUEGO desde que se cumple el disparador; null = ese escalón no existe en la pista. Discipline multiplica todos los *_min por Difficulty.scale('plazos') (Fácil x1,5, Normal x1, Difícil y Turno real x0,75). 'reincidencia': escalón inicial la 2.a y 3.a vez que se dispara la misma pista en el turno. 'muerte': causa de muertes.json. Revisión de Joan 13:2x aplicada (docs/v0.3/CAMBIOS_JOAN.md): sala 1/4/5,5/7 con WW, coaching sin permiso y excedido los ejecuta Rasec, available por lista del Mentor, llamadas perdidas y otra isla letales; los valores por defecto (WW 5:30, 4.a llamada, otra isla 10/12/15/20, target 70 %) los confirmó Joan a las 13:37. P3 (Discipline) la ejecuta: reincidencia = la escalera EMPIEZA en ese escalón y los escalones siguientes se corren a los plazos siguientes (2.ª vez de break: verbal 10:00, WW 12:00, persecución 14:00); 'persecucion' = parámetros de Pursuit (llegada por ascensor 20 s + 6 s por parada entre los pisos habilitados -1/1/2/9, ver 'paradas'); 'presencia' = apariciones, parlantes y pasos (solo presentación); 'zonas_pisos' = pisos que cubre cada zona de autorización (para la pista sala).",
+	"esquema": {
+		"escalones": [
+			"nada",
+			"llamado",
+			"verbal",
+			"ww",
+			"persecucion",
+			"muerte"
+		],
+		"campos_pista": {
+			"disparador": "texto: qué la arranca",
+			"llamado_min": "número o null",
+			"verbal_min": "número o null",
+			"ww_min": "número o null",
+			"persecucion_min": "número o null (la muerte llega cuando el cazador te alcanza)",
+			"muerte": "id de muertes.json",
+			"corta": "texto: cómo se detiene",
+			"reincidencia": "[escalón la 2.a vez, escalón la 3.a vez]: la escalera empieza ahí y los escalones siguientes usan los plazos siguientes",
+			"ejecutor": "shero (por defecto) | rasec | haime | rta: quién hace los escalones y mata (asesino de la muerte)",
+			"disparo": "minutos (umbrales *_min desde el disparador) | evento (avanza un escalón por evento: *_n; available = una lista del Mentor bajo el target)"
+		}
+	},
+	"reglas_globales": {
+		"dos_verbales_un_ww": true,
+		"ww_despido": 3,
+		"llamados_cuentan_para_resumen": true,
+		"congelan": [
+			"qa_feedback",
+			"training",
+			"coaching_autorizado"
+		],
+		"al_morir_normal": "la pista que mató se reinicia; contadores como en el checkpoint",
+		"al_morir_real": "turno completo",
+		"facil_salvarse_sentado_en_available": true
+	},
+	"pistas": {
+		"break_1": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "poner el 1.er break",
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": null,
+			"muerte": "",
+			"molestia": "dm",
+			"cuenta_como_llamado": false
+		},
+		"break_2": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "poner el 2.o break",
+			"llamado_min": 0,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": null,
+			"muerte": "",
+			"molestia": "#team-familia",
+			"cuenta_como_llamado": true
+		},
+		"tercer_break": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "poner un 3.er break",
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": 0,
+			"muerte": "tercer_break",
+			"inmediata": true,
+			"corta": "no pedir un tercero (Fonex: Breaks 2/2)"
+		},
+		"break": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "break de más de 10 min (cada break)",
+			"limite_regla_min": 10,
+			"llamado_min": 10,
+			"verbal_min": 12,
+			"ww_min": 14,
+			"persecucion_min": 16,
+			"muerte": "break_excedido",
+			"corta": "volver a la sala y poner Available",
+			"reincidencia": [
+				"verbal",
+				"ww"
+			],
+			"cuenta_mientras": "AUX Break; si ya pasó los 10 min, hasta volver a la sala con otro AUX"
+		},
+		"lunch": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "lunch de más de 45 min",
+			"limite_regla_min": 45,
+			"llamado_min": 45,
+			"verbal_min": 48,
+			"ww_min": 51,
+			"persecucion_min": 54,
+			"muerte": "lunch_excedido",
+			"corta": "volver antes de 54:00",
+			"salvacion": "dormido en sofá/puff del -1: WW en vez de muerte, 1 vez por turno",
+			"cuenta_mientras": "AUX Lunch; si ya pasó los 45 min, hasta volver a la sala con otro AUX"
+		},
+		"lunch_fuera_de_hora": {
+			"ejecutor": "rta",
+			"disparo": "minutos",
+			"disparador": "lunch antes de la hora -5 o sin lunch a la hora +15",
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": null,
+			"muerte": "",
+			"delegado": "rta"
+		},
+		"correo": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "correo de más de 10 min (cada correo)",
+			"limite_regla_min": 10,
+			"llamado_min": 10,
+			"verbal_min": 13,
+			"ww_min": 16,
+			"persecucion_min": 19,
+			"muerte": "aht_bo",
+			"corta": "cerrar el caso",
+			"excusa_equivocada": "verbal",
+			"reincidencia": [
+				"verbal",
+				"ww"
+			]
+		},
+		"sala": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "salir de la sala de PCs sin AUX autorizado (rev. Joan: con WW antes de la persecución)",
+			"llamado_min": 1,
+			"verbal_min": 4,
+			"ww_min": 5.5,
+			"persecucion_min": 7,
+			"muerte": "abandono",
+			"corta": "volver a la sala",
+			"reincidencia": [
+				"verbal",
+				"persecucion"
+			],
+			"reloj": "de_pie_aux (4x): fuera de la sala el reloj nunca corre a 45x"
+		},
+		"coaching": {
+			"ejecutor": "rasec",
+			"disparo": "minutos",
+			"disparador": "AUX Coaching sin permiso de Shero/TM/QA (lo castiga Rasec)",
+			"llamado_min": 0,
+			"verbal_min": 3,
+			"ww_min": 6,
+			"persecucion_min": 9,
+			"muerte": "coaching_sin_permiso",
+			"corta": "volver a Available/BO",
+			"reincidencia": [
+				"verbal",
+				"ww"
+			],
+			"reloj": "de_pie_aux (4x)"
+		},
+		"coaching_exceso": {
+			"ejecutor": "rasec",
+			"disparo": "minutos",
+			"disparador": "seguir en AUX Coaching cuando ya terminó la sesión convocada (1 min de gracia)",
+			"gracia_min": 1,
+			"llamado_min": 2,
+			"verbal_min": 5,
+			"ww_min": null,
+			"persecucion_min": 8,
+			"muerte": "coaching_exceso",
+			"corta": "salir de Coaching (Available/BO)",
+			"reloj": "de_pie_aux (4x)"
+		},
+		"coaching_noshow": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "no unirte al coaching que convoca Shero (60 s reales)",
+			"llamado_min": null,
+			"verbal_min": 0,
+			"ww_min": 2,
+			"persecucion_min": 4,
+			"muerte": "coaching",
+			"corta": "unirte",
+			"rooms_s_real": 60,
+			"reloj": "de_pie_aux (4x) desde que vence Rooms"
+		},
+		"coaching_noshow_rasec": {
+			"ejecutor": "rasec",
+			"disparo": "minutos",
+			"disparador": "no ir al coaching que convoca Rasec (60 s reales)",
+			"llamado_min": null,
+			"verbal_min": 0,
+			"ww_min": 2,
+			"persecucion_min": 4,
+			"muerte": "coaching",
+			"corta": "unirte",
+			"rooms_s_real": 60
+		},
+		"qa_inasistencia": {
+			"ejecutor": "haime",
+			"disparo": "minutos",
+			"disparador": "no llegar a la sala de calibración cuando Haime te llama (no cuenta como feedback)",
+			"llamado_min": 5,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": 8,
+			"inmediata": true,
+			"muerte": "qa_inasistencia",
+			"corta": "llegar a la sala de calibración"
+		},
+		"available": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "lista de allocations del Mentor en #team-familia con tu Available < 70 % (con >= 30 min productivos)",
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": null,
+			"muerte": "available_bajo",
+			"target_pct": 70,
+			"listas": [
+				"01:30",
+				"03:00",
+				"04:30",
+				"06:00",
+				"07:30"
+			],
+			"verbal_n": 1,
+			"ww_n": 2,
+			"persecucion_n": 3,
+			"verbal_dm": true,
+			"corta": "estar >= 70 % cuando sale la lista",
+			"no_se_borra_en_el_turno": true
+		},
+		"topico": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "pedir tópico a Shero ('Me siento mal')",
+			"permiso_min": 15,
+			"segunda_vez": "persecucion",
+			"muerte": "work_avoiding",
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": 0,
+			"corta": "pedirlo una sola vez por turno"
+		},
+		"topico_excedido": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "pasarte de los 15 min del permiso de tópico",
+			"llamado_min": null,
+			"verbal_min": 0,
+			"ww_min": null,
+			"persecucion_min": 2,
+			"muerte": "abandono",
+			"corta": "volver a la sala"
+		},
+		"training_regreso": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "volver tarde del training (el Trainer te soltó)",
+			"llamado_min": 8,
+			"verbal_min": 11,
+			"ww_min": null,
+			"persecucion_min": 14,
+			"muerte": "regreso_tardio",
+			"corta": "volver a la sala",
+			"reloj": "de_pie_aux (4x)"
+		},
+		"ww_ack": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "WW sin Ack",
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": 0,
+			"muerte": "ww_sin_ack",
+			"ack_s_en_pc": 8,
+			"ack_s_lejos": 40,
+			"ack_s_lejos_otro_piso": 60,
+			"_ack_v032": "v0.3.2: sin terminales Fonex el Ack se da en una PC de la sala; lejos de ella: ack_s_lejos en el piso 2 y ack_s_lejos_otro_piso desde otro piso o la escalera (× dificultad/ack). v0.3.2-core4: 60 → 40 s y 90 → 60 s (caminando: 10 s desde lo más lejos del piso 2, 22-30 s desde otro piso).",
+			"corta": "dar Ack a tiempo",
+			"absorbe": "si el WW era del lunch y estás dormido en el -1, la persecución es la del lunch (perdón por dormir)"
+		},
+		"llamadas_perdidas": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "te ofrecen un contacto y no lo tomas (los casos de BO no se pierden)",
+			"por_conteo": true,
+			"llamado_n": 1,
+			"verbal_n": 2,
+			"ww_n": 3,
+			"persecucion_n": 4,
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": null,
+			"muerte": "llamadas_perdidas",
+			"bo_excluido": true,
+			"corta": "estar sentado cuando suena"
+		},
+		"otra_isla": {
+			"ejecutor": "shero",
+			"disparo": "minutos",
+			"disparador": "sentado en una isla que no es la de Shero",
+			"llamado_min": 10,
+			"verbal_min": 12,
+			"ww_min": 15,
+			"persecucion_min": 20,
+			"muerte": "otra_isla",
+			"corta": "volver a tu isla",
+			"reloj": "de_pie_aux (4x): sentado en otra isla el reloj nunca corre a 45x (PLAN #83)",
+			"isla_shero": "C-",
+			"no_cuentan": [
+				"training_sala2",
+				"calibracion"
+			]
+		},
+		"rasec_evento": {
+			"ejecutor": "rasec",
+			"disparo": "evento",
+			"disparador": "rechazar el mini evento de Rasec, no ponerte en AUX BO o no ir al punto en 2 min",
+			"plazo_min": 2,
+			"advertencia_n": 1,
+			"muerte_n": 2,
+			"llamado_min": null,
+			"verbal_min": null,
+			"ww_min": null,
+			"persecucion_min": null,
+			"muerte": "rasec_evento",
+			"corta": "participar en AUX BO",
+			"por_turno": 1,
+			"duracion_min": [
+				4,
+				5
+			]
+		},
+		"tres_molestos": {
+			"ejecutor": "shero",
+			"disparo": "evento",
+			"disparador": "3 molestos seguidos en 20 min",
+			"t1": "ww",
+			"t2_t3": "muerte",
+			"muerte": "tres_molestos"
+		}
+	},
+	"persecucion": {
+		"_comentario": "Pursuit (core/pursuit.gd). Segundos REALES. Shero sale de su sitio (piso 2): si estás en otro piso llega en ascensor a los llegada_ascensor_s + por_piso_s × paradas (paradas entre los pisos habilitados -1·1·2·9: 2→1 = 1, 2→-1 = 2, 2→9 = 1). Si cambias de piso te sigue: por ascensor seguir_ascensor_s + por_piso_s × paradas; por la escalera entra a la caja seguir_escalera_s después y sale de ella salir_escalera_s después de ti. Corre a velocidad_shero_ms y acelera aceleracion_ms cada 10 s que te tiene en el mismo piso hasta velocidad_max_ms (caminas a 5, corres a 6,5 durante 6 s). Nunca entra a un baño: espera en la puerta lo que haga falta. Volver a tu sitio no la detiene (en Fácil, sentado en C-14 en Available = WW en vez de muerte). Una sola persecución a la vez por cazador.",
+		"llegada_ascensor_s": 20,
+		"por_piso_s": 6,
+		"seguir_ascensor_s": 12,
+		"seguir_escalera_s": 5,
+		"salir_escalera_s": 4,
+		"rta_escalera_s": 12,
+		"rta_por_piso_s": 4,
+		"paradas": [
+			-1,
+			1,
+			2,
+			9
+		],
+		"velocidad_shero_ms": 4.6,
+		"aceleracion_ms": 0.15,
+		"velocidad_max_ms": 5.6,
+		"alcance_m": 1.25,
+		"alcance_fin_ruta_m": 2.1,
+		"repath_s": 0.4,
+		"atasco_s": 1.5,
+		"rejilla_m": 0.4,
+		"cuerpo_m": 0.44,
+		"banos": "espera en la puerta",
+		"volver_al_sitio_no_la_detiene": true,
+		"bano_linea_s": 6,
+		"bano_recordatorio_s": 45
+	},
+	"presencia": {
+		"_comentario": "Solo presentación (core/shero_presence.gd): Shero 'se siente' cuando está enojado, siempre legible y nunca durante una persecución. aparicion: al final de un pasillo en otro piso (no el 2), desaparece al volver a mirarlo; pasos: detrás de ti desde el WW; escribiendo: 'Shero está escribiendo…' sin mensaje; respiracion_pa: respiración por los parlantes tras un aviso.",
+		"aparicion_desde_escalon": 2,
+		"aparicion_cada_s": [
+			70,
+			130
+		],
+		"aparicion_dist_m": [
+			12,
+			24
+		],
+		"aparicion_dura_max_s": 6,
+		"aparicion_luz": 0.9,
+		"pasos_desde_escalon": 3,
+		"pasos_cada_s": [
+			35,
+			70
+		],
+		"escribiendo_desde_escalon": 1,
+		"escribiendo_cada_s": [
+			45,
+			90
+		],
+		"escribiendo_s": [
+			3,
+			7
+		],
+		"respiracion_pa": true,
+		"calvo_min_juego_tras_ww": 30
+	},
+	"zonas_pisos": {
+		"_comentario": "Pisos que cubre una autorización con zona (Metrics.authorize) para la pista 'sala': fuera de la sala sin AUX de Break/Lunch/Baño, solo cuenta como autorizado si estás en uno de estos pisos (las cajas de escalera siempre cuentan como camino).",
+		"edificio": [
+			-1,
+			1,
+			2,
+			9
+		],
+		"piso_1": [
+			1,
+			2
+		],
+		"topico": [
+			1,
+			2
+		],
+		"training_sala2": [
+			1,
+			2
+		],
+		"sala_calibracion": [
+			2
+		],
+		"sala": [
+			2
+		],
+		"evento_rasec": [
+			2
+		]
+	}
+}

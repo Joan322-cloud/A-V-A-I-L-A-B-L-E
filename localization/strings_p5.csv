@@ -1,0 +1,24 @@
+keys,es,en
+PKG_P5_READY,Cadenas del paquete P5 (v0.3),Package P5 strings (v0.3)
+P5_REC_WAITING,HAIME TE ESPERA · CALIBRACIÓN,HAIME IS WAITING · CALIBRATION
+P5_REC_QUALITY,Calidad,Quality
+P5_REC_FEEDBACKS,Feedback QA,QA feedback
+P5_FB_TITLE,SALA DE CALIBRACIÓN · REC,CALIBRATION ROOM · REC
+P5_FB_CONTACT,Contacto,Contact
+P5_FB_CUSTOMER,Cliente,Customer
+P5_FB_NO_TRANSCRIPT,(no hay transcripción: Haime la tiene en la cabeza),(no transcript: Haime keeps it in his head)
+P5_FB_OPPORTUNITIES,OPORTUNIDADES DE MEJORA,AREAS FOR IMPROVEMENT
+P5_FB_OPPORTUNITY,Oportunidad de mejora,Area for improvement
+P5_QUIZ_TITLE,QUIZ · Actualización de campaña KipuPay 3.2,QUIZ · KipuPay campaign update 3.2
+P5_QUIZ_QUESTION,Pregunta,Question
+P5_QUIZ_HINT,Pista:,Hint:
+P5_QUIZ_RIGHT,Correctas:,Correct:
+P5_QUIZ_NEED,Mínimo para aprobar:,Minimum to pass:
+P5_QUIZ_RESULT,Resultado:,Result:
+P5_QUIZ_PAUSED,⏸ El reloj no corre mientras respondes,⏸ The clock stops while you answer
+P5_TRAINING_BOARD_QUIZ,NO HAY BREAKS · NO HAY BREAKS,THERE ARE NO BREAKS · NO BREAKS
+P5_EVENT_BANNER,¡FELIZ {tema}!,HAPPY {tema}!
+P5_EVENT_SING,[E] ¡Canta!,[E] Sing!
+P5_EVENT_CHOOSE,Elige (clic o 1-5),Choose (click or 1-5)
+P5_EVENT_CHAIRS_MUSIC,♪ … la música suena … todos caminan alrededor de las sillas sin dejar de mirarte … ♪,♪ … the music plays … everyone walks around the chairs without taking their eyes off you … ♪
+P5_NURSE,Enfermero,Nurse

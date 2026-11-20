@@ -1,0 +1,107 @@
+{
+ "_comentario": "AVAILABLE v0.3.2 · Contrato de incorporación a la campaña KipuPay, a plazo indefinido, EN PAPEL (Joan, trama v3: «escrito de manera capciosa», con términos ocultos que anuncian lo que pasará) [PROPUESTA]. Lo firma el agente en el Training (el recuerdo). 'clave' = las cláusulas que vuelven en la semana; 'chica' = letra chica (solo se ve pasando hasta la última hoja). Todo inventado.",
+ "titulo": {
+  "es": "Contrato de trabajo a plazo indefinido · Incorporación a la campaña KipuPay",
+  "en": "Indefinite-term employment contract · KipuPay campaign onboarding"
+ },
+ "partes": {
+  "es": "Entre KONZENTRAMANCE S.A.C. («LA EMPRESA») y {agente} («EL COLABORADOR»), en Lima, el {fecha}.",
+  "en": "Between KONZENTRAMANCE S.A.C. (\"THE COMPANY\") and {agente} (\"THE EMPLOYEE\"), in Lima, on {fecha}."
+ },
+ "clausulas": [
+  {
+   "n": 1,
+   "es": "Objeto. EL COLABORADOR se incorpora a la familia KipuPay. La familia es para siempre.",
+   "en": "Purpose. THE EMPLOYEE joins the KipuPay family. Family is forever.",
+   "clave": true
+  },
+  {
+   "n": 2,
+   "es": "Puesto. Agente de atención al cliente, turno de amanecida, isla de la fila C o donde la campaña disponga, en cualquier piso, incluidos los que no figuran en el ascensor.",
+   "en": "Position. Customer service agent, graveyard shift, row C island or wherever the campaign decides, on any floor, including those not shown in the elevator."
+  },
+  {
+   "n": 3,
+   "es": "Jornada. De 00:00 a 08:45, de lunes a sábado. El domingo es día de descanso, salvo requerimiento de la campaña, que puede llegar en cualquier momento, incluso mientras EL COLABORADOR duerme.",
+   "en": "Hours. From 00:00 to 08:45, Monday to Saturday. Sunday is a day off, unless the campaign requires otherwise, which may happen at any time, even while THE EMPLOYEE is asleep.",
+   "clave": true
+  },
+  {
+   "n": 4,
+   "es": "Disponibilidad. EL COLABORADOR permanecerá Available durante toda la jornada y fuera de ella. La disponibilidad no termina con la relación laboral.",
+   "en": "Availability. THE EMPLOYEE shall remain Available during the whole shift and outside it. Availability does not end with the employment.",
+   "clave": true
+  },
+  {
+   "n": 5,
+   "es": "Remuneración. La que figura en Fonex, por hora efectiva en Available. También se pagan las horas que EL COLABORADOR no recuerde haber trabajado.",
+   "en": "Pay. As shown in Fonex, per effective hour in Available. Hours THE EMPLOYEE does not remember working are also paid."
+  },
+  {
+   "n": 6,
+   "es": "Descansos. Dos (2) breaks de diez (10) minutos y un (1) lunch de cuarenta y cinco (45) minutos, sujetos a la cola. La cola nunca está vacía.",
+   "en": "Breaks. Two (2) ten-minute (10) breaks and one (1) forty-five-minute (45) lunch, subject to the queue. The queue is never empty."
+  },
+  {
+   "n": 7,
+   "es": "Actualizaciones. EL COLABORADOR asistirá a toda actualización de campaña. La inasistencia o el retiro sin permiso se consideran abandono y se resuelven en la misma sala.",
+   "en": "Updates. THE EMPLOYEE shall attend every campaign update. Absence or leaving without permission counts as abandonment and is settled in the same room.",
+   "clave": true
+  },
+  {
+   "n": 8,
+   "es": "Confidencialidad. Lo que pasa en la torre se queda en la torre, incluido EL COLABORADOR.",
+   "en": "Confidentiality. What happens in the tower stays in the tower, THE EMPLOYEE included."
+  },
+  {
+   "n": 9,
+   "es": "Renuncia. La renuncia se presenta por escrito, en la terminal habilitada del último piso, antes del fin de la jornada. El acceso al último piso permanece cerrado.",
+   "en": "Resignation. Resignation is filed in writing, at the designated terminal on the top floor, before the end of the shift. Access to the top floor remains closed.",
+   "clave": true
+  },
+  {
+   "n": 10,
+   "es": "Supervisión. EL COLABORADOR acepta ser escuchado, medido y calibrado, también cuando cree que nadie lo escucha.",
+   "en": "Supervision. THE EMPLOYEE agrees to be listened to, measured and calibrated, also when they believe nobody is listening."
+  },
+  {
+   "n": 11,
+   "es": "Faltas. Tres (3) amonestaciones escritas constituyen falta grave. La tercera no necesita ser leída.",
+   "en": "Misconduct. Three (3) written warnings constitute gross misconduct. The third one need not be read.",
+   "clave": true
+  },
+  {
+   "n": 12,
+   "es": "Promoción. La campaña podrá promover a EL COLABORADOR a funciones de supervisión. La promoción no se rechaza e incluye la indumentaria del puesto.",
+   "en": "Promotion. The campaign may promote THE EMPLOYEE to supervisory duties. Promotion cannot be declined and includes the position's attire.",
+   "clave": true
+  },
+  {
+   "n": 13,
+   "es": "Seguro. La cobertura de salud se mantiene treinta (30) días después del fin de la relación laboral, solo si el fin es por renuncia.",
+   "en": "Insurance. Health coverage remains for thirty (30) days after the employment ends, only if it ends by resignation.",
+   "clave": true
+  },
+  {
+   "n": 14,
+   "es": "Imagen y voz. La voz, la imagen y los datos de EL COLABORADOR quedan a disposición de la campaña, incluso terminada la relación, y podrán seguir atendiendo en su nombre.",
+   "en": "Image and voice. THE EMPLOYEE's voice, image and data remain at the campaign's disposal, even after the employment ends, and may keep serving customers in their name.",
+   "clave": true
+  },
+  {
+   "n": 15,
+   "es": "Renovación. Este contrato es a plazo indefinido y se renueva automáticamente cada domingo.",
+   "en": "Renewal. This contract is for an indefinite term and renews automatically every Sunday.",
+   "clave": true,
+   "chica": true
+  }
+ ],
+ "firma": {
+  "es": "Firma de EL COLABORADOR",
+  "en": "Signature of THE EMPLOYEE"
+ },
+ "pista": {
+  "es": "Firma con el lapicero (mantén el clic y dibuja sobre la línea). Puedes leer pasando las hojas con la rueda.",
+  "en": "Sign with the pen (hold the click and draw on the line). You can read by turning the pages with the wheel."
+ }
+}

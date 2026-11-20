@@ -1,0 +1,31 @@
+keys,es,en
+PKG_P3_READY,Cadenas del paquete P3 (v0.3),Package P3 strings (v0.3)
+P3_SPK_PA,{quien} (parlantes),{quien} (speakers)
+P3_CONFIRM_THIRD_BREAK,"¿Un tercer break? Shero no lo va a dejar pasar. Elige Break otra vez en 6 s para confirmar.","A third break? Shero won't let it go. Pick Break again within 6 s to confirm."
+P3_HUD_BREAKS,Breaks {n}/{max},Breaks {n}/{max}
+P3_HUD_STEP,Shero · {pista} · {escalon},Shero · {pista} · {escalon}
+P3_HUD_HUNT_COMING,Shero viene,Shero is coming
+P3_HUD_HUNT_HERE,Shero está en tu piso,Shero is on your floor
+P3_HUD_ACK_FAR,"Te llegó un written warning. Ack desde cualquier terminal Fonex: {s} s","You got a written warning. Ack from any Fonex terminal: {s} s"
+P3_STEP_1,llamado,call-out
+P3_STEP_2,verbal,verbal warning
+P3_STEP_3,written warning,written warning
+P3_STEP_4,persecución,pursuit
+P3_TRACK_BREAK,break,break
+P3_TRACK_BREAK_2,2.º break,2nd break
+P3_TRACK_LUNCH,lunch,lunch
+P3_TRACK_CORREO,caso de más de 10 min,case over 10 min
+P3_TRACK_SALA,fuera de la sala,out of the room
+P3_TRACK_OTRA_ISLA,otra isla,another island
+P3_TRACK_COACHING,coaching sin permiso,unauthorized coaching
+P3_TRACK_COACHING_EXCESO,coaching excedido,coaching overtime
+P3_TRACK_COACHING_NOSHOW,coaching de Shero,Shero's coaching
+P3_TRACK_COACHING_NOSHOW_RASEC,coaching de Rasec,Rasec's coaching
+P3_TRACK_AVAILABLE,Available bajo 70 %,Available under 70 %
+P3_TRACK_TOPICO,tópico,medical room
+P3_TRACK_TOPICO_EXCEDIDO,tópico excedido,medical room overtime
+P3_TRACK_TRAINING_REGRESO,regreso del training,return from training
+P3_TRACK_WW_ACK,sin Ack,no Ack
+P3_TRACK_LLAMADAS_PERDIDAS,llamadas perdidas,missed calls
+P3_TRACK_TRES_MOLESTOS,3 molestos,3 angry customers
+P3_TRACK_TERCER_BREAK,3.er break,3rd break

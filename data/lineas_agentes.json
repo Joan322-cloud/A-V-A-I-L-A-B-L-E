@@ -1,0 +1,777 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P4 · DMs entre agentes jugables (DIALOGOS §10 para T1; T2-T3 escritas por P4 con la misma estructura y pistas reales). Clave 'remitente>destinatario' (el jugador es el destinatario). 'respuestas' = lo que contesta el compañero a las respuestas rápidas. 'degradacion' = líneas de madrugada (bloque 3 o Fatiga ≥ 70): el compañero se degrada a medida que avanza la noche; algunas se borran solas. [PROPUESTA].",
+	"hilos": {
+		"marko>jiroshi": {
+			"1": [
+				{
+					"hora": "00:40",
+					"es": "Oye, ¿el puff del -1 todavía está? Pregunto por un amigo.",
+					"en": "Hey, is the beanbag on -1 still there? Asking for a friend.",
+					"voz": "agentes/dm_marko_jiroshi_1"
+				},
+				{
+					"hora": "04:50",
+					"es": "Si Shero te pregunta, yo estuve en Live toda la noche. Tú también, ¿no?",
+					"en": "If Shero asks, I was in Live all night. You too, right?",
+					"voz": "agentes/marko_break_escondido"
+				}
+			],
+			"2": [
+				{
+					"hora": "00:50",
+					"es": "El cliente molesto de anoche volvió. Dice que es la segunda vez. Ojo: si a la tercera cuelga molesto, Shero baja.",
+					"en": "Last night's angry customer is back. Says it's the second time. Careful: if he hangs up angry on the third, Shero comes down."
+				},
+				{
+					"hora": "05:00",
+					"es": "Si suena tu teléfono y no estás sentado, no es que no pasó nada. Shero cuenta. Yo voy 2.",
+					"en": "If your phone rings and you're not seated, it's not that nothing happened. Shero counts. I'm at 2."
+				}
+			],
+			"3": [
+				{
+					"hora": "00:30",
+					"es": "No dormí. No sé si salí del turno de ayer. Mi tarjeta marcó entrada dos veces.",
+					"en": "I didn't sleep. I don't know if I left yesterday's shift. My card clocked in twice."
+				},
+				{
+					"hora": "06:00",
+					"es": "Si el portal de Vitzo dice \"escríbanos si es urgente\", NO es urgente. Nunca es urgente.",
+					"en": "If the Vitzo portal says \"email us if urgent\", it is NOT urgent. It's never urgent."
+				}
+			]
+		},
+		"llauri>jiroshi": {
+			"1": [
+				{
+					"hora": "01:10",
+					"es": "Tip: Haime escucha el contacto entero. Hasta tu respiración. No suspires.",
+					"en": "Tip: Haime listens to the whole contact. Even your breathing. Don't sigh.",
+					"voz": "agentes/dm_llauri_jiroshi_1"
+				},
+				{
+					"hora": "03:00",
+					"es": "¿Viste la lista del Mentor? Yo en 77. Tú siempre en 90 y algo. No me digas cómo, me deprimo.",
+					"en": "Did you see the Mentor's list? I'm at 77. You're always in the 90s. Don't tell me how, I'll get depressed.",
+					"voz": "agentes/dm_llauri_jiroshi_2"
+				}
+			],
+			"2": [
+				{
+					"hora": "01:30",
+					"es": "Training a las 02:20. Siéntate adelante, el Trainer odia la fila de atrás. Y no lo mires por el vidrio.",
+					"en": "Training at 02:20. Sit in front, the Trainer hates the back row. And don't look at him through the glass."
+				},
+				{
+					"hora": "06:10",
+					"es": "POD de Vitzo: Portal → buscar → Descargar → Adjuntar. Responder al banco. Nunca \"POD request\" a Vitzo. Nunca.",
+					"en": "Vitzo POD: Portal → search → Download → Attach. Reply to the bank. Never \"POD request\" to Vitzo. Never."
+				}
+			],
+			"3": [
+				{
+					"hora": "01:00",
+					"es": "Islas Taren: el nombre letra por letra. Una tilde y es rechazo. Lo aprendí mal.",
+					"en": "Islas Taren: the name letter by letter. One accent and it's a reject. I learned it the hard way."
+				},
+				{
+					"hora": "07:00",
+					"es": "Revisión reforzada = escalar. Aunque todo esté perfecto. SOBRE TODO si está perfecto.",
+					"en": "Enhanced review = escalate. Even if everything is perfect. ESPECIALLY if it's perfect."
+				}
+			]
+		},
+		"juan>jiroshi": {
+			"1": [
+				{
+					"hora": "02:20",
+					"es": "zzz… perdón, me quedé dormido sobre el teclado. ¿Shero me vio?",
+					"en": "zzz… sorry, I fell asleep on the keyboard. Did Shero see me?",
+					"voz": "agentes/juan_zzz"
+				},
+				{
+					"hora": "03:50",
+					"es": "Lunch. 45 minutos exactos, ni uno más. Yo me pasé una vez y desperté en el sofá rojo con un WW en la frente. Pero desperté.",
+					"en": "Lunch. 45 minutes exactly, not one more. I went over once and woke up on the red sofa with a WW on my forehead. But I woke up.",
+					"voz": "agentes/juan_lunch"
+				}
+			],
+			"2": [
+				{
+					"hora": "02:00",
+					"es": "zzz… soñé que la lista del Mentor tenía mi foto en vez del porcentaje.",
+					"en": "zzz… I dreamt the Mentor's list had my photo instead of the percentage."
+				},
+				{
+					"hora": "04:40",
+					"es": "Hoy me tocó un KYC con recheck. La dirección cambió. El documento no. Bueno, sí. Le faltaba un número.",
+					"en": "I got a KYC recheck today. The address changed. The ID didn't. Well, it did. It was missing a digit."
+				}
+			],
+			"3": [
+				{
+					"hora": "02:50",
+					"es": "¿Jiroshi? ¿Sigues en la fila C? Hay alguien en mi silla y tiene mi fotocheck.",
+					"en": "Jiroshi? Are you still in row C? Someone is in my chair and has my badge."
+				},
+				{
+					"hora": "05:10",
+					"es": "La lista del Mentor me puso 69. Shero me escribió \"Vi.\" Ahora escribe y borra.",
+					"en": "The Mentor's list put me at 69. Shero wrote me \"Seen.\" Now he types and deletes."
+				}
+			]
+		},
+		"jiroshi>marko": {
+			"1": [
+				{
+					"hora": "00:40",
+					"es": "Marko, el dispensador de agua de la sala también funciona. No hace falta salir al pasillo.",
+					"en": "Marko, the water dispenser in the room works too. No need to go out to the hallway.",
+					"voz": "agentes/jiroshi_siempre_live"
+				},
+				{
+					"hora": "02:30",
+					"es": "Estás en break hace 9 minutos. Te lo digo porque te quiero. Y porque Shero también lo ve.",
+					"en": "You've been on break for 9 minutes. I'm telling you because I care. And because Shero sees it too.",
+					"voz": "agentes/dm_jiroshi_marko_2"
+				}
+			],
+			"2": [
+				{
+					"hora": "00:40",
+					"es": "Marko, hoy hay training. Si te escondes en la sala 2, ya vas a estar ahí. Es eficiente.",
+					"en": "Marko, there's training today. If you hide in room 2, you'll already be there. It's efficient."
+				},
+				{
+					"hora": "05:30",
+					"es": "Contesta las llamadas aunque estés de pie. Siéntate primero. Las llamadas no esperan. Shero tampoco.",
+					"en": "Answer the calls even if you're standing. Sit down first. Calls don't wait. Neither does Shero."
+				}
+			],
+			"3": [
+				{
+					"hora": "01:10",
+					"es": "Marko, la lista de las 03:00. No llegues bajo 70. La tercera vez ya no hay DM.",
+					"en": "Marko, the 03:00 list. Don't show up under 70. The third time there's no DM."
+				},
+				{
+					"hora": "06:30",
+					"es": "El chat WMM de hoy: portal, Contacto partner, número de solicitud. No el correo del aviso.",
+					"en": "Today's WMM chat: portal, Partner contact, request number. Not the email in the banner."
+				}
+			]
+		},
+		"ttoom>marko": {
+			"1": [
+				{
+					"hora": "01:30",
+					"es": "Bajé a la cafetería y la señora me dijo que no hay caldo. Hay. Pero no para mí.",
+					"en": "I went down to the cafeteria and the lady said there's no soup. There is. Just not for me.",
+					"voz": "agentes/ttoom_lunch"
+				},
+				{
+					"hora": "05:40",
+					"es": "Si te sale un WMM de Vitzo y Kardex dice \"escríbanle a ops@vitzo\", es una trampa. Yo casi caigo.",
+					"en": "If you get a Vitzo WMM and Kardex says \"email ops@vitzo\", it's a trap. I almost fell for it.",
+					"voz": "agentes/dm_ttoom_marko_2"
+				}
+			],
+			"2": [
+				{
+					"hora": "01:10",
+					"es": "Me tocó un chat que escribía \"where is my money\" en dos idiomas. Lo resolví. Sigue escribiendo.",
+					"en": "I got a chat that typed \"where is my money\" in two languages. I solved it. It keeps typing."
+				},
+				{
+					"hora": "06:20",
+					"es": "Banco Andino pidió un POD de Vitzo. Había una nota: \"POD request a Vitzo y listo\". No. No y listo.",
+					"en": "Banco Andino asked for a Vitzo POD. There was a note: \"POD request to Vitzo and done\". No. No and done."
+				}
+			],
+			"3": [
+				{
+					"hora": "00:45",
+					"es": "Me persiguió el perro hasta la azotea. Me salvó Llauri: le pedí por celular que me marcara el AUX.",
+					"en": "The dog chased me up to the roof. Llauri saved me: I called and asked her to set my AUX."
+				},
+				{
+					"hora": "05:40",
+					"es": "Escucho los timbres aunque no haya llamadas. ¿Tú también?",
+					"en": "I hear the rings even when there are no calls. Do you?"
+				}
+			]
+		},
+		"jiroshi>llauri": {
+			"1": [
+				{
+					"hora": "01:20",
+					"es": "Llauri, el RTA te tagueó dos veces. Al tercero no avisa.",
+					"en": "Llauri, the RTA tagged you twice. On the third it doesn't warn.",
+					"voz": "agentes/dm_jiroshi_llauri_1"
+				},
+				{
+					"hora": "04:10",
+					"es": "No te pongas Coaching si nadie te llamó. Vi lo que pasó con el de la fila E.",
+					"en": "Don't go into Coaching if nobody called you. I saw what happened to the guy in row E.",
+					"voz": "agentes/dm_jiroshi_llauri_2"
+				}
+			],
+			"2": [
+				{
+					"hora": "01:00",
+					"es": "Llauri, el Baño también cuenta. Lo dijo el RTA. Lo ladró, mejor dicho.",
+					"en": "Llauri, the Bathroom counts too. The RTA said so. Barked it, rather."
+				},
+				{
+					"hora": "04:20",
+					"es": "Haime me llamó. \"Oportunidades de mejora\". Fueron tres. Yo solo tenía una.",
+					"en": "Haime called me. \"Opportunities for improvement\". There were three. I only had one."
+				}
+			],
+			"3": [
+				{
+					"hora": "02:00",
+					"es": "Llauri, no te pases del break. Esta noche Shero está calvo desde las 2.",
+					"en": "Llauri, don't go over your break. Tonight Shero's been bald since 2."
+				},
+				{
+					"hora": "05:00",
+					"es": "Sigues en Baño. Te veo en Fonex. Todos te vemos en Fonex.",
+					"en": "You're still in Bathroom. I see you in Fonex. We all see you in Fonex."
+				}
+			]
+		},
+		"ttoom>llauri": {
+			"1": [
+				{
+					"hora": "00:50",
+					"es": "¿Estás en el baño otra vez? Si estás, no contestes.",
+					"en": "Are you in the bathroom again? If you are, don't answer.",
+					"voz": "agentes/llauri_aux_bano_01"
+				},
+				{
+					"hora": "06:30",
+					"es": "Me quedé atrapado en la escalera. Era el mismo tramo. Cuatro veces.",
+					"en": "I got stuck on the stairs. It was the same flight. Four times.",
+					"voz": "agentes/ttoom_atrapado"
+				}
+			],
+			"2": [
+				{
+					"hora": "00:55",
+					"es": "La señora de la cafetería me guardó caldo. Me miró raro. Me lo tomé igual.",
+					"en": "The cafeteria lady saved me soup. She looked at me weird. I drank it anyway."
+				},
+				{
+					"hora": "06:45",
+					"es": "¿Viste el WW de alguien en #team-familia? Shero lo firmó con \"cariño\".",
+					"en": "Did you see someone's WW in #team-familia? Shero signed it \"with love\"."
+				}
+			],
+			"3": [
+				{
+					"hora": "01:30",
+					"es": "Ayer hice el minitraining de Vitzo tres veces. La respuesta siempre es portal. Siempre.",
+					"en": "Yesterday I did the Vitzo minitraining three times. The answer is always portal. Always."
+				},
+				{
+					"hora": "07:15",
+					"es": "Marleny dijo mi nombre completo. Nunca se lo dije.",
+					"en": "Marleny said my full name. I never told her."
+				}
+			]
+		},
+		"juan>llauri": {
+			"1": [
+				{
+					"hora": "03:40",
+					"es": "Llauri, te guardé un puff. El del fondo, el que no cruje.",
+					"en": "Llauri, I saved you a beanbag. The one at the back, the one that doesn't creak.",
+					"voz": "agentes/dm_juan_llauri_1"
+				},
+				{
+					"hora": "04:20",
+					"es": "Si Shero baja y estás dormida, no abras los ojos. Solo perdona a los que duermen de verdad.",
+					"en": "If Shero comes down and you're asleep, don't open your eyes. He only forgives those who really sleep.",
+					"voz": "agentes/dm_juan_llauri_2"
+				}
+			],
+			"2": [
+				{
+					"hora": "02:30",
+					"es": "Llauri, ¿el quiz del Trainer es el mismo? Yo me acuerdo de \"portal\" y de \"45\".",
+					"en": "Llauri, is the Trainer's quiz the same? I remember \"portal\" and \"45\"."
+				},
+				{
+					"hora": "05:50",
+					"es": "Me quedé dormido en Available. Desperté con 3 llamadas perdidas y un DM que decía \"Vi.\"",
+					"en": "I fell asleep in Available. Woke up with 3 missed calls and a DM that said \"Seen.\""
+				}
+			],
+			"3": [
+				{
+					"hora": "03:40",
+					"es": "Llauri, el puff del fondo cruje ahora. Alguien más duerme ahí.",
+					"en": "Llauri, the beanbag at the back creaks now. Someone else sleeps there."
+				},
+				{
+					"hora": "06:10",
+					"es": "Ya no sé si estoy en Available o soñando que estoy en Available. ¿Hay diferencia?",
+					"en": "I don't know anymore if I'm in Available or dreaming I'm in Available. Is there a difference?"
+				}
+			]
+		},
+		"marko>ttoom": {
+			"1": [
+				{
+					"hora": "01:00",
+					"es": "Ttoom, Shero te está mirando desde su sitio. No, no voltees.",
+					"en": "Ttoom, Shero is watching you from his desk. No, don't turn around.",
+					"voz": "agentes/dm_marko_ttoom_1"
+				},
+				{
+					"hora": "05:10",
+					"es": "Me escondí en la sala de training vacía. Hay alguien en la silla del medio. No es el Trainer.",
+					"en": "I hid in the empty training room. Someone is in the middle chair. It's not the Trainer.",
+					"voz": "agentes/marko_dormido"
+				}
+			],
+			"2": [
+				{
+					"hora": "01:20",
+					"es": "Ttoom, si el cliente te dice que hay alguien detrás de ti, no voltees. Elige otra opción.",
+					"en": "Ttoom, if the customer says someone is behind you, don't turn around. Pick another option."
+				},
+				{
+					"hora": "06:00",
+					"es": "El ascensor me dejó en el 5. No hay botón del 5. Bajé por la escalera. Era la misma escalera.",
+					"en": "The elevator left me on 5. There's no button for 5. I went down the stairs. It was the same staircase."
+				}
+			],
+			"3": [
+				{
+					"hora": "00:20",
+					"es": "Ttoom, si Rasec pone música, no bailes. Solo pon BO cuando él diga.",
+					"en": "Ttoom, if Rasec puts on music, don't dance. Just set BO when he says."
+				},
+				{
+					"hora": "04:50",
+					"es": "Vi a Shero mirándote por el reflejo de tu monitor apagado. No lo apagues.",
+					"en": "I saw Shero watching you in the reflection of your monitor when it was off. Don't turn it off."
+				}
+			]
+		},
+		"llauri>ttoom": {
+			"1": [
+				{
+					"hora": "01:40",
+					"es": "Si hay training con quiz: BO, portal, 45, dos. No me lo agradezcas.",
+					"en": "If there's a training with a quiz: BO, portal, 45, two. Don't thank me.",
+					"voz": "agentes/llauri_45_minutos"
+				},
+				{
+					"hora": "06:00",
+					"es": "Si el Trainer grita, no corras hacia la puerta. Corre hacia tu sitio.",
+					"en": "If the Trainer screams, don't run to the door. Run to your seat.",
+					"voz": "agentes/llauri_break_escape"
+				}
+			],
+			"2": [
+				{
+					"hora": "02:10",
+					"es": "Quiz: BO, portal, 45, dos. Ya te lo dije. Te lo repito porque te quiero vivo.",
+					"en": "Quiz: BO, portal, 45, two. I told you already. I repeat it because I want you alive."
+				},
+				{
+					"hora": "05:30",
+					"es": "Si Rasec te invita al evento, pon BO y ve. No digas que no. Ya dije que no una vez.",
+					"en": "If Rasec invites you to the event, set BO and go. Don't say no. I said no once."
+				}
+			],
+			"3": [
+				{
+					"hora": "02:30",
+					"es": "Allocation de BO: cámbiate ya. El perro cuenta en segundos.",
+					"en": "BO allocation: switch now. The dog counts in seconds."
+				},
+				{
+					"hora": "06:40",
+					"es": "Cuando el KYC dice \"revisión reforzada\", no apruebes. Escala. No preguntes por qué.",
+					"en": "When the KYC says \"enhanced review\", don't approve. Escalate. Don't ask why."
+				}
+			]
+		},
+		"jiroshi>juan": {
+			"1": [
+				{
+					"hora": "02:10",
+					"es": "Juan, despierta. Tu AUX dice Available pero tu cabeza dice otra cosa.",
+					"en": "Juan, wake up. Your AUX says Available but your head says otherwise.",
+					"voz": "agentes/jiroshi_linea"
+				},
+				{
+					"hora": "05:30",
+					"es": "No le digas a Shero que te sientes mal dos veces. Una vez está bien. Dos veces ya no vuelves.",
+					"en": "Don't tell Shero you feel sick twice. Once is fine. Twice you don't come back.",
+					"voz": "agentes/jiroshi_kyc_ok"
+				}
+			],
+			"2": [
+				{
+					"hora": "00:35",
+					"es": "Juan, siéntate en TU isla. La de Shero. La otra isla no es tuya aunque esté vacía.",
+					"en": "Juan, sit at YOUR island. Shero's. The other island isn't yours even if it's empty."
+				},
+				{
+					"hora": "03:30",
+					"es": "Lunch a las 03:45 hoy. No a las 04:00. Shero no avisa dos veces.",
+					"en": "Lunch at 03:45 today. Not at 04:00. Shero doesn't warn twice."
+				}
+			],
+			"3": [
+				{
+					"hora": "00:40",
+					"es": "Juan, despierta. Es el turno 3. Ya no perdonan la segunda vez.",
+					"en": "Juan, wake up. It's shift 3. They don't forgive the second time anymore."
+				},
+				{
+					"hora": "05:20",
+					"es": "Si te llama Haime, ve. Ve aunque estés en un caso. Ella espera ocho minutos. Luego no espera.",
+					"en": "If Haime calls you, go. Go even if you're in a case. She waits eight minutes. Then she doesn't."
+				}
+			]
+		},
+		"llauri>juan": {
+			"1": [
+				{
+					"hora": "00:30",
+					"es": "Juan, ¿tú existes? En Ezlaki sales sin foto.",
+					"en": "Juan, do you exist? You show up on Ezlaki with no photo.",
+					"voz": "agentes/llauri_lunch"
+				},
+				{
+					"hora": "04:40",
+					"es": "Si te persigue, el baño solo te compra tiempo. Él espera. Siempre espera.",
+					"en": "If he chases you, the bathroom only buys you time. He waits. He always waits.",
+					"voz": "agentes/llauri_atrapado"
+				}
+			],
+			"2": [
+				{
+					"hora": "01:45",
+					"es": "Juan, tu foto de Ezlaki sigue en blanco. Shero dijo que es \"poco profesional\". Pon algo.",
+					"en": "Juan, your Ezlaki photo is still blank. Shero said it's \"unprofessional\". Put something."
+				},
+				{
+					"hora": "06:30",
+					"es": "Si te escribe Vitzo, no le respondas. Vitzo no escribe. Vitzo avisa.",
+					"en": "If Vitzo writes to you, don't answer. Vitzo doesn't write. Vitzo warns."
+				}
+			],
+			"3": [
+				{
+					"hora": "01:50",
+					"es": "Juan, ¿por qué tu estado dice \"en línea\" desde el turno 1?",
+					"en": "Juan, why has your status said \"online\" since shift 1?"
+				},
+				{
+					"hora": "06:50",
+					"es": "Te dejé el puff. Si no vienes, lo entiendo. Si vienes, no hagas ruido.",
+					"en": "I left you the beanbag. If you don't come, I understand. If you do, don't make noise."
+				}
+			]
+		}
+	},
+	"respuestas": {
+		"jiroshi": {
+			"jaja": {
+				"es": "jaja. no te rías muy fuerte, Haime escucha.",
+				"en": "haha. don't laugh too loud, Haime listens."
+			},
+			"no_me_metas": {
+				"es": "ok. no te meto. pero ya estás.",
+				"en": "ok. I won't. but you're already in."
+			},
+			"gracias": {
+				"es": "de nada. sigue en Live.",
+				"en": "you're welcome. stay in Live."
+			}
+		},
+		"marko": {
+			"jaja": {
+				"es": "jaja shh",
+				"en": "haha shh"
+			},
+			"no_me_metas": {
+				"es": "tarde. ya te metí.",
+				"en": "too late. you're in."
+			},
+			"gracias": {
+				"es": "no me agradezcas, avísame si viene.",
+				"en": "don't thank me, warn me if he comes."
+			}
+		},
+		"llauri": {
+			"jaja": {
+				"es": "no es broma.",
+				"en": "it's not a joke."
+			},
+			"no_me_metas": {
+				"es": "si te meto es para salvarte.",
+				"en": "if I drag you in it's to save you."
+			},
+			"gracias": {
+				"es": "me debes un puff.",
+				"en": "you owe me a beanbag."
+			}
+		},
+		"ttoom": {
+			"jaja": {
+				"es": "jaja… ¿por qué te ríes?",
+				"en": "haha… why are you laughing?"
+			},
+			"no_me_metas": {
+				"es": "perdón perdón perdón",
+				"en": "sorry sorry sorry"
+			},
+			"gracias": {
+				"es": "¿de verdad? nadie me dice gracias acá.",
+				"en": "really? nobody says thanks here."
+			}
+		},
+		"juan": {
+			"jaja": {
+				"es": "zzz… jaja",
+				"en": "zzz… haha"
+			},
+			"no_me_metas": {
+				"es": "¿meter dónde? ¿en la fila?",
+				"en": "in where? in the row?"
+			},
+			"gracias": {
+				"es": "…¿quién eres?",
+				"en": "…who are you?"
+			}
+		}
+	},
+	"degradacion": {
+		"jiroshi": [
+			{
+				"es": "sigo en Live. sigo en Live. sigo en",
+				"en": "still in Live. still in Live. still in"
+			},
+			{
+				"es": "¿tú también ves la hora quieta?",
+				"en": "do you also see the clock standing still?"
+			},
+			{
+				"es": "no me contestes si estás en un caso. estamos todos en un caso.",
+				"en": "don't answer if you're in a case. we're all in a case."
+			}
+		],
+		"marko": [
+			{
+				"es": "no puedo levantarme de la silla",
+				"en": "i can't get up from the chair"
+			},
+			{
+				"es": "mi AUX dice Available pero yo no",
+				"en": "my AUX says Available but i don't"
+			},
+			{
+				"es": "¿por qué la luz de mi monitor respira?",
+				"en": "why is my monitor light breathing?"
+			}
+		],
+		"llauri": [
+			{
+				"es": "el baño tiene una puerta más que ayer",
+				"en": "the bathroom has one more door than yesterday"
+			},
+			{
+				"es": "ya no sé cuál es el truco",
+				"en": "i don't know what the trick is anymore"
+			},
+			{
+				"es": "no me escribas, Shero lee los DMs. Shero lee",
+				"en": "don't write to me, Shero reads the DMs. Shero reads"
+			}
+		],
+		"ttoom": [
+			{
+				"es": "hay caldo. hay. no para mí. no para mí.",
+				"en": "there's soup. there is. not for me. not for me."
+			},
+			{
+				"es": "si me ves en la escalera, no soy yo",
+				"en": "if you see me on the stairs, it's not me"
+			},
+			{
+				"es": "cuántas llamadas perdidas llevo. dime tú",
+				"en": "how many missed calls do i have. you tell me"
+			}
+		],
+		"juan": [
+			{
+				"es": "zzz",
+				"en": "zzz"
+			},
+			{
+				"es": "estoy en tu fila",
+				"en": "i'm in your row"
+			},
+			{
+				"es": "despierta",
+				"en": "wake up"
+			}
+		]
+	},
+	"degradacion_horas": [
+		"07:30",
+		"08:05",
+		"08:30"
+	],
+	"evento_rasec": {
+		"_nota": "v0.3.1 Q4 (F22): compañeros hartos de las «integraciones» de Rasec: susurros durante el evento, reacción a lo que respondes y DMs (durante, y al final según el ánimo del grupo).",
+		"susurros": [
+			{
+				"voz": "comp/q4_harto_1",
+				"quien": "comp",
+				"es": "Otra vez no…",
+				"en": "Not again…"
+			},
+			{
+				"voz": "comp/q4_harto_2",
+				"quien": "comp2",
+				"es": "Son las cinco de la mañana. Las cinco.",
+				"en": "It's five in the morning. Five."
+			},
+			{
+				"voz": "comp/q4_harto_3",
+				"quien": "comp3",
+				"es": "Sonríe, que te está mirando.",
+				"en": "Smile, he's looking at you."
+			},
+			{
+				"voz": "comp/q4_harto_4",
+				"quien": "comp",
+				"es": "Tengo cuatro casos en cola y estoy cantando.",
+				"en": "I have four cases in the queue and I'm singing."
+			},
+			{
+				"voz": "comp/q4_harto_5",
+				"quien": "comp2",
+				"es": "Si aplaudo más fuerte me deja ir.",
+				"en": "If I clap louder he'll let me go."
+			},
+			{
+				"voz": "comp/q4_harto_6",
+				"quien": "comp3",
+				"es": "Esto no es integración. Es secuestro con globos.",
+				"en": "This isn't team building. It's a kidnapping with balloons."
+			},
+			{
+				"voz": "comp/q4_harto_7",
+				"quien": "comp",
+				"es": "Mi Available se está muriendo. Lo siento morir.",
+				"en": "My Available is dying. I can feel it die."
+			},
+			{
+				"voz": "comp/q4_harto_8",
+				"quien": "comp2",
+				"es": "No lo mires a los ojos. Se emociona.",
+				"en": "Don't look him in the eye. He gets excited."
+			},
+			{
+				"voz": "comp/q4_harto_9",
+				"quien": "comp3",
+				"es": "Me duermo. Me duermo de pie.",
+				"en": "I'm falling asleep. Asleep on my feet."
+			}
+		],
+		"reacciones": {
+			"seguir": [
+				{
+					"voz": "comp/q4_reaccion_1",
+					"quien": "comp2",
+					"es": "…Traidor.",
+					"en": "…Traitor."
+				},
+				{
+					"voz": "comp/q4_reaccion_2",
+					"quien": "comp",
+					"es": "Qué ganas le pones…",
+					"en": "Look at you, so eager…"
+				}
+			],
+			"excusa": [
+				{
+					"voz": "comp/q4_reaccion_3",
+					"quien": "comp3",
+					"es": "Buena. Casi.",
+					"en": "Nice. Almost."
+				},
+				{
+					"voz": "comp/q4_reaccion_4",
+					"quien": "comp",
+					"es": "Eso no le funciona a nadie.",
+					"en": "That never works for anyone."
+				}
+			],
+			"burla": [
+				{
+					"voz": "comp/q4_reaccion_5",
+					"quien": "comp",
+					"es": "[risa ahogada]",
+					"en": "[stifled laugh]"
+				},
+				{
+					"voz": "comp/q4_reaccion_6",
+					"quien": "comp3",
+					"es": "Jaja. Te va a anotar. Valió la pena.",
+					"en": "Haha. He's going to note you. Worth it."
+				}
+			]
+		},
+		"dms": {
+			"durante": [
+				{
+					"es": "¿tú también estás de pie en el centro? sálvanos",
+					"en": "are you also standing in the middle? save us"
+				},
+				{
+					"es": "me dijo que si no aplaudo me anota. estoy aplaudiendo",
+					"en": "he said if I don't clap he'll note me. I'm clapping"
+				},
+				{
+					"es": "cuatro de la mañana y karaoke. esto es un crimen",
+					"en": "four in the morning and karaoke. this is a crime"
+				},
+				{
+					"es": "Juan se escondió en el baño. no digas nada",
+					"en": "Juan hid in the bathroom. don't say anything"
+				}
+			],
+			"bien": [
+				{
+					"es": "jajaja gracias. le debemos una",
+					"en": "hahaha thanks. we owe you one"
+				},
+				{
+					"es": "alguien tenía que decirlo. ojalá no te cueste",
+					"en": "someone had to say it. hope it doesn't cost you"
+				}
+			],
+			"mal": [
+				{
+					"es": "wow. sí que le sigues el juego",
+					"en": "wow. you really play along"
+				},
+				{
+					"es": "la próxima di que estás en llamada, como Juan",
+					"en": "next time say you're on a call, like Juan"
+				}
+			]
+		}
+	}
+}

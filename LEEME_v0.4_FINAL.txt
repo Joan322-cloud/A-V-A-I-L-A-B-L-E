@@ -1,0 +1,13 @@
+A V A I L A B L E — v0.4 FINAL COMPLETA (UN SOLO ZIP)
+=====================================================
+
+CÓMO ARMAR Y COMPILAR EN WINDOWS (C:\AVAILABLE\):
+1. Descomprime AVAILABLE_v0.4_FINAL_proyecto_completo.zip en C:\AVAILABLE\juego\
+2. Descomprime AVAILABLE_v0.4_FINAL_Windows_base.zip en C:\AVAILABLE\builds\windows\
+3. Abre C:\AVAILABLE\juego\project.godot con Godot 4.7.2 (edición estándar) y ejecuta exportar_todo.bat
+   (o Proyecto -> Exportar) para generar AVAILABLE.pck (junto a AVAILABLE.exe y asr/) y AVAILABLE.html.
+
+CONTROLES DEV DE PRUEBA (GameState.DEV_TOOLS_ENABLED = true):
+- En el menú de selección de agente tienes botones directos para lanzar T0 (Training) hasta T7 (Domingo).
+- En el menú de pausa [Esc] tienes 'Ganar / Pasar Turno Actual (08:45)' y salto directo a T0..T7.
+- Antes de publicar en Steam, cambia DEV_TOOLS_ENABLED = false en scripts/autoload/game_state.gd.

@@ -1,0 +1,24 @@
+A V A I L A B L E — v0.4.1 FINAL COMPLETA (STEAM-READY)
+========================================================
+
+1. QUÉ SE CORRIGIÓ Y COMPLETÓ EN ESTA VERSIÓN:
+   - Reloj dinámico calibrado por contexto (data/balance.json + game_state.gd):
+     * Espera sin cola: 165x (Normal) / 210x (Corta) / 125x (Larga) -> turno completo en ~22-24 min.
+     * Llamadas/Chats: 18x | Timbre entrante: 12x | Correos BO (10 min): 10x (60 s reales).
+     * Caminar / AUX de pie: 8.5x | Break: 10x | Lunch: 16x (45x al dormir).
+     * Convocatorias activas (Haime/Trainer/Rasec): baja automáticamente a 5.5x.
+   - Balance de Haime (QA) (data/qa_haime.json + qa_feedback.gd):
+     * Plazo ampliado a 10 min de juego + piso mínimo garantizado de 55 segundos reales para caminar.
+     * El plazo se pausa mientras terminas una llamada activa, en lunch o durante persecuciones.
+   - Mecánicas completas del LEEME:
+     * Jueves (Turno 4): Evento físico de desalojo de Papayala en tu silla C-14 tras el lunch.
+     * Viernes (Turno 5): Shero Gigante + derrumbe + ventana interactiva de las 5 ofertas del OM a las 08:00.
+     * Sábado (Turno 6): Reloj detenido a las 05:59, 3 fragmentos de renuncia, faro en Terminal de Cese y GRASA en Azotea.
+     * Domingo (Turno 7): Día de descanso interactivo en el cuarto de Jiroshi + los 5 Finales.
+     * Steamworks SDK (SteamManager): 18 Logros de Steam + Steam Cloud Saves.
+
+2. CÓMO GENERAR EL EJECUTABLE DE WINDOWS EN 1 CLIC:
+   - Descomprime AVAILABLE_v0.4.1_FINAL_proyecto_completo.zip en C:\AVAILABLE\juego\
+   - Abre C:\AVAILABLE\juego\project.godot con Godot 4.7.2 y ejecuta EXPORTAR_WINDOWS_Y_WEB.bat
+     (generará AVAILABLE.exe con el PCK embebido en C:\AVAILABLE\builds\windows\AVAILABLE.exe).
+   - Antes de subir la build comercial a Steam, pon DEV_TOOLS_ENABLED = false en scripts/autoload/game_state.gd.

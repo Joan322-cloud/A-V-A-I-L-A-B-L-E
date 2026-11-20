@@ -1,0 +1,55 @@
+{
+	"_comentario": "Comportamientos por piso (P2 deja el gancho en FloorBase._attach_behaviours): cada piso instancia el script SOLO si existe (ResourceLoader.exists) y desde turno_desde. El nodo recibe setup_behaviour(piso, marcador, entrada) si lo define. Dueños: guardia, topico, training, haime, rasec = P5. P5: 'topico' desde T1 (en T1 el script deja el tópico cerrado pero crea PersonajesP5); 'personajes' en la azotea solo asegura PersonajesP5.",
+	"pisos": {
+		"-1": [
+			{
+				"id": "guardia",
+				"script": "res://scripts/personajes/guardia.gd",
+				"marcador": "fermin_puesto",
+				"turno_desde": 1,
+				"dueno": "P5"
+			}
+		],
+		"1": [
+			{
+				"id": "topico",
+				"script": "res://scripts/personajes/topico.gd",
+				"marcador": "topico",
+				"turno_desde": 1,
+				"dueno": "P5"
+			},
+			{
+				"id": "training",
+				"script": "res://scripts/personajes/training_session.gd",
+				"marcador": "training_sala2",
+				"turno_desde": 2,
+				"dueno": "P5"
+			}
+		],
+		"2": [
+			{
+				"id": "haime",
+				"script": "res://scripts/personajes/haime.gd",
+				"marcador": "sala_calibracion",
+				"turno_desde": 1,
+				"dueno": "P5"
+			},
+			{
+				"id": "rasec",
+				"script": "res://scripts/personajes/rasec.gd",
+				"marcador": "evento_rasec",
+				"turno_desde": 1,
+				"dueno": "P5"
+			}
+		],
+		"9": [
+			{
+				"id": "personajes",
+				"script": "res://scripts/personajes/personajes_piso.gd",
+				"marcador": "",
+				"turno_desde": 1,
+				"dueno": "P5"
+			}
+		]
+	}
+}

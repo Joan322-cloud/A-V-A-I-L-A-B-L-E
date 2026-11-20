@@ -1,0 +1,98 @@
+keys,es,en
+PKG_P6B_READY,"Cadenas del paquete P6b (v0.3): tutorial, elegir turno y manual","Package P6b strings (v0.3): tutorial, shift select and manual"
+MENU_PICK_TURN,Elegir día,Choose day
+MENU_PICK_TURN_BRANCH,Elegir día · rama guardada,Choose day · saved branch
+TS_TITLE,Elegir día · {agente},Choose day · {agente}
+TS_INTRO,"Vuelve a jugar un día de la semana que ya alcanzaste con esta partida, por ejemplo para buscar otro final. Es una rama aparte: tu partida no cambia, salvo que al terminar ese día elijas «Seguir desde aquí». El día actual es el que sigue con «Continuar».","Replay a day of the week you already reached with this save, for example to look for another ending. It's a separate branch: your save doesn't change unless you choose ""Continue from here"" at the end of that day. The current day is the one ""Continue"" plays."
+TS_PLAYED_AS,Se jugará en: {modo} · {dif} (cámbialo en el menú),Will be played as: {modo} · {dif} (change it in the menu)
+TS_PENDING,Rama guardada: {dia} (empezada el {fecha}),Saved branch: {dia} (started {fecha})
+TS_RESUME,Continuar la rama,Continue the branch
+TS_DISCARD,Descartar la rama,Discard the branch
+TS_DISCARD_CONFIRM,¿Descartar? Pulsa otra vez,Discard? Press again
+TS_DISCARDED,Rama descartada. Tu partida sigue igual.,Branch discarded. Your save is unchanged.
+TS_EMPTY,Todavía no alcanzaste ningún día con este agente.,You haven't reached any day with this agent yet.
+TS_ROW_HEAD,{dia} · alcanzado el {fecha},{dia} · reached on {fecha}
+TS_CURRENT,ACTUAL,CURRENT
+TS_CONTINUE,Continuar,Continue
+TS_REPLAY,Rejugar (rama),Replay (branch)
+TS_START_SALDO,Empieza con {saldo},Starts with {saldo}
+TS_START_FATIGA,Fatiga {f},Fatigue {f}
+TS_START_WW,WW acumulados {n},Total WW {n}
+TS_RESULT,Cerrado: Available {av} % · WW {ww} · {c} contactos · {inc} incidencias,Closed: Available {av} % · WW {ww} · {c} contacts · {inc} incidents
+TS_RESULT_MIGRATED,Cerrado (partida de una versión anterior: sin detalle),Closed (save from an earlier version: no details)
+TS_NOT_CLOSED,Aún sin cerrar,Not closed yet
+TS_FIRED,despedido,fired
+TS_MIGRATED_MARK,(datos aproximados de una versión anterior),(approximate data from an earlier version)
+TS_NOTE,"Los finales y epílogos que desbloquees quedan con este agente para siempre, también los que veas en una rama.","Endings and epilogues you unlock stay with this agent forever, including those you see in a branch."
+SE_BRANCH_TEXT,Rejugaste el {dia} en una rama. Tu partida principal no cambió.,You replayed {dia} in a branch. Your main save did not change.
+SE_BRANCH_KEEP,Seguir desde aquí,Continue from here
+SE_BRANCH_KEEP_CONFIRM,Confirmar: seguir desde aquí,Confirm: continue from here
+SE_BRANCH_DROP,[Espacio] Volver sin cambiar mi partida,[Space] Go back without changing my save
+SE_BRANCH_CANCEL,[Espacio] Cancelar,[Space] Cancel
+SE_BRANCH_CONFIRM_TEXT,¿Seguro? Tu partida continuará desde este {dia} y se reemplaza todo lo que habías jugado después (los días posteriores y el día a medias). Los finales vistos se conservan.,Are you sure? Your save will continue from this {dia} and everything you played afterwards is replaced (later days and the day in progress). Endings you have seen are kept.
+SE_BRANCH_CONFIRM_TEXT_SAFE,¿Seguro? Tu partida continuará desde este {dia}.,Are you sure? Your save will continue from this {dia}.
+TUT_DEATH_BLOCKED,Training: en un turno de verdad aquí habrías muerto («{motivo}»). Aquí no pasa nada.,"Training: in a real shift you would have died here (""{motivo}""). Nothing happens here."
+CAUSE_CORREO,Correo mal resuelto,Email case handled wrong
+CAUSE_KYC,KYC mal resuelto,KYC handled wrong
+TUT_PANEL_TITLE,TRAINING · Tema {n}/{total} · {titulo} · paso {paso}/{pasos},TRAINING · Topic {n}/{total} · {titulo} · step {paso}/{pasos}
+TUT_BTN_NEXT,Continuar [T],Continue [T]
+TUT_BTN_YES,Sí [T],Yes [T]
+TUT_BTN_NO,"No, gracias [N]","No, thanks [N]"
+TUT_BTN_SKIP,Saltar módulo [F8],Skip module [F8]
+TUT_KEY_NEXT,[T] continuar,[T] continue
+TUT_KEY_CHOOSE,[T] sí · [N] no,[T] yes · [N] no
+TUT_KEY_DO,Hazlo tú: el paso avanza solo,Do it yourself: the step advances on its own
+TUT_KEY_SKIP,[Esc] pausa / salir,[Esc] pause / quit
+TUT_HINT_PREFIX,Pista:,Hint:
+TUT_TARGET,Sigue la luz · {m} m,Follow the light · {m} m
+TUT_TARGET_OTHER_FLOOR,El objetivo está en otro piso,The target is on another floor
+TUT_DONE_TITLE,TRAINING · terminado,TRAINING · finished
+TUT_DONE_BODY,Hiciste {hechos} de {total} temas y saltaste {saltados}. Puedes repetir cualquiera desde «Training» en el menú. [T] Volver al menú.,"You did {hechos} of {total} topics and skipped {saltados}. You can repeat any of them from ""Training"" in the menu. [T] Back to menu."
+TUT_MENTOR_MODULE,"[Training] Tema {n}: {titulo}. Sin presión. Bueno, con un poquito.","[Training] Topic {n}: {titulo}. No pressure. Well, a little."
+TUT_OUTCOME_SATISFECHO,satisfecha,satisfied
+TUT_OUTCOME_NEUTRAL,neutral,neutral
+TUT_OUTCOME_MOLESTO,molesta,angry
+TUT_OUTCOME_PERDIDO,perdida (no la atendiste),lost (you didn't take it)
+TUT_KYC_OK,Correcto: pediste lo que faltaba,Correct: you requested what was missing
+TUT_KYC_WRONG,"Esa no era la acción: en Norvalia, sobre 1.500 KP y sin documento, se pide el documento de identidad","That wasn't the action: in Norvalia, over 1,500 KP and with no ID, you request the ID document"
+TUT_ACK_EXPIRED,"Se venció el Ack. En un turno real, Shero ya estaría bajando con la amonestación. Te lo mandamos otra vez.","The Ack expired. In a real shift, Shero would already be coming down with the reprimand. We're sending it again."
+TUT_VITZO_MISSED,"No reaccionaste a tiempo. En un turno real, Vitzo saldría de tu monitor. Va otra vez.","You didn't react in time. In a real shift, Vitzo would come out of your monitor. Here it is again."
+TUT_MISSED_RETRY,Se perdió el contacto: así se cuentan las llamadas perdidas. Te lo pasamos otra vez.,The contact was lost: that's how missed calls are counted. We're sending it again.
+CAUSE_INDUCCION,Práctica del Training,Training practice
+TUTM_TITLE,Training · temas,Training · topics
+TUTM_INTRO,"El recuerdo del día en que entraste a Konzentramance: el Training con el Trainer, en el aula del piso 1, hasta la firma del contrato. Escrito para quien nunca trabajó en un call center: en cada tema haces tú mismo lo que te explicamos, en tu PC de training y sin muertes reales. Cualquier tema se puede hacer solo, y saltar con [F8] (la firma, no).","The memory of the day you joined Konzentramance: the Training with the Trainer, in the floor 1 classroom, up to signing the contract. Written for anyone who never worked in a call center: in each topic you do yourself what we explain, at your training PC and with no real deaths. Any topic can be done on its own, and skipped with [F8] (not the signing)."
+TUTM_DONE,✓ hecho,✓ done
+TUTM_SKIPPED,saltado,skipped
+TUTM_PENDING,pendiente,pending
+TUTM_DO_ONE,Hacer este,Do this one
+TUTM_DO_PENDING,Hacer el Training (pendientes),Do the Training (pending)
+TUTM_DO_ALL,Repetir todo el Training,Repeat the whole Training
+TUTM_FROM_START,Desde el principio,From the start
+TUTM_RESET,Reiniciar progreso,Reset progress
+TUTM_RESET_CONFIRM,¿Seguro? Pulsa otra vez,Sure? Press again
+TUTM_TOTAL,En total ~{min} minutos reales. Tu partida no se toca: el Training tiene su propio guardado.,About {min} real minutes in total. Your save isn't touched: the Training has its own save.
+MAN_TITLE,Manual del agente,Agent manual
+MAN_INTRO,"Cada término que vas a escuchar en Konzentramance, y las reglas del turno en corto. También está en la PC: Campus → Manual del agente.","Every term you'll hear at Konzentramance, and the shift rules in short. Also on the PC: Campus → Agent manual."
+MAN_TAB_GLOSARIO,Glosario,Glossary
+MAN_TAB_REGLAS,Reglas,Rules
+MAN_SEARCH,Buscar término…,Search term…
+MAN_NONE,Ningún término coincide.,No term matches.
+MAN_CLOSE,[Esc] Cerrar,[Esc] Close
+PAUSE_MANUAL,Manual del agente,Agent manual
+P4_CAMPUS_G_MANUAL,Manual del agente,Agent manual
+P4_CAMPUS_G_REGLAS,Reglas del turno,Shift rules
+TIP_TITLE,PRIMERA VEZ,FIRST TIME
+HINT_TREE,Las opciones marcadas con «¿seguro?» tienen trampa; muestra interés y revisa antes de prometer.,"Options marked ""sure?"" are traps; show interest and check before promising."
+HINT_KARDEX,Haz clic en el número KP del correo: se abre en Kardex.,Click the KP number in the email: it opens in Kardex.
+HINT_PARTNER,"El destinatario es el partner pagador que dice Kardex; los campos, con los datos de Kardex.","The recipient is the paying partner Kardex shows; the fields, with Kardex data."
+HINT_PARTNER_VITZO,El partner es Vitzo: busca en el Portal Vitzo (F4) y responde al Cliente. Nunca un correo a Vitzo.,The partner is Vitzo: search in the Vitzo Portal (F4) and reply to the Customer. Never an email to Vitzo.
+HINT_VITZO_POD,"El partner es Vitzo: en el Portal Vitzo (F4) busca la operación, descarga el POD y adjúntalo; responde al banco que lo pidió. Nunca un correo a Vitzo.","The partner is Vitzo: in the Vitzo Portal (F4) look up the transaction, download the POD and attach it; reply to the bank that asked for it. Never an email to Vitzo."
+HINT_VITZO_REVERSAL,El partner es Vitzo: en el Portal Vitzo (F4) busca la operación y registra la «Solicitud de reversal». Nunca un correo a Vitzo.,The partner is Vitzo: in the Vitzo Portal (F4) look up the transaction and file the «Reversal request». Never an email to Vitzo.
+HINT_TIPIFICAR,Tipifica lo que hiciste de verdad (lo que enviaste o consultaste).,Categorize what you actually did (what you sent or checked).
+HINT_CERRAR,Todo listo: cierra el caso.,All done: close the case.
+HINT_KYC,"Mira región, total en KP, e-verificación y documentos; las reglas están en Campus → Manual del agente.","Check region, KP total, e-verification and documents; the rules are in Campus → Agent manual."
+C17_SCREEN,{agente} · Turno 17 · Available 0 % · Siéntate.,{agente} · Shift 17 · Available 0 % · Sit down.
+C17_SUB,(un auricular suena en un sitio que no existe),(a headset beeps at a seat that doesn't exist)
+P6B_KPI_QA,Feedback QA,QA feedback
+TUT_BEACON_TAG,▼ AQUÍ,▼ HERE
+P6B_HUDDLE,HUDDLE · 07:00 · ¡Somos familia!,HUDDLE · 07:00 · One big family!

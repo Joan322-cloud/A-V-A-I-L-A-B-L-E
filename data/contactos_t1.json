@@ -1,0 +1,3287 @@
+{
+	"_formato": "arbol_v1",
+	"_comentario": "AVAILABLE v0.3 · Turno 1: llamadas y chats como árboles de diálogo (PLAN §5), fusionados por P4 desde docs/v0.3/datos/contactos_t1_arbol.json con los campos v0.2 que siguen valiendo (fallo, ensena, herramienta, relleno). Los correos, KYC y casos de Vitzo están en casos_bo.json. Motor: scripts/core/dialog_tree.gd. v0.3.1 Q4 (F13, Joan 11:43Z): bolsa de 15 árboles por turno (9 guionizados + 6 de relleno propios). Cuántos te tocan sale de 'contactos_por_turno' (rango por dificultad); 'fijos' siempre salen; el resto se sortea sin repetir (ContactManager._plan_shift / _filler). 'cliente_nombre' lo usa Haime en el feedback. Integración v0.3.1: bolsa de T1 16, T2 17, T3 20 árboles distintos; los marcados 'solo_dificil' solo entran en el sorteo en Difícil y Turno real (en Fácil/Normal: T1 15, T2 16, T3 18). 'contactos_por_turno' no cambia (duración del turno).",
+	"arquetipos": {
+		"el_que_repite": {
+			"paciencia": 60,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_el_que_repite"
+		},
+		"la_que_llora": {
+			"paciencia": 45,
+			"calma": [
+				"empatia"
+			],
+			"voz": "cliente_la_que_llora"
+		},
+		"el_amable": {
+			"paciencia": 100,
+			"calma": [
+				"empatia",
+				"proceso"
+			],
+			"voz": "cliente_amable"
+		},
+		"el_estafado": {
+			"paciencia": 35,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_estafado"
+		},
+		"el_silencioso": {
+			"paciencia": 80,
+			"calma": [],
+			"voz": "cliente_silencioso"
+		},
+		"el_apurado": {
+			"paciencia": 40,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_apurado"
+		},
+		"la_desconfiada": {
+			"paciencia": 55,
+			"calma": [
+				"proceso",
+				"empatia"
+			],
+			"voz": "cliente_desconfiada"
+		},
+		"el_abuelo": {
+			"paciencia": 90,
+			"calma": [
+				"empatia"
+			],
+			"voz": "cliente_abuelo"
+		},
+		"la_joven": {
+			"paciencia": 50,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_joven"
+		},
+		"el_extranjero": {
+			"paciencia": 70,
+			"calma": [
+				"empatia",
+				"proceso"
+			],
+			"voz": "cliente_extranjero"
+		},
+		"la_comerciante": {
+			"paciencia": 45,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_comerciante"
+		},
+		"el_trasnochado": {
+			"paciencia": 65,
+			"calma": [
+				"empatia"
+			],
+			"voz": "cliente_trasnochado"
+		},
+		"el_conspiranoico": {
+			"paciencia": 50,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_conspiranoico"
+		},
+		"la_gerente": {
+			"paciencia": 35,
+			"calma": [
+				"proceso"
+			],
+			"voz": "cliente_gerente"
+		}
+	},
+	"contactos": [
+		{
+			"id": "t1c1",
+			"ref_v02": "c1_llamada_repite",
+			"canal": "llamada",
+			"arquetipo": "el_que_repite",
+			"hora_juego": "00:04",
+			"animo_inicial": 0,
+			"caso": {
+				"es": "Estado de envío #KP-2210-7741 a México. Enviado hace 2 días.",
+				"en": "Status of transfer #KP-2210-7741 to Mexico. Sent 2 days ago."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Aló. Quiero saber el estado de mi envío. Mi envío. El estado.",
+						"en": "Hello. I want to know the status of my transfer. My transfer. The status."
+					},
+					"audio": "voces/clientes/t1c1_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "pide_numero",
+							"es": "Entiendo su preocupación. Con gusto lo reviso.",
+							"en": "I understand your concern. I'll gladly check it."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "da_numero",
+							"es": "¿Me confirma el número de operación, por favor?",
+							"en": "Can you confirm the transaction number, please?"
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 15,
+							"sig": "repite_fuerte",
+							"es": "Los envíos a México demoran hasta cinco días hábiles, señor.",
+							"en": "Transfers to Mexico take up to five business days, sir.",
+							"qa": "respuesta_sin_revisar"
+						}
+					]
+				},
+				"pide_numero": {
+					"cliente": {
+						"es": "El número. Sí. KP-2210-7741. El estado. ¿Lo ve? ¿Lo está viendo?",
+						"en": "The number. Yes. KP-2210-7741. The status. Do you see it? Are you looking at it?"
+					},
+					"audio": "voces/clientes/t1c1_pide_numero.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "revisa",
+							"es": "Lo veo. Déjeme revisar con el partner.",
+							"en": "I see it. Let me check with the partner."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -5,
+							"t_juego": 15,
+							"sig": "fin_vuelve",
+							"es": "Ya llegó, señor. Seguro ya está en la cuenta.",
+							"en": "It's arrived, sir. It's surely in the account already.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"da_numero": {
+					"cliente": {
+						"es": "KP-2210-7741. ¿Por qué todos me piden el número y nadie me dice el estado?",
+						"en": "KP-2210-7741. Why does everyone ask me for the number and nobody tells me the status?"
+					},
+					"audio": "voces/clientes/t1c1_da_numero.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Tiene razón. Ya lo tengo aquí; le digo el estado ahora.",
+							"en": "You're right. I have it here; I'll tell you the status now."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "repite_fuerte",
+							"es": "Es el procedimiento, señor.",
+							"en": "It's the procedure, sir."
+						}
+					]
+				},
+				"repite_fuerte": {
+					"cliente": {
+						"es": "El estado. EL ESTADO. Llevo dos días repitiéndole lo mismo a gente como usted.",
+						"en": "The status. THE STATUS. I've spent two days repeating the same thing to people like you."
+					},
+					"audio": "voces/clientes/t1c1_repite_fuerte.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "revisa",
+							"es": "Disculpe. Lo reviso yo, ahora, sin pasarlo a nadie.",
+							"en": "I'm sorry. I'll check it myself, now, without passing you to anyone."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -30,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Señor, si no se calma no puedo ayudarle.",
+							"en": "Sir, if you don't calm down I can't help you.",
+							"qa": "calmese"
+						}
+					]
+				},
+				"revisa": {
+					"cliente": {
+						"es": "¿Y? ¿Qué dice? No me ponga en espera. No me ponga la música.",
+						"en": "And? What does it say? Don't put me on hold. Don't put the music on."
+					},
+					"audio": "voces/clientes/t1c1_revisa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "fin_satisfecho",
+							"es": "Está en proceso con el partner; acredita en 24 horas. Le dejo el número de seguimiento.",
+							"en": "It's in process with the partner; it credits within 24 hours. I'll leave you the tracking number."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 40,
+							"sig": "fin_neutral",
+							"es": "Un momento, lo pongo en espera para confirmar.",
+							"en": "One moment, I'll put you on hold to confirm.",
+							"accion": "hold"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Veinticuatro horas. Veinticuatro. Lo voy a repetir hasta que llegue. Gracias.",
+						"en": "Twenty-four hours. Twenty-four. I'll repeat it until it arrives. Thank you."
+					},
+					"audio": "voces/clientes/t1c1_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "…La música. Le dije que la música no. Bueno. Si no llega, llamo. Llamo y repito.",
+						"en": "…The music. I told you not the music. Fine. If it doesn't arrive, I'll call. I'll call and repeat."
+					},
+					"audio": "voces/clientes/t1c1_fin_neutral.ogg"
+				},
+				"fin_vuelve": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "¿Ya llegó? …Voy a revisar. Si no está, la próxima vez le pido su nombre.",
+						"en": "It's arrived? …I'll check. If it's not there, next time I'll ask for your name."
+					},
+					"audio": "voces/clientes/t1c1_fin_vuelve.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Voy a llamar otra vez. Y otra vez. Hasta que conteste alguien que no sea usted.",
+						"en": "I'll call again. And again. Until someone who isn't you answers."
+					},
+					"audio": "voces/clientes/t1c1_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"ensena": {
+				"es": "Aceptar con Espacio, leer el guion, elegir frases 1-4.",
+				"en": "Accept with Space, read the script, pick phrases 1-4."
+			},
+			"herramienta": [
+				"fonex",
+				"kardex"
+			],
+			"bloque": 1,
+			"orden": 1,
+			"cliente_nombre": "señor Lizardo Paz"
+		},
+		{
+			"id": "t1c2",
+			"ref_v02": "c2_llamada_llora",
+			"canal": "llamada",
+			"arquetipo": "la_que_llora",
+			"hora_juego": "00:30",
+			"animo_inicial": -10,
+			"caso": {
+				"es": "Envío retenido por verificación. Es la plata para la operación de su mamá.",
+				"en": "Transfer held for verification. It's the money for her mother's surgery."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Por favor… es la plata de la operación de mi mamá. La operan mañana.",
+						"en": "Please… it's the money for my mom's surgery. They operate tomorrow."
+					},
+					"audio": "voces/clientes/t1c2_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 20,
+							"t_juego": 25,
+							"sig": "explica",
+							"es": "Lamento mucho lo que está pasando. Vamos a resolverlo juntas.",
+							"en": "I'm so sorry about what's happening. We'll sort it out together."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "retenido",
+							"es": "El envío está retenido por verificación de identidad.",
+							"en": "The transfer is held for identity verification."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -30,
+							"t_juego": 15,
+							"sig": "documento_ya",
+							"es": "Necesito que me envíe una foto de su documento ahora.",
+							"en": "I need you to send me a photo of your ID now.",
+							"qa": "documento_sin_empatia"
+						}
+					]
+				},
+				"documento_ya": {
+					"cliente": {
+						"es": "¿Mi documento? ¿Eso es lo único que le importa? Mi mamá está en una camilla.",
+						"en": "My ID? Is that all you care about? My mom is on a stretcher."
+					},
+					"audio": "voces/clientes/t1c2_documento_ya.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "explica",
+							"es": "Perdón. Primero lo primero: ¿cómo está su mamá?",
+							"en": "I'm sorry. First things first: how is your mom?"
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Sin documento no puedo liberarlo, señora.",
+							"en": "Without the ID I can't release it, ma'am."
+						}
+					]
+				},
+				"retenido": {
+					"cliente": {
+						"es": "¿Retenido? ¿Por qué? Yo no hice nada malo. Yo solo mandé plata.",
+						"en": "Held? Why? I didn't do anything wrong. I just sent money."
+					},
+					"audio": "voces/clientes/t1c2_retenido.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "explica",
+							"es": "No hizo nada malo. Es un control y lo resolvemos ahora.",
+							"en": "You did nothing wrong. It's a check and we'll solve it now."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Es una política de seguridad, no depende de mí.",
+							"en": "It's a security policy, it doesn't depend on me."
+						}
+					]
+				},
+				"explica": {
+					"cliente": {
+						"es": "Me dicen 'verificación'. No sé qué verificar. Yo solo quiero que llegue.",
+						"en": "They say 'verification'. I don't know what to verify. I just want it to arrive."
+					},
+					"audio": "voces/clientes/t1c2_explica.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "doc_ok",
+							"es": "Para liberarlo valido su identidad. ¿Tiene su documento a la mano?",
+							"en": "To release it I'll validate your identity. Do you have your ID at hand?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "fin_mentira",
+							"es": "No se preocupe, se libera solo en unas horas.",
+							"en": "Don't worry, it releases itself in a few hours.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"doc_ok": {
+					"cliente": {
+						"es": "Sí… sí, aquí está. Se me caen las manos. Ya. Ya se lo leo.",
+						"en": "Yes… yes, here it is. My hands are shaking. There. I'll read it to you."
+					},
+					"audio": "voces/clientes/t1c2_doc_ok.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 40,
+							"sig": "fin_satisfecho",
+							"es": "Listo, queda liberado. Llega hoy mismo. Mucha fuerza.",
+							"en": "Done, it's released. It arrives today. Stay strong.",
+							"requiere": [
+								"empatia"
+							],
+							"si_falta": "fin_neutral"
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -10,
+							"t_juego": 20,
+							"sig": "fin_neutral",
+							"es": "Listo. ¿Algo más?",
+							"en": "Done. Anything else?"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Gracias… Le voy a decir a mi mamá que usted la salvó. ¿Cómo se llama? …No importa. Ya sé dónde está.",
+						"en": "Thank you… I'll tell my mom you saved her. What's your name? …Never mind. I know where you are."
+					},
+					"audio": "voces/clientes/t1c2_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Ya. Gracias, supongo.",
+						"en": "Okay. Thanks, I guess."
+					},
+					"audio": "voces/clientes/t1c2_fin_neutral.ogg"
+				},
+				"fin_mentira": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "¿Unas horas? …Voy a esperar despierta. Al lado del teléfono. Al lado de ella.",
+						"en": "A few hours? …I'll wait up. Next to the phone. Next to her."
+					},
+					"audio": "voces/clientes/t1c2_fin_mentira.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "No me ayudó nadie. Nadie. Se lo voy a decir a ella.",
+						"en": "Nobody helped me. Nobody. I'll tell her."
+					},
+					"audio": "voces/clientes/t1c2_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto",
+				"pedir_documento_sin_empatia": "cuelga"
+			},
+			"ensena": {
+				"es": "Empatía; pedir documento sin que cuelgue.",
+				"en": "Empathy; ask for the ID without her hanging up."
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"bloque": 1,
+			"orden": 2,
+			"cliente_nombre": "señora Rocío Tello"
+		},
+		{
+			"id": "t1c3",
+			"ref_v02": "c3_chat_repite",
+			"canal": "chat",
+			"arquetipo": "el_que_repite",
+			"hora_juego": "01:15",
+			"animo_inicial": -5,
+			"caso": {
+				"es": "Chat: '¿dónde está mi plata?' x3. Envío #KP-2211-0038.",
+				"en": "Chat: 'where is my money?' x3. Transfer #KP-2211-0038."
+			},
+			"inicio": "inicio",
+			"timeout": {
+				"fin": "fin_timeout",
+				"s_juego": 40
+			},
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "donde esta mi plata\ndonde esta mi plata\nhola??",
+						"en": "where is my money\nwhere is my money\nhello??"
+					},
+					"audio": "voces/clientes/t1c3_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "pide_num",
+							"es": "Hola, gracias por escribir. Lo reviso ahora mismo.",
+							"en": "Hi, thanks for writing. I'm checking it right now."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "num",
+							"es": "¿Me confirmas el número de operación?",
+							"en": "Can you confirm the transaction number?"
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "robot",
+							"es": "Estimado cliente: su solicitud ha sido recibida y será atendida en orden de llegada.",
+							"en": "Dear customer: your request has been received and will be handled in order of arrival.",
+							"qa": "respuesta_plantilla"
+						}
+					]
+				},
+				"robot": {
+					"cliente": {
+						"es": "eres un robot?\nRESPONDE COMO PERSONA",
+						"en": "are you a bot?\nANSWER LIKE A PERSON"
+					},
+					"audio": "voces/clientes/t1c3_robot.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "pide_num",
+							"es": "No soy un robot. Soy una persona, en la fila C. Te leo.",
+							"en": "I'm not a bot. I'm a person, in row C. I'm reading you.",
+							"qa": "dato_personal"
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Su solicitud ha sido recibida.",
+							"en": "Your request has been received."
+						}
+					]
+				},
+				"pide_num": {
+					"cliente": {
+						"es": "KP-2211-0038\nya lo puse ayer\ny antier",
+						"en": "KP-2211-0038\ni already wrote it yesterday\nand the day before"
+					},
+					"audio": "voces/clientes/t1c3_pide_num.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "estado",
+							"es": "Gracias. Ya lo veo: está en proceso con el partner.",
+							"en": "Thanks. I see it: it's in process with the partner."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Ya te respondí arriba.",
+							"en": "I already answered you above."
+						}
+					]
+				},
+				"num": {
+					"cliente": {
+						"es": "KP-2211-0038\npor que nadie lee",
+						"en": "KP-2211-0038\nwhy does nobody read"
+					},
+					"audio": "voces/clientes/t1c3_num.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "estado",
+							"es": "Tienes razón, lo leí. Ya lo tengo.",
+							"en": "You're right, I read it. I've got it."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Ya te respondí arriba.",
+							"en": "I already answered you above."
+						}
+					]
+				},
+				"estado": {
+					"cliente": {
+						"es": "y cuando llega\nCUANDO",
+						"en": "and when does it arrive\nWHEN"
+					},
+					"audio": "voces/clientes/t1c3_estado.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "fin_satisfecho",
+							"es": "En 24 h. Si cambia algo te escribo yo. Gracias por tu paciencia.",
+							"en": "Within 24 h. If anything changes I'll write you. Thanks for your patience."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Pronto.",
+							"en": "Soon.",
+							"qa": "respuesta_vaga"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "ok\ngracias\nperdon por escribir tanto\nes que de noche no duermo",
+						"en": "ok\nthanks\nsorry for writing so much\nit's just that i don't sleep at night"
+					},
+					"audio": "voces/clientes/t1c3_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "pronto\nok\npronto",
+						"en": "soon\nok\nsoon"
+					},
+					"audio": "voces/clientes/t1c3_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "ustedes no leen\n[el cliente cerró el chat]",
+						"en": "you people don't read\n[the customer closed the chat]"
+					},
+					"audio": "voces/clientes/t1c3_fin_molesto.ogg"
+				},
+				"fin_timeout": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "hola??\nhola??\nya se fueron todos",
+						"en": "hello??\nhello??\neveryone's gone"
+					},
+					"audio": "voces/clientes/t1c3_fin_timeout.ogg"
+				}
+			},
+			"fallo": {
+				"timer_vencido": "molesto",
+				"paciencia_cero": "molesto"
+			},
+			"ensena": {
+				"es": "Escribir mientras miras la cola; AHT visible.",
+				"en": "Type while watching the queue; AHT visible."
+			},
+			"herramienta": [
+				"ezlak_cliente"
+			],
+			"bloque": 1,
+			"orden": 3,
+			"cliente_nombre": "Gonzalo Arce"
+		},
+		{
+			"id": "t1c8",
+			"ref_v02": "nuevo",
+			"canal": "chat",
+			"arquetipo": "la_joven",
+			"hora_juego": "01:40",
+			"animo_inicial": -5,
+			"cliente_nombre": "Jimena Paucar",
+			"caso": {
+				"es": "Chat: envío rechazado porque el nombre del beneficiario no coincide (Ximena / Jimena). #KP-2211-0452.",
+				"en": "Chat: transfer rejected because the recipient's name doesn't match (Ximena / Jimena). #KP-2211-0452."
+			},
+			"inicio": "inicio",
+			"timeout": {
+				"fin": "fin_timeout",
+				"s_juego": 45
+			},
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "holaa\nmi envío salió RECHAZADO\ndice nombre no coincide??\nes mi prima, sé cómo se llama",
+						"en": "hii\nmy transfer got REJECTED\nit says name doesn't match??\nshe's my cousin, i know her name"
+					},
+					"audio": "voces/clientes/t1c8_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "explica",
+							"es": "Hola, Jimena. Qué frustrante. Lo reviso contigo ahora mismo.",
+							"en": "Hi, Jimena. How frustrating. I'll check it with you right now."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "dato",
+							"es": "Hola. ¿Me confirmas el número de operación, por favor?",
+							"en": "Hi. Could you confirm the transaction number, please?"
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "enojo",
+							"es": "Seguro lo escribiste mal. Edítalo tú en la app y listo.",
+							"en": "You probably typed it wrong. Just edit it yourself in the app.",
+							"qa": "culpar_cliente"
+						}
+					]
+				},
+				"dato": {
+					"cliente": {
+						"es": "KP-2211-0452\nya te lo había puesto arriba igual",
+						"en": "KP-2211-0452\ni already put it above anyway"
+					},
+					"audio": "voces/clientes/t1c8_dato.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "explica",
+							"es": "Gracias. Lo veo: en el envío figura «Ximena» y su documento dice «Jimena».",
+							"en": "Thanks. I see it: the transfer says \"Ximena\" and her ID says \"Jimena\"."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "enojo",
+							"es": "Es que así es el sistema, no puedo hacer nada.",
+							"en": "That's just how the system is, I can't do anything.",
+							"qa": "desentenderse"
+						}
+					]
+				},
+				"explica": {
+					"cliente": {
+						"es": "ahh\nentonces era la X\n¿y ahora qué hago? ¿pierdo la plata?",
+						"en": "ohh\nso it was the X\nso what now? do i lose the money?"
+					},
+					"audio": "voces/clientes/t1c8_explica.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 30,
+							"sig": "cierre",
+							"es": "No la pierdes. Abro una solicitud de corrección de beneficiario; se libera en 24 horas.",
+							"en": "You don't. I'm opening a recipient-correction request; it's released within 24 hours."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "cierre_vago",
+							"es": "Debería liberarse solo en un rato, no te preocupes.",
+							"en": "It should release by itself in a while, don't worry.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"enojo": {
+					"cliente": {
+						"es": "???\nno, el sistema lo hizo mal\nyo no voy a editar nada a las 2 am",
+						"en": "???\nno, the system did it wrong\ni'm not editing anything at 2 am"
+					},
+					"audio": "voces/clientes/t1c8_enojo.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "explica",
+							"es": "Tienes razón, disculpa. Lo corrijo yo desde aquí.",
+							"en": "You're right, sorry. I'll fix it from here."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Entonces no te puedo ayudar.",
+							"en": "Then I can't help you.",
+							"qa": "desentenderse"
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "ok\n¿me llega algo para saber que ya está?",
+						"en": "ok\ndo i get something to know it's done?"
+					},
+					"audio": "voces/clientes/t1c8_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Sí: te llega un correo con el número de solicitud COR-7716.",
+							"en": "Yes: you'll get an email with request number COR-7716."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -5,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Revisa la app de vez en cuando.",
+							"en": "Check the app now and then."
+						}
+					]
+				},
+				"cierre_vago": {
+					"cliente": {
+						"es": "¿un rato cuánto es?\nmi prima está esperando en la ventanilla",
+						"en": "how long is a while?\nmy cousin is waiting at the counter"
+					},
+					"audio": "voces/clientes/t1c8_cierre_vago.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "fin_satisfecho",
+							"es": "Perdón, te lo confirmo bien: abro la corrección COR-7716 y son 24 horas.",
+							"en": "Sorry, let me confirm properly: I'm opening correction COR-7716, it's 24 hours."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Un rato. Depende.",
+							"en": "A while. It depends."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "listo\ngracias\nle digo a mi prima que se vaya a dormir",
+						"en": "done\nthanks\ni'll tell my cousin to go to sleep"
+					},
+					"audio": "voces/clientes/t1c8_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "ya\nok\nsupongo",
+						"en": "ok\nfine\ni guess"
+					},
+					"audio": "voces/clientes/t1c8_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "increíble\n[la clienta cerró el chat]",
+						"en": "unbelievable\n[the customer closed the chat]"
+					},
+					"audio": "voces/clientes/t1c8_fin_molesto.ogg"
+				},
+				"fin_timeout": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "hola\n¿sigues ahí?\n…\n¿alguien está leyendo esto?",
+						"en": "hello\nare you still there?\n…\nis anyone reading this?"
+					},
+					"audio": "voces/clientes/t1c8_fin_timeout.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto",
+				"timer_vencido": "molesto"
+			},
+			"herramienta": [
+				"ezlak_cliente"
+			],
+			"bloque": 1,
+			"orden": 9
+		},
+		{
+			"id": "t1c4",
+			"ref_v02": "c4_llamada_amable",
+			"canal": "llamada",
+			"arquetipo": "el_amable",
+			"hora_juego": "02:05",
+			"animo_inicial": 20,
+			"caso": {
+				"es": "Consulta de comisión por envío a EE. UU.",
+				"en": "Question about the fee for a transfer to the US."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Buenas noches. Qué voz tan cansada tienes. ¿Duermes bien?",
+						"en": "Good evening. What a tired voice you have. Do you sleep well?"
+					},
+					"audio": "voces/clientes/t1c4_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "consulta",
+							"es": "Gracias por preguntar. ¿En qué puedo ayudarle?",
+							"en": "Thanks for asking. How can I help you?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "personal",
+							"es": "La verdad no mucho. Turno de noche, ya sabe.",
+							"en": "Not really. Night shift, you know.",
+							"qa": "dato_personal"
+						},
+						{
+							"id": "c",
+							"tipo": "fuera",
+							"animo": -5,
+							"t_juego": 10,
+							"sig": "consulta_seca",
+							"es": "Eso no es relevante para su consulta.",
+							"en": "That's not relevant to your inquiry."
+						}
+					]
+				},
+				"personal": {
+					"cliente": {
+						"es": "Lo sé. Te escucho bostezar entre llamadas. Tu fila es la C, ¿no? Se nota en el eco.",
+						"en": "I know. I hear you yawn between calls. Your row is C, isn't it? You can tell from the echo."
+					},
+					"audio": "voces/clientes/t1c4_personal.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 0,
+							"t_juego": 15,
+							"sig": "consulta",
+							"es": "¿En qué puedo ayudarle con su cuenta?",
+							"en": "How can I help you with your account?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "fin_creepy",
+							"es": "Sí, la C. ¿Cómo sabe?",
+							"en": "Yes, C. How do you know?",
+							"qa": "dato_personal"
+						}
+					]
+				},
+				"consulta_seca": {
+					"cliente": {
+						"es": "Tienes razón. Perdón. Es que a mí tampoco me pregunta nadie nada. Quería saber la comisión a Estados Unidos.",
+						"en": "You're right. Sorry. Nobody asks me anything either. I wanted to know the fee to the United States."
+					},
+					"audio": "voces/clientes/t1c4_consulta_seca.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "comision",
+							"es": "La comisión a EE. UU. es de 2,9 % más impuestos.",
+							"en": "The fee to the US is 2.9 % plus taxes."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Está en la web, señor.",
+							"en": "It's on the website, sir."
+						},
+						{
+							"id": "c",
+							"tipo": "fuera",
+							"animo": -30,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Hay cola, señor. Tengo que cortar.",
+							"en": "There's a queue, sir. I have to hang up.",
+							"qa": "colgar_primero"
+						}
+					]
+				},
+				"consulta": {
+					"cliente": {
+						"es": "Quería saber cuánto cobran por enviar a Estados Unidos. Es para mi hijo. Bueno. Era.",
+						"en": "I wanted to know how much you charge to send to the United States. It's for my son. Well. It was."
+					},
+					"audio": "voces/clientes/t1c4_consulta.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "comision",
+							"es": "La comisión a EE. UU. es de 2,9 % más impuestos.",
+							"en": "The fee to the US is 2.9 % plus taxes."
+						},
+						{
+							"id": "b",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "comision",
+							"es": "Con gusto se lo digo. Es de 2,9 % más impuestos.",
+							"en": "I'll gladly tell you. It's 2.9 % plus taxes."
+						}
+					]
+				},
+				"comision": {
+					"cliente": {
+						"es": "Dos coma nueve. Qué preciso. ¿Siempre eres tan preciso a esta hora de la madrugada?",
+						"en": "Two point nine. How precise. Are you always this precise at this hour of the night?"
+					},
+					"audio": "voces/clientes/t1c4_comision.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 15,
+							"sig": "fin_satisfecho",
+							"es": "¿Algo más en lo que pueda ayudarle?",
+							"en": "Anything else I can help you with?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": 0,
+							"t_juego": 15,
+							"sig": "fin_creepy",
+							"es": "Intento. Aquí no hay mucho más que hacer.",
+							"en": "I try. There isn't much else to do here.",
+							"qa": "dato_personal"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Nada más. Descansa cuando puedas. Yo te aviso si alguien se te acerca.",
+						"en": "Nothing else. Rest when you can. I'll let you know if someone gets close to you."
+					},
+					"audio": "voces/clientes/t1c4_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Bueno. No te quito más tiempo. Tienes poco.",
+						"en": "All right. I won't take more of your time. You don't have much."
+					},
+					"audio": "voces/clientes/t1c4_fin_neutral.ogg"
+				},
+				"fin_creepy": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Fila C. Cubículo catorce. Ya me lo imaginaba. Buenas noches, {agente}.",
+						"en": "Row C. Cubicle fourteen. I thought so. Good night, {agente}."
+					},
+					"audio": "voces/clientes/t1c4_fin_creepy.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Cortar. Claro. Entonces no te molesto más. Nunca más. Ni a ti ni a tu fila.",
+						"en": "Hang up. Of course. Then I won't bother you again. Never again. Not you, not your row."
+					},
+					"audio": "voces/clientes/t1c4_fin_molesto.ogg"
+				}
+			},
+			"fallo": {},
+			"ensena": {
+				"es": "Primera línea inquietante; sin riesgo mecánico.",
+				"en": "First unsettling line; no mechanical risk."
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"bloque": 1,
+			"orden": 4,
+			"cliente_nombre": "señora Amelia Rojas"
+		},
+		{
+			"id": "t1c9",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "el_abuelo",
+			"hora_juego": "02:50",
+			"animo_inicial": 10,
+			"cliente_nombre": "don Teófilo Huamán",
+			"caso": {
+				"es": "Señor mayor: no sabe si su hija en Valdesia recibió los 300 KP. No entiende la app.",
+				"en": "Elderly man: doesn't know if his daughter in Valdesia got the 300 KP. Doesn't understand the app."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Buenas noches, joven… perdone la hora. Mi hija me dijo que le mandara por el celular y yo no sé si llegó.",
+						"en": "Good evening, young man… sorry for the hour. My daughter told me to send it through the phone and I don't know if it arrived."
+					},
+					"audio": "voces/clientes/t1c9_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "app",
+							"es": "Buenas noches, don Teófilo. No se preocupe por la hora. Vamos a ver juntos.",
+							"en": "Good evening, Mr. Teófilo. Don't worry about the hour. Let's look together."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "numero",
+							"es": "Claro. ¿Tiene el número de operación? Empieza con KP.",
+							"en": "Sure. Do you have the transaction number? It starts with KP."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "transfiere",
+							"es": "Para dudas de la app le paso con soporte técnico.",
+							"en": "For app questions I'll transfer you to tech support.",
+							"qa": "transferir_sin_motivo"
+						}
+					]
+				},
+				"app": {
+					"cliente": {
+						"es": "Sí, sí… hay un papelito aquí. Ka, pe… dos, dos, uno, uno… ¿eso sirve?",
+						"en": "Yes, yes… there's a little note here. K, P… two, two, one, one… does that help?"
+					},
+					"audio": "voces/clientes/t1c9_app.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "estado",
+							"es": "Sirve. Ya lo encontré: KP-2211-0611, 300 KP a Valdesia.",
+							"en": "It does. Found it: KP-2211-0611, 300 KP to Valdesia."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "numero",
+							"es": "Necesito el número completo, señor, rápido.",
+							"en": "I need the full number, sir, quickly."
+						}
+					]
+				},
+				"numero": {
+					"cliente": {
+						"es": "¿El número…? Espere que busco los lentes. …Aquí está. KP-2211-0611. ¿Así está bien?",
+						"en": "The number…? Let me find my glasses. …Here. KP-2211-0611. Is that right?"
+					},
+					"audio": "voces/clientes/t1c9_numero.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "estado",
+							"es": "Perfecto, don Teófilo. Ya lo tengo en pantalla.",
+							"en": "Perfect, Mr. Teófilo. I have it on screen."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -15,
+							"t_juego": 20,
+							"sig": "fin_neutral",
+							"es": "Un momento, lo pongo en espera.",
+							"en": "One moment, I'll put you on hold.",
+							"qa": "hold_innecesario",
+							"accion": "hold"
+						}
+					]
+				},
+				"transfiere": {
+					"cliente": {
+						"es": "¿Me va a pasar con otro? Ya me pasaron dos veces… ¿usted no me puede decir si llegó?",
+						"en": "You're passing me to someone else? They already passed me twice… can't you tell me if it arrived?"
+					},
+					"audio": "voces/clientes/t1c9_transfiere.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "app",
+							"es": "Tiene razón, no lo paso con nadie. Lo veo yo.",
+							"en": "You're right, I won't pass you on. I'll check it myself."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Es el procedimiento, señor.",
+							"en": "It's the procedure, sir."
+						}
+					]
+				},
+				"estado": {
+					"cliente": {
+						"es": "¿Y? ¿Ya lo tiene mi hija?",
+						"en": "And? Does my daughter have it?"
+					},
+					"audio": "voces/clientes/t1c9_estado.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 30,
+							"sig": "fin_satisfecho",
+							"es": "Sí. Se cobró hoy a las 18:40 en Caja Mirador. Su hija ya lo tiene.",
+							"en": "Yes. It was collected today at 18:40 at Caja Mirador. Your daughter has it."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -5,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Creo que sí, debe haber llegado.",
+							"en": "I think so, it must have arrived.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Ay, gracias, joven. Que Dios lo cuide. Y duerma algo, que se le nota en la voz.",
+						"en": "Oh, thank you, young man. God bless you. And get some sleep, I can hear it in your voice."
+					},
+					"audio": "voces/clientes/t1c9_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Cree que sí… Bueno. Mañana la llamo a ella. Gracias igual.",
+						"en": "You think so… Well. I'll call her tomorrow. Thanks anyway."
+					},
+					"audio": "voces/clientes/t1c9_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Ya no sé a quién llamar. Ustedes nunca saben nada.",
+						"en": "I don't know who to call anymore. You people never know anything."
+					},
+					"audio": "voces/clientes/t1c9_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"bloque": 2,
+			"orden": 10
+		},
+		{
+			"id": "t1c6",
+			"ref_v02": "c6_llamada_estafado",
+			"canal": "llamada",
+			"arquetipo": "el_estafado",
+			"hora_juego": "03:35",
+			"animo_inicial": -30,
+			"caso": {
+				"es": "Reclamo: 800 USD enviados a un destinatario que no conoce. Posible fraude.",
+				"en": "Claim: 800 USD sent to a recipient he doesn't know. Possible fraud."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "¡Me sacaron 800 dólares! ¡Ochocientos! ¿Quién me responde?",
+						"en": "They took 800 dollars from me! Eight hundred! Who's going to answer for this?"
+					},
+					"audio": "voces/clientes/t1c6_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "datos",
+							"es": "Entiendo su molestia, señor. Estoy para ayudarle.",
+							"en": "I understand your frustration, sir. I'm here to help."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "datos_rapido",
+							"es": "Abro un reclamo por fraude ahora mismo. Necesito la fecha y el monto.",
+							"en": "I'm opening a fraud claim right now. I need the date and the amount."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -30,
+							"t_juego": 15,
+							"sig": "culpa",
+							"es": "¿Usted revisó los datos del beneficiario antes de enviar?",
+							"en": "Did you check the recipient's details before sending?",
+							"qa": "culpar_cliente"
+						}
+					]
+				},
+				"culpa": {
+					"cliente": {
+						"es": "¿Me está diciendo que es MI culpa? ¿A estas horas me contesta para culparme?",
+						"en": "Are you telling me it's MY fault? You pick up at this hour to blame me?"
+					},
+					"audio": "voces/clientes/t1c6_culpa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "datos",
+							"es": "No, señor. Perdón. Vamos a recuperar lo que se pueda.",
+							"en": "No, sir. I'm sorry. Let's recover whatever we can."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Solo pregunto lo que dice el procedimiento.",
+							"en": "I'm only asking what the procedure says."
+						}
+					]
+				},
+				"datos": {
+					"cliente": {
+						"es": "Fue el martes. Ochocientos. A un tal… no sé. Yo no conozco a nadie con ese nombre.",
+						"en": "It was Tuesday. Eight hundred. To some… I don't know. I don't know anyone with that name."
+					},
+					"audio": "voces/clientes/t1c6_datos.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 15,
+							"t_juego": 35,
+							"sig": "reclamo",
+							"es": "Abro el reclamo por operación no reconocida y bloqueo la cuenta.",
+							"en": "I'm opening a claim for an unrecognized transaction and blocking the account."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "fin_promesa",
+							"es": "No se preocupe, se lo devolvemos completo.",
+							"en": "Don't worry, we'll refund it in full.",
+							"qa": "prometer_reembolso"
+						}
+					]
+				},
+				"datos_rapido": {
+					"cliente": {
+						"es": "El martes. Ochocientos dólares. ¿Ya? ¿Así de fácil? Nadie me había hecho caso.",
+						"en": "Tuesday. Eight hundred dollars. That's it? That easy? Nobody had listened to me."
+					},
+					"audio": "voces/clientes/t1c6_datos_rapido.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "reclamo",
+							"es": "Así de fácil empieza. Ahora lo bloqueo para que no pase otra vez.",
+							"en": "That's how easily it starts. Now I'll block it so it doesn't happen again."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "reclamo",
+							"es": "Registrado. Ahora bloqueo la cuenta.",
+							"en": "Logged. Now I'm blocking the account."
+						}
+					]
+				},
+				"reclamo": {
+					"cliente": {
+						"es": "¿Y me van a devolver la plata? Dígame que sí.",
+						"en": "And will you give me the money back? Tell me yes."
+					},
+					"audio": "voces/clientes/t1c6_reclamo.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "fin_satisfecho",
+							"es": "Reclamo registrado. Le llega el número por correo; respuesta en 72 horas. Dejo la nota en su caso.",
+							"en": "Claim logged. You'll get the number by email; answer within 72 hours. I'm leaving a note on your case.",
+							"requiere": [
+								"proceso"
+							],
+							"si_falta": "fin_molesto"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "fin_promesa",
+							"es": "Sí, seguro que sí.",
+							"en": "Yes, surely.",
+							"qa": "prometer_reembolso"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Setenta y dos horas. Las voy a contar. Gracias por no culparme.",
+						"en": "Seventy-two hours. I'll count them. Thanks for not blaming me."
+					},
+					"audio": "voces/clientes/t1c6_fin_satisfecho.ogg"
+				},
+				"fin_promesa": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Me dijo que sí. Me lo dijo usted. Me voy a acordar de su voz.",
+						"en": "You said yes. You said it. I'll remember your voice."
+					},
+					"audio": "voces/clientes/t1c6_fin_promesa.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Ya sé cómo trabajan. Ya sé en qué piso están.",
+						"en": "I know how you people work. I know which floor you're on."
+					},
+					"audio": "voces/clientes/t1c6_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto",
+				"cerrar_sin_proceso": "molesto"
+			},
+			"ensena": {
+				"es": "Puede irse molesto (10 % en T1); cuenta para '3 molestos seguidos'.",
+				"en": "May leave angry (10 % in S1); counts toward '3 angry in a row'."
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"bloque": 2,
+			"orden": 6,
+			"cliente_nombre": "señor Néstor Cahuana"
+		},
+		{
+			"id": "t1c7",
+			"ref_v02": "c7_llamada_llora_vuelve",
+			"canal": "llamada",
+			"arquetipo": "la_que_llora",
+			"hora_juego": "05:15",
+			"animo_inicial": -15,
+			"caso": {
+				"es": "Vuelve a llamar: el envío liberado aún no llega. Coaching convocado durante la llamada.",
+				"en": "Calls back: the released transfer still hasn't arrived. Coaching called during the call."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Soy yo otra vez. No llegó. Dijeron que hoy. No llegó.",
+						"en": "It's me again. It didn't arrive. They said today. It didn't arrive."
+					},
+					"audio": "voces/clientes/t1c7_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "La escucho. Reviso qué pasó con la liberación.",
+							"en": "I'm listening. I'll check what happened with the release."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Déjeme ver el estado con el partner.",
+							"en": "Let me check the status with the partner."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "abandono",
+							"es": "Eso ya no depende de nosotros.",
+							"en": "That no longer depends on us.",
+							"qa": "desentenderse"
+						}
+					]
+				},
+				"abandono": {
+					"cliente": {
+						"es": "¿Entonces de quién? ¿De quién depende mi mamá?",
+						"en": "Then on whom? Who does my mom depend on?"
+					},
+					"audio": "voces/clientes/t1c7_abandono.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Perdón. Sí depende de mí. Lo veo ahora.",
+							"en": "I'm sorry. It does depend on me. I'm looking now."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Del partner, señora.",
+							"en": "On the partner, ma'am."
+						}
+					]
+				},
+				"revisa": {
+					"cliente": {
+						"es": "…¿Sigue ahí? Se escucha a alguien hablándole. ¿Me va a dejar?",
+						"en": "…Are you still there? I can hear someone talking to you. Are you going to leave me?"
+					},
+					"audio": "voces/clientes/t1c7_revisa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "accion",
+							"animo": 0,
+							"t_juego": 15,
+							"sig": "espera",
+							"es": "Un momento, la pongo en espera. No cuelgue, vuelvo.",
+							"en": "One moment, I'm putting you on hold. Don't hang up, I'll be back.",
+							"accion": "hold"
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "escala",
+							"es": "No la dejo. El partner lo tiene en cola de acreditación; lo escalo como urgente.",
+							"en": "I won't leave you. The partner has it in the crediting queue; I'm escalating it as urgent."
+						}
+					],
+					"evento": "coaching_durante_llamada"
+				},
+				"espera": {
+					"cliente": {
+						"es": "Volvió. Pensé que no volvía. Nadie vuelve.",
+						"en": "You came back. I thought you wouldn't. Nobody comes back."
+					},
+					"audio": "voces/clientes/t1c7_espera.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "escala",
+							"es": "Volví. Y ya lo escalé como urgente.",
+							"en": "I'm back. And I've escalated it as urgent."
+						},
+						{
+							"id": "b",
+							"tipo": "cierre",
+							"animo": 0,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Ya está escalado. ¿Algo más?",
+							"en": "It's escalated. Anything else?"
+						}
+					]
+				},
+				"escala": {
+					"cliente": {
+						"es": "¿Urgente de verdad? ¿O urgente como dicen todos?",
+						"en": "Urgent for real? Or urgent like everyone says?"
+					},
+					"audio": "voces/clientes/t1c7_escala.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "fin_satisfecho",
+							"es": "De verdad. Le confirmamos por mensaje apenas acredite. Dejo mi nota en el caso.",
+							"en": "For real. We'll confirm by message as soon as it credits. I'm leaving my note on the case."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "fin_promesa",
+							"es": "En una hora llega, se lo garantizo.",
+							"en": "It'll arrive in an hour, I guarantee it.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Bueno. Le creo. Es la única persona a la que le creo hoy.",
+						"en": "All right. I believe you. You're the only person I believe today."
+					},
+					"audio": "voces/clientes/t1c7_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Ya. Voy a esperar. Siempre espero.",
+						"en": "Okay. I'll wait. I always wait."
+					},
+					"audio": "voces/clientes/t1c7_fin_neutral.ogg"
+				},
+				"fin_promesa": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Una hora. Voy a mirar el reloj. Si no llega, le vuelvo a llamar. A usted.",
+						"en": "One hour. I'll watch the clock. If it doesn't arrive, I'll call you again. You."
+					},
+					"audio": "voces/clientes/t1c7_fin_promesa.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Ya no sé a quién llamar. Voy a ir. Voy a ir a su edificio.",
+						"en": "I don't know who to call anymore. I'm going. I'm going to your building."
+					},
+					"audio": "voces/clientes/t1c7_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"levantarse_sin_hold": "molesto",
+				"paciencia_cero": "molesto"
+			},
+			"ensena": {
+				"es": "Hold antes de levantarte al coaching; si no, cuelga molesta.",
+				"en": "Hold before standing up for coaching; otherwise she hangs up angry."
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"bloque": 2,
+			"orden": 7,
+			"cliente_nombre": "señora Rocío Tello"
+		},
+		{
+			"id": "t1c10",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "el_apurado",
+			"hora_juego": "07:25",
+			"animo_inicial": -10,
+			"cliente_nombre": "Brayan Ccori",
+			"caso": {
+				"es": "Le cobraron un tipo de cambio distinto al que vio en la app (la cotización vence a los 15 min).",
+				"en": "He was charged a different exchange rate than the one he saw in the app (quotes expire after 15 min)."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Oye, rápido, que entro a trabajar. La app me dijo 3,72 y me cobraron 3,69. ¿Me están robando o qué?",
+						"en": "Hey, quick, I'm starting work. The app said 3.72 and I got charged 3.69. Are you robbing me or what?"
+					},
+					"audio": "voces/clientes/t1c10_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Lo reviso rápido. ¿Me das el número de operación?",
+							"en": "I'll check it fast. Can you give me the transaction number?"
+						},
+						{
+							"id": "b",
+							"tipo": "empatia",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Entiendo, nadie quiere perder plata. Veamos qué pasó.",
+							"en": "I get it, nobody wants to lose money. Let's see what happened."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "promesa",
+							"es": "Uy, eso es un error nuestro. Te devolvemos la diferencia.",
+							"en": "Oh, that's our mistake. We'll refund the difference.",
+							"qa": "prometer_reembolso"
+						}
+					]
+				},
+				"revisa": {
+					"cliente": {
+						"es": "KP-2211-0902. Dale.",
+						"en": "KP-2211-0902. Go."
+					},
+					"audio": "voces/clientes/t1c10_revisa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 30,
+							"sig": "explica",
+							"es": "La cotización de 3,72 era de las 06:51; pagaste a las 07:09, ya había vencido.",
+							"en": "The 3.72 quote was from 06:51; you paid at 07:09, it had already expired."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "enojo",
+							"es": "El tipo de cambio cambia, así es.",
+							"en": "Rates change, that's how it is.",
+							"qa": "respuesta_vaga"
+						}
+					]
+				},
+				"promesa": {
+					"cliente": {
+						"es": "¿En serio? ¿Cuándo? ¿Me llega hoy?",
+						"en": "Really? When? Does it come today?"
+					},
+					"audio": "voces/clientes/t1c10_promesa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": -5,
+							"t_juego": 25,
+							"sig": "explica",
+							"es": "Perdón, me adelanté. Déjame revisar primero la hora de tu cotización.",
+							"en": "Sorry, I got ahead of myself. Let me check your quote time first."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Sí, sí, hoy mismo.",
+							"en": "Yes, yes, today.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"explica": {
+					"cliente": {
+						"es": "O sea que por dieciocho minutos perdí plata. Genial.",
+						"en": "So I lost money over eighteen minutes. Great."
+					},
+					"audio": "voces/clientes/t1c10_explica.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "fin_satisfecho",
+							"es": "Sí. La próxima, si la cotización pasa de 15 minutos, la app te pide renovarla. Te dejo la nota en tu cuenta.",
+							"en": "Yes. Next time, if the quote is over 15 minutes old, the app asks you to renew it. I'm leaving a note on your account."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Hay que leer las condiciones.",
+							"en": "You have to read the terms.",
+							"qa": "culpar_cliente"
+						}
+					]
+				},
+				"enojo": {
+					"cliente": {
+						"es": "«Así es». Qué buena atención. ¿Me explicas o no?",
+						"en": "\"That's how it is\". Great service. Will you explain or not?"
+					},
+					"audio": "voces/clientes/t1c10_enojo.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "explica",
+							"es": "Disculpa. Te explico: la cotización dura 15 minutos y la tuya había vencido.",
+							"en": "Sorry. Let me explain: quotes last 15 minutes and yours had expired."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "No hay más que explicar.",
+							"en": "There's nothing more to explain."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 4,
+					"cliente": {
+						"es": "Ya. Por lo menos ahora sé. Chau, que me marcan tarde.",
+						"en": "Fine. At least now I know. Bye, they'll mark me late."
+					},
+					"audio": "voces/clientes/t1c10_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Hoy mismo. Ya. Voy a estar revisando. Cada cinco minutos.",
+						"en": "Today. Right. I'll be checking. Every five minutes."
+					},
+					"audio": "voces/clientes/t1c10_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Voy a cambiar de app. Y voy a poner una reseña con tu nombre.",
+						"en": "I'm switching apps. And I'm leaving a review with your name."
+					},
+					"audio": "voces/clientes/t1c10_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"bloque": 3,
+			"orden": 11
+		}
+	],
+	"relleno": [
+		{
+			"id": "t1r1",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "la_comerciante",
+			"animo_inicial": 0,
+			"cliente_nombre": "señora Rosalía Mamani",
+			"caso": {
+				"es": "Comerciante: quiere subir su límite diario para pagar a su proveedor en Norvalia.",
+				"en": "Market vendor: wants to raise her daily limit to pay her supplier in Norvalia."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "¡Aló! Mire, joven, tengo un puesto en el mercado y su app no me deja mandar más de mil quinientos. ¡Necesito pagarle al proveedor!",
+						"en": "Hello! Look, young man, I have a market stall and your app won't let me send more than fifteen hundred. I need to pay my supplier!"
+					},
+					"audio": "voces/clientes/t1r1_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "kyc",
+							"es": "Le explico: para pasar de 1.500 KP necesita el KYC completo. ¿Lo hacemos?",
+							"en": "Let me explain: above 1,500 KP you need full KYC. Shall we do it?"
+						},
+						{
+							"id": "b",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "kyc",
+							"es": "Entiendo, su negocio no puede esperar. Veamos cómo subirlo.",
+							"en": "I understand, your business can't wait. Let's see how to raise it."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "promesa",
+							"es": "Le subo el límite ahora mismo desde aquí.",
+							"en": "I'll raise your limit right now from here.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"kyc": {
+					"cliente": {
+						"es": "¿Otra vez el documento? Ya mandé mi foto el año pasado.",
+						"en": "The document again? I sent my photo last year."
+					},
+					"audio": "voces/clientes/t1r1_kyc.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "cierre",
+							"es": "La del año pasado era la verificación básica. Para el límite alto piden la revisión documental: frente, reverso y una selfie.",
+							"en": "Last year's was basic verification. The higher limit needs a document review: front, back and a selfie."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Si no manda el documento no se puede, señora.",
+							"en": "If you don't send the document it's not possible, ma'am.",
+							"qa": "politica_sin_empatia"
+						}
+					]
+				},
+				"promesa": {
+					"cliente": {
+						"es": "¿Ya? ¿Ya está? A ver, voy a intentar… no, me sigue diciendo límite.",
+						"en": "Done? Is it done? Let me try… no, it still says limit."
+					},
+					"audio": "voces/clientes/t1r1_promesa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 25,
+							"sig": "kyc",
+							"es": "Perdón, me equivoqué: yo no puedo subirlo. Le explico cómo se hace.",
+							"en": "Sorry, I was wrong: I can't raise it. Let me explain how it's done."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Inténtelo más tarde.",
+							"en": "Try again later."
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "Ya, ya. ¿Y cuánto demora eso? El proveedor viene a las seis.",
+						"en": "Fine, fine. And how long does it take? The supplier comes at six."
+					},
+					"audio": "voces/clientes/t1r1_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Si lo sube ahora, la revisión sale en unas horas. Le dejo el enlace por SMS.",
+							"en": "If you upload it now, the review comes out in a few hours. I'll text you the link."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -5,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Eso ya depende de Cumplimiento, no sabría decirle.",
+							"en": "That depends on Compliance, I couldn't say.",
+							"qa": "respuesta_vaga"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Ya, joven, gracias. Si viene por el mercado le invito un jugo.",
+						"en": "All right, young man, thanks. If you come by the market I'll buy you a juice."
+					},
+					"audio": "voces/clientes/t1r1_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Ya, pues. Lo subo y que sea lo que Dios quiera.",
+						"en": "Well, then. I'll upload it and whatever happens, happens."
+					},
+					"audio": "voces/clientes/t1r1_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Así no se puede trabajar. ¡Ustedes no trabajan!",
+						"en": "You can't work like this. You people don't work!"
+					},
+					"audio": "voces/clientes/t1r1_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			]
+		},
+		{
+			"id": "t1r2",
+			"ref_v02": "nuevo",
+			"canal": "chat",
+			"arquetipo": "el_amable",
+			"animo_inicial": 10,
+			"cliente_nombre": "señora Delia Ríos",
+			"caso": {
+				"es": "Chat: quiere cambiar el celular de su cuenta porque le robaron el teléfono.",
+				"en": "Chat: wants to change the phone number on her account because her phone was stolen."
+			},
+			"inicio": "inicio",
+			"timeout": {
+				"fin": "fin_timeout",
+				"s_juego": 45
+			},
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Buenas noches. Disculpe que le escriba a estas horas.\nMe robaron el celular y quiero cambiar el número de mi cuenta.",
+						"en": "Good evening. Sorry to write at this hour.\nMy phone was stolen and I want to change the number on my account."
+					},
+					"audio": "voces/clientes/t1r2_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "verifica",
+							"es": "Buenas noches, señora Delia. Lamento lo del robo. Primero protegemos la cuenta.",
+							"en": "Good evening, Mrs. Delia. I'm sorry about the theft. First we protect the account."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "verifica",
+							"es": "Claro. El cambio se hace con verificación en Identa. ¿Le explico?",
+							"en": "Sure. The change is done with verification in Identa. Shall I explain?"
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 15,
+							"sig": "clave",
+							"es": "Pásame tu clave y tu código y lo cambio yo.",
+							"en": "Send me your password and code and I'll change it myself.",
+							"qa": "pedir_clave"
+						}
+					]
+				},
+				"verifica": {
+					"cliente": {
+						"es": "Sí, por favor. No entiendo mucho de esto.",
+						"en": "Yes, please. I don't understand much about this."
+					},
+					"audio": "voces/clientes/t1r2_verifica.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "cierre",
+							"es": "Le bloqueo el acceso del celular robado y le llega un enlace al correo para verificar con su documento.",
+							"en": "I'm blocking access from the stolen phone and you'll get a link by email to verify with your ID."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "cierre",
+							"es": "Mándeme aquí la foto de su documento, por el chat.",
+							"en": "Send me a photo of your ID here, in the chat.",
+							"qa": "dato_personal"
+						}
+					]
+				},
+				"clave": {
+					"cliente": {
+						"es": "¿Mi clave? Mi hijo me dijo que nunca la diera…\n¿usted es de KipuPay de verdad?",
+						"en": "My password? My son told me never to give it…\nare you really from KipuPay?"
+					},
+					"audio": "voces/clientes/t1r2_clave.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "verifica",
+							"es": "Su hijo tiene razón y le pido disculpas: no me dé su clave. Lo hacemos por Identa.",
+							"en": "Your son is right and I apologize: don't give me your password. We'll do it through Identa."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Si no me la da no puedo hacer nada.",
+							"en": "If you don't give it to me I can't do anything."
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "Ya me llegó algo al correo.\n¿Y mi plata está bien?",
+						"en": "I got something in my email.\nIs my money safe?"
+					},
+					"audio": "voces/clientes/t1r2_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Sí. No hubo movimientos desde el robo. Con la verificación queda el número nuevo.",
+							"en": "Yes. There's been no activity since the theft. After verification the new number is set."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -5,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Debería estar bien.",
+							"en": "It should be fine."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Ay, qué alivio.\nMuchas gracias, joven.\nQue tenga buena noche, aunque sea de trabajo.",
+						"en": "Oh, what a relief.\nThank you so much.\nHave a good night, even if it's a working one."
+					},
+					"audio": "voces/clientes/t1r2_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Bueno.\nDebería.\nGracias.",
+						"en": "All right.\nShould.\nThanks."
+					},
+					"audio": "voces/clientes/t1r2_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Voy a llamar a mi hijo.\n[la clienta cerró el chat]",
+						"en": "I'm calling my son.\n[the customer closed the chat]"
+					},
+					"audio": "voces/clientes/t1r2_fin_molesto.ogg"
+				},
+				"fin_timeout": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "¿Hola?\n¿Me dejó sola?",
+						"en": "Hello?\nDid you leave me alone?"
+					},
+					"audio": "voces/clientes/t1r2_fin_timeout.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto",
+				"timer_vencido": "molesto"
+			},
+			"herramienta": [
+				"ezlak_cliente"
+			]
+		},
+		{
+			"id": "t1r3",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "la_desconfiada",
+			"animo_inicial": -10,
+			"cliente_nombre": "señora Norma Valdivia",
+			"caso": {
+				"es": "Le llegó un SMS de «KipuPay» pidiéndole un código. Posible phishing.",
+				"en": "She got a text from \"KipuPay\" asking for a code. Possible phishing."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Me llegó un mensaje que dice que es de ustedes y me pide un código de seis números. ¿Es de ustedes o no?",
+						"en": "I got a message that says it's from you and asks for a six-digit code. Is it yours or not?"
+					},
+					"audio": "voces/clientes/t1r3_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "aviso",
+							"es": "No es nuestro. KipuPay nunca pide códigos por SMS. No lo comparta.",
+							"en": "It's not ours. KipuPay never asks for codes by text. Don't share it."
+						},
+						{
+							"id": "b",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "aviso",
+							"es": "Hizo muy bien en llamar antes de responder. Revisemos.",
+							"en": "You did the right thing calling before replying. Let's check."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 15,
+							"sig": "duda",
+							"es": "Puede ser real, a veces mandamos verificaciones.",
+							"en": "It might be real, sometimes we send verifications.",
+							"qa": "info_incorrecta"
+						}
+					]
+				},
+				"aviso": {
+					"cliente": {
+						"es": "¿Y cómo sé que usted es de KipuPay? A usted tampoco lo conozco.",
+						"en": "And how do I know you're from KipuPay? I don't know you either."
+					},
+					"audio": "voces/clientes/t1r3_aviso.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "cierre",
+							"es": "Bien pensado. Usted llamó al número de la app; yo no le voy a pedir ningún código.",
+							"en": "Good thinking. You called the number in the app; I won't ask you for any code."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Señora, tiene que confiar en alguien.",
+							"en": "Ma'am, you have to trust someone."
+						}
+					]
+				},
+				"duda": {
+					"cliente": {
+						"es": "¿Real? ¿Entonces le paso el código a ellos? Dígame claro.",
+						"en": "Real? So I give them the code? Tell me clearly."
+					},
+					"audio": "voces/clientes/t1r3_duda.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 25,
+							"sig": "aviso",
+							"es": "Perdón, me expresé mal: no lo pase. Ese mensaje no es nuestro.",
+							"en": "Sorry, I misspoke: don't send it. That message isn't ours."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Sí, páselo, no pasa nada.",
+							"en": "Yes, send it, it's fine.",
+							"qa": "info_sin_verificar"
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "Hmm. Ya. ¿Y qué hago con el mensaje?",
+						"en": "Hmm. Fine. What do I do with the message?"
+					},
+					"audio": "voces/clientes/t1r3_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Bórrelo y bloquee el número. Le dejo un reporte de intento de fraude en su cuenta.",
+							"en": "Delete it and block the number. I'm filing a fraud-attempt report on your account."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -5,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Ignórelo nomás.",
+							"en": "Just ignore it."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 4,
+					"cliente": {
+						"es": "Ya. Gracias. Igual voy a cambiar mi clave mañana.",
+						"en": "Fine. Thanks. I'll change my password tomorrow anyway."
+					},
+					"audio": "voces/clientes/t1r3_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Ignorarlo. Claro. Como si fuera tan fácil a las tres de la mañana.",
+						"en": "Ignore it. Sure. As if it were that easy at three in the morning."
+					},
+					"audio": "voces/clientes/t1r3_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Ya no les creo nada. Ni a ellos ni a ustedes.",
+						"en": "I don't believe anything anymore. Not them, not you."
+					},
+					"audio": "voces/clientes/t1r3_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			]
+		},
+		{
+			"id": "t1r4",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "el_extranjero",
+			"animo_inicial": 5,
+			"cliente_nombre": "señor Ansel Varga",
+			"caso": {
+				"es": "Extranjero: pregunta qué documento necesita su beneficiario para cobrar en ventanilla de Caja Mirador.",
+				"en": "Foreigner: asks what ID his recipient needs to collect cash at a Caja Mirador counter."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Buenas noches. Disculpe mi español. Mi hermano debe cobrar dinero en… Caja Mirador. ¿Qué documento lleva?",
+						"en": "Good evening. Excuse my Spanish. My brother must collect money at… Caja Mirador. What document does he bring?"
+					},
+					"audio": "voces/clientes/t1r4_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "detalle",
+							"es": "Buenas noches, se le entiende muy bien. Le explico con calma.",
+							"en": "Good evening, I understand you very well. Let me explain calmly."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "detalle",
+							"es": "Necesita su documento de identidad vigente y el número de operación.",
+							"en": "He needs his valid ID and the transaction number."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "confuso",
+							"es": "Cualquier documento sirve, no se preocupe.",
+							"en": "Any document works, don't worry.",
+							"qa": "respuesta_vaga"
+						}
+					]
+				},
+				"detalle": {
+					"cliente": {
+						"es": "¿Documento vigente… y el número KP? Su pasaporte está vencido hace un mes.",
+						"en": "Valid document… and the KP number? His passport expired a month ago."
+					},
+					"audio": "voces/clientes/t1r4_detalle.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "cierre",
+							"es": "Con pasaporte vencido no le pagan. Puede usar su cédula de residente si la tiene vigente.",
+							"en": "With an expired passport they won't pay. He can use his residence card if it's valid."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Seguro se lo aceptan igual.",
+							"en": "They'll probably accept it anyway.",
+							"qa": "prometer_sin_verificar"
+						}
+					]
+				},
+				"confuso": {
+					"cliente": {
+						"es": "¿Cualquier? ¿Mi hermano puede llevar… la tarjeta del gimnasio?",
+						"en": "Any? My brother can bring… his gym card?"
+					},
+					"audio": "voces/clientes/t1r4_confuso.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "detalle",
+							"es": "No, perdón. Tiene que ser un documento de identidad vigente.",
+							"en": "No, sorry. It has to be a valid ID."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Pregunte en la ventanilla.",
+							"en": "Ask at the counter."
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "Sí, tiene cédula de residente. Muy bien. ¿Algo más?",
+						"en": "Yes, he has a residence card. Very good. Anything else?"
+					},
+					"audio": "voces/clientes/t1r4_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Solo el número KP y que el nombre coincida letra por letra. Nada más.",
+							"en": "Just the KP number and the name matching letter by letter. That's all."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -5,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "No, eso es todo, creo.",
+							"en": "No, that's all, I think."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Muchas gracias. Usted es muy amable para ser… de noche.",
+						"en": "Thank you very much. You are very kind for… night time."
+					},
+					"audio": "voces/clientes/t1r4_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "Usted cree. Bien. Mañana veremos.",
+						"en": "You think. Fine. Tomorrow we will see."
+					},
+					"audio": "voces/clientes/t1r4_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "No entiendo nada. Y creo que usted tampoco.",
+						"en": "I understand nothing. And I think you don't either."
+					},
+					"audio": "voces/clientes/t1r4_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			]
+		},
+		{
+			"id": "t1r5",
+			"ref_v02": "nuevo",
+			"canal": "chat",
+			"arquetipo": "el_que_repite",
+			"animo_inicial": -5,
+			"cliente_nombre": "señor Wilfredo Soto",
+			"caso": {
+				"es": "Chat: no le llegó el correo con el comprobante de su envío #KP-2211-0377.",
+				"en": "Chat: he never got the receipt email for transfer #KP-2211-0377."
+			},
+			"inicio": "inicio",
+			"timeout": {
+				"fin": "fin_timeout",
+				"s_juego": 45
+			},
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "comprobante\nno me llegó el comprobante\nel comprobante",
+						"en": "receipt\ni didn't get the receipt\nthe receipt"
+					},
+					"audio": "voces/clientes/t1r5_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "correo",
+							"es": "Buenas noches. Se lo reenvío. ¿Me confirma su correo?",
+							"en": "Good evening. I'll resend it. Can you confirm your email?"
+						},
+						{
+							"id": "b",
+							"tipo": "empatia",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "correo",
+							"es": "Entiendo, sin comprobante uno no queda tranquilo. Lo vemos.",
+							"en": "I understand, without a receipt you can't rest easy. Let's see."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "repite",
+							"es": "Los comprobantes llegan solos, revise su spam.",
+							"en": "Receipts arrive by themselves, check your spam.",
+							"qa": "respuesta_plantilla"
+						}
+					]
+				},
+				"correo": {
+					"cliente": {
+						"es": "wsoto.48@correo.kp\nese\nese correo",
+						"en": "wsoto.48@correo.kp\nthat one\nthat email"
+					},
+					"audio": "voces/clientes/t1r5_correo.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "cierre",
+							"es": "En su cuenta figura wsoto48 sin punto. Lo corrijo y le reenvío el comprobante.",
+							"en": "Your account has wsoto48 without the dot. I'll fix it and resend the receipt."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Listo, reenviado.",
+							"en": "Done, resent.",
+							"qa": "respuesta_sin_revisar"
+						}
+					]
+				},
+				"repite": {
+					"cliente": {
+						"es": "spam\nya revisé el spam\nno está en el spam\nel comprobante",
+						"en": "spam\ni checked spam\nit's not in spam\nthe receipt"
+					},
+					"audio": "voces/clientes/t1r5_repite.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "correo",
+							"es": "Disculpe. Lo reviso yo. ¿Me confirma el correo?",
+							"en": "Sorry. I'll check it myself. Can you confirm your email?"
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -25,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Entonces no sé qué decirle.",
+							"en": "Then I don't know what to tell you."
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "sin punto\nera sin punto\n¿ya llegó?",
+						"en": "without the dot\nit was without the dot\nhas it arrived?"
+					},
+					"audio": "voces/clientes/t1r5_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Ya salió, al correo con punto. Debería verlo en un minuto.",
+							"en": "It's sent, to the address with the dot. You should see it in a minute."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -5,
+							"t_juego": 10,
+							"sig": "fin_neutral",
+							"es": "Revise más tarde.",
+							"en": "Check later."
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "llegó\nllegó el comprobante\ngracias\ngracias",
+						"en": "it came\nthe receipt came\nthanks\nthanks"
+					},
+					"audio": "voces/clientes/t1r5_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "más tarde\nok\nmás tarde",
+						"en": "later\nok\nlater"
+					},
+					"audio": "voces/clientes/t1r5_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "nada\nnunca llega nada\n[el cliente cerró el chat]",
+						"en": "nothing\nnothing ever arrives\n[the customer closed the chat]"
+					},
+					"audio": "voces/clientes/t1r5_fin_molesto.ogg"
+				},
+				"fin_timeout": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "comprobante\n¿?\ncomprobante",
+						"en": "receipt\n?\nreceipt"
+					},
+					"audio": "voces/clientes/t1r5_fin_timeout.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto",
+				"timer_vencido": "molesto"
+			},
+			"herramienta": [
+				"ezlak_cliente"
+			]
+		},
+		{
+			"id": "t1r6",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "el_silencioso",
+			"animo_inicial": 0,
+			"cliente_nombre": "un número sin nombre",
+			"caso": {
+				"es": "Llamada muda. Respiración. Al final pregunta por un envío de hace años.",
+				"en": "Silent call. Breathing. At the end he asks about a transfer from years ago."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "…",
+						"en": "…"
+					},
+					"audio": "voces/clientes/t1r6_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "aviso",
+							"es": "KipuPay, buenas noches. No lo escucho. ¿Me escucha?",
+							"en": "KipuPay, good evening. I can't hear you. Can you hear me?"
+						},
+						{
+							"id": "b",
+							"tipo": "empatia",
+							"animo": 5,
+							"t_juego": 20,
+							"sig": "aviso",
+							"es": "Buenas noches. Tómese su tiempo, aquí estoy.",
+							"en": "Good evening. Take your time, I'm here."
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "[Colgar sin avisar]",
+							"en": "[Hang up without warning]",
+							"qa": "colgar_primero"
+						}
+					]
+				},
+				"aviso": {
+					"cliente": {
+						"es": "…(respira)… …",
+						"en": "…(breathing)… …"
+					},
+					"audio": "voces/clientes/t1r6_aviso.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 25,
+							"sig": "habla",
+							"es": "Segundo aviso: si no me responde, voy a tener que cerrar la llamada.",
+							"en": "Second warning: if you don't answer, I'll have to end the call."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -10,
+							"t_juego": 10,
+							"sig": "habla",
+							"es": "¿Aló? ¿Aló? ¿Hay alguien?",
+							"en": "Hello? Hello? Is someone there?"
+						}
+					]
+				},
+				"habla": {
+					"cliente": {
+						"es": "…El envío de mi esposa. Dos mil diecinueve. Nunca llegó. Nadie me contesta desde entonces.",
+						"en": "…My wife's transfer. Two thousand nineteen. It never arrived. Nobody has answered me since then."
+					},
+					"audio": "voces/clientes/t1r6_habla.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 15,
+							"t_juego": 30,
+							"sig": "cierre",
+							"es": "Lo siento mucho. Lo busco en el historial y le dejo un caso abierto con su número.",
+							"en": "I'm very sorry. I'll look it up in the history and leave a case open under your number."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -15,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Eso es muy antiguo, ya no aparece en el sistema.",
+							"en": "That's too old, it doesn't show up in the system anymore.",
+							"qa": "desentenderse"
+						}
+					]
+				},
+				"cierre": {
+					"cliente": {
+						"es": "…Usted sí contestó.",
+						"en": "…You did answer."
+					},
+					"audio": "voces/clientes/t1r6_cierre.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "fin_satisfecho",
+							"es": "Sí. Caso KS-0019. Lo van a llamar del área de reclamos.",
+							"en": "Yes. Case KS-0019. The claims team will call you."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": 0,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "¿Algo más en lo que pueda ayudarle?",
+							"en": "Anything else I can help you with?"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 4,
+					"cliente": {
+						"es": "…Gracias. Voy a esperar despierto. Como siempre.",
+						"en": "…Thank you. I'll wait up. Like always."
+					},
+					"audio": "voces/clientes/t1r6_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 3,
+					"cliente": {
+						"es": "…(respira)… …(cuelga)",
+						"en": "…(breathing)… …(hangs up)"
+					},
+					"audio": "voces/clientes/t1r6_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "[tono de ocupado… y debajo, alguien sigue respirando]",
+						"en": "[busy tone… and underneath it, someone is still breathing]"
+					},
+					"audio": "voces/clientes/t1r6_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			]
+		},
+		{
+			"id": "t1r7",
+			"ref_v02": "nuevo",
+			"canal": "llamada",
+			"arquetipo": "el_trasnochado",
+			"animo_inicial": -5,
+			"cliente_nombre": "señor Ulises Carhuaz",
+			"caso": {
+				"es": "Envió 250 KP a su expareja «en un arrebato» hace 20 minutos. Quiere cancelarlo; sigue «en proceso».",
+				"en": "He sent 250 KP to his ex \"on an impulse\" 20 minutes ago. He wants to cancel it; it's still \"processing\"."
+			},
+			"inicio": "inicio",
+			"nodos": {
+				"inicio": {
+					"cliente": {
+						"es": "Oiga… hola. Hice una tontería. Le mandé plata a mi ex. Doscientos cincuenta. Hace un ratito. ¿Se puede deshacer?",
+						"en": "Hey… hi. I did something stupid. I sent money to my ex. Two hundred fifty. A little while ago. Can it be undone?"
+					},
+					"audio": "voces/clientes/t1r7_inicio.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Buenas noches, señor Ulises. Tranquilo, a todos nos pasa. Lo reviso ahora.",
+							"en": "Good evening, Mr. Ulises. Easy, it happens to everyone. I'll check it now."
+						},
+						{
+							"id": "b",
+							"tipo": "proceso",
+							"animo": 5,
+							"t_juego": 15,
+							"sig": "revisa",
+							"es": "¿Me da el número de operación, por favor?",
+							"en": "Could you give me the transaction number, please?"
+						},
+						{
+							"id": "c",
+							"tipo": "trampa",
+							"animo": -15,
+							"t_juego": 10,
+							"sig": "sermon",
+							"es": "Eso le pasa por enviar plata a estas horas.",
+							"en": "That's what you get for sending money at this hour.",
+							"qa": "culpar_cliente"
+						}
+					]
+				},
+				"revisa": {
+					"cliente": {
+						"es": "KP-2214-0919. Creo. Veo doble, perdón.",
+						"en": "KP-2214-0919. I think. I'm seeing double, sorry."
+					},
+					"audio": "voces/clientes/t1r7_revisa.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "proceso",
+							"animo": 10,
+							"t_juego": 25,
+							"sig": "cancela",
+							"es": "Lo tengo: sigue en proceso. Dentro de los 30 minutos se puede cancelar. ¿Lo cancelo?",
+							"en": "Got it: it's still processing. Within 30 minutes it can be cancelled. Shall I cancel it?"
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -10,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Ya salió, no se puede hacer nada.",
+							"en": "It already went out, nothing can be done.",
+							"qa": "respuesta_sin_revisar"
+						}
+					]
+				},
+				"sermon": {
+					"cliente": {
+						"es": "…Ya sé. Por eso llamo. No para que me lo diga usted también.",
+						"en": "…I know. That's why I'm calling. Not so you can tell me too."
+					},
+					"audio": "voces/clientes/t1r7_sermon.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "empatia",
+							"animo": 10,
+							"t_juego": 20,
+							"sig": "revisa",
+							"es": "Tiene razón, disculpe. Vamos a ver si llegamos a tiempo.",
+							"en": "You're right, sorry. Let's see if we're in time."
+						},
+						{
+							"id": "b",
+							"tipo": "fuera",
+							"animo": -20,
+							"t_juego": 10,
+							"sig": "fin_molesto",
+							"es": "Solo le digo la verdad.",
+							"en": "I'm just telling you the truth."
+						}
+					]
+				},
+				"cancela": {
+					"cliente": {
+						"es": "Sí. Sí, cancélelo. ¿Ella se va a enterar?",
+						"en": "Yes. Yes, cancel it. Will she find out?"
+					},
+					"audio": "voces/clientes/t1r7_cancela.ogg",
+					"opciones": [
+						{
+							"id": "a",
+							"tipo": "cierre",
+							"animo": 15,
+							"t_juego": 25,
+							"sig": "fin_satisfecho",
+							"es": "Cancelado. A ella no le llega nada; usted recibe la devolución en su cuenta en unos minutos.",
+							"en": "Cancelled. She gets nothing; you'll get the refund in your account in a few minutes."
+						},
+						{
+							"id": "b",
+							"tipo": "trampa",
+							"animo": -5,
+							"t_juego": 15,
+							"sig": "fin_neutral",
+							"es": "Seguro le llega una notificación, no sé.",
+							"en": "She'll probably get a notification, I don't know.",
+							"qa": "info_sin_verificar"
+						}
+					]
+				}
+			},
+			"finales": {
+				"fin_satisfecho": {
+					"resultado": "satisfecho",
+					"csat": 5,
+					"cliente": {
+						"es": "Gracias. De verdad. Me voy a dormir. O a intentarlo.",
+						"en": "Thank you. Really. I'm going to sleep. Or try to."
+					},
+					"audio": "voces/clientes/t1r7_fin_satisfecho.ogg"
+				},
+				"fin_neutral": {
+					"resultado": "neutral",
+					"csat": 2,
+					"cliente": {
+						"es": "Ya. Bueno. Mañana la llamo y le explico. O no.",
+						"en": "Right. Well. Tomorrow I'll call her and explain. Or not."
+					},
+					"audio": "voces/clientes/t1r7_fin_neutral.ogg"
+				},
+				"fin_molesto": {
+					"resultado": "molesto",
+					"csat": 1,
+					"cliente": {
+						"es": "Para esto me hubiera quedado callado. (cuelga)",
+						"en": "I should have just kept quiet. (hangs up)"
+					},
+					"audio": "voces/clientes/t1r7_fin_molesto.ogg"
+				}
+			},
+			"fallo": {
+				"paciencia_cero": "molesto"
+			},
+			"herramienta": [
+				"kardex"
+			],
+			"solo_dificil": true
+		}
+	],
+	"fijos": [
+		"t1c1",
+		"t1c2",
+		"t1c4",
+		"t1c7"
+	],
+	"contactos_por_turno": {
+		"facil": [
+			7,
+			9
+		],
+		"normal": [
+			9,
+			11
+		],
+		"dificil": [
+			10,
+			12
+		],
+		"real": [
+			11,
+			13
+		],
+		"_nota": "Contactos con árbol (llamada/chat) que te tocan en el turno según la dificultad (Turno real = 'real'). Los 'fijos' salen siempre; el resto se sortea sin repetir entre los guionizados opcionales y el relleno. Los casos de BO (correo, KYC, Vitzo) van aparte (casos_bo.json)."
+	}
+}

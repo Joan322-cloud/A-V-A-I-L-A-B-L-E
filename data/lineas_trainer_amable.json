@@ -1,0 +1,403 @@
+{
+ "_comentario": "AVAILABLE v0.3.2 · El Trainer AMABLE del Training (el recuerdo; docs/AVAILABLE_trama_semana §2.1) [PROPUESTA]. Voz suave y cálida (voces/trainer_amable/<id>, Kokoro, -16 LUFS). t_<módulo> = la presentación de cada tema (la dice al empezar el módulo). Grietas sutiles: «nos vemos el martes». v3 (Joan): bromas graciosas que esconden lo que te va a pasar, sin revelar mucho; «lo más importante de KipuPay, después del cliente, jeje». Rehecho (Joan 2026-11-11): todas las líneas del guion del Training; las que dicen tu nombre (t_nombre*, t_firmado, t_leyo) tienen una voz por agente (<id>_<agente>); t_bien_* / t_casi_* rotan.",
+ "t_aux": {
+  "es": "Ahora sí, a trabajar. Bueno, a aprender. Esa es tu PC de training: inicia sesión con Espacio, que no muerde.",
+  "en": "Now, to work. Well, to learn. That's your training PC: log in with Space, it doesn't bite."
+ },
+ "t_tranqui": {
+  "es": "Tranqui. Todos se equivocan el primer día. Yo nunca, pero tranqui. ¡Ja, ja!",
+  "en": "Relax. Everyone makes mistakes on the first day. I never did, but relax. Ha ha!"
+ },
+ "t_contactos": {
+  "es": "Ahora un role play. Yo hago de cliente molesto. Y apunten esto: mientras estén con un cliente, con headset y con el guion, nadie los va a molestar. Nadie.",
+  "en": "Now a role play. I'll be the angry customer. And write this down: while you're with a customer, headset on and following the script, nobody will bother you. Nobody."
+ },
+ "t_correo": {
+  "es": "El correo es un caso. Tienen diez minutos. El minuto once es de Shero. Y nadie quiere conocer a Shero en el minuto once. ¡Ja, ja!",
+  "en": "An email is a case. You have ten minutes. Minute eleven belongs to Shero. And nobody wants to meet Shero at minute eleven. Ha ha!"
+ },
+ "t_bo_kyc": {
+  "es": "Back office y KYC. Lo que no está en Kardex, no pasó. Y si ustedes no están en Kardex… bueno, ustedes tampoco pasaron. ¡Es broma, familia!",
+  "en": "Back office and KYC. If it's not in Kardex, it didn't happen. And if you're not in Kardex… well, you didn't happen either. Just kidding, family!"
+ },
+ "t_vitzo": {
+  "es": "Vitzo. A Vitzo nunca un correo. ¡Ja, ja! En serio, ¿ya? Nunca.",
+  "en": "Vitzo. Never send Vitzo an email. Ha ha! Seriously, okay? Never."
+ },
+ "t_ezlak": {
+  "es": "Ezlaki es nuestro chat de familia. Contesten rápido. Algunos contestan tan rápido que se quedan a vivir en el chat. ¡Ja, ja!",
+  "en": "Ezlaki is our family chat. Answer fast. Some people answer so fast they end up living in the chat. Ha ha!"
+ },
+ "t_salir": {
+  "es": "Breaks y lunch. El break es un privilegio… es broma, son dos de diez. La azotea está cerrada, ¿ya? Para renunciar hay que subir, ¡y nadie sube! Ja, ja.",
+  "en": "Breaks and lunch. A break is a privilege… just kidding, it's two of ten. The roof is closed, okay? To quit you have to go up there, and nobody goes up! Ha ha."
+ },
+ "t_jefes": {
+  "es": "Shero es un pan de Dios. El que se porta bien termina de supervisor, como él. ¡Mírenlo! Bueno, mejor no lo miren. Y QA los quiere mucho.",
+  "en": "Shero is a sweetheart. Whoever behaves ends up a supervisor, like him. Look at him! Well, better not look at him. And QA loves you very much."
+ },
+ "t_fatiga": {
+  "es": "Si se sienten cansados, descansen. Abajo hay sillones. Algunos descansan tan bien que se quedan con nosotros para siempre. ¡Ja, ja! Pero nunca en Available.",
+  "en": "If you feel tired, rest. Downstairs there are sofas. Some rest so well they stay with us forever. Ha ha! But never in Available."
+ },
+ "t_partidas": {
+  "es": "Esto último es del sistema. Lean tranquilos. Yo voy preparando lo más bonito del training.",
+  "en": "This last part is from the system. Read calmly. I'll get the nicest part of the training ready."
+ },
+ "t_contrato": {
+  "es": "Esto es lo más bonito del training. Hoy dejan de ser postulantes. El contrato es indefinido: como la familia.",
+  "en": "This is the nicest part of the training. Today you stop being applicants. The contract is indefinite: like family."
+ },
+ "t_ceremonia": {
+  "es": "Firmen nomás, son cláusulas de cajón. Nadie las lee. Bueno, una vez una chica las leyó todas… ¡y aquí sigue! Ja, ja.",
+  "en": "Just sign, they're standard clauses. Nobody reads them. Well, once a girl read them all… and she's still here! Ha ha."
+ },
+ "t_firmado": {
+  "es": "¡Bienvenido a la familia, {agente}!",
+  "en": "Welcome to the family, {agente}!"
+ },
+ "t_despedida": {
+  "es": "Nos vemos el martes. Digo… nos vemos. El domingo es libre. Casi siempre.",
+  "en": "See you on Tuesday. I mean… see you. Sunday is free. Almost always."
+ },
+ "t_hola": {
+  "es": "¡Hola, hola! Pasa, pasa, no te quedes en la puerta. ¿Promoción de hoy? ¡Qué alegría! Yo soy el Trainer.",
+  "en": "Hi, hi! Come in, come in, don't stand in the doorway. Today's class? What a joy! I'm the Trainer."
+ },
+ "t_cafe_1": {
+  "es": "Primero lo primero: café y empanaditas. Ahí, con tus compañeros. Cortesía de la empresa.",
+  "en": "First things first: coffee and empanadas. Over there, with your classmates. It's on the company."
+ },
+ "t_cafe_2": {
+  "es": "El primer día el café es gratis. Después también hay… en la máquina del menos uno. Dos soles cincuenta, jeje.",
+  "en": "On the first day the coffee is free. Afterwards there's some too… in the machine on minus one. Two fifty, hehe."
+ },
+ "t_sitio": {
+  "es": "A sus sitios, familia. El tuyo es la T-01, al centro, para que no te pierdas nada.",
+  "en": "To your seats, family. Yours is T-01, in the middle, so you don't miss a thing."
+ },
+ "t_nombre_pregunta": {
+  "es": "¿Y tú? ¿Cómo te llamas?",
+  "en": "And you? What's your name?"
+ },
+ "t_login_ok": {
+  "es": "¡Eso! Desde ahora, el sistema te conoce.",
+  "en": "That's it! From now on, the system knows you."
+ },
+ "t_aux_2": {
+  "es": "Lo que ves en Fonex es tu AUX: tu estado. Available es «estoy listo, que entre el cliente». Abre el menú con la Q.",
+  "en": "What you see in Fonex is your AUX: your status. Available means \"I'm ready, send the customer in\". Open the menu with Q."
+ },
+ "t_aux_bo": {
+  "es": "Ahora ponte BO, back office: trabajo interno. Es la tecla dos.",
+  "en": "Now set BO, back office: internal work. It's key two."
+ },
+ "t_aux_pct": {
+  "es": "Mira tu Available: en BO baja. Arriba de setenta, eres familia. Abajo de setenta… también, pero te llaman, jeje.",
+  "en": "Look at your Available: in BO it drops. Above seventy, you're family. Below seventy… you're family too, but they call you in, hehe."
+ },
+ "t_aux_volver": {
+  "es": "Y de vuelta a Available: Q y uno.",
+  "en": "And back to Available: Q and one."
+ },
+ "t_aux_pc": {
+  "es": "Y ojo: el AUX se cambia solo en tu PC. En ninguna otra parte. ¿Y si estás lejos? Para eso hay un comodín. Se los enseño en el break.",
+  "en": "And careful: you change your AUX only at your PC. Nowhere else. And if you're away? There's a lifeline for that. I'll show you on the break."
+ },
+ "t_kpi_1": {
+  "es": "Ahora la parte que más le gusta a la gerencia: los números. Se llaman KPI. No se asusten, son como las notas del colegio.",
+  "en": "Now management's favorite part: the numbers. They're called KPIs. Don't be scared, they're like report cards at school."
+ },
+ "t_aht": {
+  "es": "Cada cliente es distinto. Y el tiempo cuenta: es tu AHT. Ni muy largo ni muy corto. Justo, como un buen ceviche.",
+  "en": "Every customer is different. And time counts: that's your AHT. Not too long, not too short. Just right, like a good ceviche."
+ },
+ "t_cola": {
+  "es": "La cola son los clientes que esperan. Te va a sonar uno. Esta vez no contestes: mira qué pasa.",
+  "en": "The queue is the customers who are waiting. One is about to ring for you. This time don't answer: watch what happens."
+ },
+ "t_perdido_ok": {
+  "es": "¿Vieron? Nadie contestó y el cliente volvió a la cola. Ese perdido queda con tu nombre. Para siempre. Bueno, hasta el cierre de mes, jeje.",
+  "en": "See? Nobody answered and the customer went back to the queue. That missed contact stays under your name. Forever. Well, until month end, hehe."
+ },
+ "t_perdido_contestaste": {
+  "es": "¡Contestaste igual! Eso es vocación. Pero ojo: si suena y nadie contesta, se pierde y queda con tu nombre.",
+  "en": "You answered anyway! That's dedication. But careful: if it rings and nobody answers, it's lost and it stays under your name."
+ },
+ "t_qa_1": {
+  "es": "Y calidad. Haime, nuestra QA, escucha sus llamadas y les pone nota. A veces la escuchamos entre todos: eso es calibrar. A ver, ¿quién presta su primera llamada?",
+  "en": "And quality. Haime, our QA, listens to your calls and grades them. Sometimes we all listen together: that's a calibration. So, who volunteers their first call?"
+ },
+ "t_contactos_2": {
+  "es": "Te entra por el headset. Acepta con Espacio. Y sonríe: el cliente lo escucha.",
+  "en": "It comes in through your headset. Accept with Space. And smile: the customer can hear it."
+ },
+ "t_llamada_bien": {
+  "es": "¡Muy bien! ¿Escucharon? Se fue feliz. Eso es lo que hacemos aquí: gente feliz.",
+  "en": "Very good! Did you hear? She left happy. That's what we do here: happy people."
+ },
+ "t_llamada_regular": {
+  "es": "No estuvo mal para ser la primera. La próxima, escucha un poquito más antes de responder. Ya te va a salir.",
+  "en": "Not bad for the first one. Next time, listen a little longer before you answer. You'll get it."
+ },
+ "t_hold": {
+  "es": "Si tienes que pararte en plena llamada, primero hold, con la H. El cliente escucha musiquita. A todos nos gusta la musiquita.",
+  "en": "If you have to get up mid-call, hold first, with H. The customer hears a little music. Everyone likes the little music."
+ },
+ "t_chat": {
+  "es": "Ahora un chat. Igual, pero escrito. Y no te demores: el cliente ve cuando escribes.",
+  "en": "Now a chat. Same thing, but written. And don't dawdle: the customer can see you typing."
+ },
+ "t_paso_kardex": {
+  "es": "Paso uno: Kardex. Ahí está la operación de verdad.",
+  "en": "Step one: Kardex. That's where the real transaction is."
+ },
+ "t_paso_campos": {
+  "es": "Los campos, con los datos de Kardex, no los del cliente. El cliente a veces se equivoca. Kardex nunca.",
+  "en": "The fields, with the Kardex data, not the customer's. Customers make mistakes sometimes. Kardex never does."
+ },
+ "t_paso_tipificar": {
+  "es": "Tipifica: dile al sistema qué hiciste. Si no tipificas, es como si no hubieras trabajado.",
+  "en": "Categorize: tell the system what you did. If you don't categorize, it's as if you never worked."
+ },
+ "t_break_cafe": {
+  "es": "¡Coffee break, familia! Diez minutitos. Lo están haciendo increíble.",
+  "en": "Coffee break, family! Ten little minutes. You're doing amazing."
+ },
+ "t_historia_1": {
+  "es": "¿Saben qué? Yo me senté en esa misma T-01. Hace ocho años. Mi primera semana lloré en el baño del piso dos. Una vez. Bueno, tres.",
+  "en": "You know what? I sat at that same T-01. Eight years ago. My first week I cried in the second-floor bathroom. Once. Well, three times."
+ },
+ "t_historia_2": {
+  "es": "Y mírenme ahora: Trainer. Con fotocheck dorado.",
+  "en": "And look at me now: Trainer. With a gold badge."
+ },
+ "t_historia_3": {
+  "es": "Si yo pude, ustedes pueden. Hacen sus números, no faltan, y en seis meses ya son TL. Se los prometo.",
+  "en": "If I could, you can. Hit your numbers, don't miss a day, and in six months you're a TL. I promise you."
+ },
+ "t_break_fin": {
+  "es": "Ya, ya, se acabó el recreo. A sus sitios. El break dura diez y ni un segundo más. ¡Ja, ja!",
+  "en": "Okay, okay, recess is over. Back to your seats. A break is ten minutes and not one second more. Ha ha!"
+ },
+ "t_identa": {
+  "es": "Identa es para el KYC: ¿el cliente es quien dice ser? Mira la región, el monto y si se verificó. Las reglas de cada país están en el Manual.",
+  "en": "Identa is for KYC: is the customer who they say they are? Check the region, the amount and whether they were verified. Each country's rules are in the Manual."
+ },
+ "t_bo_volver": {
+  "es": "Y de vuelta a Available, que el BO baja tu porcentaje.",
+  "en": "And back to Available, BO lowers your percentage."
+ },
+ "t_portal": {
+  "es": "Para Vitzo, el portal: F cuatro. Ahí ves el estado, el comprobante, todo.",
+  "en": "For Vitzo, the portal: F4. There you see the status, the receipt, everything."
+ },
+ "t_ezlak_2": {
+  "es": "Si un jefe te escribe, contestas al toque. Dale «Ok».",
+  "en": "If a boss writes to you, you answer right away. Hit \"Ok\"."
+ },
+ "t_reaccion": {
+  "es": "Vitzo pide una reacción. Dale el emoji: es su forma de saber que estamos vivos. Que estamos atentos, digo.",
+  "en": "Vitzo is asking for a reaction. Give him the emoji: it's his way of knowing we're alive. That we're paying attention, I mean."
+ },
+ "t_coaching_volver": {
+  "es": "Terminó el coaching: vuelve a Available. Quedarse en Coaching sin permiso es feo. Muy feo.",
+  "en": "Coaching's over: go back to Available. Staying in Coaching without permission is ugly. Very ugly."
+ },
+ "t_break": {
+  "es": "Pruébalo: ponte Break, Q y tres.",
+  "en": "Try it: set Break, Q and three."
+ },
+ "t_salir_puerta": {
+  "es": "Ahora sal por la puerta, al pasillo. Con Break puedes. Sin Break, no. Nunca.",
+  "en": "Now go out the door, into the hallway. With Break you can. Without Break, no. Never."
+ },
+ "t_taper": {
+  "es": "Dos breaks de diez y un lunch de cuarenta y cinco. Y traigan su taper: comida casera, como en casa. Esta es su casa.",
+  "en": "Two ten-minute breaks and one forty-five-minute lunch. And bring your lunchbox: home cooking, like at home. This is your home."
+ },
+ "t_volver_sitio": {
+  "es": "Vuelve a tu sitio. El break se acabó hace… ya.",
+  "en": "Back to your seat. The break ended… just now."
+ },
+ "t_escalera": {
+  "es": "La escalera es sencilla: llamado, verbal, written warning y… bueno, ojalá nunca lleguen al final. Nadie llega. Casi nadie.",
+  "en": "The ladder is simple: a call-out, a verbal, a written warning and… well, hopefully you never reach the end. Nobody does. Almost nobody."
+ },
+ "t_ack": {
+  "es": "Te llegó un written warning de práctica. Tranqui, es de mentira. Dale Ack.",
+  "en": "You got a practice written warning. Relax, it's pretend. Ack it."
+ },
+ "t_rta": {
+  "es": "Perrito RTA cuida los AUX. Si te dice BO, BO. Es buenito. Muerde poquito.",
+  "en": "Perrito RTA looks after the AUX. If he says BO, BO. He's sweet. He barely bites."
+ },
+ "t_screamer_fin": {
+  "es": "¿Se asustaron? Es solo un simulacro. En el piso nadie se asusta. Bueno.",
+  "en": "Did that scare you? It's just a drill. Nobody gets scared out on the floor. Well."
+ },
+ "t_agua": {
+  "es": "Tomen agüita. Y en el menos uno hay puffs: baja y prueba uno. Pero si solo es sueño, al tópico no, ¿ya? El sueño no es enfermedad.",
+  "en": "Drink some water. And on minus one there are bean bags: go down and try one. But if you're just sleepy, not the infirmary, okay? Sleepiness isn't an illness."
+ },
+ "t_foto_1": {
+  "es": "¡Foto de promoción! Todos a la pizarra. ¿Vas a salir sonriendo?",
+  "en": "Class photo! Everyone to the board. Are you going to smile?"
+ },
+ "t_foto_2": {
+  "es": "Una copia va al mural del piso uno, con todas las promociones. La otra es suya, para su sitio. Para siempre.",
+  "en": "One copy goes on the floor one wall, with every class. The other one is yours, for your desk. Forever."
+ },
+ "t_promesa": {
+  "es": "Ya son familia. Lo que necesiten, aquí estoy. Siempre voy a estar aquí.",
+  "en": "You're family now. Whatever you need, I'm here. I'll always be here."
+ },
+ "t_bien_1": {
+  "es": "¡Muy bien! Así me gusta.",
+  "en": "Very good! That's what I like."
+ },
+ "t_bien_2": {
+  "es": "¡Eso! Tienes madera de TL.",
+  "en": "That's it! You've got TL material."
+ },
+ "t_bien_3": {
+  "es": "¡Perfecto! Ni yo lo hacía tan rápido.",
+  "en": "Perfect! Not even I was that fast."
+ },
+ "t_bien_4": {
+  "es": "¡Bravo! Aplausos para la T-01.",
+  "en": "Bravo! A round of applause for T-01."
+ },
+ "t_bien_5": {
+  "es": "¡Excelente! Vas a llegar lejos aquí.",
+  "en": "Excellent! You're going to go far here."
+ },
+ "t_bien_6": {
+  "es": "¡Bien! La gerencia va a estar orgullosa.",
+  "en": "Good! Management is going to be proud."
+ },
+ "t_casi_1": {
+  "es": "Casi, casi. No pasa nada, para eso es el training.",
+  "en": "Almost, almost. It's fine, that's what training is for."
+ },
+ "t_casi_2": {
+  "es": "Uy, no. Pero tranqui, todos se equivocan el primer día.",
+  "en": "Oops, no. But relax, everyone gets it wrong on day one."
+ },
+ "t_casi_3": {
+  "es": "Casi. Lo anotamos como aprendizaje, ¿ya?",
+  "en": "Almost. We'll count it as learning, okay?"
+ },
+ "t_nombre": {
+  "es": "¡{agente}! Qué buen nombre. Ya no se me olvida, ¿eh?",
+  "en": "{agente}! What a great name. I won't forget it, eh?"
+ },
+ "t_nombre_timido": {
+  "es": "Ah, tímido. Tranqui: aquí lo dice tu fotocheck. {agente}. Ya no se me olvida.",
+  "en": "Ah, shy. Relax: your badge says it. {agente}. I won't forget it."
+ },
+ "t_comodin_1": {
+  "es": "Atención, que esto no sale en el manual. Se te acabó el break y tu PC quedó lejos. Una vez por turno tienes un comodín: mantén la C y llama a alguien de tu promoción.",
+  "en": "Pay attention, this isn't in the manual. Your break is over and your PC is far away. Once per shift you get a lifeline: hold C and call someone from your class."
+ },
+ "t_comodin_2": {
+  "es": "¿Viste? Tu PC cambió sola. Para eso están los amigos. Pero es uno por turno, ¿ya? Cuiden a sus amigos.",
+  "en": "See? Your PC changed by itself. That's what friends are for. But it's one per shift, okay? Take care of your friends."
+ },
+ "t_calib_si": {
+  "es": "¡Eso! Valiente. Tranqui, hoy no toca. Pero ya sé quién levanta la mano, jeje.",
+  "en": "That's it! Brave. Relax, not today. But now I know who raises their hand, hehe."
+ },
+ "t_calib_no": {
+  "es": "Tranqui, Llauri. Igual la QA escoge sola. Siempre escoge sola. Es un honor. Casi siempre.",
+  "en": "Relax, Llauri. QA picks on her own anyway. She always picks on her own. It's an honor. Almost always."
+ },
+ "t_historia_vale": {
+  "es": "¿Si valió la pena? Claro. Claro que sí. Aquí tengo todo. Aquí tengo… todo.",
+  "en": "Was it worth it? Of course. Of course it was. I have everything here. I have… everything."
+ },
+ "t_historia_calla": {
+  "es": "Así me gusta, que escuchen. El que escucha, llega lejos aquí.",
+  "en": "That's what I like, people who listen. Those who listen go far here."
+ },
+ "t_foto_si": {
+  "es": "¡Eso! Esa sonrisa no la pierdan nunca.",
+  "en": "That's it! Never lose that smile."
+ },
+ "t_foto_no": {
+  "es": "¿Serio? Bueno. Ya te vas a soltar. Aquí todos terminan sonriendo.",
+  "en": "Serious? Fine. You'll loosen up. Everyone ends up smiling here."
+ },
+ "t_bien_7": {
+  "es": "¡Así se hace! Anótenlo los demás.",
+  "en": "That's how it's done! Take note, everyone."
+ },
+ "t_bien_8": {
+  "es": "¡Correcto! Esto ya lo traías de casa, ¿no?",
+  "en": "Correct! You already knew this one, didn't you?"
+ },
+ "t_bien_9": {
+  "es": "¡Muy bien! Me vas a dejar sin chamba, jeje.",
+  "en": "Very good! You'll put me out of a job, hehe."
+ },
+ "t_bien_10": {
+  "es": "¡Exacto! Shero va a estar contento. Y eso es difícil.",
+  "en": "Exactly! Shero is going to be pleased. And that's not easy."
+ },
+ "t_nombres": {
+  "es": "Aquí todos nos conocemos por el nombre. Llauri, Marko, Ttoom, Juan. Y yo soy el Trainer. Solo «el Trainer», jeje.",
+  "en": "Here we all know each other by name. Llauri, Marko, Ttoom, Juan. And I'm the Trainer. Just \"the Trainer\", hehe."
+ },
+ "t_que_es": {
+  "es": "Les explico rapidito. KipuPay es una app para mandar plata a otro país: gente que trabaja lejos y le manda a su mamá, a sus hijos. Ustedes son su voz.",
+  "en": "Real quick. KipuPay is an app for sending money to another country: people who work far away and send it to their mom, their kids. You are its voice."
+ },
+ "t_ayuda_si": {
+  "es": "Así me gusta, que se ayuden. Eso es familia. En el piso, eso sí, cada uno con su caso, ¿ya? Jeje.",
+  "en": "That's what I like, helping each other. That's family. Out on the floor, though, everyone minds their own case, okay? Hehe."
+ },
+ "t_ayuda_no": {
+  "es": "Llauri: efe uno. Tranquila. Aquí nadie se queda atrás. Bueno. Casi nadie.",
+  "en": "Llauri: F1. Easy. Nobody gets left behind here. Well. Almost nobody."
+ },
+ "t_escribir": {
+  "es": "También puedes escribir con tus palabras. Pero ojo: escribir «¿por qué?» queda anotado, jeje.",
+  "en": "You can also type in your own words. But careful: typing \"why?\" goes on your record, hehe."
+ },
+ "t_simulacro": {
+  "es": "Lo último: un simulacro. Así se ve cuando alguien del piso… te alcanza. ¿Lo quieres ver?",
+  "en": "Last thing: a drill. This is what it looks like when someone on the floor… catches up with you. Want to see it?"
+ },
+ "t_simulacro_no": {
+  "es": "Mejor. Ya lo vas a ver. Digo… ojalá que no, jeje.",
+  "en": "Better that way. You'll see it eventually. I mean… hopefully not, hehe."
+ },
+ "t_colapso_fin": {
+  "es": "¡Volviste! Eso es un colapso: te apagas y reconectas donde estabas. Aquí siempre se vuelve. Siempre.",
+  "en": "You're back! That's a collapse: you shut down and reconnect where you were. Here you always come back. Always."
+ },
+ "t_foto_timer": {
+  "es": "Temporizador… diez segundos. ¡Ya voy, ya voy!",
+  "en": "Timer… ten seconds. Coming, coming!"
+ },
+ "t_foto_ya": {
+  "es": "Digan… ¡familia!",
+  "en": "Say… family!"
+ },
+ "t_leyo": {
+  "es": "¿Lo leíste todo, {agente}? Hasta la letra chica. Jeje. Nadie lee la letra chica.",
+  "en": "You read all of it, {agente}? Even the fine print. Hehe. Nobody reads the fine print."
+ },
+ "t_tl_gana": {
+  "es": "Jeje. Gana… experiencia. Mucha experiencia.",
+  "en": "Hehe. They make… experience. Lots of experience."
+ },
+ "t_brindis": {
+  "es": "¡Salud, familia! Por la promoción.",
+  "en": "Cheers, family! To the class."
+ },
+ "t_no_leyo": {
+  "es": "Ni lo leíste. Así me gusta: confianza, jeje.",
+  "en": "Didn't even read it. That's what I like: trust, hehe."
+ }
+}

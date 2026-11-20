@@ -1,0 +1,446 @@
+{
+	"_comentario": "[PROPUESTA] Mentor (v0.3, PLAN §2 #40 y #43, DIALOGOS §8): en todos los turnos. Publica en #team-familia la lista de allocations con el Available de cada agente (cada 90 min: lista_horas; Shero se entera SOLO por esta lista), las allocations a BO de 20 min (turnos.json/allocations_bo; el RTA da la orden en #allocations), 3 minitrainings en la app Campus y es lamebotas con Shero. {desde}/{hasta}/{aux}/{hora}/{lista}/{n}. v0.3.2 fb-ui: 9 minitrainings, 3 por turno (minitrainings_por_dia + minitraining_horas; Mentor.day_minitrainings).",
+	"avatar": "mentor",
+	"allocations": [
+		{
+			"aux": "bo",
+			"es": "Allocation {desde}-{hasta}: AUX esperado BO. Cola de Identa alta. Gracias por el compromiso.",
+			"en": "Allocation {desde}-{hasta}: expected AUX BO. Identa queue is high. Thanks for the commitment."
+		},
+		{
+			"aux": "bo",
+			"es": "Team, allocation de {desde} a {hasta}: todos a {aux}. Los KYC no se verifican solos. Shero ya está al tanto 🙏",
+			"en": "Team, allocation from {desde} to {hasta}: everyone to {aux}. KYCs don't verify themselves. Shero is already aware 🙏"
+		}
+	],
+	"fin_allocation": {
+		"lineas": [
+			{
+				"es": "Fin de la allocation. Todos Available, team. Buen trabajo (sobre todo el de Shero coordinando).",
+				"en": "Allocation over. Everyone Available, team. Good job (especially Shero coordinating)."
+			},
+			{
+				"es": "Cerramos allocation. Vuelven a Available. Recuerden: el layout es el layout.",
+				"en": "Closing allocation. Back to Available. Remember: the layout is the layout."
+			}
+		]
+	},
+	"lamebotas": {
+		"lineas": [
+			{
+				"es": "Totalmente de acuerdo, Shero. Gran liderazgo, como siempre.",
+				"en": "Totally agree, Shero. Great leadership, as always."
+			},
+			{
+				"es": "Lo que dice Shero. Anótenlo, team.",
+				"en": "What Shero said. Write it down, team."
+			},
+			{
+				"es": "Excelente reminder, Shero 👏 Esto es lo que diferencia a esta campaña.",
+				"en": "Excellent reminder, Shero 👏 This is what sets this campaign apart."
+			},
+			{
+				"es": "Apoyo al 100 %. Si alguien tiene dudas, me escriben a mí antes que molestar a Shero.",
+				"en": "100 % behind this. If anyone has questions, write to me before bothering Shero."
+			},
+			{
+				"es": "Así es, Shero. No hay breaks. Lo voy a poner en mi foto de perfil.",
+				"en": "That's right, Shero. There are no breaks. I'll put it on my profile picture."
+			},
+			{
+				"es": "Gran gestión, Shero. Los WW también son una forma de cariño.",
+				"en": "Great handling, Shero. WWs are a form of affection too."
+			}
+		]
+	},
+	"rta_orden": {
+		"es": "Allocation BO {desde}-{hasta}. @{agente} pasa a BO. Te estoy contando.",
+		"en": "BO allocation {desde}-{hasta}. @{agente} switch to BO. I'm counting."
+	},
+	"lista": {
+		"es": "Allocation list {hora}: {lista}. Shero ya está al tanto.",
+		"en": "Allocation list {hora}: {lista}. Shero is already aware."
+	},
+	"lista_bajo": {
+		"es": "(@{agente}: debajo del target. No es presión. Es seguimiento.)",
+		"en": "(@{agente}: below target. It's not pressure. It's follow-up.)"
+	},
+	"lista_horas": [
+		"01:30",
+		"03:00",
+		"04:30",
+		"06:00",
+		"07:30"
+	],
+	"lista_base": {
+		"1": {
+			"Jiroshi": 93,
+			"Marko": 84,
+			"Llauri": 77,
+			"Ttoom": 72,
+			"Juan": 88
+		},
+		"2": {
+			"Jiroshi": 91,
+			"Marko": 80,
+			"Llauri": 75,
+			"Ttoom": 70,
+			"Juan": 83
+		},
+		"3": {
+			"Jiroshi": 90,
+			"Marko": 78,
+			"Llauri": 73,
+			"Ttoom": 68,
+			"Juan": 69
+		}
+	},
+	"allocation_horas_extra": [
+		"02:40",
+		"05:15",
+		"07:05"
+	],
+	"minitraining_horas": [
+		"00:20",
+		"03:30",
+		"06:15"
+	],
+	"minitrainings_por_dia": {
+		"_comentario": "v0.3.2 (Joan): tres minitrainings distintos por turno. Clave = turno de turnos.json; valor = ids de `minitrainings`, en el orden de `minitraining_horas`. Un tema no se repite en el día ni entre días (lo comprueba la batería v032_fbmt). Un turno sin clave propia rota entre los que hay (los turnos 4+ de la v0.4 necesitarán sus temas).",
+		"1": [
+			"mt_empatia",
+			"mt_breaks",
+			"mt_adherencia"
+		],
+		"2": [
+			"mt_hold",
+			"mt_vitzo",
+			"mt_correo"
+		],
+		"3": [
+			"mt_allocations",
+			"mt_kyc",
+			"mt_ack"
+		]
+	},
+	"minitrainings": [
+		{
+			"id": "mt_empatia",
+			"anuncio": {
+				"es": "Team, minitraining obligatorio en Campus: \"Empatía en 3 pasos\" (5 min). Shero lo revisa al final del turno.",
+				"en": "Team, mandatory minitraining in Campus: \"Empathy in 3 steps\" (5 min). Shero checks it at the end of the shift."
+			},
+			"titulo": {
+				"es": "Empatía en 3 pasos",
+				"en": "Empathy in 3 steps"
+			},
+			"texto": {
+				"es": "1) Reconoce lo que siente el cliente. 2) Dile qué vas a hacer. 3) Hazlo. Prometer sin verificar es una marca de QA. Suspirar también.",
+				"en": "1) Acknowledge what the customer feels. 2) Tell them what you'll do. 3) Do it. Promising without checking is a QA mark. Sighing too."
+			},
+			"pregunta": {
+				"es": "El cliente llora porque no llegó su dinero. ¿Qué dices primero?",
+				"en": "The customer cries because their money didn't arrive. What do you say first?"
+			},
+			"opciones": [
+				{
+					"es": "\"Seguro llega en unas horas.\"",
+					"en": "\"It'll surely arrive in a few hours.\""
+				},
+				{
+					"es": "\"Entiendo lo que está pasando. Lo reviso con usted ahora.\"",
+					"en": "\"I understand what's happening. I'll check it with you now.\""
+				},
+				{
+					"es": "\"Cálmese, por favor.\"",
+					"en": "\"Calm down, please.\""
+				}
+			],
+			"correcta": 1
+		},
+		{
+			"id": "mt_breaks",
+			"anuncio": {
+				"es": "Minitraining en Campus: \"Breaks y lunch: minuto 46\". Se hace en Available. En el break no: el break es para descansar de aprender.",
+				"en": "Minitraining in Campus: \"Breaks, lunch: minute 46\". Do it in Available. Not on your break: the break is for resting from learning."
+			},
+			"titulo": {
+				"es": "Breaks y lunch: minuto 46",
+				"en": "Breaks, lunch: minute 46"
+			},
+			"texto": {
+				"es": "Dos breaks de diez minutos y un lunch de cuarenta y cinco, a su hora. Con Break, Lunch o Baño puedes salir de la sala; sin uno de esos AUX, es abandono. El tercer break no existe. El minuto 46 tampoco.",
+				"en": "Two ten-minute breaks and one forty-five-minute lunch, at its time. With Break, Lunch or Bathroom you may leave the room; without one of those AUX, it's abandonment. There's no third break. No minute 46 either."
+			},
+			"pregunta": {
+				"es": "Ya usaste tus dos breaks y quieres un café. ¿Qué haces?",
+				"en": "You've used both breaks and want a coffee. What do you do?"
+			},
+			"opciones": [
+				{
+					"es": "Pongo Break otra vez: es cortito",
+					"en": "Set Break again: it's a short one"
+				},
+				{
+					"es": "Salgo sin cambiar el AUX: nadie mira",
+					"en": "Leave without changing the AUX"
+				},
+				{
+					"es": "Espero al lunch o al fin del turno",
+					"en": "Wait for lunch or the end of the shift"
+				}
+			],
+			"correcta": 2
+		},
+		{
+			"id": "mt_adherencia",
+			"anuncio": {
+				"es": "Último minitraining: \"Adherencia: tu AUX eres tú\". Quien no lo complete sale en la lista.",
+				"en": "Last minitraining: \"Adherence: your AUX is you\". Whoever doesn't complete it goes on the list."
+			},
+			"titulo": {
+				"es": "Adherencia: tu AUX eres tú",
+				"en": "Adherence: your AUX is you"
+			},
+			"texto": {
+				"es": "Available sube tu %. BO lo baja. Break, Lunch, Baño, Coaching y Training lo congelan. Si tu teléfono suena y no estás sentado, es una llamada perdida. La cuarta ya no suena.",
+				"en": "Available raises your %. BO lowers it. Break, Lunch, Bathroom, Coaching and Training freeze it. If your phone rings and you're not seated, it's a missed call. The fourth one doesn't ring anymore."
+			},
+			"pregunta": {
+				"es": "¿Qué AUX baja tu Available %?",
+				"en": "Which AUX lowers your Available %?"
+			},
+			"opciones": [
+				{
+					"es": "Break",
+					"en": "Break"
+				},
+				{
+					"es": "BO",
+					"en": "BO"
+				},
+				{
+					"es": "Lunch",
+					"en": "Lunch"
+				}
+			],
+			"correcta": 1
+		},
+		{
+			"id": "mt_hold",
+			"anuncio": {
+				"es": "Minitraining obligatorio en Campus: \"Hold: no ven tu silla\". Dura menos que un hold. Shero cronometra los dos.",
+				"en": "Mandatory minitraining in Campus: \"Hold: they can't see you\". It's shorter than a hold. Shero times both."
+			},
+			"titulo": {
+				"es": "Hold: no ven tu silla",
+				"en": "Hold: they can't see you"
+			},
+			"texto": {
+				"es": "En una llamada el cliente solo te oye. Si tienes que pararte, primero pon Hold: escucha música y la llamada sigue contigo. Si te levantas sin Hold, cuelga molesto. Y un cliente molesto queda en tus números.",
+				"en": "On a call the customer can only hear you. If you have to get up, set Hold first: they hear music and the call stays with you. Stand up without Hold and they hang up angry. That stays in your numbers."
+			},
+			"pregunta": {
+				"es": "Estás en una llamada y tienes que pararte. ¿Qué haces primero?",
+				"en": "You're on a call and have to get up. What do you do first?"
+			},
+			"opciones": [
+				{
+					"es": "Pongo Hold y recién me paro",
+					"en": "Set Hold, and only then get up"
+				},
+				{
+					"es": "Me paro rápido: vuelvo antes de que lo note",
+					"en": "Get up fast: I'm back before they notice"
+				},
+				{
+					"es": "Corto y lo llamo después",
+					"en": "Hang up and call back later"
+				}
+			],
+			"correcta": 0
+		},
+		{
+			"id": "mt_vitzo",
+			"anuncio": {
+				"es": "Nuevo minitraining: \"Vitzo: solo portal\". Es cortito. Como la paciencia de Shero. Es broma, Shero.",
+				"en": "New minitraining: \"Vitzo: portal only\". It's short. Like Shero's patience. Just kidding, Shero."
+			},
+			"titulo": {
+				"es": "Vitzo: solo portal",
+				"en": "Vitzo: portal only"
+			},
+			"texto": {
+				"es": "Si el partner pagador es Vitzo: status, POD, reversal y contacto se hacen en el Portal Vitzo. Nunca por correo. Ni con la plantilla 'POD request'. Ni aunque una nota interna o el propio portal digan otra cosa.",
+				"en": "If the paying partner is Vitzo: status, POD, reversal and contact are done in the Vitzo Portal. Never by email. Not with the 'POD request' template. Not even if an internal note or the portal itself says otherwise."
+			},
+			"pregunta": {
+				"es": "Banco Andino pide el POD de una operación pagada por Vitzo. ¿Qué haces?",
+				"en": "Banco Andino asks for the POD of a transaction paid by Vitzo. What do you do?"
+			},
+			"opciones": [
+				{
+					"es": "Plantilla 'POD request' a ops@vitzo.kp",
+					"en": "'POD request' template to ops@vitzo.kp"
+				},
+				{
+					"es": "Reenvío el correo del banco a Vitzo",
+					"en": "Forward the bank's email to Vitzo"
+				},
+				{
+					"es": "Portal Vitzo → Descargar POD → adjuntar y responder al banco",
+					"en": "Vitzo Portal → Download POD → attach and reply to the bank"
+				}
+			],
+			"correcta": 2
+		},
+		{
+			"id": "mt_correo",
+			"anuncio": {
+				"es": "Último minitraining: \"El correo es un caso\". Tienen diez minutos por correo. Leer esto toma menos. Lo medí.",
+				"en": "Last minitraining: \"An email is a case\". You get ten minutes per email. Reading this takes less. I timed it."
+			},
+			"titulo": {
+				"es": "El correo es un caso",
+				"en": "An email is a case"
+			},
+			"texto": {
+				"es": "Un correo de BO es un caso: Kardex, destinatario (el partner pagador), plantilla, campos, enviar, tipificar y cerrar. Tienes diez minutos de juego. Los datos salen de Kardex, no de lo que escribió el cliente.",
+				"en": "A BO email is a case: Kardex, recipient (the paying partner), template, fields, send, tag and close. You have ten game minutes. The data comes from Kardex, not from what the customer wrote."
+			},
+			"pregunta": {
+				"es": "El cliente dice 500 KP. Kardex dice 480 KP. ¿Qué monto va en el correo?",
+				"en": "The customer says 500 KP. Kardex says 480 KP. Which amount goes in the email?"
+			},
+			"opciones": [
+				{
+					"es": "500 KP: el cliente sabe cuánto mandó",
+					"en": "500 KP: the customer knows what they sent"
+				},
+				{
+					"es": "480 KP: lo que dice Kardex",
+					"en": "480 KP: what Kardex says"
+				},
+				{
+					"es": "Ninguno: dejo el campo vacío",
+					"en": "Neither: I leave the field empty"
+				}
+			],
+			"correcta": 1
+		},
+		{
+			"id": "mt_allocations",
+			"anuncio": {
+				"es": "Team, minitraining obligatorio en Campus: \"Allocations y la lista\". Yo publico la lista; el porcentaje lo ponen ustedes. Shero lo revisa al final del turno.",
+				"en": "Team, mandatory minitraining in Campus: \"Allocations and the list\". I post the list; the percentage is on you. Shero checks it at the end of the shift."
+			},
+			"titulo": {
+				"es": "Allocations y la lista",
+				"en": "Allocations and the list"
+			},
+			"texto": {
+				"es": "La lista sale cada 90 minutos con el Available del team: target 70 %. Una allocation te manda un rato a otro AUX, casi siempre BO; la orden la da el RTA en #allocations. Cuando termina, vuelves a Available.",
+				"en": "The list comes out every 90 minutes with the team's Available: target 70 %. An allocation sends you to another AUX, usually BO; the RTA orders it in #allocations. When it ends, back to Available."
+			},
+			"pregunta": {
+				"es": "Terminó tu allocation a BO y no tienes casos abiertos. ¿Qué haces?",
+				"en": "Your BO allocation ended and you have no open case. What do you do?"
+			},
+			"opciones": [
+				{
+					"es": "Me quedo en BO por si llega otro caso",
+					"en": "Stay in BO in case another case comes"
+				},
+				{
+					"es": "Pongo Break: me lo gané",
+					"en": "Set Break: I earned it"
+				},
+				{
+					"es": "Vuelvo a Available",
+					"en": "Go back to Available"
+				}
+			],
+			"correcta": 2
+		},
+		{
+			"id": "mt_kyc",
+			"anuncio": {
+				"es": "Nuevo minitraining: \"KYC: primero el Recheck\". Cortito y con etiquetas. A Shero le encantan las etiquetas.",
+				"en": "New minitraining: \"KYC: Recheck first\". Short, and with tags. Shero loves tags."
+			},
+			"titulo": {
+				"es": "KYC: primero el Recheck",
+				"en": "KYC: Recheck first"
+			},
+			"texto": {
+				"es": "Los KYC llegan solo en BO, en Identa. Mira la etiqueta, la región y el monto. «KYC Recheck»: el recheck va primero. «Revisión reforzada»: solo Cumplimiento cambia el estado; tú escalas. Lo demás, en las Guías.",
+				"en": "KYC cases only arrive in BO, in Identa. Check the tag, the region and the amount. \"KYC Recheck\": the recheck goes first. \"Enhanced review\": only Compliance changes the status; you escalate. The rest is in the Guides."
+			},
+			"pregunta": {
+				"es": "El perfil dice «Revisión reforzada» y la e-verificación pasó. ¿Qué haces?",
+				"en": "The profile says \"Enhanced review\" and e-verification passed. What now?"
+			},
+			"opciones": [
+				{
+					"es": "Escalo: solo Cumplimiento cambia el estado",
+					"en": "Escalate: only Compliance changes the status"
+				},
+				{
+					"es": "Apruebo: la e-verificación pasó",
+					"en": "Approve: e-verification passed"
+				},
+				{
+					"es": "Rechazo, por si acaso",
+					"en": "Reject, just in case"
+				}
+			],
+			"correcta": 0
+		},
+		{
+			"id": "mt_ack",
+			"anuncio": {
+				"es": "Último minitraining: \"El Ack: un WW se contesta\". Quien no lo complete sale en la lista. No es amenaza. Es la lista.",
+				"en": "Last minitraining: \"The Ack: answer your WW\". Whoever doesn't complete it goes on the list. It's not a threat. It's the list."
+			},
+			"titulo": {
+				"es": "El Ack: un WW se contesta",
+				"en": "The Ack: answer your WW"
+			},
+			"texto": {
+				"es": "Un WW llega por Ezlaki y hay que darle Ack: confirmas que lo leíste, no que estés de acuerdo. Se da en una PC de la sala; si estás lejos tienes un poco más de tiempo. Sin Ack, tu supervisor te lo lleva en persona.",
+				"en": "A WW arrives on Ezlaki and you must Ack it: you confirm you read it, not that you agree. You give it on a PC in the room; if you're far you get a little more time. Without an Ack, your supervisor brings it in person."
+			},
+			"pregunta": {
+				"es": "Te llega un WW y crees que es injusto. ¿Qué haces primero?",
+				"en": "You get a WW and think it's unfair. What do you do first?"
+			},
+			"opciones": [
+				{
+					"es": "No le doy Ack hasta que me lo expliquen",
+					"en": "Don't Ack it until someone explains"
+				},
+				{
+					"es": "Le doy Ack: es acuse de recibo, no confesión",
+					"en": "Ack it: it's a receipt, not a confession"
+				},
+				{
+					"es": "Cierro Ezlaki y sigo trabajando",
+					"en": "Close Ezlaki and keep working"
+				}
+			],
+			"correcta": 1
+		}
+	],
+	"minitraining_pendiente": {
+		"es": "Faltan {n} minitrainings. No es presión. Es seguimiento.",
+		"en": "{n} minitrainings missing. It's not pressure. It's follow-up."
+	},
+	"shero_minitraining": {
+		"es": "Minitraining pendiente. Te lo pidieron tres veces. Yo te lo pido una.",
+		"en": "Minitraining pending. You were asked three times. I'm asking once."
+	},
+	"minitraining_hecho": {
+		"es": "Gracias por completar el minitraining 🙌 Shero lo verá.",
+		"en": "Thanks for completing the minitraining 🙌 Shero will see it."
+	}
+}

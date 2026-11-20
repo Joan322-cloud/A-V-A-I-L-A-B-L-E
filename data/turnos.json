@@ -1,0 +1,812 @@
+[
+	{
+		"turno": 0,
+		"dia": "training",
+		"nombre": {
+			"es": "Training",
+			"en": "Training"
+		},
+		"fecha": {
+			"es": "Recuerdo",
+			"en": "Memory"
+		},
+		"corto": {
+			"es": "RECUERDO",
+			"en": "MEMORY"
+		},
+		"titulo": {
+			"es": "Training (recuerdo)",
+			"en": "Training (memory)"
+		},
+		"presente": {
+			"es": "Lunes 26 de octubre de 2026",
+			"en": "Monday, October 26, 2026"
+		},
+		"recuerdo": {
+			"Jiroshi": {
+				"fecha": {
+					"es": "Viernes 24 de octubre de 2025",
+					"en": "Friday, October 24, 2025"
+				},
+				"despues": {
+					"es": "1 año después",
+					"en": "1 year later"
+				},
+				"iso": "2025-10-24",
+				"piensa": [
+					{
+						"es": "Sesenta y dos palabras por minuto. «Eres justo lo que buscamos.» Ya, Jiroshi, tú puedes.",
+						"en": "Sixty-two words per minute. \"You're just what we're looking for.\" Come on, Jiroshi, you can do this.",
+						"voz": "jiroshi_recuerdo_1"
+					},
+					{
+						"es": "Con esto pago la pensión de Kiara. Todo el ciclo. Mamá no lo va a creer.",
+						"en": "With this I pay Kiara's tuition. The whole term. Mom won't believe it.",
+						"voz": "jiroshi_recuerdo_2"
+					},
+					{
+						"es": "Camisa celeste, planchada. Si soy perfecto, nadie me toca. Así de simple.",
+						"en": "Light blue shirt, ironed. If I'm perfect, nobody can touch me. That simple.",
+						"voz": "jiroshi_recuerdo_3"
+					},
+					{
+						"es": "En seis meses TL. Le compro a mamá un carrito nuevo. Con techo.",
+						"en": "TL in six months. I'll buy Mom a new cart. With a roof.",
+						"voz": "jiroshi_recuerdo_4"
+					}
+				]
+			},
+			"Marko": {
+				"fecha": {
+					"es": "Viernes 24 de octubre de 2025",
+					"en": "Friday, October 24, 2025"
+				},
+				"despues": {
+					"es": "1 año después",
+					"en": "1 year later"
+				},
+				"iso": "2025-10-24",
+				"piensa": [
+					{
+						"es": "Jiroshi dice que aquí se puede dormir en el break. Esto va a estar bacán.",
+						"en": "Jiroshi says you can nap on your break here. This is gonna be great.",
+						"voz": "marko_recuerdo_1"
+					},
+					{
+						"es": "Sueldo fijo. Pago las apps en dos meses y se acabó. Tranqui.",
+						"en": "Steady pay. I'll clear the apps in two months and that's it. Easy.",
+						"voz": "marko_recuerdo_2"
+					},
+					{
+						"es": "El abuelo decía que el trabajo honrado se nota en la cara. A ver si se me nota, abuelo.",
+						"en": "Grandpa used to say honest work shows on your face. Let's see if it shows on mine, Grandpa.",
+						"voz": "marko_recuerdo_3"
+					},
+					{
+						"es": "Con el primer sueldo le pongo flores al abuelo. Y ya no más apuestas. Nunca más.",
+						"en": "With my first paycheck I'll bring Grandpa flowers. And no more betting. Never again.",
+						"voz": "marko_recuerdo_4"
+					}
+				]
+			},
+			"Llauri": {
+				"fecha": {
+					"es": "Viernes 24 de octubre de 2025",
+					"en": "Friday, October 24, 2025"
+				},
+				"despues": {
+					"es": "1 año después",
+					"en": "1 year later"
+				},
+				"iso": "2025-10-24",
+				"piensa": [
+					{
+						"es": "Bono por inglés y turno de noche. Me alcanza para la universidad. Perfecto.",
+						"en": "English bonus and a night shift. It covers university. Perfect.",
+						"voz": "llauri_recuerdo_1"
+					},
+					{
+						"es": "Voy a leer el reglamento entero. Nadie lo lee. Por eso.",
+						"en": "I'm going to read the whole rulebook. Nobody reads it. That's why.",
+						"voz": "llauri_recuerdo_2"
+					},
+					{
+						"es": "Cláusula por cláusula. Si las leo todas, nadie me puede engañar.",
+						"en": "Clause by clause. If I read them all, nobody can fool me.",
+						"voz": "llauri_recuerdo_3"
+					},
+					{
+						"es": "Sin un sol del padrastro. Con esto termino la carrera yo sola.",
+						"en": "Not one cent from my stepfather. With this I finish my degree on my own.",
+						"voz": "llauri_recuerdo_4"
+					}
+				]
+			},
+			"Ttoom": {
+				"fecha": {
+					"es": "Viernes 24 de octubre de 2025",
+					"en": "Friday, October 24, 2025"
+				},
+				"despues": {
+					"es": "1 año después",
+					"en": "1 year later"
+				},
+				"iso": "2025-10-24",
+				"piensa": [
+					{
+						"es": "Turno de noche: dicen que de madrugada casi no entran llamadas. Perdón, qué suerte la mía.",
+						"en": "Night shift: they say almost no calls come in before dawn. Sorry, I'm just so lucky.",
+						"voz": "ttoom_recuerdo_1"
+					},
+					{
+						"es": "Este mes sí le mando el giro completo a mamá.",
+						"en": "This month I'm sending Mom the full transfer.",
+						"voz": "ttoom_recuerdo_2"
+					},
+					{
+						"es": "Papá, mamá: su hijo trabaja en una torre de vidrio. En Lima. Con fotocheck.",
+						"en": "Dad, Mom: your son works in a glass tower. In Lima. With a badge.",
+						"voz": "ttoom_recuerdo_3"
+					},
+					{
+						"es": "Y si de noche no entra nada, hasta puedo estudiar inglés. Perdón, qué suerte.",
+						"en": "And if nothing comes in at night, I can even study English. Sorry, I'm so lucky.",
+						"voz": "ttoom_recuerdo_4"
+					}
+				]
+			},
+			"Juan": {
+				"fecha": {
+					"es": "Viernes 24 de octubre de 2025",
+					"en": "Friday, October 24, 2025"
+				},
+				"despues": {
+					"es": "1 año después",
+					"en": "1 year later"
+				},
+				"iso": "2025-10-24",
+				"piensa": [
+					{
+						"es": "Era el ciento cuarenta y siete de la cola y me eligieron. Con seguro para mamá.",
+						"en": "I was number one hundred forty-seven in line and they picked me. With insurance for Mom.",
+						"voz": "juan_recuerdo_1"
+					},
+					{
+						"es": "Hoy no me duermo. Ni un minuto. Hoy no.",
+						"en": "Not falling asleep today. Not one minute. Not today.",
+						"voz": "juan_recuerdo_2"
+					},
+					{
+						"es": "Doscientos catorce escalones y hoy los bajé corriendo. Mamá se quedó en la puerta, sonriendo.",
+						"en": "Two hundred fourteen steps and today I ran down them. Mom stood at the door, smiling.",
+						"voz": "juan_recuerdo_3"
+					},
+					{
+						"es": "Con el seguro, la diálisis está cubierta. Tres mañanas por semana. Ya no tengo miedo.",
+						"en": "With the insurance, dialysis is covered. Three mornings a week. I'm not scared anymore.",
+						"voz": "juan_recuerdo_4"
+					}
+				]
+			}
+		},
+		"promocion": [
+			{
+				"id": "hola_nayra",
+				"quien": "Llauri",
+				"es": "¡Hola! Yo soy Llauri. ¿También entras hoy? Ay, qué nervios, ¿no?",
+				"en": "Hi! I'm Llauri. Starting today too? Oh, I'm so nervous, aren't you?",
+				"voz": "promo_hola_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "hola_yimi",
+				"quien": "Marko",
+				"es": "Marko. Agarra una empanada antes de que me las acabe.",
+				"en": "Marko. Grab an empanada before I finish them all.",
+				"voz": "promo_hola_yimi",
+				"cast": "promo_nuevo"
+			},
+			{
+				"id": "mano_nayra",
+				"quien": "Llauri",
+				"es": "¡Yo, yo! Ay, no. Mejor no.",
+				"en": "Me, me! Oh, no. Better not.",
+				"voz": "promo_mano_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "llamada_yimi",
+				"quien": "Marko",
+				"es": "Uf. Yo me hubiera quedado mudo.",
+				"en": "Phew. I would've frozen.",
+				"voz": "promo_llamada_yimi",
+				"cast": "promo_nuevo"
+			},
+			{
+				"id": "ayuda_nayra",
+				"quien": "Llauri",
+				"es": "Pst. ¿Kardex era el efe uno? Ay, ya me perdí.",
+				"en": "Psst. Was Kardex F1? Oh, I'm lost already.",
+				"voz": "promo_ayuda_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "gracias_nayra",
+				"quien": "Llauri",
+				"es": "¡Gracias! Te debo una empanada.",
+				"en": "Thanks! I owe you an empanada.",
+				"voz": "promo_gracias_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "planilla_yimi",
+				"quien": "Marko",
+				"es": "Mi primer trabajo con planilla. Le mandé foto del fotocheck a mi mamá.",
+				"en": "My first job on the payroll. I sent my mom a photo of the badge.",
+				"voz": "promo_planilla_yimi",
+				"cast": "promo_nuevo"
+			},
+			{
+				"id": "porque_nayra",
+				"quien": "Llauri",
+				"es": "Yo entré por mi hijita. Cumple cuatro en diciembre. ¿Y tú? ¿Por qué entraste?",
+				"en": "I joined for my little girl. She turns four in December. And you? Why did you join?",
+				"voz": "promo_porque_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "lindo_nayra",
+				"quien": "Llauri",
+				"es": "Qué lindo. Va a salir, vas a ver. Aquí nos cuidamos entre todos.",
+				"en": "That's lovely. It'll work out, you'll see. We look out for each other here.",
+				"voz": "promo_lindo_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "contaras_nayra",
+				"quien": "Llauri",
+				"es": "Ya nos contarás. Tenemos un montón de amanecidas por delante.",
+				"en": "You'll tell us someday. We've got loads of night shifts ahead of us.",
+				"voz": "promo_contaras_nayra",
+				"cast": "promo_nueva"
+			},
+			{
+				"id": "ahorro_zuly",
+				"quien": "Ttoom",
+				"es": "Yo estoy juntando para traer a mi abuelita de Huancayo. Ya casi.",
+				"en": "I'm saving up to bring my grandma over from Huancayo. Almost there.",
+				"voz": "promo_ahorro_zuly",
+				"cast": "promo_zuly"
+			},
+			{
+				"id": "tl_kenyi",
+				"quien": "Juan",
+				"es": "¿Y cuánto gana un TL?",
+				"en": "And how much does a TL make?",
+				"voz": "promo_tl_kenyi",
+				"cast": "promo_kenyi"
+			},
+			{
+				"id": "moto_yimi",
+				"quien": "Marko",
+				"es": "En seis meses TL y en un año, mi moto. Anótenlo.",
+				"en": "TL in six months and my motorbike in a year. Write it down.",
+				"voz": "promo_moto_yimi",
+				"cast": "promo_nuevo"
+			},
+			{
+				"id": "ojos_nayra",
+				"quien": "Llauri",
+				"es": "¡Salí con los ojos cerrados! ¿Otra, otra?",
+				"en": "My eyes were closed! Another one, another one?",
+				"voz": "promo_ojos_nayra",
+				"cast": "promo_nueva"
+			}
+		],
+		"habilitado": false,
+		"induccion": true,
+		"fin": "08:45",
+		"lunch": "08:00",
+		"lunch_min": 45,
+		"breaks": 2,
+		"break_min": 10,
+		"training": null,
+		"training_min": 30,
+		"vitzo": [],
+		"allocations_bo": 0,
+		"allocation_bo_min": 20,
+		"haime": false,
+		"version": "0.3",
+		"checkpoints": "contacto",
+		"contactos": "tutorial",
+		"prob_molesto": 0.0,
+		"rta_tolerancia_s": 600,
+		"ack_s": 30.0,
+		"distorsiones_por_vuelta": 0,
+		"enemigos": [],
+		"calma_s": 30,
+		"fatiga_inicio": 15,
+		"bloques_shero": {
+			"1": [
+				"observar"
+			],
+			"2": [
+				"observar"
+			],
+			"3": [
+				"observar"
+			]
+		},
+		"clase": [
+			"Llauri",
+			"Marko",
+			"Ttoom",
+			"Juan"
+		],
+		"ecos": {
+			"eco_foto": {
+				"es": "Promoción del {fecha}. Éramos cinco.",
+				"en": "Class of {fecha}. There were five of us.",
+				"voz": "eco_foto"
+			},
+			"eco_foto_cerca": {
+				"es": "Nayra duró tres meses. Yimi, seis. Quedo yo.",
+				"en": "Nayra lasted three months. Yimi, six. I'm what's left.",
+				"voz": "eco_foto_cerca"
+			},
+			"eco_foto_2": {
+				"es": "Zuly salía aquí, a la izquierda. Lo sé. ¿Lo sé?",
+				"en": "Zuly was right here, on the left. I know it. Do I know it?",
+				"voz": "eco_foto_2"
+			},
+			"eco_foto_3": {
+				"es": "Kenyi tampoco. No voy a mirar más esta foto.",
+				"en": "Kenyi's gone too. I'm not looking at this photo again.",
+				"voz": "eco_foto_3"
+			},
+			"eco_cafe": {
+				"es": "Dos cincuenta. «Cortesía de la empresa», decía el Trainer.",
+				"en": "Two fifty. \"It's on the company,\" the Trainer used to say.",
+				"voz": "eco_cafe"
+			},
+			"eco_comodin": {
+				"es": "Antes llamaba a Nayra. Contestaba al toque.",
+				"en": "I used to call Nayra. She picked up right away.",
+				"voz": "eco_comodin"
+			},
+			"eco_firma": {
+				"es": "Mi firma. La hice sonriendo.",
+				"en": "My signature. I was smiling when I made it.",
+				"voz": "eco_firma"
+			},
+			"eco_trainer": {
+				"es": "Aquí siempre se vuelve. Siempre.",
+				"en": "People always come back here. Always.",
+				"voz": "eco_vuelve",
+				"quien": "trainer"
+			}
+		},
+		"comodin": {
+			"Nayra": {
+				"es": "¡Ya te lo marco! Corre, corre.",
+				"en": "I'm setting it now! Run, run.",
+				"voz": "comodin_nayra",
+				"cast": "promo_nueva"
+			},
+			"Yimi": {
+				"es": "Listo. Me debes una empanada.",
+				"en": "Done. You owe me an empanada.",
+				"voz": "comodin_yimi",
+				"cast": "promo_nuevo"
+			},
+			"Zuly": {
+				"es": "Ya está. Available. De nada.",
+				"en": "It's done. Available. You're welcome.",
+				"voz": "comodin_zuly",
+				"cast": "promo_zuly"
+			},
+			"Kenyi": {
+				"es": "Marcado. Vuelve rápido, que el Trainer está mirando.",
+				"en": "Set. Hurry back, the Trainer is watching.",
+				"voz": "comodin_kenyi",
+				"cast": "promo_kenyi"
+			}
+		},
+		"contrato_fecha": {
+			"es": "Lunes 27 de octubre de 2025",
+			"en": "Monday, October 27, 2025"
+		}
+	},
+	{
+		"turno": 1,
+		"dia": "lunes",
+		"nombre": {
+			"es": "Lunes",
+			"en": "Monday"
+		},
+		"fecha": {
+			"es": "Lunes 26 de octubre",
+			"en": "Monday, October 26"
+		},
+		"corto": {
+			"es": "LUN 26 OCT",
+			"en": "MON OCT 26"
+		},
+		"titulo": {
+			"es": "Primera amanecida",
+			"en": "First dawn"
+		},
+		"dia_mes": 26,
+		"habilitado": true,
+		"fin": "08:45",
+		"lunch": "04:00",
+		"lunch_min": 45,
+		"breaks": 2,
+		"break_min": 10,
+		"training": null,
+		"training_min": 30,
+		"vitzo": [
+			"03:00",
+			"06:00"
+		],
+		"allocations_bo": 1,
+		"allocation_bo_min": 20,
+		"haime": true,
+		"version": "0.1",
+		"checkpoints": "contacto",
+		"contactos": "contactos_t1",
+		"prob_molesto": 0.1,
+		"rta_tolerancia_s": 90,
+		"ack_s": 8.0,
+		"distorsiones_por_vuelta": 1,
+		"enemigos": [
+			"shero",
+			"rta",
+			"vitzo"
+		],
+		"calma_s": 120,
+		"fatiga_inicio": 20,
+		"bloques_shero": {
+			"1": [
+				"observar",
+				"escribir"
+			],
+			"2": [
+				"caminar",
+				"coaching"
+			],
+			"3": [
+				"perseguir",
+				"screamer"
+			]
+		}
+	},
+	{
+		"turno": 2,
+		"dia": "martes",
+		"nombre": {
+			"es": "Martes",
+			"en": "Tuesday"
+		},
+		"fecha": {
+			"es": "Martes 27 de octubre",
+			"en": "Tuesday, October 27"
+		},
+		"corto": {
+			"es": "MAR 27 OCT",
+			"en": "TUE OCT 27"
+		},
+		"titulo": {
+			"es": "Actualización de campaña",
+			"en": "Campaign update"
+		},
+		"dia_mes": 27,
+		"habilitado": true,
+		"fin": "08:45",
+		"lunch": "03:45",
+		"lunch_min": 45,
+		"breaks": 2,
+		"break_min": 10,
+		"training": "02:20",
+		"training_min": 30,
+		"quiz_aprobar": [
+			2,
+			3,
+			4
+		],
+		"vitzo": [
+			"03:00",
+			"06:00"
+		],
+		"allocations_bo": 2,
+		"allocation_bo_min": 20,
+		"haime": true,
+		"version": "0.2",
+		"checkpoints": "dos_contactos",
+		"contactos": "contactos_t2",
+		"prob_molesto": 0.15,
+		"rta_tolerancia_s": 80,
+		"ack_s": 8.0,
+		"distorsiones_por_vuelta": 1,
+		"enemigos": [
+			"shero",
+			"rta",
+			"vitzo",
+			"trainer",
+			"cliente_molesto"
+		],
+		"calma_s": 100,
+		"fatiga_inicio": 25,
+		"bloques_shero": {
+			"1": [
+				"observar",
+				"escribir",
+				"caminar",
+				"coaching"
+			],
+			"2": [
+				"perseguir",
+				"screamer"
+			],
+			"3": []
+		}
+	},
+	{
+		"turno": 3,
+		"dia": "miercoles",
+		"nombre": {
+			"es": "Miércoles",
+			"en": "Wednesday"
+		},
+		"fecha": {
+			"es": "Miércoles 28 de octubre",
+			"en": "Wednesday, October 28"
+		},
+		"corto": {
+			"es": "MIÉ 28 OCT",
+			"en": "WED OCT 28"
+		},
+		"titulo": {
+			"es": "Allocations",
+			"en": "Allocations"
+		},
+		"dia_mes": 28,
+		"habilitado": true,
+		"fin": "08:45",
+		"lunch": "04:20",
+		"lunch_min": 45,
+		"breaks": 2,
+		"break_min": 10,
+		"training": "01:40",
+		"training_min": 30,
+		"quiz_aprobar": [
+			3,
+			4,
+			4
+		],
+		"vitzo": [
+			"03:00",
+			"06:00"
+		],
+		"allocations_bo": 3,
+		"allocation_bo_min": 20,
+		"haime": true,
+		"version": "0.2",
+		"checkpoints": "dos_contactos",
+		"contactos": "contactos_t3",
+		"prob_molesto": 0.2,
+		"rta_tolerancia_s": 75,
+		"ack_s": 7.0,
+		"distorsiones_por_vuelta": 2,
+		"enemigos": [
+			"shero",
+			"rta",
+			"vitzo",
+			"trainer",
+			"cliente_molesto",
+			"mentor"
+		],
+		"calma_s": 90,
+		"fatiga_inicio": 30,
+		"bloques_shero": {
+			"1": [
+				"observar",
+				"escribir",
+				"caminar",
+				"coaching"
+			],
+			"2": [
+				"perseguir",
+				"screamer"
+			],
+			"3": []
+		}
+	},
+	{
+		"turno": 4,
+		"dia": "jueves",
+		"nombre": {
+			"es": "Jueves",
+			"en": "Thursday"
+		},
+		"fecha": {
+			"es": "Jueves 29 de octubre",
+			"en": "Thursday, October 29"
+		},
+		"corto": {
+			"es": "JUE 29 OCT",
+			"en": "THU OCT 29"
+		},
+		"titulo": {
+			"es": "Auditoría y el puesto ocupado",
+			"en": "Audit and the taken seat"
+		},
+		"dia_mes": 29,
+		"habilitado": true,
+		"version": "0.4",
+		"checkpoints": "login_break_lunch",
+		"contactos": "contactos_t4",
+		"prob_molesto": 0.22,
+		"rta_tolerancia_s": 68,
+		"ack_s": 6.8,
+		"distorsiones_por_vuelta": 2,
+		"enemigos": [
+			"shero",
+			"rta",
+			"vitzo",
+			"haime",
+			"rasec",
+			"papayala"
+		],
+		"calma_s": 75,
+		"fatiga_inicio": 40,
+		"contenido": [
+			"T4 auditoría: REC de Haime 20 s, apagones por fila, el concurso de disfraces de Halloween de Rasec (adelantado al jueves 29)",
+			"T5 el puesto ocupado: Papayala en tu sitio después del lunch, cierra los chats grupales de amigos y provoca auditorías de TL/QA; el piso 5 se abre una vez a las 05:20"
+		],
+		"fin": "08:45",
+		"lunch": "04:00",
+		"lunch_min": 45,
+		"breaks": 2,
+		"break_min": 10,
+		"haime": true
+	},
+	{
+		"turno": 5,
+		"dia": "viernes",
+		"nombre": {
+			"es": "Viernes",
+			"en": "Friday"
+		},
+		"fecha": {
+			"es": "Viernes 30 de octubre",
+			"en": "Friday, October 30"
+		},
+		"corto": {
+			"es": "VIE 30 OCT",
+			"en": "FRI OCT 30"
+		},
+		"titulo": {
+			"es": "Shero Gigante y el derrumbe",
+			"en": "Giant Shero and the collapse"
+		},
+		"dia_mes": 30,
+		"habilitado": true,
+		"version": "0.4",
+		"checkpoints": "login_lunch",
+		"contactos": "contactos_t5",
+		"prob_molesto": 0.28,
+		"rta_tolerancia_s": 58,
+		"ack_s": 6.0,
+		"distorsiones_por_vuelta": 3,
+		"enemigos": [
+			"shero",
+			"shero_gigante",
+			"rta",
+			"vitzo",
+			"haime",
+			"rasec",
+			"om"
+		],
+		"calma_s": 55,
+		"fatiga_inicio": 50,
+		"contenido": [
+			"Penúltimo turno (Viernes): Shero pierde el afro y muta en Shero Gigante (5.2m -> 6.3m), derrumbando progresivamente el Piso 2 hasta el cierre del turno.",
+			"Asientos vacíos de compañeros, Memo en blanco y ofertas del OM a las 08:00."
+		],
+		"fin": "08:45",
+		"lunch": "04:15",
+		"lunch_min": 45,
+		"breaks": 2,
+		"break_min": 10,
+		"haime": true
+	},
+	{
+		"turno": 6,
+		"dia": "sabado",
+		"nombre": {
+			"es": "Sábado",
+			"en": "Saturday"
+		},
+		"fecha": {
+			"es": "Sábado 31 de octubre",
+			"en": "Saturday, October 31"
+		},
+		"corto": {
+			"es": "SÁB 31 OCT",
+			"en": "SAT OCT 31"
+		},
+		"titulo": {
+			"es": "GRASA · El Jefe Final",
+			"en": "GRASA · The Final Boss"
+		},
+		"dia_mes": 31,
+		"habilitado": true,
+		"version": "0.4",
+		"checkpoints": "inicio",
+		"contactos": "contactos_t6",
+		"prob_molesto": 0.38,
+		"rta_tolerancia_s": 42,
+		"ack_s": 5.0,
+		"distorsiones_por_vuelta": 4,
+		"enemigos": [
+			"grasa",
+			"rta",
+			"vitzo",
+			"haime",
+			"rasec",
+			"papayala"
+		],
+		"calma_s": 0,
+		"fatiga_inicio": 60,
+		"congela_contadores": "05:59",
+		"finales": [
+			"renunciar",
+			"despedido",
+			"volverse_shero",
+			"alma_en_software",
+			"secreto"
+		],
+		"contenido": [
+			"Último turno laboral (Sábado 31 Oct · Halloween): El Aula 1 está vacía; el Trainer se ha convertido en GRASA, el jefe final en la azotea.",
+			"El reloj se clava a las 05:59 AM hasta reunir los 3 fragmentos de tu carta de renuncia (Piso 2, Piso 1, Sótano -1) y enfrentar a GRASA en el Piso 9."
+		],
+		"fin": "08:45",
+		"lunch": "04:00",
+		"lunch_min": 45,
+		"breaks": 1,
+		"break_min": 10,
+		"haime": true
+	},
+	{
+		"turno": 7,
+		"dia": "domingo",
+		"nombre": {
+			"es": "Domingo",
+			"en": "Sunday"
+		},
+		"fecha": {
+			"es": "Domingo 1 de noviembre",
+			"en": "Sunday, November 1"
+		},
+		"corto": {
+			"es": "DOM 1 NOV",
+			"en": "SUN NOV 1"
+		},
+		"titulo": {
+			"es": "Día de descanso (Interactivo · 5 Finales)",
+			"en": "Day off (Interactive · 5 Endings)"
+		},
+		"dia_mes": 1,
+		"habilitado": true,
+		"version": "0.4",
+		"descanso": true,
+		"checkpoints": "inicio",
+		"contactos": "",
+		"enemigos": [],
+		"fatiga_inicio": 0,
+		"contenido": [
+			"Domingo 1 de noviembre (Todos los Santos): escena interactiva en el cuarto de Jiroshi. Revisa tus recuerdos, el contrato y contesta el celular a las 23:48 para desbloquear uno de los 5 finales."
+		]
+	}
+]

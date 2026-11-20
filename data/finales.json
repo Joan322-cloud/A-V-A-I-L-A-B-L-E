@@ -1,0 +1,85 @@
+{
+	"agente": "Jiroshi",
+	"finales": [
+		{
+			"id": "renunciar",
+			"numero": 1,
+			"titulo": {
+				"es": "Final 1 · Renunciar",
+				"en": "Ending 1 · Resign"
+			},
+			"subtitulo": {
+				"es": "Cláusula 9 · Terminal de Cese en la Azotea",
+				"en": "Clause 9 · Rooftop Resignation Terminal"
+			},
+			"texto": {
+				"es": "Domingo 1 de noviembre de 2026, 08:45 AM. Subiste a la azotea bajo la lluvia de Lima y firmaste tu renuncia antes de que el reloj volviera a reiniciarse. Sales por los molinetes con tu fotocheck en la mano. Afuera amanece de verdad.",
+				"en": "Sunday, November 1, 2026, 8:45 AM. You climbed to the rooftop under Lima's rain and signed your resignation before the clock reset. You walk out through the turnstiles holding your badge. Outside, dawn finally breaks."
+			}
+		},
+		{
+			"id": "despedido",
+			"numero": 2,
+			"titulo": {
+				"es": "Final 2 · Despedido (3 Written Warnings)",
+				"en": "Ending 2 · Fired (3 Written Warnings)"
+			},
+			"subtitulo": {
+				"es": "Cláusula 11 · Cese por Incumplimiento",
+				"en": "Clause 11 · Termination for Cause"
+			},
+			"texto": {
+				"es": "Acumulaste tres Written Warnings con copia a Gerencia. Shero te escoltó hasta el lobby del sótano -1 mientras Don Fermín desactivaba tu fotocheck. Pierdes el seguro y la pensión de Kiara queda pendiente, pero estás fuera de la torre.",
+				"en": "You accumulated three Written Warnings copied to Management. Shero escorted you to the basement lobby while Don Fermín deactivated your badge. You lose your benefits, but you are out of the tower."
+			}
+		},
+		{
+			"id": "volverse_shero",
+			"numero": 3,
+			"titulo": {
+				"es": "Final 3 · Volverse Shero (Supervisor Fila C)",
+				"en": "Ending 3 · Become Shero (Row C Supervisor)"
+			},
+			"subtitulo": {
+				"es": "Cláusula 12 · Promoción Interna",
+				"en": "Clause 12 · Internal Promotion"
+			},
+			"texto": {
+				"es": "Mantuviste tus métricas impecables y aceptaste la oferta de ascenso. Ahora ocupas el escritorio del fondo en el Piso 2. Tu camisa celeste está impecable. Cuando miras hacia la silla C-14, ves a un nuevo ingresante con ojos cansados. Escribes en Ezlaki: «No hay breaks.»",
+				"en": "You kept spotless metrics and accepted the promotion offer. Now you sit at the supervisor desk at the back of Floor 2. Your light-blue shirt is pressed. Looking at seat C-14, you see a tired new hire. You type in Ezlaki: 'There are no breaks.'"
+			}
+		},
+		{
+			"id": "alma_en_software",
+			"numero": 4,
+			"titulo": {
+				"es": "Final 4 · Alma en el Software",
+				"en": "Ending 4 · Soul in the Software"
+			},
+			"subtitulo": {
+				"es": "Cláusula 14 · Disponibilidad Perpetua",
+				"en": "Clause 14 · Perpetual Availability"
+			},
+			"texto": {
+				"es": "El desgaste superó tu límite y aceptaste la integración total. Tu silla C-14 permanece vacía durante la madrugada, pero tu avatar sigue en verde en Ezlaki («Available.») y tu voz sintetizada responde cada llamada de KipuPay sin descanso.",
+				"en": "Burnout pushed you past the edge. Seat C-14 sits empty through the night shift, yet your Ezlaki status stays green ('Available.') and your synthesized voice answers every KipuPay call endlessly."
+			}
+		},
+		{
+			"id": "secreto",
+			"numero": 5,
+			"titulo": {
+				"es": "Final 5 · El Fotocheck (Final Secreto)",
+				"en": "Ending 5 · The Badge (Secret Ending)"
+			},
+			"subtitulo": {
+				"es": "Cláusula 15 · El Archivo de la Promoción 24/10/2025",
+				"en": "Clause 15 · The Oct 24, 2025 Wave Archive"
+			},
+			"texto": {
+				"es": "Leíste las 15 cláusulas del contrato indefinido, conservaste la polaroid de Llauri, Marko, Ttoom y Juan y expusiste el archivo oculto de Konzentramance. Domingo 1 de noviembre, 23:48: tu teléfono vibra con una llamada entrante de la torre, pero esta vez cuelgas primero.",
+				"en": "You read all 15 clauses of the indefinite contract, kept the polaroid of Llauri, Marko, Ttoom, and Juan, and exposed Konzentramance's hidden archive. Sunday, Nov 1, 11:48 PM: your phone buzzes with an incoming call from the tower, and this time you hang up first."
+			}
+		}
+	]
+}

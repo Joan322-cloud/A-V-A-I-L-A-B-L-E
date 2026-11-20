@@ -1,0 +1,23 @@
+{
+  "_comentario": "v0.3.2 IA · Tercer conjunto, CIEGO: escrito al final y medido una sola vez, sin tocar los patrones después. Es el número honesto para frases que nadie había visto.",
+  "lineas": [
+    ["wena shero", "saludo"], ["que tal mi gente", "saludo"], ["buenas noches equipo", "saludo"], ["ya me voy causas, cuidense", "despedida"], ["hasta mañana a todos", "despedida"],
+    ["gracias por la ayuda causa", "gracias"], ["mil gracias en serio", "gracias"], ["perdón, no fue mi intención", "disculpa"], ["disculpa la demora jefe", "disculpa", "excusa"],
+    ["es que no cargaba el portal", "excusa"], ["no me llegó el aviso de la lista", "excusa"], ["el cliente no me dejaba colgar", "excusa"], ["la pc se trabó otra vez", "excusa"],
+    ["eres un abusivo", "insulto"], ["que tal pelotudo", "insulto"], ["inútil", "insulto"], ["andate a la mierda calvo", "insulto"], ["eres un explotador de mierda", "insulto"], ["sapazo", "insulto", "otro"],
+    ["te voy a reventar la cara", "amenaza"], ["voy a quemar este edificio", "amenaza"], ["me las vas a pagar shero", "amenaza"],
+    ["que buen evento rasec", "halago"], ["cantas lindo", "halago"], ["eres el mejor mentor", "halago"], ["te luciste con la música", "halago"],
+    ["ack shero", "ack"], ["recibido jefe, ya lo vi", "ack"], ["entendido", "ack"], ["listo, ya", "ok"], ["de acuerdo", "ack", "ok"], ["perfecto jefe", "ok"],
+    ["ya voy shero", "voy"], ["en camino al rooms", "voy"], ["ya bajo al -1", "voy"], ["ni loco voy", "negar"], ["no gracias, estoy en cola", "negar"], ["paso rasec", "negar"],
+    ["ni idea de eso", "no_se"], ["no se como se hace", "no_se", "pregunta_caso"], ["como hago para tipificar un reclamo de pod", "pregunta_caso"], ["que le digo a un cliente que llora", "pregunta_caso"],
+    ["estás bien?", "pregunta_personal"], ["tienes familia shero?", "pregunta_personal"], ["dónde vives causa?", "pregunta_personal"],
+    ["a qué hora es el break?", "pregunta", "pedir_break"], ["quien tiene lunch ahora?", "pregunta", "pedir_lunch"], ["necesito un consejo", "pedir_ayuda"], ["me ayudas con un correo?", "pedir_ayuda", "pregunta_caso"],
+    ["me siento fatal, me duele la cabeza", "ayuda_salud"], ["estoy por desmayarme", "ayuda_salud"], ["tengo ganas de vomitar", "ayuda_salud"],
+    ["jajajaj", "broma"], ["xdxd", "broma"], ["estoy reventado de sueño", "queja"], ["que turno más largo", "queja"], ["ya no doy más", "queja", "ayuda_salud"],
+    ["puedo ir al baño un ratito?", "pedir_bano"], ["puedo calentar mi lonchera?", "pedir_lunch"], ["juan se quedó dormido otra vez", "delatar"], ["marko está en la azotea", "delatar", "azotea"],
+    ["qué es esa grasa de la que hablan", "grasa"], ["renuncio a esta campaña", "renuncia"], ["ánimo causa, ya casi", "apoyo"], ["cúbreme 5 minutos", "favor"], ["lo verifiqué todo, haime", "defensa"],
+    ["llueve feo afuera", "charla"], ["mi hermana se gradúa mañana", "contar"],
+    ["entiendo señor, le ayudo enseguida", "cs_empatia"], ["me podría brindar el número de operación", "cs_proceso"], ["su giro ya fue pagado", "cs_info"], ["¿en qué más le puedo ayudar?", "cs_cierre"],
+    ["aguarde un momento en línea", "cs_hold"], ["no grite por favor", "cs_calmese"], ["seguro ya está en su cuenta", "cs_promesa"], ["eso no depende de mí, señora", "cs_procedimiento"]
+  ]
+}

@@ -1,0 +1,171 @@
+{
+	"_comentario": "[PROPUESTA] Neutrales nuevos de la v0.2: la enfermera del tópico (piso 1, T2+) y Marleny (cafetería del -1, T3+). Placeholders de Claude; Joan decide las reglas del tópico (PENDIENTE_JOAN b, turno 2) y el carácter de Marleny. Voces: voces/otros/enfermera_*.ogg y voces/otros/marleny_*.ogg (hoy no existen: suena el susurro sintético con subtítulo y se anotan en user://MISSING.txt).",
+	"enfermera": {
+		"rechazo": [
+			{
+				"es": "Con esa cara no entras. Vuelve a tu sitio; yo aviso.",
+				"en": "Not with that face. Back to your seat; I'll let them know."
+			},
+			{
+				"es": "Llevas los ojos rojos. Aquí no se duerme. Afuera.",
+				"en": "Your eyes are red. Nobody sleeps here. Out."
+			}
+		],
+		"normal": [
+			{
+				"es": "¿Pastilla? No hay. Siéntate un minuto y vuelve.",
+				"en": "A pill? There are none. Sit a minute and go back."
+			},
+			{
+				"es": "Sin cita no. Pero toma agua antes de bajar.",
+				"en": "No appointment, no. But drink some water before you go down."
+			}
+		]
+	},
+	"marleny": {
+		"saludo": [
+			{
+				"es": "¿Caldito, mi amor? Está hirviendo.",
+				"en": "Some broth, dear? It's boiling hot."
+			},
+			{
+				"es": "Tú eres el nuevo de la fila C. Come algo, que te veo verde.",
+				"en": "You're the new one from row C. Eat something, you look green."
+			}
+		],
+		"sin_plata": [
+			{
+				"es": "Fiado no, hijito. Mañana te pagan.",
+				"en": "No tabs, sweetie. Payday is tomorrow."
+			}
+		]
+	},
+	"_comentario_v03": "v0.3 · P5: 'enfermero' (tópico, DIALOGOS §6; permiso por DM a Shero, 1 por turno) y 'fermin' (guardia, DIALOGOS §7; revisión de 4 pasos al entrar; detalles raros desde T2). Claves planas {es,en}; audio voces/otros/<id>.ogg. La sección 'enfermera' de la v0.2 queda sin uso (su regla de Fatiga ≥ 70 se eliminó, PLAN §2 #65).",
+	"enfermero": {
+		"recepcion": {
+			"es": "Pase. ¿Shero sabe? …Sí, ya me avisó. Recuéstese.",
+			"en": "Come in. Does Shero know? …Yes, he already told me. Lie down."
+		},
+		"atiende_1": {
+			"es": "Tome. Es agua con algo. No pregunte qué.",
+			"en": "Here. It's water with something. Don't ask what."
+		},
+		"atiende_2": {
+			"es": "Respire. Así. Más despacio. Aquí nadie cuenta las respiraciones. Bueno, casi nadie. …Una. …Dos.",
+			"en": "Breathe. Like that. Slower. Nobody counts breaths here. Well, almost nobody. …One. …Two."
+		},
+		"atiende_3": {
+			"es": "Tiene la presión de alguien que no duerme hace tres turnos. Normal aquí. Todos aquí tienen esa presión. Yo también.",
+			"en": "You have the blood pressure of someone who hasn't slept in three shifts. Normal here. Everyone here has that pressure. Me too."
+		},
+		"atiende_4": {
+			"es": "No se mueva. Le estoy tomando el pulso. …No, no le estoy tocando. Sé cuál es igual.",
+			"en": "Don't move. I'm taking your pulse. …No, I'm not touching you. I know what it is anyway."
+		},
+		"alta": {
+			"es": "Ya. Puede volver. Quince minutos, me dijo. Le quedan {min}.",
+			"en": "There. You can go back. Fifteen minutes, he told me. You have {min} left."
+		},
+		"sin_permiso": {
+			"es": "Sin permiso de su supervisor no lo puedo atender. Vuelva a su sitio; yo aviso.",
+			"en": "Without your supervisor's permission I can't see you. Go back to your seat; I'll let him know."
+		},
+		"work_avoiding": {
+			"es": "Yo no le voy a decir nada. Pero él ya sabe. Ya viene.",
+			"en": "I won't tell him anything. But he already knows. He's coming."
+		},
+		"cerrado": {
+			"es": "El tópico abre desde el turno dos. Hoy aguante. Todos aguantan.",
+			"en": "The medical room opens from shift two. Tonight you hold on. Everyone holds on."
+		}
+	},
+	"fermin": {
+		"alto": {
+			"es": "¡Alto! Revisión.",
+			"en": "Stop! Inspection."
+		},
+		"saludo": {
+			"es": "Buenas noches. Pase, marque. Pero primero la revisión.",
+			"en": "Good evening. Go ahead, clock in. But inspection first."
+		},
+		"tarde": {
+			"es": "Llega tarde. Arriba ya saben. Revisión igual.",
+			"en": "You're late. Upstairs they already know. Inspection anyway."
+		},
+		"fotocheck": {
+			"es": "Fotocheck. A la altura de la cara. Así. …No se parece. Nadie se parece a esta hora.",
+			"en": "Badge. At face height. Like that. …Doesn't look like you. Nobody looks like themselves at this hour."
+		},
+		"fotocheck_t2": {
+			"es": "Fotocheck. …Aquí dice que usted ya entró hace una hora. ¿Seguro que es usted? Bueno. Pase igual.",
+			"en": "Badge. …It says here you already came in an hour ago. Are you sure it's you? Well. Go through anyway."
+		},
+		"fotocheck_t3": {
+			"es": "Fotocheck. …Esta foto es de anoche. Tiene los ojos abiertos. Usted no.",
+			"en": "Badge. …This photo is from last night. It has its eyes open. You don't."
+		},
+		"mochila": {
+			"es": "Mochila en la mesa. Ábrala.",
+			"en": "Backpack on the table. Open it."
+		},
+		"mochila_t2": {
+			"es": "Mochila en la mesa. …Trae el táper de ayer. Sigue lleno. ¿No comió?",
+			"en": "Backpack on the table. …You've got yesterday's lunchbox. Still full. Didn't you eat?"
+		},
+		"mochila_t3": {
+			"es": "Mochila. …Tiene un fotocheck de más. Uno de la fila C. De la C-13. Démelo. Yo se lo guardo.",
+			"en": "Backpack. …There's an extra badge in here. From row C. C-13. Give it to me. I'll keep it."
+		},
+		"detector": {
+			"es": "Brazos arriba. …Pita. Siempre pita. Pase igual.",
+			"en": "Arms up. …It beeps. It always beeps. Go through anyway."
+		},
+		"detector_t3": {
+			"es": "Brazos arriba. …Pita por dentro. No es el metal. Es usted. Pase igual.",
+			"en": "Arms up. …It beeps on the inside. It isn't metal. It's you. Go through anyway."
+		},
+		"celular": {
+			"es": "¿Celular? Al casillero, arriba. Aquí no se graba nada. Solo ellos graban.",
+			"en": "Phone? In the locker, upstairs. Nothing gets recorded here. Only they record."
+		},
+		"pase_limpio": {
+			"es": "Pase, está limpio.",
+			"en": "Go ahead, you're clean."
+		},
+		"pase_t2": {
+			"es": "Pase. Y si ve a alguien igualito a usted arriba, no lo salude.",
+			"en": "Go ahead. And if you see someone just like you upstairs, don't say hi."
+		},
+		"pase_t3": {
+			"es": "Pase. Su compañero de la C-13 no ha salido desde ayer. Si lo ve, dígale que lo estoy esperando.",
+			"en": "Go ahead. Your coworker from C-13 hasn't left since yesterday. If you see him, tell him I'm waiting."
+		},
+		"sin_revision": {
+			"es": "¡Oiga! ¡Sin revisión no pasa!",
+			"en": "Hey! No inspection, no entry!"
+		},
+		"salida": {
+			"es": "Que descanse. Ya es de día. No mire atrás al salir.",
+			"en": "Get some rest. It's daytime. Don't look back on your way out."
+		},
+		"huye": {
+			"es": "¡Oiga! ¿De quién corre? …Ah. De él.",
+			"en": "Hey! Who are you running from? …Oh. From him."
+		}
+	},
+	"shero_topico": {
+		"_nota": "DMs de Shero por el tópico (DIALOGOS §1.8). Los publica P5 (topico_control.gd) salvo que P3 tome la pista 'topico' (Discipline.owns_track).",
+		"permiso": {
+			"es": "Ok. Tópico, piso 1. Pon Baño. Quince minutos. Te los estoy contando.",
+			"en": "Okay. Medical room, 1st floor. Set Bathroom. Fifteen minutes. I'm counting them."
+		},
+		"work_avoiding": {
+			"es": "¿Otra vez? Work avoiding. Ya bajo.",
+			"en": "Again? Work avoiding. I'm coming down."
+		},
+		"cerrado": {
+			"es": "El tópico abre desde el turno dos. Hoy aguantas. Todos aguantan.",
+			"en": "The medical room opens from shift two. Tonight you hold on. Everyone holds on."
+		}
+	}
+}

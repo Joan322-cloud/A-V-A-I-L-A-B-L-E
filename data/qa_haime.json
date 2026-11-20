@@ -1,0 +1,144 @@
+{
+	"_comentario": "AVAILABLE v0.3 · P5 · Reglas de Haime (QA), PLAN §2 #32-34 y #76 [PROPUESTA]. Minutos = minutos de juego (× Difficulty.scale('plazos') en los plazos). Un contacto es 'malo' si termina molesto, si es un caso BO mal resuelto (bo_miss) o si dejó marcas de QA (opciones con 'qa' en los árboles, motivos del caso BO). Cada marca se convierte en una 'oportunidad de mejora' (oportunidades.<marca>); las que no tienen texto propio usan 'generica'. 'rec_cada' = 1 de cada N contactos muestra el punto REC (Haime los escucha todos).",
+	"llamada_tras_min": [
+		5.0,
+		15.0
+	],
+	"entre_llamadas_min": 40.0,
+	"margen_llegada_min": 10.0,
+	"aviso_noshow_min": 6.0,
+	"max_por_turno": 4,
+	"max_por_turno_dificil": 3,
+	"_nota_v031": "v0.3.1 Q1 (D2/F9): Fácil y Normal = 4 feedbacks (la 4.ª es la calibración final; la 3.ª, la última advertencia con la cara al máximo y «La próxima es la calibración de la muerte»); Difícil y Turno real = 3. F17: tras morir por calibracion_final o qa_inasistencia, margen_tras_muerte_min de juego sin llamadas y hace falta un contacto malo nuevo.",
+	"margen_tras_muerte_min": 90.0,
+	"regreso_min": 6.0,
+	"rec_cada": 3,
+	"puntaje_por_marca": 17,
+	"puntaje_molesto": 30,
+	"sesion": {
+		"_nota": "Segundos REALES entre líneas de la sesión (el reloj 'feedback' corre a 10x: ~85 s reales = ~14 min de juego).",
+		"pausa_linea_s": [
+			5.5,
+			7.0
+		],
+		"replay_s": 6.0
+	},
+	"oportunidades": {
+		"calmese": {
+			"es": "Le dijiste «cálmese». Se calmó. Escucha cómo ya no respira en la grabación.",
+			"en": "You told them \"calm down\". They calmed down. Listen to how they stop breathing on the recording."
+		},
+		"colgar_primero": {
+			"es": "Colgaste primero. El cliente se quedó en la línea once minutos más. Yo también.",
+			"en": "You hung up first. The customer stayed on the line eleven more minutes. So did I."
+		},
+		"culpar_cliente": {
+			"es": "Culpaste al cliente. Aquí la culpa no se transfiere. Se archiva a tu nombre.",
+			"en": "You blamed the customer. Blame isn't transferred here. It's filed under your name."
+		},
+		"dato_personal": {
+			"es": "Pediste un dato que no debías. Ahora lo tenemos los dos. Y lo tengo yo, también, de ti.",
+			"en": "You asked for data you shouldn't have. Now we both have it. And I have yours, too."
+		},
+		"desentenderse": {
+			"es": "Te desentendiste. Se nota cuando alguien deja de estar. Se nota mucho en la madrugada.",
+			"en": "You checked out. You can tell when someone stops being there. You can tell a lot at night."
+		},
+		"documento_sin_empatia": {
+			"es": "Pediste el documento sin empatía. La empatía se pide primero. El documento, después. Tú, al final.",
+			"en": "You asked for the document without empathy. Empathy goes first. The document, after. You, last."
+		},
+		"info_incorrecta": {
+			"es": "Diste información incorrecta con mucha seguridad. Esa seguridad me interesa. La voy a estudiar.",
+			"en": "You gave wrong information very confidently. That confidence interests me. I'm going to study it."
+		},
+		"info_sin_verificar": {
+			"es": "No verificaste. Yo sí verifiqué. Tres veces. Rebobiné hasta que tu voz dejó de sonar como tu voz.",
+			"en": "You didn't verify. I did. Three times. I rewound until your voice stopped sounding like your voice."
+		},
+		"partner_equivocado": {
+			"es": "Mandaste al cliente con el partner equivocado. Él sigue caminando hacia allá.",
+			"en": "You sent the customer to the wrong partner. They're still walking there."
+		},
+		"pedir_clave": {
+			"es": "Escuchaste su clave. KipuPay nunca pide claves. Tú sí la escuchaste. Yo también, ahora.",
+			"en": "You heard their password. KipuPay never asks for passwords. You heard it. So did I, now."
+		},
+		"politica_sin_empatia": {
+			"es": "Leíste la política como si fuera tuya. La política no es tuya. Nada aquí es tuyo.",
+			"en": "You read the policy as if it were yours. The policy isn't yours. Nothing here is yours."
+		},
+		"proceso_innecesario": {
+			"es": "Hiciste un proceso que no hacía falta. Igual quedó registrado. Todo queda registrado.",
+			"en": "You ran a process that wasn't needed. It got recorded anyway. Everything gets recorded."
+		},
+		"prometer_reembolso": {
+			"es": "Prometiste un reembolso. El cliente lo está esperando ahora mismo, despierto, como tú.",
+			"en": "You promised a refund. The customer is waiting for it right now, awake, like you."
+		},
+		"prometer_sin_verificar": {
+			"es": "Prometiste sin verificar. Las promesas quedan grabadas. Yo las colecciono.",
+			"en": "You promised without verifying. Promises get recorded. I collect them."
+		},
+		"respuesta_plantilla": {
+			"es": "Respondiste con plantilla. Sonaste como la máquina de agua. La máquina de agua tiene mejor CSAT.",
+			"en": "You answered with a template. You sounded like the water cooler. The water cooler has better CSAT."
+		},
+		"respuesta_sin_revisar": {
+			"es": "No revisaste antes de responder. Yo reviso todo antes de llamarte. Todo.",
+			"en": "You didn't check before answering. I check everything before I call you. Everything."
+		},
+		"respuesta_vaga": {
+			"es": "Fuiste vago. «Ya lo vemos». ¿Quiénes lo vemos? Dímelo despacio. Lo estoy grabando.",
+			"en": "You were vague. \"We'll look into it\". Who is we? Say it slowly. I'm recording."
+		},
+		"transferir_sin_motivo": {
+			"es": "Transferiste sin motivo. El cliente cayó en una cola que no existe. Ahí está. Escúchalo.",
+			"en": "You transferred without a reason. The customer fell into a queue that doesn't exist. There it is. Listen."
+		},
+		"molesto": {
+			"es": "El cliente terminó molesto. Escucha el clic. Ese clic es tu nombre.",
+			"en": "The customer ended up angry. Listen to the click. That click is your name."
+		},
+		"bo_miss": {
+			"es": "Cerraste un caso mal. El caso no se cierra porque tú lo cierres. Sigue abierto. Dentro de ti.",
+			"en": "You closed a case wrong. A case doesn't close because you close it. It stays open. Inside you."
+		},
+		"tipificacion": {
+			"es": "Tipificaste mal. Un código equivocado y el cliente deja de existir para el sistema. Como tú, a las 8:46.",
+			"en": "Wrong typification. One wrong code and the customer stops existing for the system. Like you, at 8:46."
+		},
+		"destinatario_equivocado": {
+			"es": "Le escribiste a quien no era. Ahora ellos también saben tu nombre.",
+			"en": "You wrote to the wrong person. Now they know your name too."
+		},
+		"correo_incorrecto": {
+			"es": "El correo salió incompleto. Lo leí en voz alta, sola, en esta sala. Sonaba a disculpa.",
+			"en": "The email went out incomplete. I read it aloud, alone, in this room. It sounded like an apology."
+		},
+		"sin_enviar": {
+			"es": "No enviaste nada. El silencio también se audita.",
+			"en": "You sent nothing. Silence gets audited too."
+		},
+		"sin_pod": {
+			"es": "Faltó el POD. La prueba de entrega. Aquí todo necesita prueba. Incluso que estuviste.",
+			"en": "The POD was missing. Proof of delivery. Everything here needs proof. Even that you were here."
+		},
+		"correo_innecesario": {
+			"es": "Mandaste un correo que no hacía falta. Cada correo innecesario es una persona más que sabe que existes.",
+			"en": "You sent an email that wasn't needed. Each unnecessary email is one more person who knows you exist."
+		},
+		"kyc": {
+			"es": "El KYC. Decidiste mal sobre la identidad de otra persona. ¿Estás seguro de la tuya?",
+			"en": "The KYC. You decided wrong about another person's identity. Are you sure about yours?"
+		},
+		"falta_portal": {
+			"es": "No entraste al portal. El portal sí entró en ti. Lo veo en tus ojos.",
+			"en": "You didn't go into the portal. The portal went into you. I see it in your eyes."
+		},
+		"generica": {
+			"es": "Hay algo en tu contacto que no tiene nombre todavía. Le voy a poner el tuyo.",
+			"en": "There's something in your contact that has no name yet. I'm going to give it yours."
+		}
+	}
+}

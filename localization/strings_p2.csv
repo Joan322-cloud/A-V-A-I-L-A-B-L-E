@@ -1,0 +1,156 @@
+keys,es,en
+PKG_P2_READY,Cadenas del paquete P2 (v0.3),Package P2 strings (v0.3)
+HUD_SLEEP,[E] Dormir un rato,[E] Sleep for a while
+HUD_WAKE,[E] Despertar,[E] Wake up
+MSG_TURNSTILE_NO_CHECK,¡Sin revisión no pasa! Acérquese al puesto de seguridad.,"No check, no entry! Step up to the security desk."
+MSG_WATER_ROOM,"Agua tibia, con sabor a plástico. Un poco mejor.",Lukewarm water that tastes like plastic. A little better.
+MSG_SESSION_BACK,Parpadeas. Estás en C-14. Tu sesión siempre estuvo aquí.,You blink. You're at C-14. Your session was always here.
+KPI_TITLE,TEAM KIPUPAY · HOY,TEAM KIPUPAY · TODAY
+KPI_AVAILABLE,Available del equipo,Team Available
+KPI_AHT,AHT promedio,Average AHT
+KPI_CSAT,CSAT,CSAT
+KPI_BREAKS,Breaks justificados,Justified breaks
+KPI_ABANDONO,Llamadas abandonadas,Abandoned calls
+KPI_ME,{agente}: {pct} %  ·  te estamos viendo,{agente}: {pct} %  ·  we are watching you
+KPI_ME_PENDING,{agente}: calculando…,{agente}: calculating…
+SPEAKER_PA,Parlantes,Speakers
+PA_1,"Recordamos a los asesores que el break es un privilegio, no un derecho.","We remind all agents that a break is a privilege, not a right."
+PA_2,Asesor de la fila C: su sesión sigue abierta.,Row C agent: your session is still open.
+PA_3,Konzentramance agradece su sacrificio.,Konzentramance thanks you for your sacrifice.
+PA_4,El ascensor 2 sigue en mantenimiento. No lo esperen.,Elevator 2 is still under maintenance. Do not wait for it.
+PA_5,Se informa que la cola tiene 47 llamadas en espera. Todos Available.,There are 47 calls waiting in queue. Everyone Available.
+PA_6,"Por su seguridad, esta jornada está siendo grabada.","For your safety, this shift is being recorded."
+PA_7,Se solicita a quien esté llorando en el baño del piso 2 que regrese a su posición.,"Whoever is crying in the 2nd-floor bathroom, please return to your position."
+PA_8,Faltan… horas para el fin del turno.,There are… hours left until the end of the shift.
+SIGN_TOWER_SUB,CENTRO DE CONTACTO,CONTACT CENTER
+SIGN_GUARD_CHECK,CONTROL DE SEGURIDAD · REVISIÓN OBLIGATORIA,SECURITY CHECK · MANDATORY SEARCH
+SIGN_REST,ZONA DE DESCANSO · MÁXIMO 10 MIN,REST AREA · 10 MIN MAXIMUM
+POSTER_REST,Recarga energías. Tu equipo te espera.,Recharge. Your team is waiting for you.
+POSTER_REST_DARK,No te duermas. Te están contando los minutos.,Don't fall asleep. They are counting the minutes.
+NOTE_PUFF,"si te duermes aquí, que no te encuentren","if you fall asleep here, don't let them find you"
+SIGN_STREET_SHOP,BOTICA 24 HORAS,24-HOUR PHARMACY
+BUS_ROUTE,47  AV. INTERMINABLE · NOCTURNO,47  ENDLESS AVE. · NIGHT
+SIGN_CALIBRATION,SALA DE CALIBRACIÓN · QA,CALIBRATION ROOM · QA
+SIGN_RECORDED,ESTA SESIÓN ESTÁ SIENDO GRABADA,THIS SESSION IS BEING RECORDED
+QA_SCREEN,Calibración · Nota: 0 / 100,Calibration · Score: 0 / 100
+QA_BOARD,"OPORTUNIDADES DE MEJORA
+1. Empatía
+2. Empatía
+3. Empatía","OPPORTUNITIES FOR IMPROVEMENT
+1. Empathy
+2. Empathy
+3. Empathy"
+NOTE_CALIBRATION,no llores aquí adentro. se escucha,don't cry in here. they can hear it
+NOTE_WATER,el agua está bien. es lo único que está bien,the water is fine. it's the only thing that is fine
+POSTER_ROOM_1,Cada llamada es una oportunidad.,Every call is an opportunity.
+POSTER_ROOM_1_DARK,Cada llamada es una deuda.,Every call is a debt.
+POSTER_ROOM_2,Sonríe: el cliente lo escucha.,Smile: the customer can hear it.
+POSTER_ROOM_2_DARK,Sonríe. Él también te escucha.,Smile. He can hear you too.
+POSTER_LOCKERS,Deja tus problemas en el casillero.,Leave your problems in the locker.
+POSTER_LOCKERS_DARK,Deja aquí lo que te queda.,Leave here whatever you have left.
+NOTE_C13,volví a las 3:47 y no había nadie,I came back at 3:47 and no one was here
+NOTE_DESK_1,día 41 sin break,day 41 without a break
+NOTE_DESK_2,no te pares. no te pares. no te pares,don't stand up. don't stand up. don't stand up
+NOTE_DESK_3,si oyes música a las 4 no mires atrás,if you hear music at 4 don't look back
+NOTE_DESK_4,mamá perdón por no llamar,mom sorry for not calling
+NOTE_DESK_5,mi available es 69 %. ayuda,my available is 69 %. help
+NOTE_DESK_6,el de la C-15 nunca contesta,the guy at C-15 never answers
+NOTE_LOCKER,no abras el 47,don't open number 47
+NOTE_BATHROOM,aquí no hay cámaras. creo,there are no cameras in here. I think
+POSTER_ATTITUDE_DARK,AVAILABLE ES UNA ACTITUD. LA TUYA NO ALCANZA.,AVAILABLE IS AN ATTITUDE. YOURS IS NOT ENOUGH.
+POSTER_BREAK_DARK,EL BREAK ES UN PRIVILEGIO. YA LO USASTE.,A BREAK IS A PRIVILEGE. YOU ALREADY USED IT.
+POSTER_METRICS_DARK,LAS MÉTRICAS NO MIENTEN. TÚ SÍ.,METRICS DON'T LIE. YOU DO.
+NOTE_TRAINING,responde lo que él quiere oír,answer what he wants to hear
+NOTE_TOPICO,no digas que te sientes mal dos veces,don't say you feel sick twice
+SIGN_ROOFTOP_HOURS,AZOTEA · SOLO EN BREAK O LUNCH,ROOFTOP · BREAK OR LUNCH ONLY
+SIGN_ROOFTOP_CAFE,CAFETERÍA AL AIRE LIBRE,OPEN-AIR CAFETERIA
+ROOFTOP_MENU,"MENÚ
+Café ........ S/ 2.50
+Sánguche .... S/ 6.00
+Microondas .. gratis
+(10 min)","MENU
+Coffee ..... S/ 2.50
+Sandwich ... S/ 6.00
+Microwave .. free
+(10 min)"
+NOTE_ROOFTOP,desde aquí se ve la ventana de Shero,you can see Shero's window from here
+SCR_BREAK,¡TE DIJE QUE NO HAY BREAKS!,I TOLD YOU THERE ARE NO BREAKS!
+SCR_TERCER_BREAK,¡TRES BREAKS! ¡TRES!,THREE BREAKS! THREE!
+SCR_LUNCH,¡CUARENTA Y CINCO MINUTOS!,FORTY-FIVE MINUTES!
+SCR_CORREO,¡DIECINUEVE MINUTOS!,NINETEEN MINUTES!
+SCR_SALA,¡ABANDONO DE POSICIÓN!,ABANDONMENT OF POSITION!
+SCR_TRAINING,¡EL TRAINING TERMINÓ HACE CATORCE MINUTOS!,TRAINING ENDED FOURTEEN MINUTES AGO!
+SCR_COACHING,¡AHORA SÍ TIENES COACHING!,NOW YOU HAVE COACHING!
+SCR_COACHING_RASEC,¿COACHING CON QUIÉN?,COACHING WITH WHOM?
+SCR_COACHING_EXCESO,¿ONCE HORAS DE COACHING?,ELEVEN HOURS OF COACHING?
+SCR_RASEC_EVENTO,¡AQUÍ TODOS PARTICIPAN!,EVERYONE TAKES PART HERE!
+SCR_QA_TARDE,LLEGAS TARDE A TU FEEDBACK.,YOU'RE LATE FOR YOUR FEEDBACK.
+SCR_HAIME,ESTA LLAMADA ESTÁ SIENDO GRABADA.,THIS CALL IS BEING RECORDED.
+SCR_LLAMADAS,¡CONTESTEN ESAS LLAMADAS!,ANSWER THOSE CALLS!
+SCR_ISLA,¡TU ISLA ES LA MÍA!,YOUR ISLAND IS MINE!
+SCR_AVL,¡{pct} POR CIENTO!,{pct} PERCENT!
+SCR_TOPICO,¡AHORA SÍ TE SIENTES MAL!,NOW YOU FEEL SICK!
+SCR_ACK,¡DALE ACK!,ACK IT!
+SCR_CESE,Firma.,Sign.
+SCR_MOLESTOS,¡TRES! ¡TRES CLIENTES!,THREE! THREE CUSTOMERS!
+SCR_RTA,¡ADHERENCIA!,ADHERENCE!
+SCR_VITZO,¡ENVÍENME CORREOO!,SEND ME THE EMAIL!!
+SCR_VITZO_WMM,¿POD? ¡¿POR CORREO?! ¡ENVÍENME CORREOO!,POD? BY EMAIL?! SEND ME THE EMAIL!!
+SCR_TRAINER,¡GAAAA!,GAAAA!
+SCR_GRASA,¡¿Y TÚ QUIÉN ERES?!,AND WHO ARE YOU?!
+SCR_GUARDIA,¡SIN REVISIÓN NO PASA!,"NO CHECK, NO ENTRY!"
+SCR_MEMO_TITLE,AMONESTACIÓN,DISCIPLINARY NOTICE
+SCR_MEMO_BODY,"Motivo: break excedido.
+Se deja constancia en su legajo.
+
+Firma del supervisor: ____","Reason: break exceeded.
+This is recorded in your file.
+
+Supervisor signature: ____"
+SCR_ROOMS_TITLE,Ezlaki Rooms · Coaching,Ezlaki Rooms · Coaching
+SCR_ROOMS_BODY,"Shero te invitó a una reunión.
+Uniéndote…","Shero invited you to a meeting.
+Joining…"
+SCR_ROOMS_BODY_RASEC,"Rasec (TM) te invitó a una reunión.
+♪ música de madrugada ♪","Rasec (TM) invited you to a meeting.
+♪ late-night music ♪"
+SCR_ROOMS_ENDED,"Reunión finalizada hace 0 min.
+Sigues en AUX Coaching.","Meeting ended 0 min ago.
+You are still in AUX Coaching."
+SCR_REC_LINE,Esta llamada está siendo grabada.,This call is being recorded.
+SCR_LIST_TITLE,#team-familia · Allocations · Available %,#team-familia · Allocations · Available %
+SCR_LIST_BODY,"Jiroshi ....... 88 %
+Marko ......... 81 %
+Ttoom ......... 79 %
+Juan .......... 74 %
+{agente} ...... {pct} %   ◄ bajo el target","Jiroshi ....... 88 %
+Marko ......... 81 %
+Ttoom ......... 79 %
+Juan .......... 74 %
+{agente} ...... {pct} %   ◄ below target"
+SCR_WW_TITLE,WRITTEN WARNING,WRITTEN WARNING
+SCR_WW_BODY,"Usted ha recibido una amonestación escrita.
+
+[ Ack ]  — tiempo restante: 0 s","You have received a written warning.
+
+[ Ack ]  — time left: 0 s"
+SCR_CESE_SUBJECT,Asunto: Fin de la relación laboral,Subject: End of employment
+SCR_CESE_BODY,"Estimado/a {agente}:
+
+Por la presente le comunicamos que, habiendo acumulado tres (3) amonestaciones escritas, Konzentramance da por concluida la relación laboral con efecto inmediato.
+
+Gracias por su sacrificio.
+RR. HH.","Dear {agente}:
+
+Having accumulated three (3) written warnings, Konzentramance hereby ends your employment effective immediately.
+
+Thank you for your sacrifice.
+HR"
+SCR_CESE_STAMP,CESADO,TERMINATED
+SCR_TICKET_TITLE,Ticket %d · INSATISFECHO,Ticket %d · DISSATISFIED
+SCR_TICKET_BODY,"CSAT 1/5 · ""No me ayudó""","CSAT 1/5 · ""Didn't help me"""
+SCR_PORTAL_TITLE,Portal Vitzo · Caso,Vitzo Portal · Case
+SCR_PORTAL_BODY,"Solicitud recibida por CORREO.
+Estado: NO AUTORIZADO","Request received by EMAIL.
+Status: NOT AUTHORIZED"
+SCR_COACHING_RASEC_NOSHOW,¿Y TÚ POR QUÉ NO VINISTE?,AND WHY DIDN'T YOU COME?

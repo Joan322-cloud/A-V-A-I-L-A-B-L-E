@@ -1,0 +1,282 @@
+[
+	{
+		"id": "break_excedido",
+		"quien": "shero",
+		"motivo": {
+			"es": "Break excedido ({detalle})",
+			"en": "Break exceeded ({detalle})"
+		},
+		"screamer": "shero"
+	},
+	{
+		"id": "tercer_break",
+		"quien": "shero",
+		"motivo": {
+			"es": "Tercer break del turno",
+			"en": "Third break of the shift"
+		},
+		"screamer": "shero"
+	},
+	{
+		"id": "lunch_excedido",
+		"quien": "shero",
+		"motivo": {
+			"es": "Lunch excedido ({detalle})",
+			"en": "Lunch exceeded ({detalle})"
+		},
+		"screamer": "shero"
+	},
+	{
+		"id": "aht_bo",
+		"quien": "shero",
+		"motivo": {
+			"es": "AHT BO ({detalle})",
+			"en": "BO AHT ({detalle})"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "abandono",
+		"quien": "shero",
+		"motivo": {
+			"es": "Abandono de posición",
+			"en": "Abandonment of position"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "coaching_sin_permiso",
+		"quien": "rasec",
+		"motivo": {
+			"es": "Coaching no autorizado",
+			"en": "Unauthorized coaching"
+		},
+		"screamer": "rasec"
+	},
+	{
+		"id": "coaching_exceso",
+		"quien": "rasec",
+		"motivo": {
+			"es": "Coaching excedido ({detalle})",
+			"en": "Coaching overtime ({detalle})"
+		},
+		"screamer": "rasec"
+	},
+	{
+		"id": "rasec_evento",
+		"quien": "rasec",
+		"motivo": {
+			"es": "Aquí todos participan",
+			"en": "Everyone takes part here"
+		},
+		"screamer": "rasec"
+	},
+	{
+		"id": "coaching",
+		"quien": "shero",
+		"motivo": {
+			"es": "Inasistencia a coaching",
+			"en": "Coaching no-show"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "available_bajo",
+		"quien": "shero",
+		"motivo": {
+			"es": "Available {detalle} %",
+			"en": "Available {detalle} %"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "work_avoiding",
+		"quien": "shero",
+		"motivo": {
+			"es": "Work avoiding",
+			"en": "Work avoiding"
+		},
+		"screamer": "shero"
+	},
+	{
+		"id": "regreso_tardio",
+		"quien": "shero",
+		"motivo": {
+			"es": "Regreso tardío del training",
+			"en": "Late return from training"
+		},
+		"screamer": "shero"
+	},
+	{
+		"id": "ww_sin_ack",
+		"quien": "shero",
+		"motivo": {
+			"es": "Written warning sin ack",
+			"en": "Written warning without ack"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "llamadas_perdidas",
+		"quien": "shero",
+		"motivo": {
+			"es": "Llamadas perdidas ({detalle})",
+			"en": "Missed calls ({detalle})"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "otra_isla",
+		"quien": "shero",
+		"motivo": {
+			"es": "Fuera de tu isla",
+			"en": "Away from your island"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "tres_molestos",
+		"quien": "shero",
+		"motivo": {
+			"es": "3 contactos insatisfechos consecutivos",
+			"en": "3 consecutive dissatisfied contacts"
+		},
+		"screamer": "shero",
+		"respeta_calma": true
+	},
+	{
+		"id": "tercer_ww",
+		"quien": "shero",
+		"motivo": {
+			"es": "Fin de la relación laboral",
+			"en": "End of employment"
+		},
+		"screamer": "shero"
+	},
+	{
+		"id": "aux_incorrecto",
+		"quien": "rta",
+		"motivo": {
+			"es": "AUX incorrecto ({detalle})",
+			"en": "Wrong AUX ({detalle})"
+		},
+		"screamer": "rta"
+	},
+	{
+		"id": "correo_vitzo",
+		"quien": "vitzo",
+		"motivo": {
+			"es": "Correo no autorizado a Vitzo",
+			"en": "Unauthorized email to Vitzo"
+		},
+		"screamer": "vitzo"
+	},
+	{
+		"id": "wmm_correo_vitzo",
+		"quien": "vitzo",
+		"motivo": {
+			"es": "Status de un WMM pedido por correo a Vitzo",
+			"en": "WMM status requested from Vitzo by email"
+		},
+		"screamer": "vitzo"
+	},
+	{
+		"id": "wmm_pod_correo",
+		"quien": "vitzo",
+		"motivo": {
+			"es": "POD de un WMM pedido por correo a Vitzo",
+			"en": "WMM POD requested from Vitzo by email"
+		},
+		"screamer": "vitzo"
+	},
+	{
+		"id": "vitzo_reminder",
+		"quien": "vitzo",
+		"motivo": {
+			"es": "Reminder sin confirmar",
+			"en": "Reminder not confirmed"
+		},
+		"screamer": "vitzo"
+	},
+	{
+		"id": "qa_inasistencia",
+		"quien": "haime",
+		"motivo": {
+			"es": "Inasistencia al feedback de QA",
+			"en": "QA feedback no-show"
+		},
+		"screamer": "haime"
+	},
+	{
+		"id": "calibracion_final",
+		"quien": "haime",
+		"motivo": {
+			"es": "Calibración final",
+			"en": "Final calibration"
+		},
+		"screamer": "haime"
+	},
+	{
+		"id": "training_reprobado",
+		"quien": "trainer",
+		"motivo": {
+			"es": "Training reprobado ({detalle})",
+			"en": "Training failed ({detalle})"
+		},
+		"screamer": "trainer"
+	},
+	{
+		"id": "training_inasistencia",
+		"quien": "trainer",
+		"motivo": {
+			"es": "Abandono del training",
+			"en": "Training abandoned"
+		},
+		"screamer": "trainer"
+	},
+	{
+		"id": "colapso",
+		"quien": "fatiga",
+		"motivo": {
+			"es": "Colapso",
+			"en": "Collapse"
+		},
+		"screamer": "",
+		"animacion": "colapso"
+	},
+	{
+		"id": "reflejo_kyc",
+		"quien": "shero",
+		"motivo": {
+			"es": "Gestión de KYC observada en sitio",
+			"en": "KYC handling observed on site"
+		},
+		"screamer": "",
+		"solo_ww": true
+	},
+	{
+		"id": "sin_revision",
+		"quien": "fermin",
+		"motivo": {
+			"es": "Ingresaste sin pasar revisión de seguridad",
+			"en": "Entered without passing security inspection"
+		},
+		"screamer": "fermin"
+	},
+	{
+		"id": "grasa_azotea",
+		"quien": "grasa",
+		"motivo": {
+			"es": "GRASA te alcanzó en la Azotea del Piso 9",
+			"en": "GRASA caught you on the Floor 9 rooftop"
+		},
+		"screamer": "grasa"
+	}
+]

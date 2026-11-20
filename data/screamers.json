@@ -1,0 +1,1566 @@
+{
+	"_comentario": "Screamers por causa (PLAN §8.1, P2; v0.3.1 Q2). causas: una fila por causa de muertes.json con screamer (\"causa@asesino\" para el mismo motivo con otro asesino). duracion = segundos del screamer (Joan: 3-4 s; se afina aquí, fila por fila; el test p2 'screamers' la mide ±0,25). intro = cómo llega (función _i_<intro> de fx/screamers.gd: carrera, detras, frente, apagon, reflejo, pantalla, telefono, lista, ww, tickets, mesa, salto_mesa, detras_corre, monitor, salto, suelo, pizarra, evento, cese, dormido, alcance); variante = nombre heredado de la v0.3 (las pruebas viejas lo leen). intro_alcance = intro si te alcanzó en una persecución (por defecto 'alcance': arranca donde estaba el cazador). t_agarre = fracción de la duración en la que te agarra y grita; t_final = fracción en la que empieza el final. agarre = dos_brazos | ninguno. final = embestida | cabina (Rasec: la cabina de DJ) | mordida (perro). frase = slot de la frase GRITADA (voces/<slug>/scr_grito_<id>, tomas _01.._03, EN en en/; las genera tools/q2_gritos.py); frase_texto = clave del texto en pantalla (strings_v031_q2.csv). deform = curva [[t 0..1, deformación 0..1], …] de la cara (ScreamRig + cara_deforme.gdshader). linea/voz/voz_respaldo/cara/capa: como en la v0.3 (voz = respaldo si falta la frase). modelo = GLB (assets/models); look: calvo (Shero, siempre) / pelo (Rasec). caras: ajustes por modelo de los puntos de la cara de ScreamRig.FACES (opcional). por_asesino: valores por defecto de cada asesino. v0.3.1 (muertes propias, fx/kill_moves.gd): kill = la muerte propia de la fila (agarre, acción y final específicos: KillMoves.SPEC); kill_alcance = la que corre si te alcanzó en una persecución (Vitzo de pie: vitzo_salto); gira = false: la intro no te da vuelta (te agarra por detrás). agarre = dos_brazos | patas (Perrito RTA: las patas delanteras hacen de brazos) | ninguno. v0.3.2 (kills): duracion = la que haga falta para que la frase gritada (la toma más larga ES/EN; frase_rep = veces que la grita) termine + 0,3 s (y las de Joan del documento: 3 y 4 a 5 s, 10 a 4, 22 a 4,5, 23 a 3,5, 24 a 3,8, 25 a 3,5); t_agarre y deform se reescalaron para que la intro dure lo mismo en segundos; frase_s_max = largo de esa frase (lo comprueba v032_kills). frase_parte2_s = (lunch excedido) segundo del archivo en que arranca la segunda mitad de la frase («¡NI UN SEGUNDO MÁS!»: ahí cae el tercer golpe). frase_golpe_s = segundo del golpe fuerte dentro del archivo de la frase (número o lista por toma _01.._03; por defecto 0,11): la voz arranca (golpe − 0,11) s antes del grito para que el golpe del audio caiga en el de la imagen (tomas nuevas del Trainer: 0,24 / 0,30 / 0,34). La duración real la calcula Screamers.seconds_for leyendo el archivo: si la toma es más larga que frase_s_max, la muerte se alarga lo mismo. escena = true: muerte de dos escenas (la fusión de Vitzo, vitzo_fusion; 11,5 s: en la escena 2 el reminder se oye dos veces entero), tope Screamers.LONG_CAP. v0.3.2d: t_agarre_s = segundo ABSOLUTO del agarre (manda sobre t_agarre); salto_s = segundo en que arranca el salto de Vitzo (el estruendo sfx/vitzo_salto cae un cuadro después); intro 'zarpazo' = Vitzo salta de inmediato desde donde quedó (sin pared de recordatorios). kills2 (susto de golpe): TODAS las filas llevan t_agarre_s = 0,10 s (Vitzo 0,36 con salto_s 0,25; el salto de la mesa de Haime 0,50): del disparo de la muerte al agarre no hay intro, ni crecida, ni aviso; la intro de la fila solo decide de qué lado entra (Screamers._i_golpe) salvo las que SON la escena (alcance, zarpazo, dormido, mesa, salto_mesa, cese, acecho_suelo). antes_golpe = agarre y duración de antes (tools/k2_susto_de_golpe.py). accion_s = segundos fijos de acción entre el agarre y la frase gritada (KillMoves.run; la muerte dura agarre + accion_s + la toma + cola). kills2: las filas ya no llevan linea / voz / voz_respaldo (herencia de la v0.3: textos y voces viejos, p. ej. «¡DIECINUEVE MINUTOS!» en aht_bo, que solo sonaban si faltaba la toma de la frase): lo que se grita y se escribe es frase + frase_texto, nada más.",
+	"causas": {
+		"break_excedido": {
+			"asesino": "shero",
+			"variante": "carrera",
+			"duracion": 3.52,
+			"extra": "memo",
+			"anim": "jumpscare_main",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "carrera",
+			"frase": "voces/shero/scr_grito_no_hay_breaks",
+			"frase_texto": "SCR_Q2_NO_HAY_BREAKS",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0284,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.168,
+					0.35
+				],
+				[
+					0.445,
+					0.7
+				],
+				[
+					0.861,
+					1.0
+				]
+			],
+			"kill": "shero_placaje",
+			"frase_s_max": 2.083,
+			"antes_golpe": {
+				"agarre_s": 1.08,
+				"duracion": 4.5
+			},
+			"t_agarre_s": 0.1
+		},
+		"tercer_break": {
+			"asesino": "shero",
+			"variante": "detras",
+			"duracion": 4.44,
+			"anim": "jumpscare_alt",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "carrera",
+			"frase": "voces/shero/scr_grito_tercer_break",
+			"frase_texto": "SCR_Q2_TERCER_BREAK",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0225,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.151,
+					0.35
+				],
+				[
+					0.408,
+					0.7
+				],
+				[
+					0.871,
+					1.0
+				]
+			],
+			"kill": "shero_cuello_pared",
+			"frase_s_max": 2.327,
+			"antes_golpe": {
+				"agarre_s": 0.959,
+				"duracion": 5.3
+			},
+			"t_agarre_s": 0.1
+		},
+		"lunch_excedido": {
+			"asesino": "shero",
+			"variante": "mesa",
+			"duracion": 5.47,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "mesa",
+			"frase": "voces/shero/scr_grito_45_minutos",
+			"frase_texto": "SCR_K2_45_MINUTOS",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0183,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.12,
+					0.35
+				],
+				[
+					0.326,
+					0.7
+				],
+				[
+					0.632,
+					1.0
+				]
+			],
+			"kill": "shero_mesa_taper",
+			"frase_s_max": 4.661,
+			"frase_parte2_s": 2.45,
+			"antes_golpe": {
+				"agarre_s": 1.08,
+				"duracion": 6.45
+			},
+			"t_agarre_s": 0.1
+		},
+		"aht_bo": {
+			"asesino": "shero",
+			"variante": "reflejo",
+			"duracion": 5.05,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "reflejo",
+			"frase": "voces/shero/scr_grito_correo10",
+			"frase_texto": "SCR_K2_CORREO10",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0198,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.15,
+					0.35
+				],
+				[
+					0.412,
+					0.7
+				],
+				[
+					0.726,
+					1.0
+				]
+			],
+			"kill": "shero_monitor",
+			"gira": false,
+			"frase_s_max": 3.209,
+			"antes_golpe": {
+				"agarre_s": 1.366,
+				"duracion": 5.6
+			},
+			"t_agarre_s": 0.1,
+			"nota": "kills2 (Joan, 12/11): grita «¡TE PASASTE 10 MINUTOS DE CORREOO!» (tools/k2_gen_audio.py --solo correo10); «¡¿ACASO NO SABES TRABAJAR?!» pasó a work_avoiding (reflejo_kyc la conserva)."
+		},
+		"abandono": {
+			"asesino": "shero",
+			"variante": "carrera",
+			"duracion": 4.02,
+			"desde_grados": -150.0,
+			"nota": "sale del ascensor o la escalera: llega por detrás",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "carrera",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_ABANDONO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0249,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.164,
+					0.35
+				],
+				[
+					0.443,
+					0.7
+				],
+				[
+					0.861,
+					1.0
+				]
+			],
+			"kill": "shero_lanyard",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.08,
+				"duracion": 5.0
+			},
+			"t_agarre_s": 0.1
+		},
+		"regreso_tardio": {
+			"asesino": "shero",
+			"variante": "carrera",
+			"duracion": 4.42,
+			"desde_grados": 150.0,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "carrera",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_REGRESO_TARDIO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0226,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.162,
+					0.35
+				],
+				[
+					0.442,
+					0.7
+				],
+				[
+					0.861,
+					1.0
+				]
+			],
+			"kill": "shero_lanyard_arrastre",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.08,
+				"duracion": 5.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"coaching": {
+			"asesino": "shero",
+			"variante": "pantalla",
+			"duracion": 4.13,
+			"titulo": "SCR_ROOMS_TITLE",
+			"cuerpo": "SCR_ROOMS_BODY",
+			"cara_antes": "shero_calvo",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "pantalla",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_COACHING",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0242,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.176,
+					0.35
+				],
+				[
+					0.481,
+					0.7
+				],
+				[
+					0.847,
+					1.0
+				]
+			],
+			"kill": "shero_cable_arrastre",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.366,
+				"duracion": 5.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"coaching@rasec": {
+			"asesino": "rasec",
+			"variante": "pantalla",
+			"duracion": 4.1,
+			"titulo": "SCR_ROOMS_TITLE",
+			"cuerpo": "SCR_ROOMS_BODY_RASEC",
+			"cara_antes": "rasec_pelo",
+			"musica": "musica/hold_kipupay_parlantes",
+			"modelo": "rasec",
+			"look": "",
+			"cara": "rasec",
+			"intro": "pantalla",
+			"frase": "voces/rasec/scr_grito_autorizo",
+			"frase_texto": "SCR_Q2_AUTORIZO",
+			"agarre": "dos_brazos",
+			"final": "cabina",
+			"t_agarre": 0.0244,
+			"t_final": 0.665,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.164,
+					0.35
+				],
+				[
+					0.442,
+					0.7
+				],
+				[
+					0.665,
+					1.0
+				]
+			],
+			"kill": "rasec_micro_cabina",
+			"frase_s_max": 2.823,
+			"antes_golpe": {
+				"agarre_s": 1.201,
+				"duracion": 5.2
+			},
+			"t_agarre_s": 0.1
+		},
+		"coaching_sin_permiso": {
+			"asesino": "rasec",
+			"variante": "pantalla",
+			"duracion": 4.2,
+			"titulo": "SCR_ROOMS_TITLE",
+			"cuerpo": "SCR_ROOMS_BODY_RASEC",
+			"cara_antes": "rasec_pelo",
+			"musica": "musica/hold_kipupay_parlantes",
+			"modelo": "rasec",
+			"look": "",
+			"cara": "rasec",
+			"intro": "pantalla",
+			"frase": "voces/rasec/scr_grito_autorizo",
+			"frase_texto": "SCR_Q2_AUTORIZO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0238,
+			"t_final": 0.666,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.163,
+					0.35
+				],
+				[
+					0.442,
+					0.7
+				],
+				[
+					0.666,
+					1.0
+				]
+			],
+			"kill": "rasec_platos",
+			"frase_s_max": 2.823,
+			"antes_golpe": {
+				"agarre_s": 1.198,
+				"duracion": 5.3
+			},
+			"t_agarre_s": 0.1
+		},
+		"coaching_exceso": {
+			"asesino": "rasec",
+			"variante": "apagon",
+			"duracion": 4.7,
+			"extra": "reloj",
+			"modelo": "rasec",
+			"look": "",
+			"cara": "rasec",
+			"intro": "apagon",
+			"frase": "voces/rasec/scr_grito_coaching",
+			"frase_texto": "SCR_Q2_ONCE_HORAS",
+			"agarre": "dos_brazos",
+			"final": "cabina",
+			"t_agarre": 0.0213,
+			"t_final": 0.664,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.161,
+					0.35
+				],
+				[
+					0.441,
+					0.7
+				],
+				[
+					0.664,
+					1.0
+				]
+			],
+			"kill": "rasec_silla_giro",
+			"frase_s_max": 3.011,
+			"antes_golpe": {
+				"agarre_s": 1.201,
+				"duracion": 5.8
+			},
+			"t_agarre_s": 0.1
+		},
+		"rasec_evento": {
+			"asesino": "rasec",
+			"variante": "evento",
+			"duracion": 4.72,
+			"musica": "musica/hold_kipupay_parlantes",
+			"modelo": "rasec",
+			"look": "pelo",
+			"cara": "rasec",
+			"intro": "evento",
+			"frase": "voces/rasec/scr_grito_participan",
+			"frase_texto": "SCR_Q2_PARTICIPAN",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0212,
+			"t_final": 0.655,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.165,
+					0.35
+				],
+				[
+					0.452,
+					0.7
+				],
+				[
+					0.655,
+					1.0
+				]
+			],
+			"kill": "rasec_gorro_silla",
+			"frase_s_max": 2.966,
+			"antes_golpe": {
+				"agarre_s": 1.28,
+				"duracion": 5.9
+			},
+			"t_agarre_s": 0.1
+		},
+		"qa_inasistencia": {
+			"asesino": "haime",
+			"variante": "rec",
+			"duracion": 3.98,
+			"extra": "telefono",
+			"anim": "jumpscare_main",
+			"modelo": "haime",
+			"cara": "haime",
+			"intro": "detras_corre",
+			"frase": "voces/haime/scr_grito_esperando",
+			"frase_texto": "SCR_Q2_ESPERANDO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0251,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.173,
+					0.35
+				],
+				[
+					0.468,
+					0.7
+				],
+				[
+					0.853,
+					1.0
+				]
+			],
+			"kill": "haime_hombro_hoja",
+			"gira": false,
+			"frase_s_max": 2.227,
+			"antes_golpe": {
+				"agarre_s": 1.224,
+				"duracion": 5.1
+			},
+			"t_agarre_s": 0.1
+		},
+		"calibracion_final": {
+			"asesino": "haime",
+			"variante": "rec",
+			"duracion": 4.83,
+			"anim": "jumpscare_main",
+			"modelo": "haime",
+			"cara": "haime",
+			"intro": "salto_mesa",
+			"frase": "voces/haime/scr_grito_empatia",
+			"frase_texto": "SCR_K2_EMPATIA2",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.1035,
+			"deform": [
+				[
+					0.0,
+					0.0
+				],
+				[
+					0.064,
+					0.03
+				],
+				[
+					0.244,
+					0.35
+				],
+				[
+					0.523,
+					0.7
+				],
+				[
+					0.86,
+					1.0
+				]
+			],
+			"nota": "Joan vio 'solo una pantalla roja': la PC acercada de la silla de calibración tapaba al modelo y el REC llenaba la pantalla de rojo opaco (confirmado con qa_q2/old/old_calibracion_final.mp4). v0.3.1: la UI se esconde, sin capa roja plena, salta la mesa.",
+			"kill": "haime_mejillas",
+			"frase_rep": 2,
+			"frase_s_max": 3.585,
+			"antes_golpe": {
+				"agarre_s": 1.368,
+				"duracion": 5.7
+			},
+			"t_agarre_s": 0.5
+		},
+		"llamadas_perdidas": {
+			"asesino": "shero",
+			"variante": "telefono",
+			"duracion": 4.22,
+			"desde_grados": -110.0,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "telefono",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_LLAMADAS_PERDIDAS",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0237,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.163,
+					0.35
+				],
+				[
+					0.442,
+					0.7
+				],
+				[
+					0.861,
+					1.0
+				]
+			],
+			"kill": "shero_cable_cuello",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.082,
+				"duracion": 5.2
+			},
+			"t_agarre_s": 0.1
+		},
+		"otra_isla": {
+			"asesino": "shero",
+			"variante": "telefono",
+			"duracion": 4.42,
+			"desde_grados": 80.0,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "telefono",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_OTRA_ISLA",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0226,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.162,
+					0.35
+				],
+				[
+					0.442,
+					0.7
+				],
+				[
+					0.861,
+					1.0
+				]
+			],
+			"kill": "shero_cable_lazo",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.08,
+				"duracion": 5.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"available_bajo": {
+			"asesino": "shero",
+			"variante": "lista",
+			"duracion": 4.23,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "lista",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_AVAILABLE_BAJO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0236,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.176,
+					0.35
+				],
+				[
+					0.481,
+					0.7
+				],
+				[
+					0.848,
+					1.0
+				]
+			],
+			"kill": "shero_lista",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.369,
+				"duracion": 5.5
+			},
+			"t_agarre_s": 0.1
+		},
+		"work_avoiding": {
+			"asesino": "shero",
+			"variante": "apagon",
+			"duracion": 3.98,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "apagon",
+			"frase": "voces/shero/scr_grito_acaso",
+			"frase_texto": "SCR_K2_ACASO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0251,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.179,
+					0.35
+				],
+				[
+					0.488,
+					0.7
+				],
+				[
+					0.858,
+					1.0
+				]
+			],
+			"kill": "shero_ojos",
+			"frase_s_max": 2.487,
+			"antes_golpe": {
+				"agarre_s": 1.367,
+				"duracion": 5.3
+			},
+			"t_agarre_s": 0.1,
+			"nota": "kills2 (Joan, 12/11): grita «¡¿ACASO NO SABES TRABAJAR?!» (antes la genérica «¡AMONESTACIÓN DISCIPLINARIA!»)."
+		},
+		"ww_sin_ack": {
+			"asesino": "shero",
+			"variante": "ww",
+			"duracion": 4.13,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "ww",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_WW_SIN_ACK",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0242,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.176,
+					0.35
+				],
+				[
+					0.481,
+					0.7
+				],
+				[
+					0.847,
+					1.0
+				]
+			],
+			"kill": "shero_hoja_ww",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.366,
+				"duracion": 5.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"tercer_ww": {
+			"asesino": "shero",
+			"variante": "cese",
+			"duracion": 3.66,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "cese",
+			"frase": "voces/shero/scr_grito_despedido",
+			"frase_texto": "SCR_Q2_DESPEDIDO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0273,
+			"t_final": 0.748,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.208,
+					0.35
+				],
+				[
+					0.568,
+					0.7
+				],
+				[
+					0.82,
+					1.0
+				]
+			],
+			"kill": "shero_fotocheck",
+			"frase_s_max": 2.305,
+			"antes_golpe": {
+				"agarre_s": 1.841,
+				"duracion": 5.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"tres_molestos": {
+			"asesino": "shero",
+			"variante": "tickets",
+			"duracion": 4.13,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "tickets",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_K2_TRES_MOLESTOS",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0242,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.176,
+					0.35
+				],
+				[
+					0.481,
+					0.7
+				],
+				[
+					0.847,
+					1.0
+				]
+			],
+			"kill": "shero_tickets",
+			"frase_s_max": 2.535,
+			"antes_golpe": {
+				"agarre_s": 1.366,
+				"duracion": 5.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"aux_incorrecto": {
+			"asesino": "rta",
+			"variante": "suelo",
+			"duracion": 4.8,
+			"modelo": "perrito_rta",
+			"cara": "perrito_rta_enojado",
+			"intro": "acecho_suelo",
+			"frase": "voces/rta/scr_grito_aux",
+			"frase_texto": "SCR_Q2_AUX",
+			"agarre": "patas",
+			"final": "mordida",
+			"t_agarre": 0.0208,
+			"deform": [
+				[
+					0.0,
+					0.25
+				],
+				[
+					0.125,
+					0.3
+				],
+				[
+					0.16,
+					0.3
+				],
+				[
+					0.19,
+					0.5
+				],
+				[
+					0.365,
+					0.5
+				],
+				[
+					0.4,
+					0.8
+				],
+				[
+					0.8,
+					0.8
+				],
+				[
+					0.84,
+					1.0
+				],
+				[
+					1.0,
+					1.0
+				]
+			],
+			"kill": "rta_trepa_mordida",
+			"frase_s_max": 2.692,
+			"antes_golpe": {
+				"agarre_s": 1.086,
+				"duracion": 5.1
+			},
+			"t_agarre_s": 0.1,
+			"nota": "kills2: 4,8 s (0,1 s de salto + 1,7 s de acción legible: derriba, antebrazo, sacude + la frase); la cara casi no se deforma hasta las fauces.",
+			"accion_s": 1.7,
+			"deform_monotona": false
+		},
+		"correo_vitzo": {
+			"asesino": "vitzo",
+			"variante": "monitor",
+			"duracion": 4.48,
+			"cara": "res://assets/ui/vitzo_cara.png",
+			"intro": "zarpazo",
+			"intro_alcance": "zarpazo",
+			"frase": "voces/vitzo/scr_grito_correo",
+			"frase_texto": "SCR_Q2_CORREO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0804,
+			"modelo": "vitzo",
+			"deform": [
+				[
+					0.0,
+					0.0
+				],
+				[
+					0.067,
+					0.03
+				],
+				[
+					0.212,
+					0.35
+				],
+				[
+					0.474,
+					0.7
+				],
+				[
+					0.868,
+					1.0
+				]
+			],
+			"kill": "vitzo_vidrio_bandeja",
+			"kill_alcance": "vitzo_salto",
+			"frase_s_max": 2.749,
+			"t_agarre_s": 0.36,
+			"salto_s": 0.25,
+			"antes_golpe": {
+				"agarre_s": 0.36,
+				"duracion": 4.48
+			}
+		},
+		"vitzo_reminder": {
+			"asesino": "vitzo",
+			"variante": "monitor",
+			"duracion": 20.0,
+			"cara": "res://assets/ui/vitzo_cara.png",
+			"intro": "zarpazo",
+			"intro_alcance": "zarpazo",
+			"frase": "voces/vitzo/scr_grito_correo",
+			"frase_texto": "SCR_Q2_CORREO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0157,
+			"modelo": "vitzo",
+			"deform": [
+				[
+					0.0,
+					0.0
+				],
+				[
+					0.014,
+					0.05
+				],
+				[
+					0.05,
+					0.6
+				],
+				[
+					0.14,
+					1.0
+				],
+				[
+					1.0,
+					1.0
+				]
+			],
+			"kill": "vitzo_fusion",
+			"kill_alcance": "vitzo_fusion",
+			"escena": true,
+			"frase_s_max": 2.749,
+			"fusion_voz": "voces/agentes/fusion_reminder_<agente>",
+			"t_agarre_s": 0.36,
+			"salto_s": 0.25,
+			"antes_golpe": {
+				"agarre_s": 0.36,
+				"duracion": 22.9
+			}
+		},
+		"wmm_correo_vitzo": {
+			"asesino": "vitzo",
+			"variante": "portal",
+			"duracion": 4.28,
+			"cara": "res://assets/ui/vitzo_cara.png",
+			"intro": "zarpazo",
+			"intro_alcance": "zarpazo",
+			"frase": "voces/vitzo/scr_grito_correo",
+			"frase_texto": "SCR_Q2_CORREO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0841,
+			"modelo": "vitzo",
+			"deform": [
+				[
+					0.0,
+					0.0
+				],
+				[
+					0.07,
+					0.03
+				],
+				[
+					0.215,
+					0.35
+				],
+				[
+					0.477,
+					0.7
+				],
+				[
+					0.869,
+					1.0
+				]
+			],
+			"kill": "vitzo_pantalla_correo",
+			"kill_alcance": "vitzo_salto",
+			"frase_s_max": 2.749,
+			"t_agarre_s": 0.36,
+			"salto_s": 0.25,
+			"antes_golpe": {
+				"agarre_s": 0.36,
+				"duracion": 4.28
+			}
+		},
+		"wmm_pod_correo": {
+			"asesino": "vitzo",
+			"variante": "portal",
+			"duracion": 4.15,
+			"cara": "res://assets/ui/vitzo_cara.png",
+			"intro": "zarpazo",
+			"intro_alcance": "zarpazo",
+			"frase": "voces/vitzo/scr_grito_correo",
+			"frase_texto": "SCR_Q2_CORREO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0867,
+			"modelo": "vitzo",
+			"deform": [
+				[
+					0.0,
+					0.0
+				],
+				[
+					0.052,
+					0.03
+				],
+				[
+					0.083,
+					0.35
+				],
+				[
+					0.37,
+					0.7
+				],
+				[
+					0.843,
+					1.0
+				]
+			],
+			"kill": "vitzo_divisor",
+			"kill_alcance": "vitzo_salto",
+			"frase_s_max": 2.749,
+			"t_agarre_s": 0.36,
+			"salto_s": 0.25,
+			"antes_golpe": {
+				"agarre_s": 0.36,
+				"duracion": 4.15
+			}
+		},
+		"training_reprobado": {
+			"asesino": "trainer",
+			"variante": "pizarra",
+			"duracion": 4.08,
+			"cara": "trainer_grito",
+			"anim": "jumpscare_main",
+			"modelo": "trainer",
+			"intro": "pizarra",
+			"frase": "voces/trainer/scr_grito_gaaaa",
+			"frase_texto": "SCR_Q2_GAAAA",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0245,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.164,
+					0.35
+				],
+				[
+					0.442,
+					0.7
+				],
+				[
+					0.86,
+					1.0
+				]
+			],
+			"kill": "trainer_pizarra",
+			"frase_s_max": 2.207,
+			"frase_golpe_s": [
+				0.24,
+				0.3,
+				0.34
+			],
+			"antes_golpe": {
+				"agarre_s": 1.02,
+				"duracion": 5.0
+			},
+			"t_agarre_s": 0.1,
+			"accion_s": 1.6
+		},
+		"training_inasistencia": {
+			"asesino": "trainer",
+			"variante": "carrera",
+			"duracion": 3.18,
+			"cara": "trainer_grito",
+			"anim": "jumpscare_main",
+			"modelo": "trainer",
+			"look": "",
+			"desde_grados": -140.0,
+			"intro": "carrera",
+			"frase": "voces/trainer/scr_grito_gaaaa",
+			"frase_texto": "SCR_Q2_GAAAA",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0314,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.17,
+					0.35
+				],
+				[
+					0.447,
+					0.7
+				],
+				[
+					0.862,
+					1.0
+				]
+			],
+			"kill": "trainer_oido",
+			"frase_s_max": 2.207,
+			"frase_golpe_s": [
+				0.24,
+				0.3,
+				0.34
+			],
+			"antes_golpe": {
+				"agarre_s": 1.021,
+				"duracion": 4.1
+			},
+			"t_agarre_s": 0.1,
+			"accion_s": 0.6
+		},
+		"reflejo_kyc": {
+			"asesino": "shero",
+			"variante": "reflejo",
+			"duracion": 4.23,
+			"nota": "solo_ww: normalmente no mata; si alguna vez lo hace, reflejo",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "reflejo",
+			"frase": "voces/shero/scr_grito_acaso",
+			"frase_texto": "SCR_K2_ACASO",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0236,
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.176,
+					0.35
+				],
+				[
+					0.481,
+					0.7
+				],
+				[
+					0.848,
+					1.0
+				]
+			],
+			"kill": "shero_teclado",
+			"gira": false,
+			"frase_s_max": 2.487,
+			"antes_golpe": {
+				"agarre_s": 1.369,
+				"duracion": 5.5
+			},
+			"t_agarre_s": 0.1
+		},
+		"lunch_dormido": {
+			"asesino": "shero",
+			"variante": "dormido",
+			"intro": "dormido",
+			"duracion": 3.99,
+			"t_agarre": 0.0251,
+			"frase": "voces/shero/scr_grito_camiseta",
+			"frase_texto": "SCR_K2_CAMISETA",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"nota": "2.ª siesta del lunch (F14): Screamers.row_for usa esta fila si mueres por lunch_excedido acostado en un sofá/puff",
+			"deform": [
+				[
+					0.0,
+					0.03
+				],
+				[
+					0.169,
+					0.35
+				],
+				[
+					0.455,
+					0.7
+				],
+				[
+					0.857,
+					1.0
+				]
+			],
+			"kill": "shero_boca_sofa",
+			"frase_s_max": 2.253,
+			"antes_golpe": {
+				"agarre_s": 1.214,
+				"duracion": 5.1
+			},
+			"t_agarre_s": 0.1
+		},
+		"sin_revision": {
+			"asesino": "fermin",
+			"modelo": "guardia_fermin",
+			"cara": "guardia_fermin",
+			"intro": "carrera",
+			"duracion": 2.9,
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_FERMIN_SIN_REV",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre_s": 0.1
+		},
+		"grasa_azotea": {
+			"asesino": "grasa",
+			"modelo": "grasa",
+			"cara": "grasa",
+			"intro": "carrera",
+			"duracion": 3.4,
+			"gore": 1.0,
+			"frase": "voces/grasa/scr_grito_hail_grasa",
+			"frase_texto": "SCR_K2_HAIL_GRASA",
+			"voz": "grasa/scr_grasa",
+			"voz_respaldo": "grasa/grasa_grito_corto",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"deform": [
+				[
+					0.0,
+					0.3
+				],
+				[
+					0.18,
+					0.72
+				],
+				[
+					0.6,
+					0.92
+				],
+				[
+					0.95,
+					1.0
+				]
+			],
+			"deform_final": 1.0,
+			"t_agarre_s": 0.1
+		},
+		"shero_gigante": {
+			"asesino": "shero",
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"intro": "carrera",
+			"duracion": 3.3,
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_SHERO_GIGANTE",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre_s": 0.1,
+			"gore": 1.0,
+			"deform": [
+				[
+					0.0,
+					0.35
+				],
+				[
+					0.2,
+					0.8
+				],
+				[
+					0.85,
+					1.0
+				]
+			],
+			"deform_final": 1.0
+		}
+	},
+	"por_asesino": {
+		"shero": {
+			"variante": "carrera",
+			"duracion": 2.62,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"linea": "SCR_BREAK",
+			"voz": "shero/shero_screamer",
+			"intro": "carrera",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_Q2_AMONESTACION",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.0382,
+			"antes_golpe": {
+				"agarre_s": 1.08,
+				"duracion": 3.6
+			},
+			"t_agarre_s": 0.1
+		},
+		"rasec": {
+			"variante": "pantalla",
+			"duracion": 2.9,
+			"modelo": "rasec",
+			"look": "",
+			"cara": "rasec",
+			"cara_antes": "rasec_pelo",
+			"linea": "SCR_COACHING_RASEC",
+			"voz": "rasec/scr_coaching",
+			"intro": "pantalla",
+			"frase": "voces/rasec/scr_grito_autorizo",
+			"frase_texto": "SCR_Q2_AUTORIZO",
+			"agarre": "dos_brazos",
+			"final": "cabina",
+			"t_agarre": 0.0345,
+			"t_final": 0.669,
+			"antes_golpe": {
+				"agarre_s": 1.2,
+				"duracion": 4.0
+			},
+			"t_agarre_s": 0.1
+		},
+		"haime": {
+			"variante": "rec",
+			"duracion": 2.93,
+			"modelo": "haime",
+			"cara": "haime",
+			"linea": "SCR_HAIME",
+			"voz": "haime/scr_haime",
+			"intro": "salto_mesa",
+			"frase": "voces/haime/scr_grito_empatia",
+			"frase_texto": "SCR_Q2_EMPATIA",
+			"agarre": "dos_brazos",
+			"t_agarre": 0.1706,
+			"antes_golpe": {
+				"agarre_s": 1.368,
+				"duracion": 3.8
+			},
+			"t_agarre_s": 0.5
+		},
+		"trainer": {
+			"variante": "pizarra",
+			"duracion": 2.48,
+			"modelo": "trainer",
+			"cara": "trainer_grito",
+			"linea": "SCR_TRAINER",
+			"voz": "trainer/trainer_gaaaa_01",
+			"intro": "pizarra",
+			"frase": "voces/trainer/scr_grito_gaaaa",
+			"frase_texto": "SCR_Q2_GAAAA",
+			"agarre": "dos_brazos",
+			"t_agarre": 0.0403,
+			"frase_golpe_s": [
+				0.24,
+				0.3,
+				0.34
+			],
+			"antes_golpe": {
+				"agarre_s": 1.02,
+				"duracion": 3.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"rta": {
+			"variante": "suelo",
+			"duracion": 2.21,
+			"modelo": "perrito_rta",
+			"cara": "perrito_rta_enojado",
+			"linea": "SCR_RTA",
+			"voz": "rta/scr_rta",
+			"intro": "suelo",
+			"frase": "voces/rta/scr_grito_aux",
+			"frase_texto": "SCR_Q2_AUX",
+			"agarre": "ninguno",
+			"final": "mordida",
+			"t_agarre": 0.0452,
+			"antes_golpe": {
+				"agarre_s": 1.088,
+				"duracion": 3.2
+			},
+			"t_agarre_s": 0.1
+		},
+		"vitzo": {
+			"variante": "monitor",
+			"duracion": 3.6,
+			"cara": "res://assets/ui/vitzo_cara.png",
+			"linea": "SCR_VITZO",
+			"voz": "vitzo/vitzo_screamer",
+			"capa": "voces/vitzo/vitzo_screamer_capa",
+			"intro": "zarpazo",
+			"intro_alcance": "zarpazo",
+			"frase": "voces/vitzo/scr_grito_correo",
+			"frase_texto": "SCR_Q2_CORREO",
+			"agarre": "dos_brazos",
+			"t_agarre": 0.3,
+			"modelo": "vitzo",
+			"t_agarre_s": 0.36,
+			"salto_s": 0.25,
+			"antes_golpe": {
+				"agarre_s": 0.36,
+				"duracion": 3.6
+			}
+		},
+		"cliente": {
+			"variante": "tickets",
+			"duracion": 2.53,
+			"modelo": "shero",
+			"look": "calvo",
+			"cara": "shero_calvo_grito",
+			"linea": "SCR_MOLESTOS",
+			"voz": "shero/scr_molestos",
+			"intro": "tickets",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_Q2_AMONESTACION",
+			"agarre": "dos_brazos",
+			"t_agarre": 0.0395,
+			"antes_golpe": {
+				"agarre_s": 1.368,
+				"duracion": 3.8
+			},
+			"t_agarre_s": 0.1
+		},
+		"grasa": {
+			"variante": "carrera",
+			"duracion": 3.2,
+			"modelo": "grasa",
+			"cara": "grasa",
+			"linea": "SCR_GRASA",
+			"voz": "grasa/scr_grasa",
+			"voz_respaldo": "grasa/grasa_grito_corto",
+			"anim": "jumpscare_main",
+			"intro": "carrera",
+			"agarre": "dos_brazos",
+			"t_agarre": 0.0415,
+			"frase": "voces/grasa/scr_grito_hail_grasa",
+			"frase_texto": "SCR_K2_HAIL_GRASA",
+			"nota_deform": "v0.3.2e: su cara es un óvalo chico dentro de la capucha; con la deformación al máximo las cuencas y la boca se la comen entera (queda negra): tope 0,55 y 0,62 en el final",
+			"deform": [
+				[
+					0.0,
+					0.25
+				],
+				[
+					0.15,
+					0.68
+				],
+				[
+					0.55,
+					0.88
+				],
+				[
+					0.9,
+					0.96
+				]
+			],
+			"deform_final": 1.0,
+			"antes_golpe": {
+				"agarre_s": 1.088,
+				"duracion": 3.4
+			},
+			"t_agarre_s": 0.1,
+			"gore": 1.0
+		},
+		"guardia": {
+			"variante": "carrera",
+			"duracion": 2.41,
+			"desde_grados": 0.0,
+			"modelo": "guardia_fermin",
+			"anim": "jumpscare_main",
+			"nota": "P6: se abalanza de frente con la linterna (clip propio jumpscare_main + SpotLight en la mano)",
+			"cara": "guardia_fermin",
+			"linea": "SCR_GUARDIA",
+			"voz": "otros/scr_fermin",
+			"voz_respaldo": "otros/fermin_alto",
+			"intro": "frente",
+			"agarre": "dos_brazos",
+			"t_agarre": 0.0415,
+			"frase_texto": "SCR_GUARDIA",
+			"nota_deform": "v0.3.2e: como GRASA: cara chica y realista; con la deformación al máximo las cuencas y la boca se la comen entera (quedaba una máscara negra bajo la gorra): tope 0,55 y 0,62 en el final",
+			"deform": [
+				[
+					0.0,
+					0.04
+				],
+				[
+					0.21,
+					0.38
+				],
+				[
+					0.718,
+					0.5
+				],
+				[
+					0.929,
+					0.55
+				]
+			],
+			"deform_final": 0.62,
+			"antes_golpe": {
+				"agarre_s": 1.088,
+				"duracion": 3.4
+			},
+			"t_agarre_s": 0.1
+		},
+		"fermin": {
+			"variante": "carrera",
+			"duracion": 2.9,
+			"modelo": "guardia_fermin",
+			"cara": "guardia_fermin",
+			"linea": "SCR_FERMIN_SIN_REV",
+			"voz": "shero/shero_screamer",
+			"intro": "carrera",
+			"frase": "voces/shero/scr_grito_amonestacion",
+			"frase_texto": "SCR_FERMIN_SIN_REV",
+			"agarre": "dos_brazos",
+			"final": "embestida",
+			"t_agarre": 0.04,
+			"t_agarre_s": 0.1
+		}
+	},
+	"caras": {
+		"shero": {
+			"jaw_drop": 0.75
+		},
+		"grasa": {
+			"jaw_drop": 0.95,
+			"jaw_mult": 1.65,
+			"eye_bulge": 2.4,
+			"skull_stretch": 0.45
+		}
+	}
+}

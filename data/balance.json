@@ -1,0 +1,549 @@
+{
+	"_comentario": "Todos los números del GDD v0.1. Tiempos 'de juego' en segundos/minutos del reloj del turno; 'reales' en segundos de pared.",
+	"reloj": {
+		"_comentario": "v0.4.1: Velocidades calibradas por contexto. Rapido sin cola (165x), pausado/lento al caminar (8.5x), correos BO (10x = 60s reales por 10 min) y convocatorias urgentes (5.5x).",
+		"llegada_salida": 6.5,
+		"urgente_convocatoria": 5.5,
+		"contacto": 18.0,
+		"contacto_guion": 18.0,
+		"timbre": 12.0,
+		"caso_bo": 10.0,
+		"sin_cola": 165.0,
+		"de_pie_aux": 8.5,
+		"lunch": 16.0,
+		"training": 22.0,
+		"dormido": 45.0,
+		"feedback": 10.0,
+		"coaching_sesion": 12.0,
+		"quiz": 0.0,
+		"break": 10.0
+	},
+	"reloj_presets": {
+		"_comentario": "v0.4.1: Presets calibrados por duracion de turno (Corta ~17-19 min, Normal ~22-24 min, Larga ~29-32 min) manteniendo siempre tiempo justo para desplazamientos.",
+		"corta": {
+			"sin_cola": 210.0,
+			"llegada_salida": 8.0,
+			"urgente_convocatoria": 6.5,
+			"contacto": 22.0,
+			"timbre": 15.0,
+			"caso_bo": 12.0,
+			"de_pie_aux": 10.0,
+			"break": 12.0,
+			"lunch": 20.0
+		},
+		"normal": {
+			"sin_cola": 165.0,
+			"llegada_salida": 6.5,
+			"urgente_convocatoria": 5.5,
+			"contacto": 18.0,
+			"timbre": 12.0,
+			"caso_bo": 10.0,
+			"de_pie_aux": 8.5,
+			"break": 10.0,
+			"lunch": 16.0
+		},
+		"larga": {
+			"sin_cola": 125.0,
+			"llegada_salida": 5.5,
+			"urgente_convocatoria": 4.5,
+			"contacto": 14.0,
+			"timbre": 10.0,
+			"caso_bo": 8.5,
+			"de_pie_aux": 7.0,
+			"break": 8.5,
+			"lunch": 13.0
+		}
+	},
+	"turno": {
+		"inicio_llegada": "23:48",
+		"login": "00:00",
+		"fin": "08:45",
+		"bloques": [
+			"00:00",
+			"03:00",
+			"06:00"
+		],
+		"duracion_real_objetivo_min": [
+			12,
+			19
+		],
+		"_nota_v031": "v0.3.1 Q1 (F21/F23): rangos en minutos reales por preset. 'bot' = el bot listo (instantáneo); 'humano' = el bot humano (--humano). duracion_real_objetivo_min = el del bot en Normal (compatibilidad).",
+		"duracion_real_min": {
+			"corta": {
+				"bot": [
+					9,
+					17
+				],
+				"humano": [
+					18,
+					29
+				]
+			},
+			"normal": {
+				"bot": [
+					12,
+					19
+				],
+				"humano": [
+					21,
+					31
+				]
+			},
+			"larga": {
+				"bot": [
+					18,
+					26
+				],
+				"humano": [
+					27,
+					37
+				]
+			}
+		}
+	},
+	"cupos_aux_min": {
+		"_comentario": "v0.3: el break se mide por break (2 por turno, 10 min cada uno); lunch 45 min a su hora; el baño conserva su cupo acumulado.",
+		"break": 10,
+		"lunch": 45,
+		"bano": 10
+	},
+	"breaks": {
+		"por_turno": 2,
+		"duracion_min": 10
+	},
+	"lunch": {
+		"_comentario": "Ventana para empezar el lunch a su hora (turnos.json/lunch): desde la hora -5 min hasta la hora +15 min (PLAN §2 #27).",
+		"ventana_antes_min": 5.0,
+		"ventana_despues_min": 15.0
+	},
+	"rta": {
+		"tolerancia_s_juego": 90,
+		"caza_tras_aviso_s_juego": 60,
+		"velocidad_caza_ms": 8.0,
+		"velocidad_jugador_ms": 5.0,
+		"patrulla_cada_min_juego": 8,
+		"pausa_silla_vacia_s": 3.0
+	},
+	"isla": {
+		"timer_min_juego": 10,
+		"gracia_min_juego": 5
+	},
+	"ww": {
+		"ack_segundos": 7.5,
+		"despido": 3,
+		"accesibilidad_extra": 0.5
+	},
+	"correo_bo": {
+		"limite_min_juego": 10,
+		"excusas": 3,
+		"excusa_correcta": 2
+	},
+	"coaching": {
+		"unirse_s": 60.0
+	},
+	"vitzo": {
+		"horas_recordatorio": [
+			3,
+			6
+		],
+		"reaccionar_s": 45.0
+	},
+	"molestos": {
+		"seguidos": 3,
+		"ventana_min": 20,
+		"prob_molesto_t1": 0.1,
+		"ignorar_oferta_s_juego": 90.0,
+		"_nota_t2": "[PROPUESTA] En T2+ un contacto con 'ignorar_s_juego' que no se acepta a tiempo se pierde y cuenta como molesto (GDD 4.3). 3 seguidos en 20 min = muerte 'tres_molestos' desde T2 (en T1 sigue siendo coaching + WW)."
+	},
+	"available": {
+		"verde": 85.0,
+		"rojo": 75.0,
+		"cierre_bloque_h": 3,
+		"evaluar_desde_min": 30.0,
+		"_formula": "v0.3: Available / (Available + BO). Break, Lunch, Baño, Coaching y Training no cuentan."
+	},
+	"aht": {
+		"verde_min": 6.0,
+		"rojo_min": 9.0,
+		"bo_rojo_min": 10.0
+	},
+	"bano": {
+		"_comentario": "GDD rev 2 (4.3): baños en -1 (dos individuales con pestillo, luz falla a los 60 s), 1 (regulares, desvío) y 2 (regulares, refugio normal). Sala segura 90 s en todos; Shero no entra a ningún baño; terminal Fonex junto a cada baño.",
+		"sala_segura_s": 90.0,
+		"fatiga_por_min": -5.0,
+		"shero_espera_s": 90.0,
+		"por_piso": {
+			"-1": {
+				"tipo": "individual",
+				"cantidad": 2,
+				"pestillo": true,
+				"luz_parpadea_desde_s": 45.0,
+				"luz_falla_s": 60.0,
+				"sala_segura_s": 60.0
+			},
+			"1": {
+				"tipo": "regular",
+				"cantidad": 2,
+				"pestillo": false,
+				"luz_parpadea_desde_s": 75.0,
+				"luz_falla_s": 90.0,
+				"sala_segura_s": 90.0
+			},
+			"2": {
+				"tipo": "regular",
+				"cantidad": 2,
+				"pestillo": false,
+				"luz_parpadea_desde_s": 75.0,
+				"luz_falla_s": 90.0,
+				"sala_segura_s": 90.0
+			}
+		}
+	},
+	"fatiga": {
+		"inicio_t1": 20.0,
+		"inicio_por_turno": 5.0,
+		"por_hora": 4.0,
+		"por_molesto": 8.0,
+		"por_muerte": 15.0,
+		"tras_colapso": 60.0,
+		"tope_respawn": 85.0,
+		"_nota_core3": "v0.3.2-core3: por_muerte, tras_colapso y tope_respawn YA NO SE USAN (se dejan por los datos viejos). Reaparecer nunca da más Fatiga que la del checkpoint. Tras un colapso, o desde la segunda muerte seguida desde el mismo checkpoint (cualquier causa), como mucho tope_tras_colapso[Fácil, Normal, Difícil, Turno real]; desde la tercera ese tope baja ayuda_baja_por_muerte por muerte hasta ayuda_suelo. La segunda muerte seguida trae además, una vez por checkpoint, el tópico disponible otra vez y un café sin cobrar (Checkpoints._death_help), con aviso en «Reconectando».",
+		"tope_tras_colapso": [
+			40.0,
+			40.0,
+			45.0,
+			50.0
+		],
+		"ayuda_baja_por_muerte": 10.0,
+		"ayuda_suelo": 10.0,
+		"cafe": -15.0,
+		"lunch_completo": -10.0,
+		"umbral_parpadeo": 40.0,
+		"umbral_microsueno": 70.0,
+		"umbral_texto": 90.0,
+		"desenfoque_cada_s": 40.0,
+		"desenfoque_sube_s": 5.0,
+		"desenfoque_tope": 0.6,
+		"_nota_v031": "v0.3.1 Q1 (B7): el desenfoque por Fatiga (40-69) aparece a los desenfoque_cada_s sin frotarte los ojos, sube en desenfoque_sube_s y nunca pasa de desenfoque_tope (se sigue leyendo). El reloj del parpadeo vuelve a 0 al reaparecer, al empezar turno y al volver al menú. Fácil/Normal: la 1.ª vez de cada turno, aviso «[R] Frotarte los ojos».",
+		"microsueno_min_s": 60.0,
+		"microsueno_max_s": 90.0,
+		"microsueno_negro_s": 0.5
+	},
+	"shero": {
+		"velocidad_caminar_ms": 3.9,
+		"velocidad_perseguir_ms": 3.9,
+		"ignorar_dm_s_juego": 60,
+		"escribiendo_min_s": 5.0,
+		"escribiendo_max_s": 40.0,
+		"distancia_screamer_m": 1.0
+	},
+	"lunch_inmune": {
+		"_comentario": "v0.3.2 (Joan: «durante lunch eres inmune»): con el AUX Lunch (el primero del turno, dentro de sus 45 min) nadie te convoca ni te persigue de nuevo (Discipline.is_lunch_immune). Al soltar el lunch, gracia_s_real segundos reales más y luego lo aplazado sale de a uno cada escalonado_s reales.",
+		"gracia_s_real": 90.0,
+		"escalonado_s": 40.0
+	},
+	"jugador": {
+		"fov": 75.0,
+		"fov_correr": 85.0,
+		"fov_min": 65.0,
+		"fov_max": 90.0,
+		"velocidad_ms": 5.0,
+		"velocidad_correr_ms": 6.5,
+		"aliento_s": 6.0,
+		"giro_sentado_grados": 160.0,
+		"frotar_ojos_negro_s": 0.5,
+		"_parpadeo_v032": "v0.3.2 (Joan: el parpadeo más fluido y un poco más rápido): ya no es un negro de golpe de 1 s sino párpados que bajan y suben con curvas suaves (Overlays). Frotarse los ojos: cerrar_s + cerrado_s + abrir_s = 0,5 s; microsueño: cierra igual, queda cerrado microsueno_negro_s y abre en microsueno_abrir_s.",
+		"parpadeo_cerrar_s": 0.13,
+		"parpadeo_cerrado_s": 0.09,
+		"parpadeo_abrir_s": 0.28,
+		"microsueno_abrir_s": 0.4
+	},
+	"chat": {
+		"timer_respuesta_s_juego": 40,
+		"respuestas_por_turno": 3
+	},
+	"kyc": {
+		"campos_t1": 2
+	},
+	"director": {
+		"intervalo_s": 10.0,
+		"max_eventos_t1": 1,
+		"min_entre_screamers_s": 120.0
+	},
+	"calma_garantizada_s": 120.0,
+	"incidencias_campana_ww_extra": 12,
+	"turno_real": {
+		"_comentario": "v0.3: las escalas por dificultad están en data/dificultad.json (Turno real = Difícil + sin checkpoints + reinicio completo)."
+	},
+	"economia": {
+		"_nota": "[PROPUESTA] Todos los montos en soles son placeholders para que Joan ponga la tabla real de sueldo/pasaje (PENDIENTE_JOAN b, turno 2). Activa desde turno_desde; en T1 no se muestra ni se cobra nada.",
+		"turno_desde": 2,
+		"saldo_inicial_soles": 12.0,
+		"sueldo_turno_soles": 58.0,
+		"pagos_turno": 8,
+		"_nota_pagos": "v0.3: el sueldo se reparte por minuto de turno (525 min): un pago al cerrar cada hora (1:00 … 8:00) y el cierre (8:00-8:45) al terminar el turno.",
+		"descuento_ww_soles": 15.0,
+		"pasaje_soles": 3.0,
+		"cafe_soles": 2.5,
+		"expendedora": {
+			"_nota": "[PROPUESTA] precios y efectos. gotas: quitan el desenfoque por Fatiga durante desenfoque_off_s segundos reales.",
+			"items": [
+				{
+					"id": "cafe",
+					"precio": 2.5,
+					"fatiga": -15.0
+				},
+				{
+					"id": "energetica",
+					"precio": 4.5,
+					"fatiga": -22.0
+				},
+				{
+					"id": "gotas",
+					"precio": 6.0,
+					"fatiga": 0.0,
+					"desenfoque_off_s": 240.0
+				}
+			]
+		},
+		"cafeteria_marleny": {
+			"_nota": "[PROPUESTA] menú y precios de Marleny; abre desde turno_desde. Comer aquí baja más Fatiga que la expendedora y cuenta como lunch completo.",
+			"turno_desde": 3,
+			"items": [
+				{
+					"id": "caldo",
+					"precio": 8.0,
+					"fatiga": -28.0,
+					"lunch": true
+				},
+				{
+					"id": "pan_chicharron",
+					"precio": 6.0,
+					"fatiga": -20.0,
+					"lunch": true
+				},
+				{
+					"id": "emoliente",
+					"precio": 3.0,
+					"fatiga": -12.0,
+					"lunch": false
+				}
+			]
+		}
+	},
+	"cola": {
+		"_comentario": "Ritmo de la cola (GDD 3.2/3.3): 8 contactos guionizados a su hora_juego; relleno solo en Available, espaciado por el Director segun su nivel 0-3 (segundos reales), con tope por bloque y sin pisar un guion proximo.",
+		"pausa_tras_contacto_s_real": [
+			4.0,
+			8.0
+		],
+		"relleno_max_por_bloque": {
+			"1": 2,
+			"2": 2,
+			"3": 1
+		},
+		"relleno_margen_guion_s_juego": 480,
+		"relleno_espera_real_s": {
+			"0": [
+				45.0,
+				75.0
+			],
+			"1": [
+				30.0,
+				50.0
+			],
+			"2": [
+				18.0,
+				32.0
+			],
+			"3": [
+				10.0,
+				20.0
+			]
+		},
+		"relleno_bloque3_nivel_min": 2
+	},
+	"trainer": {
+		"_nota": "[PROPUESTA] Trainer (piso 1, T2+). Mira al pasillo cada mirar_cada_s; si te quedas mirándolo > mirada_s te intercepta: charla de inducción de charla_real_s segundos que avanza el reloj charla_s_juego. Grito GAAAA solo desde turno_grito.",
+		"mirar_cada_s_min": 14.0,
+		"mirar_cada_s_max": 26.0,
+		"mirar_pasillo_s": 5.0,
+		"mirada_s": 4.0,
+		"distancia_mirada_m": 11.0,
+		"velocidad_ms": 2.6,
+		"charla_real_s": 9.0,
+		"charla_s_juego": 600.0,
+		"charla_fatiga": 6.0,
+		"turno_grito": 3,
+		"grito_fatiga": 10.0,
+		"cooldown_intercepcion_s": 60.0
+	},
+	"mentor": {
+		"_nota": "[PROPUESTA] Mentor (T3+): publica allocations a BO en Ezlaki que cambian el AUX esperado; cumplir_s reales para cambiar antes del aviso del RTA; duracion en minutos de juego. v0.3 (PLAN §2 #40): con Available = Available / (Available + BO) las allocations se espacian (~3 de 20 min por turno de 8:45) para que un agente obediente termine >= 80 %; P4 pone el tope exacto (turnos.json/allocations_bo).",
+		"primera_allocation_min_juego": 90.0,
+		"cada_min_juego_min": 150.0,
+		"cada_min_juego_max": 180.0,
+		"duracion_min_juego": 20.0,
+		"cumplir_s": 60.0,
+		"prob_lamebotas": 0.6
+	},
+	"topico": {
+		"_nota": "[PROPUESTA] Tópico del piso 1 (T2+): con Fatiga >= fatiga_rechazo la enfermera te manda de vuelta y Shero lo anota (DM). Debajo de ese umbral solo te mira.",
+		"fatiga_rechazo": 70.0,
+		"fatiga_alivio": -5.0
+	},
+	"cola_acd": {
+		"_comentario": "v0.3.2 (Joan: «como un call center real»): cola de KipuPay (scripts/core/cola_acd.gd). Solo te ofrecen contactos en Available. Ambiente: llegadas_por_hora por bloque (1, 2, 3) en reloj de juego; los 4 compañeros (con su horario de break, lunch, training, coaching, BO y uno dormido en T2/T3) los atienden con aht_npc_min_juego. Tus guiones que llegan sin que estés en Available esperan; los opcionales los toma un compañero tras npc_toma_guion_tras_min. Al volver a Available con >= back_to_back_desde en cola te entran seguidos (pausa back_to_back_pausa_s_real) hasta back_to_back_max[Fácil, Normal, Difícil]. Tras una perdida (sonó en Available y no contestaste) no te suena nada en rona_s_real. Shero avisa en #team-familia con shero_aviso_cola o más (cada shero_aviso_cada_min).",
+		"llegadas_por_hora": [
+			8.0,
+			10.0,
+			7.0
+		],
+		"aht_npc_min_juego": [
+			4.0,
+			8.0
+		],
+		"npc_toma_guion_tras_min": 8.0,
+		"back_to_back_desde": 3,
+		"back_to_back_max": [
+			2,
+			3,
+			4
+		],
+		"back_to_back_pausa_s_real": 2.5,
+		"rona_s_real": 25.0,
+		"shero_aviso_cola": 6,
+		"shero_aviso_cada_min": 40.0,
+		"_nota_core2": "v0.3.2-core2: la cola no se queda parada. Si el contacto de ambiente más antiguo lleva esperando más de espera_max_min_juego[Fácil, Normal, Difícil] minutos de juego (nadie lo atiende: con un compañero libre el ambiente no espera) y tú llevas espera_max_pausa_s_real segundos reales en Available, sentado y libre, te entra a ti aunque el cupo de relleno del turno ya esté servido. Al repetir un tramo (reaparecer, Reiniciar contacto, Continuar) cada contacto que ya atendiste deja un hueco a su hora y entra un sustituto de la bolsa de relleno (ContactManager, «Repetir un tramo»).",
+		"espera_max_min_juego": [
+			40.0,
+			30.0,
+			20.0
+		],
+		"espera_max_pausa_s_real": 6.0
+	},
+	"escalera": {
+		"break": {
+			"facil": [
+				10,
+				11.5,
+				13,
+				14.5
+			],
+			"normal": [
+				10,
+				10.8,
+				11.6,
+				12.4
+			],
+			"dificil": [
+				10,
+				10.5,
+				11.0,
+				11.5
+			]
+		},
+		"lunch": {
+			"facil": [
+				45,
+				46.5,
+				48,
+				49.5
+			],
+			"normal": [
+				45,
+				45.8,
+				46.6,
+				47.4
+			],
+			"dificil": [
+				45,
+				45.5,
+				46.0,
+				46.5
+			]
+		},
+		"correo": {
+			"facil": [
+				10,
+				12,
+				14,
+				16
+			],
+			"normal": [
+				10,
+				11.2,
+				12.4,
+				13.6
+			],
+			"dificil": [
+				10,
+				10.8,
+				11.5,
+				12.2
+			]
+		},
+		"sala": {
+			"facil": [
+				0.75,
+				2.0,
+				3.2,
+				4.5
+			],
+			"normal": [
+				0.5,
+				1.3,
+				2.1,
+				2.9
+			],
+			"dificil": [
+				0.35,
+				0.9,
+				1.5,
+				2.0
+			]
+		},
+		"otra_isla": {
+			"facil": [
+				3,
+				4.5,
+				6,
+				7.5
+			],
+			"normal": [
+				1.5,
+				2.5,
+				3.5,
+				4.5
+			],
+			"dificil": [
+				1.0,
+				1.8,
+				2.5,
+				3.2
+			]
+		},
+		"marcas": {
+			"sube": [
+				"verbal",
+				"ww"
+			],
+			"piso_min": 1.2
+		}
+	},
+	"comodin": {
+		"_comentario": "v0.3.2 (Joan): sin terminales Fonex, una vez por turno llamas a un compañero (mantén C) para que te marque el AUX en tu PC. Contesta en contesta_min..max s de juego; si no contesta, reintento_s_real segundos reales para llamar a otro con el mismo comodín. scripts/autoload/comodin.gd.",
+		"contesta_min_s_juego": 10.0,
+		"contesta_max_s_juego": 20.0,
+		"reintento_s_real": 30.0,
+		"_amago": "v0.3.2-core4: tercer break marcado con el comodín: Shero amaga la persecución (se levanta y corre hacia ti) y se detiene al llegar a amago_cerca_m de ti, tras amago_m metros o a los amago_s_real segundos reales, lo que pase primero; lo dice y vuelve a su sitio. El comodín cubre ese break durante su cupo (cupos_aux_min/break).",
+		"amago_s_real": 5.0,
+		"amago_m": 9.0,
+		"amago_cerca_m": 6.0
+	},
+	"reconexion": {
+		"_comentario": "v0.3.2 (Joan): tras reaparecer, sentado en tu PC en «Reconectando» duracion_s_real (5 s reales, la cuenta se ve en el HUD y en Fonex): sin contactos, sin convocatorias, neutro para el Available %. Si no eliges un AUX pasa solo a Available; el primer timbre llega primer_timbre_s_real después. scripts/autoload/reconexion.gd.",
+		"duracion_s_real": 5.0,
+		"primer_timbre_s_real": 4.0
+	}
+}

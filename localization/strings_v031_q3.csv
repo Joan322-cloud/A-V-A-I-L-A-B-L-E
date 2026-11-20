@@ -1,0 +1,10 @@
+keys,es,en
+PKG_V031_Q3_READY,"Cadenas del paquete Q3 (v0.3.1): audio, voces y Ezlaki","Package Q3 strings (v0.3.1): audio, voices and Ezlaki"
+EZLAKI_WRITE,Escribir en {canal}… (Enter envía),Message {canal}… (Enter sends)
+EZLAKI_SEND,Enviar,Send
+EZLAKI_PREVIEW,Vas a responder: «{texto}»,You'll reply: «{texto}»
+EZLAKI_SHOT_FILE,image.png · clic para ampliar,image.png · click to enlarge
+EZLAKI_SHOT_CLOSE,Clic o Esc para cerrar,Click or Esc to close
+CAUSE_INSULTO,Falta de respeto al supervisor en Ezlaki,Disrespecting your supervisor on Ezlaki
+EZLAKI_SHERO_COACHING_LISTA,"@here Team, por favor a las 7:30 las siguientes personas ingresan al Rooms de coachings:","@here Team, please at 7:30 the following people join the coaching Room:"
+EZLAKI_SHERO_CASO_DIARIO,"@here Team, ayer solo tengo casos de KipuLog de estas personas, sin embargo, de acuerdo al horario 13 personas tenían turno. Espero al interno la justificación de las 10 personas restantes. Recuerden que subir su caso diario es OBLIGATORIO, eviten ser amonestados.","@here Team, yesterday I only have KipuLog cases from these people, however, according to the schedule 13 people had a shift. I expect the justification of the remaining 10 people by DM. Remember that uploading your daily case is MANDATORY, avoid being reprimanded."

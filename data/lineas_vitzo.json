@@ -1,0 +1,99 @@
+{
+	"_comentario": "Líneas de Vitzo, bot WORKFLOW de Ezlaki (GDD 6.1). Voz robótica, inglés mezclado con español. Los emojis de reacción pedida rotan. v0.3 (P4): recordatorio en #site-updates con reacción (clic/Enter), reaccion_ok, correo_detectado (casos BO) y wmm_detectado + screamer_wmm (llamadas/chats WMM).",
+	"avatar": "robot_verde",
+	"emojis_reaccion": [
+		"✅",
+		"👀",
+		"🫡",
+		"🙏",
+		"👍"
+	],
+	"recordatorio": {
+		"canal": "canal",
+		"voz": "vitzo_recordatorio",
+		"lineas": [
+			{
+				"literal": true,
+				"es": "@here Hello team! un Reminder 🚨 está estrictamente prohibido enviar correos a Vitzo solicitando status, POD, WMM o reversals, ya que esta mala gestión está poniendo en riesgo nuestra relacion con el partner. Por ello, se están aplicando medidas disciplinarias inmediatas a los involucrados. Dejo AQUÍ la guía de como sacar POD's para Vitzo.🚨",
+				"en": "@here Hello team! a Reminder 🚨 it is strictly forbidden to send emails to Vitzo requesting status, POD, WMM or reversals, since this poor handling is putting our relationship with the partner at risk. Therefore, immediate disciplinary measures are being applied to those involved. HERE is the guide on how to get POD's for Vitzo.🚨"
+			},
+			{
+				"literal": false,
+				"es": "Hello team! 🚨 Reminder: Vitzo no responde correos de status. Vitzo no responde.",
+				"en": "Hello team! 🚨 Reminder: Vitzo does not answer status emails. Vitzo does not answer."
+			},
+			{
+				"literal": false,
+				"es": "Reminder 🚨 la guía está AQUÍ. La guía siempre estuvo AQUÍ.",
+				"en": "Reminder 🚨 the guide is HERE. The guide was always HERE."
+			},
+			{
+				"literal": false,
+				"es": "Hello team! Reminder: Vitzo no responde correos. Vitzo responde en su portal. Vitzo siempre responde en su portal.",
+				"en": "Hello team! Reminder: Vitzo doesn't answer emails. Vitzo answers in its portal. Vitzo always answers in its portal."
+			}
+		]
+	},
+	"correo_detectado": {
+		"canal": "canal",
+		"voz": "vitzo_screamer",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "Se detectó un correo no autorizado. Se están aplicando medidas.",
+				"en": "An unauthorized email was detected. Measures are being applied."
+			},
+			{
+				"literal": false,
+				"es": "Hello team! 3 involucrados identificados. Gracias por su colaboración.",
+				"en": "Hello team! 3 involved identified. Thank you for your cooperation."
+			},
+			{
+				"literal": false,
+				"es": "Correo recibido. Gracias por escribirnos. Vamos para allá.",
+				"en": "Email received. Thank you for writing. We're on our way."
+			}
+		]
+	},
+	"screamer": {
+		"canal": "voz",
+		"voz": "vitzo_screamer",
+		"nota": "Decisión de Joan (2026-11-07): 'GAAAA' es exclusivo del Trainer.",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "¡ENVÍENME CORREOO!",
+				"en": "SEND ME THE EMAIL!!"
+			}
+		]
+	},
+	"fondo_pc": {
+		"es": "El fondo de tu PC ahora es el avatar de Vitzo hasta el fin del turno.",
+		"en": "Your PC wallpaper is now Vitzo's avatar until the end of the shift."
+	},
+	"reaccion_ok": {
+		"es": "Gracias por su colaboración.",
+		"en": "Thank you for your cooperation."
+	},
+	"wmm_detectado": {
+		"canal": "#site-updates",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "¿Un POD? ¿Por correo? El POD estaba en el portal. El POD siempre estuvo en el portal.",
+				"en": "A POD? By email? The POD was in the portal. The POD was always in the portal."
+			}
+		]
+	},
+	"screamer_wmm": {
+		"canal": "voz",
+		"voz": "scr_wmm",
+		"lineas": [
+			{
+				"literal": false,
+				"es": "¿POD? ¡¿POR CORREO?! ¡ENVÍENME CORREOO!",
+				"en": "POD? BY EMAIL?! SEND ME THE EMAIL!!"
+			}
+		]
+	}
+}

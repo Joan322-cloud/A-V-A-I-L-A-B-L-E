@@ -1,0 +1,143 @@
+[
+	{
+		"id": "un_panel_mas",
+		"numero": 1,
+		"nombre": {
+			"es": "Un panel más",
+			"en": "One more panel"
+		},
+		"trigger": {
+			"tipo": "volver_de_zona",
+			"zona": "pasillo_agua",
+			"condicion": "tras_primer_break"
+		},
+		"efecto": {
+			"tipo": "sumar_panel",
+			"paneles_base": 14,
+			"segundos_extra_pasillo": 1.0
+		},
+		"turno_minimo": 1,
+		"probabilidad": 1.0,
+		"unica": false,
+		"cooldown_s_real": 180.0,
+		"piso": 2
+	},
+	{
+		"id": "silla_caliente",
+		"numero": 2,
+		"nombre": {
+			"es": "La silla caliente",
+			"en": "The warm chair"
+		},
+		"trigger": {
+			"tipo": "volver_a_fila_c",
+			"fatiga_min": 40
+		},
+		"efecto": {
+			"tipo": "silla_extra",
+			"girada_hacia": "C-14",
+			"tibia": true
+		},
+		"turno_minimo": 1,
+		"probabilidad": 0.8,
+		"unica": true,
+		"cooldown_s_real": 0.0,
+		"piso": 2
+	},
+	{
+		"id": "tres_cuarenta_y_siete",
+		"numero": 3,
+		"nombre": {
+			"es": "3:47 otra vez",
+			"en": "3:47 again"
+		},
+		"trigger": {
+			"tipo": "mirar_reloj_pared",
+			"veces": 2,
+			"bloque": 2
+		},
+		"efecto": {
+			"tipo": "reloj_pared_fijo",
+			"hora": "3:47 AM",
+			"fonex_correcto": true
+		},
+		"turno_minimo": 1,
+		"probabilidad": 1.0,
+		"unica": true,
+		"cooldown_s_real": 0.0,
+		"piso": 2
+	},
+	{
+		"id": "sesion_otra_fila",
+		"numero": 4,
+		"nombre": {
+			"es": "Sesión en otra fila",
+			"en": "Session in another row"
+		},
+		"trigger": {
+			"tipo": "volver_de_lunch"
+		},
+		"efecto": {
+			"tipo": "sesion_movida",
+			"fila_destino": "E",
+			"cliente_en_espera": "0:42",
+			"placa_propia": true
+		},
+		"turno_minimo": 1,
+		"probabilidad": 1.0,
+		"unica": true,
+		"cooldown_s_real": 0.0,
+		"piso": 2
+	},
+	{
+		"id": "el_espejo",
+		"numero": 5,
+		"nombre": {
+			"es": "El espejo",
+			"en": "The mirror"
+		},
+		"trigger": {
+			"tipo": "mirar_espejo",
+			"zona": [
+				"bano_p1",
+				"bano_p2"
+			],
+			"fatiga_min": 50
+		},
+		"efecto": {
+			"tipo": "reflejo_espejo",
+			"dura_hasta": "fin_del_reflejo_2s",
+			"_nota_v032": "v0.3.2: en tu reflejo (MirrorView, ≤ 2 s) alguien está de pie detrás de ti; al darte vuelta no hay nadie. Antes: la cámara de seguridad de la Fila C durante 20 s."
+		},
+		"turno_minimo": 1,
+		"probabilidad": 0.9,
+		"unica": true,
+		"cooldown_s_real": 0.0,
+		"piso": [
+			1,
+			2
+		]
+	},
+	{
+		"id": "hold_parlantes",
+		"numero": 6,
+		"nombre": {
+			"es": "Hold por los parlantes",
+			"en": "Hold music on the speakers"
+		},
+		"trigger": {
+			"tipo": "microsueno",
+			"bloque": 3
+		},
+		"efecto": {
+			"tipo": "audio_parlantes",
+			"archivo": "hold_kipupay_parlantes",
+			"segundos": 12.0
+		},
+		"turno_minimo": 1,
+		"probabilidad": 0.6,
+		"unica": false,
+		"cooldown_s_real": 240.0,
+		"piso": 2
+	}
+]

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://171d2yqn6wcp"]
+
+[ext_resource type="Script" uid="uid://csmomposorlj1" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/ui/MainMenu.tscn" id="2_menu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="3_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/Workstation.tscn" id="4_ws"]
+[ext_resource type="PackedScene" path="res://scenes/ui/DeathScreen.tscn" id="5_death"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ShiftEnd.tscn" id="6_end"]
+[ext_resource type="PackedScene" path="res://scenes/ui/PauseMenu.tscn" id="7_pause"]
+[ext_resource type="PackedScene" path="res://scenes/fx/Overlays.tscn" id="8_fx"]
+
+[node name="Main" type="Node" unique_id=1476586480]
+script = ExtResource("1_main")
+
+[node name="World" type="Node3D" parent="." unique_id=1223939502]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2065611390]
+
+[node name="HUD" parent="UI" unique_id=1566764247 instance=ExtResource("3_hud")]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Workstation" parent="UI" unique_id=98501302 instance=ExtResource("4_ws")]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Overlays" parent="UI" unique_id=732139969 instance=ExtResource("8_fx")]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="DeathScreen" parent="UI" unique_id=476685706 instance=ExtResource("5_death")]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ShiftEnd" parent="UI" unique_id=1217341742 instance=ExtResource("6_end")]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PauseMenu" parent="UI" unique_id=371555853 instance=ExtResource("7_pause")]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="MainMenu" parent="UI" unique_id=951549176 instance=ExtResource("2_menu")]
+layout_mode = 3
+anchors_preset = 0
